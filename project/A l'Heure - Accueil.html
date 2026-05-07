@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>À l'Heure — L'information du Sénégal et de l'Afrique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,600;1,6..72,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body data-density="regular" data-theme="paper" data-accent="brique" data-grid="dense" data-screen-label="01 Accueil">
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">
+      <span>Jeudi 7 mai 2026 · <em style="font-style:normal;color:#fff">Dakar</em></span>
+      <span class="dot"></span>
+      <span class="meteo">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffd24d" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>
+        Dakar 28°C · ciel clair
+      </span>
+      <span class="dot"></span>
+      <span>Marée haute 14h12</span>
+    </div>
+    <div class="right">
+      <a href="#">Newsletter</a>
+      <a href="#">Apps</a>
+      <a href="#">Mon compte</a>
+      <span class="dot"></span>
+      <div class="lang" role="tablist" aria-label="Langue">
+        <button class="on">FR</button><button>EN</button><button>WO</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="wrap">
+    <div class="mast-left">
+      <button class="live-btn"><span class="pulse"></span>DIRECT <small>· Journal de 13h</small></button>
+      <span class="updated">Mis à jour il y a 4&nbsp;min</span>
+    </div>
+    <a class="logo" href="#" aria-label="À l'Heure">
+      <span class="logo-mark"><span class="a">À</span> l'Heure</span>
+      <span class="logo-tag">L'information<br/>du Sénégal et<br/>de l'Afrique</span>
+    </a>
+    <div class="mast-right">
+      <button class="icon-btn" aria-label="Rechercher"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+      <button class="icon-btn" aria-label="Compte"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></button>
+      <button class="sub-btn">S'ABONNER</button>
+    </div>
+  </div>
+  <div class="tricolor"><span></span><span></span><span></span></div>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap">
+    <div class="menu-pill">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      RUBRIQUES
+    </div>
+    <ul>
+      <li class="active"><a href="#">À la une</a></li>
+      <li><a href="#">Sénégal</a></li>
+      <li><a href="#">Afrique</a></li>
+      <li><a href="#">Monde</a></li>
+      <li><a href="#">Politique</a></li>
+      <li><a href="#">Économie</a></li>
+      <li><a href="#">Société</a></li>
+      <li><a href="#">Sport</a></li>
+      <li><a href="#">Culture</a></li>
+      <li><a href="#">Diaspora</a></li>
+    </ul>
+    <div class="end">
+      <a href="#" style="font:700 12px var(--sans);color:var(--red);letter-spacing:.04em">▶ VIDÉOS</a>
+      <a href="#" style="font:700 12px var(--sans);color:var(--blue);letter-spacing:.04em">♪ PODCASTS</a>
+    </div>
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="label">En continu</span>
+  <div class="items">
+    <div class="items-track">
+      <span><time>13:42</time>L'Assemblée nationale adopte la loi de finances rectificative à 142 voix contre 38</span>
+      <span class="sep">●</span>
+      <span><time>13:18</time>Touba — 5,2 millions de fidèles attendus pour le Magal</span>
+      <span class="sep">●</span>
+      <span><time>12:55</time>BRT Dakar : la ligne 2 entrera en service le 1er juin</span>
+      <span class="sep">●</span>
+      <span><time>12:31</time>CEDEAO — réunion d'urgence des ministres de la défense vendredi à Abuja</span>
+      <span class="sep">●</span>
+      <span><time>11:48</time>Lions de la Téranga : Sadio Mané rappelé en sélection</span>
+      <span class="sep">●</span>
+      <span><time>13:42</time>L'Assemblée nationale adopte la loi de finances rectificative à 142 voix contre 38</span>
+      <span class="sep">●</span>
+      <span><time>13:18</time>Touba — 5,2 millions de fidèles attendus pour le Magal</span>
+      <span class="sep">●</span>
+      <span><time>12:55</time>BRT Dakar : la ligne 2 entrera en service le 1er juin</span>
+      <span class="sep">●</span>
+      <span><time>12:31</time>CEDEAO — réunion d'urgence des ministres de la défense vendredi à Abuja</span>
+      <span class="sep">●</span>
+      <span><time>11:48</time>Lions de la Téranga : Sadio Mané rappelé en sélection</span>
+      <span class="sep">●</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <article class="art lead">
+        <div class="img">
+          <img src="https://picsum.photos/seed/saintlouis-pirogues/1280/720" alt="Pirogues à Saint-Louis" />
+          <span class="cred">Photo · Mamadou Diop / À l'Heure</span>
+        </div>
+        <span class="badge rep">Grand reportage</span>
+        <span class="rub">Sénégal · Saint-Louis</span>
+        <h3><a href="#">À Saint-Louis, le bras de fer monte d'un cran autour de la pêche artisanale</a></h3>
+        <p class="dek">Depuis l'aube, plus de quatre cents pirogues bloquent l'accès au port de Guet Ndar pour protester contre la signature de nouveaux accords avec les chalutiers étrangers. Les pêcheurs réclament un moratoire — et un dialogue avec l'État qui tarde à venir.</p>
+        <div class="meta">
+          <span class="by">Aïssatou Ndoye</span><span class="dot"></span>
+          <time>Aujourd'hui · 11h30</time><span class="dot"></span>
+          <span>Lecture 8 min</span><span class="dot"></span>
+          <span style="color:var(--red);font-weight:700">● 6 commentaires</span>
+        </div>
+      </article>
+
+      <aside class="hero-side">
+        <article class="art">
+          <div class="img" style="aspect-ratio:16/9"><img src="https://picsum.photos/seed/diomaye-jeunes/640/360" alt="" /></div>
+          <span class="rub">Politique</span>
+          <h3><a href="#">Plan Diomaye 2026 : ce que le gouvernement promet aux jeunes diplômés</a></h3>
+          <p class="dek">160&nbsp;milliards FCFA, 75&nbsp;000 contrats, mais beaucoup d'inconnues sur le calendrier.</p>
+          <div class="meta"><span class="by">Service Politique</span><span class="dot"></span><time>Il y a 1h</time></div>
+        </article>
+        <article class="art">
+          <span class="rub">Économie · Énergie</span>
+          <h3><a href="#">Gaz GTA : la phase 2 d'exploitation entre dans le calendrier officiel</a></h3>
+          <p class="dek">BP et Kosmos confirment une mise en production progressive début 2027. Recettes revues à la hausse.</p>
+          <div class="meta"><span class="by">Cheikh Sarr</span><span class="dot"></span><time>Il y a 2h</time></div>
+        </article>
+        <article class="art">
+          <span class="rub">Diaspora · Marseille</span>
+          <h3><a href="#">À Marseille, les Sénégalais préparent les législatives — entre fierté et fatigue</a></h3>
+          <div class="meta"><span class="by">Bineta Sy, envoyée spéciale</span><span class="dot"></span><time>Ce matin</time><span class="dot"></span><span class="badge video" style="font-size:9px;padding:2px 6px">Vidéo · 4'12</span></div>
+        </article>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- À LA UNE GRID -->
+<section class="section">
+  <div class="wrap">
+    <div class="alaune-head">
+      <span class="lab">À la une — sélection rédaction</span>
+      <span class="ln"></span>
+      <a href="#" style="font:700 12px var(--sans);color:var(--blue);letter-spacing:.04em">Voir tout →</a>
+    </div>
+    <div class="alaune-grid">
+      <article class="art">
+        <div class="img"><img src="https://picsum.photos/seed/conseil-constitutionnel/600/400" alt="" /></div>
+        <span class="rub">Politique</span>
+        <h3><a href="#">L'opposition demande une réforme du Conseil constitutionnel</a></h3>
+        <div class="meta"><time>11:08</time><span class="dot"></span><span>3 min</span></div>
+      </article>
+      <article class="art">
+        <div class="img"><img src="https://picsum.photos/seed/bceao-fcfa/600/400" alt="" /></div>
+        <span class="rub">Économie</span>
+        <h3><a href="#">Le franc CFA de nouveau au centre des discussions à la BCEAO</a></h3>
+        <div class="meta"><time>10:42</time><span class="dot"></span><span>5 min</span></div>
+      </article>
+      <article class="art">
+        <div class="img"><img src="https://picsum.photos/seed/keurmassar-pluies/600/400" alt="" /></div>
+        <span class="rub">Société</span>
+        <h3><a href="#">Inondations à Keur Massar : l'État active le plan ORSEC</a></h3>
+        <div class="meta"><span class="badge live" style="font-size:9px;padding:2px 6px">DIRECT</span><time>09:30</time></div>
+      </article>
+      <article class="art">
+        <div class="img"><img src="https://picsum.photos/seed/youssou-ndour/600/400" alt="" /></div>
+        <span class="rub">Culture</span>
+        <h3><a href="#">Youssou Ndour annonce une tournée à travers cinq pays africains</a></h3>
+        <div class="meta"><time>09:15</time><span class="dot"></span><span class="badge video" style="font-size:9px;padding:2px 6px">Vidéo</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SÉNÉGAL -->
+<section class="section sn" data-screen-label="02 Sénégal">
+  <div class="wrap" style="padding-top:36px">
+    <div class="sec-head">
+      <div class="l"><span class="kicker">Notre pays</span><h2>Sénégal</h2></div>
+      <a href="#" class="more">Toute l'actualité du Sénégal</a>
+    </div>
+    <div class="sn-grid">
+      <article class="art medium">
+        <div class="img" style="aspect-ratio:3/2">
+          <img src="https://picsum.photos/seed/touba-magal/900/600" alt="Touba" />
+          <span class="cred">Photo · AFP</span>
+        </div>
+        <span class="rub">Religion · Touba</span>
+        <h3 style="font-size:34px;line-height:1.08"><a href="#">Touba se prépare au grand Magal : 5,2 millions de fidèles attendus</a></h3>
+        <p class="dek" style="font-size:15px">Le comité d'organisation a présenté son dispositif. Hébergement, sécurité, sanitaires : la ville sainte se métamorphose pour accueillir une foule jamais égalée.</p>
+        <div class="meta"><span class="by">Modou Fall, à Touba</span><span class="dot"></span><time>Aujourd'hui · 09h00</time><span class="dot"></span><span>Reportage 12 min</span></div>
+      </article>
+      <div class="sn-list">
+        <article class="art row">
+          <div class="img"><img src="https://picsum.photos/seed/ziguinchor-paix/300/300" alt="" /></div>
+          <div class="body">
+            <span class="rub">Casamance</span>
+            <h3><a href="#">À Ziguinchor, un accord met fin à 40 ans de conflit</a></h3>
+            <div class="meta"><time>Hier · 21h12</time><span class="dot"></span><span>Reportage</span></div>
+          </div>
+        </article>
+        <article class="art row">
+          <div class="img"><img src="https://picsum.photos/seed/brt-dakar/300/300" alt="" /></div>
+          <div class="body">
+            <span class="rub">Mobilité · Dakar</span>
+            <h3><a href="#">Le BRT change le quotidien à Dakar — premier bilan, six mois après</a></h3>
+            <div class="meta"><time>Aujourd'hui · 08h44</time><span class="dot"></span><span>Enquête</span></div>
+          </div>
+        </article>
+        <article class="art row">
+          <div class="img"><img src="https://picsum.photos/seed/justice-tribunal/300/300" alt="" /></div>
+          <div class="body">
+            <span class="rub">Justice</span>
+            <h3><a href="#">Affaire Sweet Beauty : la cour d'appel rendra sa décision vendredi</a></h3>
+            <div class="meta"><time>Aujourd'hui · 07h20</time></div>
+          </div>
+        </article>
+        <article class="art row">
+          <div class="img"><img src="https://picsum.photos/seed/mboro-phosphates/300/300" alt="" /></div>
+          <div class="body">
+            <span class="rub">Économie · Thiès</span>
+            <h3><a href="#">Mboro : les phosphates relancent l'emploi mais inquiètent les nappes</a></h3>
+            <div class="meta"><time>Hier</time><span class="dot"></span><span>Long format</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECT -->
+<section class="direct" data-screen-label="03 Direct">
+  <div class="wrap">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid #1d326b;padding-bottom:14px">
+      <div>
+        <span style="font:800 11px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#f0c8c5">▶ En direct & à la demande</span>
+        <h2>Écoutez À l'Heure</h2>
+      </div>
+      <span class="sub">12 podcasts · 4 émissions en direct · 24h/24</span>
+    </div>
+    <div class="direct-grid">
+      <div class="player">
+        <span class="live-tag"><span class="d"></span>EN DIRECT · ANTENNE</span>
+        <div class="show">JOURNAL · Présenté par Awa Sané</div>
+        <h3>Le journal de 13h — édition spéciale Saint-Louis</h3>
+        <div class="controls">
+          <button class="play" aria-label="Lecture"></button>
+          <div class="wave" aria-hidden="true">
+            <i style="height:8px"></i><i style="height:14px"></i><i style="height:22px"></i><i style="height:30px"></i><i style="height:18px"></i>
+            <i style="height:26px"></i><i style="height:34px"></i><i style="height:22px" class="hot"></i><i style="height:30px" class="hot"></i><i style="height:38px" class="hot"></i>
+            <i style="height:24px" class="hot"></i><i style="height:18px"></i><i style="height:28px"></i><i style="height:20px"></i><i style="height:12px"></i>
+            <i style="height:24px"></i><i style="height:32px"></i><i style="height:22px"></i><i style="height:14px"></i><i style="height:18px"></i>
+            <i style="height:26px"></i><i style="height:34px"></i><i style="height:22px"></i><i style="height:16px"></i><i style="height:24px"></i>
+            <i style="height:30px"></i><i style="height:22px"></i><i style="height:14px"></i><i style="height:20px"></i><i style="height:28px"></i>
+            <i style="height:18px"></i><i style="height:26px"></i><i style="height:14px"></i><i style="height:22px"></i><i style="height:30px"></i>
+            <i style="height:20px"></i><i style="height:14px"></i><i style="height:24px"></i><i style="height:18px"></i><i style="height:12px"></i>
+          </div>
+        </div>
+        <div class="now"><span>13:00 — 14:00</span><span>Prochain : Le Grand Débat · 14h</span></div>
+      </div>
+      <div class="pods">
+        <div class="pod">
+          <div class="cover">D</div>
+          <div class="body">
+            <span class="show">Les Décodeurs</span>
+            <h4>La CEDEAO peut-elle survivre au départ du Mali, du Burkina et du Niger ?</h4>
+            <span class="dur">28 min · Hier</span>
+          </div>
+          <button class="pl"></button>
+        </div>
+        <div class="pod">
+          <div class="cover b">T</div>
+          <div class="body">
+            <span class="show">Téranga · Le portrait</span>
+            <h4>Aïssata Tall Sall : « la diplomatie sénégalaise se réinvente »</h4>
+            <span class="dur">42 min · Cette semaine</span>
+          </div>
+          <button class="pl"></button>
+        </div>
+        <div class="pod">
+          <div class="cover g">É</div>
+          <div class="body">
+            <span class="show">Économie d'Afrique</span>
+            <h4>Pétrole sénégalais : à qui profite réellement la rente ?</h4>
+            <span class="dur">35 min · Lundi</span>
+          </div>
+          <button class="pl"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AFRIQUE + SIDEBAR -->
+<section class="section" data-screen-label="04 Afrique">
+  <div class="wrap">
+    <div class="sb-grid">
+      <div>
+        <div class="sec-head">
+          <div class="l"><span class="kicker">Continent</span><h2>Afrique</h2></div>
+          <a href="#" class="more">Tout l'agenda africain</a>
+        </div>
+        <div class="three">
+          <article class="art">
+            <div class="img" style="aspect-ratio:16/10"><img src="https://picsum.photos/seed/ivoire-presidentielle/900/560" alt="" /></div>
+            <span class="rub">Côte d'Ivoire</span>
+            <h3 style="font-size:28px"><a href="#">Présidentielle ivoirienne : les dernières manœuvres avant le scrutin d'octobre</a></h3>
+            <p class="dek">Alliances de dernière minute, retours sur la scène politique : Abidjan vit sous tension électorale.</p>
+            <div class="meta"><span class="by">Bureau d'Abidjan</span><span class="dot"></span><time>Il y a 3h</time></div>
+          </article>
+          <div class="col-list">
+            <article class="art row">
+              <div class="img"><img src="https://picsum.photos/seed/sahel-bamako/300/300" alt="" /></div>
+              <div class="body">
+                <span class="rub">Sahel · Mali</span>
+                <h3><a href="#">Un nouvel attentat secoue Bamako, 14 morts dans une caserne</a></h3>
+                <div class="meta"><time>06:14</time></div>
+              </div>
+            </article>
+            <article class="art row">
+              <div class="img"><img src="https://picsum.photos/seed/rdc-paix/300/300" alt="" /></div>
+              <div class="body">
+                <span class="rub">RDC · Goma</span>
+                <h3><a href="#">La trêve dans l'Est tient pour la troisième semaine consécutive</a></h3>
+                <div class="meta"><time>Hier</time></div>
+              </div>
+            </article>
+            <article class="art row">
+              <div class="img"><img src="https://picsum.photos/seed/maroc-algerie/300/300" alt="" /></div>
+              <div class="body">
+                <span class="rub">Maghreb</span>
+                <h3><a href="#">Maroc–Algérie : le froid diplomatique perdure malgré la médiation</a></h3>
+                <div class="meta"><time>Hier</time></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-list">
+            <article class="art row">
+              <div class="img"><img src="https://picsum.photos/seed/ethiopie-tigray/300/300" alt="" /></div>
+              <div class="body">
+                <span class="rub">Éthiopie</span>
+                <h3><a href="#">Tigré : Addis-Abeba accélère la reconstruction des écoles</a></h3>
+                <div class="meta"><time>Mardi</time></div>
+              </div>
+            </article>
+            <article class="art row">
+              <div class="img"><img src="https://picsum.photos/seed/nigeria-naira/300/300" alt="" /></div>
+              <div class="body">
+                <span class="rub">Nigeria</span>
+                <h3><a href="#">La naira repart à la baisse, la banque centrale temporise</a></h3>
+                <div class="meta"><time>Hier</time></div>
+              </div>
+            </article>
+            <article class="art row">
+              <div class="img"><img src="https://picsum.photos/seed/afrique-sud/300/300" alt="" /></div>
+              <div class="body">
+                <span class="rub">Afrique du Sud</span>
+                <h3><a href="#">Coupures d'électricité : Eskom annonce un nouveau plan de sortie</a></h3>
+                <div class="meta"><time>Aujourd'hui · 08h</time></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <aside style="display:flex;flex-direction:column;gap:24px;position:sticky;top:78px">
+        <div class="sidebar">
+          <h3>Les + lus</h3>
+          <ol class="top-list">
+            <li><div><div class="ti">« Nous sommes fatigués » : à Mbour, la colère des familles de migrants disparus</div><div class="meta">Société · 12 min</div></div></li>
+            <li><div><div class="ti">Modou Lô vs Siteu : pourquoi cette revanche divise les arènes</div><div class="meta">Lutte · 6 min</div></div></li>
+            <li><div><div class="ti">Pourquoi le Sénégal ne produit toujours pas son propre riz</div><div class="meta">Économie · Enquête</div></div></li>
+            <li><div><div class="ti">Diomaye Faye à Paris : ce que prévoit l'agenda du président</div><div class="meta">Politique · 4 min</div></div></li>
+            <li><div><div class="ti">Bouba Ndour réagit aux critiques sur le festival de Saint-Louis</div><div class="meta">Culture · 5 min</div></div></li>
+          </ol>
+        </div>
+
+        <div class="wolof-card">
+          <span class="lab">Mot du jour · Wolof</span>
+          <span class="word">Téranga</span>
+          <span class="pron">/te.ʁaŋ.ɡa/ · n.f.</span>
+          <span class="def">Hospitalité, art de bien recevoir. Valeur cardinale de la société sénégalaise — partager le repas, l'ombre, le silence.</span>
+        </div>
+
+        <div class="nl-card">
+          <span class="lab">Newsletter</span>
+          <h4>Le Brief de Dakar, chaque matin à 7h</h4>
+          <p>L'essentiel de l'actualité sénégalaise et africaine, en 5 minutes de lecture.</p>
+          <div class="form">
+            <input type="email" placeholder="votre@email.sn" />
+            <button>Je m'inscris</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- TRIBUNE -->
+<section class="tribune">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="l"><span class="kicker">Idées · Tribunes</span><h2>Débats</h2></div>
+      <a href="#" class="more">Toutes les tribunes</a>
+    </div>
+    <div class="tribune-grid">
+      <div>
+        <blockquote>« L'Afrique n'a pas besoin d'un nouveau modèle. Elle a besoin de croire en celui qu'elle est en train d'inventer. »</blockquote>
+        <cite>
+          <span class="av">FS</span>
+          <span class="who"><b>Felwine Sarr</b><span>Économiste, écrivain · Tribune libre</span></span>
+        </cite>
+      </div>
+      <div class="right">
+        <span class="lab">À lire aussi</span>
+        <h3>Cinq plumes pour comprendre le Sénégal d'aujourd'hui</h3>
+        <div class="others">
+          <a href="#"><span class="num">01</span><div><div class="ti">Souveraineté monétaire : pourquoi l'éco se fait attendre</div><div class="au">Carlos Lopes · Économie</div></div></a>
+          <a href="#"><span class="num">02</span><div><div class="ti">Justice et opinion : les paradoxes d'une réforme</div><div class="au">Ndèye Fatou Kane · Société</div></div></a>
+          <a href="#"><span class="num">03</span><div><div class="ti">Le Sahel ne se résume pas au djihadisme</div><div class="au">Bakary Sambe · Géopolitique</div></div></a>
+          <a href="#"><span class="num">04</span><div><div class="ti">Pourquoi la diaspora doit voter — vraiment</div><div class="au">Rama Yade · Politique</div></div></a>
+          <a href="#"><span class="num">05</span><div><div class="ti">L'art contemporain africain n'est pas une mode</div><div class="au">Aïcha Diallo · Culture</div></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPORT + CULTURE -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="l"><span class="kicker">Terrain & scène</span><h2>Sport · Culture</h2></div>
+      <a href="#" class="more">Tout voir</a>
+    </div>
+    <div class="alaune-grid">
+      <article class="art">
+        <div class="img"><img src="https://picsum.photos/seed/lions-teranga/600/400" alt="" /></div>
+        <span class="rub">Football · Lions</span>
+        <h3><a href="#">Mané, Sarr, Koulibaly : la liste qui fait vibrer la Téranga</a></h3>
+        <div class="meta"><time>Aujourd'hui</time><span class="dot"></span><span>Édition Sport</span></div>
+      </article>
+      <article class="art">
+        <div class="img"><img src="https://picsum.photos/seed/lutte-modou-lo/600/400" alt="" /></div>
+        <span class="rub">Lutte sénégalaise</span>
+        <h3><a href="#">Modou Lô vs Siteu : la revanche que tout Dakar attend</a></h3>
+        <div class="meta"><time>Hier</time><span class="dot"></span><span>Reportage</span></div>
+      </article>
+      <article class="art">
+        <div class="img"><img src="https://picsum.photos/seed/dakar-biennale/600/400" alt="" /></div>
+        <span class="rub">Arts · Dak'Art</span>
+        <h3><a href="#">La Biennale de Dakar 2026 dévoile sa direction artistique</a></h3>
+        <div class="meta"><time>Mardi</time><span class="dot"></span><span>Culture</span></div>
+      </article>
+      <article class="art">
+        <div class="img"><img src="https://picsum.photos/seed/cinema-mati-diop/600/400" alt="" /></div>
+        <span class="rub">Cinéma</span>
+        <h3><a href="#">Mati Diop, Cannes, et la nouvelle vague sénégalaise</a></h3>
+        <div class="meta"><time>Lundi</time><span class="dot"></span><span class="badge video" style="font-size:9px;padding:2px 6px">Vidéo</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MAGAZINE / DOSSIERS -->
+<section class="mag">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="l"><span class="kicker">Long format · Séries</span><h2>Nos dossiers</h2></div>
+      <a href="#" class="more">Tous les dossiers</a>
+    </div>
+    <div class="mag-grid">
+      <article class="mag-card">
+        <div class="img"><img src="https://picsum.photos/seed/dossier-petrole/600/600" alt="" /></div>
+        <div class="body">
+          <span class="lab">Série · 6 épisodes</span>
+          <h3>Pétrole et gaz : la promesse, le doute, la rente</h3>
+          <p class="dek">Six mois d'enquête au cœur des plateformes off-shore. Comment Sangomar et GTA changent — ou non — la vie des Sénégalais.</p>
+          <span class="ep">Épisode 4 · « À qui profite la manne ? »</span>
+        </div>
+      </article>
+      <article class="mag-card">
+        <div class="img"><img src="https://picsum.photos/seed/dossier-migrations/600/600" alt="" /></div>
+        <div class="body">
+          <span class="lab">Long format</span>
+          <h3>Barça wala Barzakh : ces jeunes qui choisissent encore la pirogue</h3>
+          <p class="dek">À Mbour, Saint-Louis et Kafountine, la rédaction a suivi pendant huit semaines des familles partagées entre l'espoir et le deuil.</p>
+          <span class="ep">Reportage · 22 min de lecture</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <span class="lg"><span class="a">À</span> l'Heure</span>
+        <p>Quotidien d'information indépendant. Sénégal — Afrique — Monde. Édité depuis Dakar, en français, anglais et wolof.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="X">𝕏</a>
+          <a href="#" aria-label="Instagram">◐</a>
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="WhatsApp">✉</a>
+        </div>
+      </div>
+      <div>
+        <h5>Rubriques</h5>
+        <ul>
+          <li><a href="#">Sénégal</a></li>
+          <li><a href="#">Afrique</a></li>
+          <li><a href="#">Monde</a></li>
+          <li><a href="#">Politique</a></li>
+          <li><a href="#">Économie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Magazines</h5>
+        <ul>
+          <li><a href="#">Sport · Lions</a></li>
+          <li><a href="#">Culture · Téranga</a></li>
+          <li><a href="#">Diaspora</a></li>
+          <li><a href="#">Idées · Débats</a></li>
+          <li><a href="#">Sciences</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Antenne</h5>
+        <ul>
+          <li><a href="#">Direct radio</a></li>
+          <li><a href="#">Programmes</a></li>
+          <li><a href="#">Podcasts</a></li>
+          <li><a href="#">Vidéos</a></li>
+          <li><a href="#">Fréquences</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>La rédaction</h5>
+        <ul>
+          <li><a href="#">Qui sommes-nous</a></li>
+          <li><a href="#">Charte éditoriale</a></li>
+          <li><a href="#">Nous contacter</a></li>
+          <li><a href="#">Carrières</a></li>
+          <li><a href="#">Annonceurs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2026 À l'Heure SA · Dakar, Sénégal · RC SN-DKR-2018-B-1042</span>
+      <div class="links">
+        <a href="#">Mentions légales</a>
+        <a href="#">CGU</a>
+        <a href="#">Cookies</a>
+        <a href="#">Plan du site</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- TWEAKS -->
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "paper",
+  "accent": "brique",
+  "density": "regular",
+  "grid": "dense"
+}/*EDITMODE-END*/;
+
+function TweaksApp() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  React.useEffect(() => {
+    document.body.dataset.theme = t.theme;
+    document.body.dataset.accent = t.accent;
+    document.body.dataset.density = t.density;
+    document.body.dataset.grid = t.grid;
+  }, [t]);
+  return (
+    <TweaksPanel title="Tweaks">
+      <TweakSection label="Ambiance" />
+      <TweakRadio label="Fond" value={t.theme} options={["paper","ink"]} onChange={(v)=>setTweak('theme',v)} />
+      <TweakSelect label="Accent (le « rouge »)" value={t.accent}
+        options={[
+          {value:"brique",label:"Brique RFI · #C8302A"},
+          {value:"green", label:"Vert Sénégal · #0A8A4A"},
+          {value:"ocre",  label:"Ocre Sahel · #B8731F"},
+          {value:"teal",  label:"Atlantique · #127A82"},
+        ]}
+        onChange={(v)=>setTweak('accent',v)} />
+      <TweakSection label="Mise en page" />
+      <TweakRadio label="Densité" value={t.density} options={["compact","regular","comfy"]} onChange={(v)=>setTweak('density',v)} />
+      <TweakRadio label="Grille" value={t.grid} options={["dense","airy"]} onChange={(v)=>setTweak('grid',v)} />
+    </TweaksPanel>
+  );
+}
+
+const accentMap = { brique:"#C8302A", green:"#0A8A4A", ocre:"#B8731F", teal:"#127A82" };
+function applyAccent(name){
+  const c = accentMap[name] || "#C8302A";
+  document.documentElement.style.setProperty('--red', c);
+}
+new MutationObserver(()=>applyAccent(document.body.dataset.accent))
+  .observe(document.body, {attributes:true, attributeFilter:["data-accent"]});
+
+const root = document.createElement('div');
+document.body.appendChild(root);
+ReactDOM.createRoot(root).render(<TweaksApp/>);
+</script>
+
+</body>
+</html>

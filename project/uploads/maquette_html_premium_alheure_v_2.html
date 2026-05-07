@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A l'Heure — Quotidien digital sénégalais</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    :root{
+      --blue:#003D99;
+      --red:#D42B2B;
+      --dark:#111827;
+      --gray:#6B7280;
+      --light:#F8FAFC;
+      --border:#E5E7EB;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#fff;
+      color:var(--dark);
+      line-height:1.6;
+    }
+
+    .container{
+      max-width:1280px;
+      margin:auto;
+      padding:0 24px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      background:#fff;
+      border-bottom:1px solid var(--border);
+      z-index:100;
+    }
+
+    .topbar{
+      background:var(--blue);
+      color:#fff;
+      font-size:12px;
+      padding:8px 0;
+    }
+
+    .topbar .container{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .navbar{
+      height:80px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      font-family:'Playfair Display',serif;
+      font-size:38px;
+      font-weight:800;
+      color:var(--blue);
+    }
+
+    .logo span{
+      color:var(--red);
+    }
+
+    nav{
+      display:flex;
+      gap:32px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--dark);
+      font-size:14px;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    nav a:hover{
+      color:var(--red);
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:32px;
+      padding:50px 0;
+    }
+
+    .hero-main img,
+    .hero-side img,
+    .card img{
+      width:100%;
+      object-fit:cover;
+      border-radius:12px;
+    }
+
+    .hero-main img{
+      height:520px;
+    }
+
+    .hero-side{
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+    }
+
+    .hero-side img{
+      height:220px;
+    }
+
+    .category{
+      display:inline-block;
+      background:var(--red);
+      color:#fff;
+      padding:5px 12px;
+      border-radius:30px;
+      font-size:11px;
+      font-weight:700;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+
+    h1{
+      font-family:'Playfair Display',serif;
+      font-size:52px;
+      line-height:1.1;
+      margin:20px 0;
+    }
+
+    h2{
+      font-family:'Playfair Display',serif;
+      font-size:28px;
+      line-height:1.3;
+      margin-top:16px;
+    }
+
+    .excerpt{
+      color:var(--gray);
+      margin-top:18px;
+      font-size:18px;
+    }
+
+    .meta{
+      margin-top:20px;
+      color:var(--gray);
+      font-size:13px;
+    }
+
+    .section{
+      padding:60px 0;
+      border-top:1px solid var(--border);
+    }
+
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:40px;
+    }
+
+    .section-title{
+      font-size:14px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--blue);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:32px;
+    }
+
+    .card img{
+      height:240px;
+      margin-bottom:18px;
+    }
+
+    .card p{
+      color:var(--gray);
+      font-size:14px;
+      margin-top:10px;
+    }
+
+    .editorial{
+      background:var(--light);
+      padding:80px 0;
+      margin-top:60px;
+    }
+
+    .editorial-box{
+      max-width:900px;
+      margin:auto;
+      text-align:center;
+    }
+
+    .editorial h2{
+      font-size:42px;
+      margin-bottom:24px;
+    }
+
+    .quote{
+      font-family:'Playfair Display',serif;
+      font-size:28px;
+      color:var(--blue);
+      margin-top:30px;
+    }
+
+    .newsletter{
+      background:var(--blue);
+      color:#fff;
+      padding:80px 0;
+      text-align:center;
+    }
+
+    .newsletter h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .newsletter input{
+      width:320px;
+      padding:16px;
+      border:none;
+      border-radius:6px;
+      margin-right:10px;
+      font-size:15px;
+    }
+
+    .newsletter button{
+      padding:16px 24px;
+      border:none;
+      background:var(--red);
+      color:#fff;
+      border-radius:6px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    footer{
+      background:#0F172A;
+      color:#94A3B8;
+      padding:60px 0 30px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr;
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-title{
+      color:#fff;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    footer a{
+      display:block;
+      text-decoration:none;
+      color:#94A3B8;
+      margin-bottom:10px;
+    }
+
+    .copyright{
+      border-top:1px solid rgba(255,255,255,.1);
+      padding-top:20px;
+      font-size:13px;
+      text-align:center;
+    }
+
+    @media(max-width:900px){
+      .hero,
+      .grid,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      nav{
+        display:none;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .newsletter input{
+        width:100%;
+        margin-bottom:12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>Mercredi 7 mai 2026</span>
+    <span>Informer vite. Informer juste.</span>
+  </div>
+</div>
+
+<header>
+  <div class="container navbar">
+    <div class="logo">A l'<span>Heure</span></div>
+
+    <nav>
+      <a href="#">Actualités</a>
+      <a href="#">Société</a>
+      <a href="#">ActuAfrique</a>
+      <a href="#">Sport</a>
+      <a href="#">Culture</a>
+      <a href="#">Opinion</a>
+      <a href="#">Vidéos</a>
+    </nav>
+  </div>
+</header>
+
+<section class="container hero">
+
+  <div class="hero-main">
+    <span class="category">À la Une</span>
+
+    <h1>
+      Le Sénégal entre dans une nouvelle phase politique et économique
+    </h1>
+
+    <p class="excerpt">
+      Entre réformes institutionnelles, défis économiques et repositionnement diplomatique,
+      le pays accélère sa transformation.
+    </p>
+
+    <div class="meta">
+      Par la rédaction • 7 min de lecture
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1400&auto=format&fit=crop" alt="actualité Sénégal">
+  </div>
+
+  <div class="hero-side">
+
+    <div>
+      <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=1200&auto=format&fit=crop" alt="sport">
+      <h2>CAN 2026 : les Lions veulent confirmer leur domination</h2>
+      <div class="meta">Sport • 4 min</div>
+    </div>
+
+    <div>
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="culture">
+      <h2>Dakar confirme son statut de capitale culturelle africaine</h2>
+      <div class="meta">Culture • 5 min</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section container">
+
+  <div class="section-header">
+    <div class="section-title">Actualités</div>
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop">
+      <h2>Le gouvernement accélère les réformes économiques</h2>
+      <p>Les autorités annoncent de nouvelles mesures pour soutenir la croissance et l’emploi.</p>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop">
+      <h2>Le numérique devient un levier stratégique au Sénégal</h2>
+      <p>Startups, fintech et innovation redessinent progressivement l’économie nationale.</p>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop">
+      <h2>La jeunesse sénégalaise face aux défis de l’emploi</h2>
+      <p>Entre entrepreneuriat et nouvelles opportunités digitales, une génération se transforme.</p>
+    </article>
+
+  </div>
+
+</section>
+
+<section class="editorial">
+  <div class="container editorial-box">
+
+    <div class="section-title">Éditorial</div>
+
+    <h2>
+      Construire un média crédible dans une époque d’instantanéité
+    </h2>
+
+    <p>
+      Dans un environnement dominé par la vitesse et la viralité, la crédibilité éditoriale devient
+      la principale valeur d’un média moderne.
+    </p>
+
+    <div class="quote">
+      « Informer vite ne doit jamais empêcher d’informer juste. »
+    </div>
+
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container">
+
+    <h2>Recevez l’essentiel de l’actualité</h2>
+
+    <p style="margin-bottom:30px;opacity:.8">
+      Chaque matin, les informations majeures du Sénégal et d’Afrique.
+    </p>
+
+    <input type="email" placeholder="Votre adresse email">
+    <button>S'abonner</button>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <div class="logo" style="font-size:34px;color:white">
+          A l'<span>Heure</span>
+        </div>
+
+        <p style="margin-top:20px">
+          Quotidien digital sénégalais premium.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-title">Rubriques</div>
+        <a href="#">Actualités</a>
+        <a href="#">Société</a>
+        <a href="#">ActuAfrique</a>
+        <a href="#">Sport</a>
+      </div>
+
+      <div>
+        <div class="footer-title">À propos</div>
+        <a href="#">Publicité</a>
+        <a href="#">Contact</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Newsletter</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 A l'Heure — Tous droits réservés.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

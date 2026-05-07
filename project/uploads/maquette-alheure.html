@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A l'Heure — Maquette avec articles réels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue:#003D99; --blue-light:#1A5BC4; --blue-dark:#00287A;
+      --red:#D42B2B;  --red-light:#E84444;
+      --n50:#F8F9FA;  --n100:#F1F3F5; --n200:#E9ECEF;
+      --n400:#CED4DA; --n500:#ADB5BD; --n600:#6C757D;
+      --n700:#495057; --n800:#343A40; --n900:#212529;
+      --seneweb:#E8232A; --dakaractu:#005BAA; --leral:#1C8C44;
+    }
+    html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
+    body { font-family:'Inter',system-ui,sans-serif; background:var(--n50); color:var(--n900); }
+    a    { text-decoration:none; color:inherit; }
+    img  { display:block; max-width:100%; }
+    .container { max-width:1280px; margin:0 auto; padding:0 16px; }
+
+    .badge { display:inline-block; padding:2px 8px; font-size:10px; font-weight:700;
+             text-transform:uppercase; letter-spacing:.06em; border-radius:2px; color:#fff; }
+    .b-societe   { background:#7c3aed; }  .b-politique { background:var(--blue); }
+    .b-sport     { background:#16a34a; }  .b-economie  { background:var(--blue-dark); }
+    .b-culture   { background:#d97706; }  .b-religion  { background:#0d9488; }
+    .b-sante     { background:#e11d48; }  .b-faits     { background:#6b7280; }
+    .b-afrique   { background:#b45309; }  .b-intl      { background:#1d4ed8; }
+    .b-joj       { background:#0284c7; }  .b-media     { background:#7c3aed; }
+    .b-gaming    { background:#6d28d9; }
+
+    .src-tag { display:inline-flex; align-items:center; gap:5px; font-size:9px; font-weight:700;
+               padding:2px 7px; border-radius:99px; border:1.5px solid; }
+    .src-sw { color:var(--seneweb);   border-color:var(--seneweb); }
+    .src-da { color:var(--dakaractu); border-color:var(--dakaractu); }
+    .src-lr { color:var(--leral);     border-color:var(--leral); }
+    .dot    { width:5px; height:5px; border-radius:50%; flex-shrink:0; }
+    .dot-sw { background:var(--seneweb); }
+    .dot-da { background:var(--dakaractu); }
+    .dot-lr { background:var(--leral); }
+
+    .topbar { background:var(--blue); color:#fff; font-size:11px; height:32px; display:flex; align-items:center; }
+    .topbar-inner { display:flex; align-items:center; justify-content:space-between; width:100%; }
+    .topbar a { opacity:.8; } .topbar a:hover { opacity:1; color:#fca5a5; }
+    .topbar-links { display:flex; gap:16px; }
+
+    header { position:sticky; top:0; z-index:100; background:#fff;
+             border-bottom:1px solid var(--n200); box-shadow:0 1px 6px rgba(0,0,0,.07); }
+    .hdr-main { display:flex; align-items:center; justify-content:space-between; height:64px; gap:16px; }
+    .logo-b { font-family:'Playfair Display',serif; font-size:26px; font-weight:800; color:var(--blue); letter-spacing:-.5px; }
+    .logo-r { font-family:'Playfair Display',serif; font-size:26px; font-weight:800; color:var(--red);  letter-spacing:-.5px; }
+    .logo-sub span { display:block; font-size:8.5px; text-transform:uppercase; letter-spacing:.12em; color:var(--n500); font-weight:600; }
+    .search { position:relative; flex:1; max-width:420px; }
+    .search input { width:100%; padding:8px 16px 8px 36px; font-size:13px; background:var(--n100);
+                    border:1px solid var(--n200); border-radius:99px; outline:none; }
+    .search input:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(0,61,153,.12); }
+    .search-icon { position:absolute; left:11px; top:50%; transform:translateY(-50%); color:var(--n500); }
+    .btn-nl { background:var(--red); color:#fff; padding:8px 16px; border-radius:4px; font-size:12px; font-weight:700; white-space:nowrap; }
+
+    nav { border-top:1px solid var(--n100); background:#fff; }
+    .nav-inner { display:flex; align-items:center; overflow-x:auto; scrollbar-width:none; }
+    .nav-inner::-webkit-scrollbar { display:none; }
+    .nav-a { padding:10px 14px; font-size:12px; font-weight:700; text-transform:uppercase;
+             letter-spacing:.05em; color:var(--n700); border-bottom:2px solid transparent; white-space:nowrap; }
+    .nav-a:hover,.nav-a.on { color:var(--blue); }
+    .nav-a.on { border-bottom-color:var(--red); }
+    .nav-live { margin-left:auto; display:flex; align-items:center; gap:6px; padding:5px 14px;
+                background:var(--red); color:#fff; font-size:11px; font-weight:800; border-radius:3px; }
+    .ldot { width:7px; height:7px; background:#fff; border-radius:50%; animation:pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.4} }
+
+    .brk { background:var(--n900); color:#fff; display:flex; align-items:center; height:36px; overflow:hidden; }
+    .brk-lbl { background:var(--red); color:#fff; padding:0 14px; height:100%; display:flex; align-items:center;
+               font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.1em; white-space:nowrap; flex-shrink:0; }
+    .ticker-w { flex:1; overflow:hidden; margin-left:12px; }
+    .ticker   { display:flex; gap:40px; white-space:nowrap; animation:tick 55s linear infinite; }
+    .ticker:hover { animation-play-state:paused; }
+    @keyframes tick { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    .ticker a { font-size:12.5px; color:#d1d5db; } .ticker a:hover { color:var(--red-light); }
+
+    .src-panel { background:#fff; border-bottom:3px solid var(--n100); }
+    .src-tabs  { display:flex; gap:0; overflow-x:auto; scrollbar-width:none; }
+    .src-tabs::-webkit-scrollbar { display:none; }
+    .src-tab { display:flex; align-items:center; gap:8px; padding:12px 22px; font-size:13px; font-weight:700;
+               border-bottom:3px solid transparent; margin-bottom:-3px; white-space:nowrap; cursor:pointer; color:var(--n600); }
+    .tab-sw { color:var(--seneweb);   border-bottom-color:var(--seneweb); }
+    .tab-da { color:var(--dakaractu); border-bottom-color:var(--dakaractu); }
+    .tab-lr { color:var(--leral);     border-bottom-color:var(--leral); }
+    .tl  { width:26px; height:26px; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; color:#fff; }
+    .tl-s { background:var(--seneweb); } .tl-d { background:var(--dakaractu); } .tl-l { background:var(--leral); }
+    .cnt-badge { font-size:10px; padding:1px 7px; border-radius:99px; }
+    .cnt-s { background:#fef2f2; color:#dc2626; } .cnt-d { background:#eff6ff; color:#1d4ed8; } .cnt-l { background:#f0fdf4; color:#15803d; }
+
+    .pg { display:grid; grid-template-columns:1fr 300px; gap:28px; padding:24px 0; }
+    @media(max-width:900px){ .pg { grid-template-columns:1fr; } }
+
+    .sh  { display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; }
+    .st  { font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--n900); border-left:4px solid var(--blue); padding-left:10px; }
+    .st-r { border-left-color:var(--red); }
+    .see { font-size:11px; font-weight:700; color:var(--blue); text-transform:uppercase; }
+
+    .src-sh { display:flex; align-items:center; gap:10px; margin-bottom:16px; padding-bottom:10px; border-bottom:2px solid var(--n100); }
+    .src-pill { display:inline-flex; align-items:center; gap:5px; padding:4px 12px; border-radius:99px; font-size:11px; font-weight:800; text-transform:uppercase; color:#fff; }
+    .p-s { background:var(--seneweb); } .p-d { background:var(--dakaractu); } .p-l { background:var(--leral); }
+    .src-nm { font-size:14px; font-weight:700; color:var(--n700); }
+    .src-lk { font-size:11px; color:var(--n500); margin-left:auto; }
+
+    .hero { display:grid; grid-template-columns:2fr 1fr; gap:16px; margin-bottom:32px; }
+    @media(max-width:768px){ .hero { grid-template-columns:1fr; } }
+    .hero-sec { display:flex; flex-direction:column; gap:16px; }
+
+    .fc { position:relative; border-radius:10px; overflow:hidden; cursor:pointer; background:var(--n200); display:block; }
+    .fc img { width:100%; height:100%; object-fit:cover; transition:transform .5s; }
+    .fc:hover img { transform:scale(1.04); }
+    .fc-ov { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 55%,transparent 100%); }
+    .fc-body { position:absolute; bottom:0; left:0; right:0; padding:18px; }
+    .fc-title { font-family:'Playfair Display',serif; font-weight:700; color:#fff; line-height:1.25; margin-top:8px; }
+    .fc:hover .fc-title { color:#fca5a5; }
+    .fc-meta { color:#9ca3af; font-size:11px; margin-top:6px; display:flex; align-items:center; gap:6px; }
+
+    .sec { margin-bottom:32px; }
+    .g3  { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .g2  { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+    .g2h { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px; }
+    @media(max-width:700px){ .g3,.g2,.g2h { grid-template-columns:1fr; } }
+
+    .ac { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.07); transition:box-shadow .2s; display:block; }
+    .ac:hover { box-shadow:0 6px 20px rgba(0,0,0,.13); }
+    .ac-img { position:relative; aspect-ratio:16/9; overflow:hidden; background:var(--n100); }
+    .ac-img img { width:100%; height:100%; object-fit:cover; transition:transform .3s; }
+    .ac:hover .ac-img img { transform:scale(1.05); }
+    .bw { position:absolute; top:8px; left:8px; }
+    .ac-body { padding:14px; }
+    .ac-title { font-family:'Playfair Display',serif; font-size:14px; font-weight:600; color:var(--n900); line-height:1.4;
+                display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .ac:hover .ac-title { color:var(--blue); }
+    .ac-meta { display:flex; align-items:center; justify-content:space-between; margin-top:10px; font-size:11px; color:var(--n500); }
+
+    .hcard { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.07); transition:box-shadow .2s; display:flex; }
+    .hcard:hover { box-shadow:0 5px 16px rgba(0,0,0,.12); }
+    .hcard-img { width:100px; height:78px; flex-shrink:0; overflow:hidden; }
+    .hcard-img img { width:100%; height:100%; object-fit:cover; }
+    .hcard-body { padding:10px 12px; display:flex; flex-direction:column; justify-content:center; gap:5px; }
+    .hcard-title { font-family:'Playfair Display',serif; font-size:12px; font-weight:600; color:var(--n900); line-height:1.35;
+                   display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .hcard:hover .hcard-title { color:var(--blue); }
+
+    aside { display:flex; flex-direction:column; gap:0; }
+    .wgt { background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.07); padding:16px; margin-bottom:20px; }
+    .ad  { background:var(--n100); border:1.5px dashed var(--n400); border-radius:8px; display:flex; align-items:center;
+           justify-content:center; color:var(--n500); font-size:11px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:20px; }
+    .ad-rect { height:250px; }
+
+    .cmp-item { display:flex; gap:10px; padding:10px 0; border-bottom:1px solid var(--n100); }
+    .cmp-item:last-child { border-bottom:none; }
+    .cmp-dot  { width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:5px; }
+    .cmp-title { font-size:12.5px; font-weight:600; color:var(--n800); line-height:1.4;
+                 display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    .cmp-title:hover { color:var(--blue); }
+    .cmp-src  { font-size:10px; color:var(--n400); margin-top:3px; }
+
+    .nl-wgt { background:var(--blue); color:#fff; }
+    .nl-wgt h4 { font-family:'Playfair Display',serif; font-size:17px; margin-bottom:4px; }
+    .nl-wgt p  { font-size:12px; color:#93c5fd; margin-bottom:12px; }
+    .nl-wgt input  { width:100%; padding:8px 12px; font-size:13px; border-radius:4px; border:none; outline:none; margin-bottom:8px; color:var(--n900); }
+    .nl-wgt button { width:100%; padding:9px; font-size:13px; font-weight:700; background:var(--red); color:#fff; border:none; border-radius:4px; cursor:pointer; }
+
+    .fnl { background:var(--blue); padding:28px 0; }
+    .fnl-in { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .fnl h3 { font-family:'Playfair Display',serif; color:#fff; font-size:20px; }
+    .fnl p  { color:#93c5fd; font-size:13px; }
+    .fnl form { display:flex; gap:8px; }
+    .fnl input  { padding:9px 16px; font-size:13px; border-radius:4px; border:none; width:240px; outline:none; }
+    .fnl button { padding:9px 20px; background:var(--red); color:#fff; font-size:13px; font-weight:700; border:none; border-radius:4px; cursor:pointer; }
+    footer { background:var(--n900); color:#9ca3af; }
+    .fg { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:40px; padding:40px 0; }
+    @media(max-width:768px){ .fg { grid-template-columns:1fr 1fr; } }
+    .f-logo { font-family:'Playfair Display',serif; font-size:24px; font-weight:800; color:#fff; margin-bottom:12px; }
+    .f-logo span { color:var(--red); }
+    .f-col h5 { font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:#fff; font-weight:700; margin-bottom:12px; }
+    .f-col a  { display:block; font-size:13px; color:#6b7280; margin-bottom:8px; }
+    .f-col a:hover { color:#fff; }
+    .f-bot { border-top:1px solid #1f2937; display:flex; align-items:center; justify-content:space-between; height:48px; font-size:11px; color:#4b5563; }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-inner">
+      <span style="opacity:.75">Mercredi 7 mai 2026 — Articles en temps réel</span>
+      <div class="topbar-links">
+        <a href="https://www.seneweb.com" target="_blank">Seneweb</a>
+        <a href="https://www.dakaractu.com" target="_blank">Dakaractu</a>
+        <a href="https://www.leral.net" target="_blank">Leral.net</a>
+        <span style="opacity:.3">|</span>
+        <a href="#">Newsletter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="hdr-main">
+      <a href="#" style="display:flex;align-items:center;gap:8px">
+        <span><span class="logo-b">A l'</span><span class="logo-r">Heure</span></span>
+        <div class="logo-sub" style="margin-left:4px">
+          <span>Actualité Sénégalaise</span>
+          <span style="color:#d1d5db">en temps réel</span>
+        </div>
+      </a>
+      <div class="search">
+        <span class="search-icon">🔍</span>
+        <input type="search" placeholder="Rechercher une actualité..." />
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <span style="font-size:20px;cursor:pointer">🔔</span>
+        <a href="#" class="btn-nl">Newsletter</a>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-a on">Accueil</a>
+        <a href="#" class="nav-a">Politique</a>
+        <a href="#" class="nav-a">Économie</a>
+        <a href="#" class="nav-a">Sport</a>
+        <a href="#" class="nav-a">Société</a>
+        <a href="#" class="nav-a">Culture</a>
+        <a href="#" class="nav-a">Religion</a>
+        <a href="#" class="nav-a">Diaspora</a>
+        <a href="#" class="nav-a">Vidéos</a>
+        <a href="#" class="nav-live"><span class="ldot"></span>Live</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- BREAKING NEWS -->
+<div class="brk">
+  <span class="brk-lbl">⚡ Flash</span>
+  <div class="ticker-w">
+    <div class="ticker">
+      <a href="https://www.leral.net/JOJ-2026-le-Prefet-de-Dakar-ordonne-la-liberation-des-emprises-du-canal-de-la-Gueule-Tapee_a398734.html" target="_blank">JOJ 2026 : le Préfet de Dakar ordonne la libération des emprises du canal de la Gueule Tapée &nbsp;|</a>
+      <a href="https://www.seneweb.com/fr/news/Afrique/mali-plus-de-30-morts-dans-deux-attaques_n_491847.html" target="_blank">Mali : plus de 30 morts dans des attaques revendiquées par le JNIM &nbsp;|</a>
+      <a href="https://www.dakaractu.com/Son-deces-annonce-sur-les-reseaux-sociaux-Mamour-Diallo-rassure-ses-proches_a271315.html" target="_blank">Mamour Diallo rassure : « Je me porte à merveille » &nbsp;|</a>
+      <a href="https://www.leral.net/Idrissa-Gana-Gueye-proche-d-une-prolongation-avec-Everton_a398732.html" target="_blank">Idrissa Gana Guèye proche d'une prolongation avec Everton &nbsp;|</a>
+      <a href="https://www.dakaractu.com/Risque-de-defaut-de-paiement-en-Afrique_a271071.html" target="_blank">Risque de défaut de paiement : le Sénégal sous surveillance &nbsp;|</a>
+      <a href="https://www.seneweb.com/fr/news/Societe/wakhinane-nimzatt-comment-le-lutteur-bebe-diene_n_491826.html" target="_blank">Lutteur Bébé Diène et ses complices démasqués à Wakhinane &nbsp;|</a>
+      <!-- duplicate -->
+      <a href="https://www.leral.net/JOJ-2026-le-Prefet-de-Dakar-ordonne-la-liberation-des-emprises-du-canal-de-la-Gueule-Tapee_a398734.html" target="_blank">JOJ 2026 : le Préfet de Dakar ordonne la libération des emprises du canal de la Gueule Tapée &nbsp;|</a>
+      <a href="https://www.seneweb.com/fr/news/Afrique/mali-plus-de-30-morts-dans-deux-attaques_n_491847.html" target="_blank">Mali : plus de 30 morts dans des attaques revendiquées par le JNIM &nbsp;|</a>
+      <a href="https://www.dakaractu.com/Son-deces-annonce-sur-les-reseaux-sociaux-Mamour-Diallo-rassure-ses-proches_a271315.html" target="_blank">Mamour Diallo rassure : « Je me porte à merveille » &nbsp;|</a>
+      <a href="https://www.leral.net/Idrissa-Gana-Gueye-proche-d-une-prolongation-avec-Everton_a398732.html" target="_blank">Idrissa Gana Guèye proche d'une prolongation avec Everton &nbsp;|</a>
+      <a href="https://www.dakaractu.com/Risque-de-defaut-de-paiement-en-Afrique_a271071.html" target="_blank">Risque de défaut de paiement : le Sénégal sous surveillance &nbsp;|</a>
+      <a href="https://www.seneweb.com/fr/news/Societe/wakhinane-nimzatt-comment-le-lutteur-bebe-diene_n_491826.html" target="_blank">Lutteur Bébé Diène et ses complices démasqués à Wakhinane &nbsp;|</a>
+    </div>
+  </div>
+</div>
+
+<!-- SOURCES PANEL -->
+<div class="src-panel">
+  <div class="container">
+    <div class="src-tabs">
+      <div class="src-tab tab-sw"><div class="tl tl-s">SW</div>Seneweb.com<span class="cnt-badge cnt-s">8 articles</span></div>
+      <div class="src-tab tab-da"><div class="tl tl-d">DA</div>Dakaractu.com<span class="cnt-badge cnt-d">8 articles</span></div>
+      <div class="src-tab tab-lr"><div class="tl tl-l">LN</div>Leral.net<span class="cnt-badge cnt-l">8 articles</span></div>
+      <span style="margin-left:auto;display:flex;align-items:center;font-size:11px;color:var(--n500)">🕐 Mis à jour aujourd'hui</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+  <div class="pg">
+
+    <!-- ════════ COLONNE GAUCHE ════════════════════════════ -->
+    <div>
+      <div class="sh" style="margin-top:20px">
+        <h2 class="st">À la Une — Articles du jour</h2>
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <!-- Principal : lutteur sénégalais (homme africain athlétique) -->
+        <div style="height:400px">
+          <a href="https://www.seneweb.com/fr/news/Societe/wakhinane-nimzatt-comment-le-lutteur-bebe-diene-et-ses-complices-ont-ete-demasques_n_491826.html"
+             target="_blank" class="fc" style="height:100%">
+            <!-- Homme africain sportif / athlète -->
+            <img src="https://images.unsplash.com/photo-1547126010-c5c30ff72f27?w=900&q=80"
+                 alt="Lutteur africain" style="height:400px;object-position:center top" />
+            <div class="fc-ov"></div>
+            <div class="fc-body">
+              <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+                <span class="badge b-societe">Société</span>
+                <span class="src-tag src-sw"><span class="dot dot-sw"></span>Seneweb</span>
+              </div>
+              <div class="fc-title" style="font-size:20px">
+                Wakhinane Nimzatt — Comment le lutteur Bébé Diène et ses complices ont été démasqués
+              </div>
+              <div class="fc-meta">🕐 <span>Aujourd'hui</span> · <span>Seneweb.com</span></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="hero-sec">
+          <!-- JOJ 2026 — stade / infrastructures sportives -->
+          <a href="https://www.leral.net/JOJ-2026-le-Prefet-de-Dakar-ordonne-la-liberation-des-emprises-du-canal-de-la-Gueule-Tapee_a398734.html"
+             target="_blank" class="fc" style="flex:1">
+            <img src="https://images.unsplash.com/photo-1541919329513-35f7af297129?w=600&q=80"
+                 alt="Stade sportif Dakar JOJ" style="height:187px" />
+            <div class="fc-ov"></div>
+            <div class="fc-body">
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="badge b-joj">JOJ 2026</span>
+                <span class="src-tag src-lr"><span class="dot dot-lr"></span>Leral.net</span>
+              </div>
+              <div class="fc-title" style="font-size:14px">Le Préfet de Dakar ordonne la libération des emprises du canal de la Gueule Tapée</div>
+            </div>
+          </a>
+          <!-- Macky Sall ONU — homme africain en costume / discours -->
+          <a href="https://www.dakaractu.com/Audition-Candidats-a-ONU-Macky-Sall-presente-sa-vision-axee-sur-le-dialogue_a271236.html"
+             target="_blank" class="fc" style="flex:1">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+                 alt="Homme africain diplomate" style="height:187px" />
+            <div class="fc-ov"></div>
+            <div class="fc-body">
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="badge b-politique">Diplomatie</span>
+                <span class="src-tag src-da"><span class="dot dot-da"></span>Dakaractu</span>
+              </div>
+              <div class="fc-title" style="font-size:14px">Macky Sall présente sa vision axée sur le dialogue pour l'ONU</div>
+            </div>
+          </a>
+        </div>
+      </div><!-- /hero -->
+
+      <!-- ════════ SENEWEB ════════════════════════════════ -->
+      <div class="sec">
+        <div class="src-sh">
+          <span class="src-pill p-s">SW</span>
+          <span class="src-nm">Seneweb.com</span>
+          <a href="https://www.seneweb.com" target="_blank" class="src-lk">Voir le site →</a>
+        </div>
+        <div class="g3" style="margin-bottom:16px">
+
+          <!-- 1. Bébé Diène lutte — homme africain sportif -->
+          <a href="https://www.seneweb.com/fr/news/Societe/wakhinane-nimzatt-comment-le-lutteur-bebe-diene-et-ses-complices-ont-ete-demasques_n_491826.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80"
+                   alt="Athlète africain lutteur" />
+              <div class="bw"><span class="badge b-societe">Société</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Wakhinane Nimzatt — Comment le lutteur Bébé Diène et ses complices ont été démasqués</div>
+              <div class="ac-meta"><span class="src-tag src-sw"><span class="dot dot-sw"></span>Seneweb</span></div>
+            </div>
+          </a>
+
+          <!-- 2. Lat Diop / Farba Ngom — homme africain mature -->
+          <a href="https://www.seneweb.com/fr/news/Societe/rebeuss-matelas-ventilateurs-beignets-avocats-farba-ngom-raconte-la-vie-de-lat-diop-en-prison_n_491814.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=600&q=80"
+                   alt="Homme africain sérieux" />
+              <div class="bw"><span class="badge b-politique">Justice</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Rebeuss — Farba Ngom raconte la vie de Lat Diop en prison : matelas, ventilateurs, beignets…</div>
+              <div class="ac-meta"><span class="src-tag src-sw"><span class="dot dot-sw"></span>Seneweb</span></div>
+            </div>
+          </a>
+
+          <!-- 3. Fraude informaticien — image tech (non-personne) -->
+          <a href="https://www.seneweb.com/fr/news/Societe/fraude-xxl-tout-sur-les-methodes-sophistiquees-de-linformaticien-arrete_n_491828.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80"
+                   alt="Cybersécurité fraude" />
+              <div class="bw"><span class="badge b-faits">Fraude</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Fraude XXL : méthodes sophistiquées de l'informaticien arrêté avec son impressionnant arsenal</div>
+              <div class="ac-meta"><span class="src-tag src-sw"><span class="dot dot-sw"></span>Seneweb</span></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="g3">
+          <!-- 4. Rwanda YouTubeur — homme africain avec téléphone -->
+          <a href="https://www.seneweb.com/fr/news/Afrique/rwanda-un-youtubeur-critique-du-pouvoir-decede-en-prison_n_491850.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&q=80"
+                   alt="Africain smartphone réseaux sociaux" />
+              <div class="bw"><span class="badge b-afrique">Afrique</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Rwanda : un youtubeur critique du pouvoir décède en prison le jour de sa libération</div>
+              <div class="ac-meta"><span class="src-tag src-sw"><span class="dot dot-sw"></span>Seneweb</span></div>
+            </div>
+          </a>
+
+          <!-- 5. Mali JNIM — paysage désertique sahélien -->
+          <a href="https://www.seneweb.com/fr/news/Afrique/mali-plus-de-30-morts-dans-deux-attaques-dans-le-centre_n_491847.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1543286386-2e659306cd6c?w=600&q=80"
+                   alt="Sahel désert Mali" />
+              <div class="bw"><span class="badge b-afrique">Afrique</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Mali : plus de 30 morts dans deux attaques revendiquées par les jihadistes du JNIM</div>
+              <div class="ac-meta"><span class="src-tag src-sw"><span class="dot dot-sw"></span>Seneweb</span></div>
+            </div>
+          </a>
+
+          <!-- 6. Tchad Boko Haram — conflit armé Afrique -->
+          <a href="https://www.seneweb.com/fr/news/Afrique/tchad-trois-jours-de-deuil-national-apres-lattaque-de-boko-haram_n_491845.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1569974507005-6dc61f97fb5?w=600&q=80"
+                   alt="Conflit armé Afrique" />
+              <div class="bw"><span class="badge b-afrique">Afrique</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Tchad : trois jours de deuil national après l'attaque de Boko Haram</div>
+              <div class="ac-meta"><span class="src-tag src-sw"><span class="dot dot-sw"></span>Seneweb</span></div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 7 + 8 mini horizontal -->
+        <div class="g2h">
+          <a href="https://www.seneweb.com/fr/news/International/trafic-de-medicaments-pres-de-270-arrestations_n_491813.html"
+             target="_blank" class="hcard">
+            <div class="hcard-img">
+              <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&q=80" alt="Médicaments Interpol" />
+            </div>
+            <div class="hcard-body">
+              <span class="badge b-intl" style="display:inline-block;margin-bottom:4px">International</span>
+              <div class="hcard-title">Interpol : 270 arrestations dans 90 pays pour trafic de médicaments</div>
+            </div>
+          </a>
+          <a href="https://www.seneweb.com/fr/news/Societe/bebe-de-18-mois-egorge-linsoutenable-recit-de-loncle-tueur_n_491830.html"
+             target="_blank" class="hcard">
+            <div class="hcard-img">
+              <img src="https://images.unsplash.com/photo-1589994160839-163cd867cfe8?w=300&q=80" alt="Justice tribunal" />
+            </div>
+            <div class="hcard-body">
+              <span class="badge b-faits" style="display:inline-block;margin-bottom:4px">Faits divers</span>
+              <div class="hcard-title">Bébé de 18 mois égorgé : l'insoutenable récit de l'oncle tueur</div>
+            </div>
+          </a>
+        </div>
+      </div><!-- /seneweb -->
+
+      <!-- ════════ DAKARACTU ══════════════════════════════ -->
+      <div class="sec">
+        <div class="src-sh">
+          <span class="src-pill p-d">DA</span>
+          <span class="src-nm">Dakaractu.com</span>
+          <a href="https://www.dakaractu.com" target="_blank" class="src-lk">Voir le site →</a>
+        </div>
+        <div class="g2">
+
+          <!-- 1. Hélicoptère Mali -->
+          <a href="https://www.dakaractu.com/Mali-Chute-probable-d-un-helicoptere-de-l-armee-pres-de-Gao_a271325.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=600&q=80" alt="Hélicoptère militaire" />
+              <div class="bw"><span class="badge b-afrique">Afrique</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Mali — Chute probable d'un hélicoptère de l'armée près de Gao après une offensive coordonnée du FLA et du JNIM</div>
+              <div class="ac-meta"><span class="src-tag src-da"><span class="dot dot-da"></span>Dakaractu</span></div>
+            </div>
+          </a>
+
+          <!-- 2. Iran / USA -->
+          <a href="https://www.dakaractu.com/Iran-le-ministere-de-la-Defense-affirme-que-les-Etats-Unis-cherchent_a271322.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&q=80" alt="Diplomatie internationale" />
+              <div class="bw"><span class="badge b-intl">International</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Iran : le ministère de la Défense affirme que les États-Unis cherchent « un moyen de sauver la face »</div>
+              <div class="ac-meta"><span class="src-tag src-da"><span class="dot dot-da"></span>Dakaractu</span></div>
+            </div>
+          </a>
+
+          <!-- 3. Mamour Diallo — homme africain avec téléphone -->
+          <a href="https://www.dakaractu.com/Son-deces-annonce-sur-les-reseaux-sociaux-Mamour-Diallo-rassure-ses-proches_a271315.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1603575448878-da4f59f59af4?w=600&q=80"
+                   alt="Homme africain téléphone réseaux sociaux" />
+              <div class="bw"><span class="badge b-politique">Politique</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Son décès annoncé sur les réseaux sociaux, Mamour Diallo rassure ses proches : « Je me porte à merveille »</div>
+              <div class="ac-meta"><span class="src-tag src-da"><span class="dot dot-da"></span>Dakaractu</span></div>
+            </div>
+          </a>
+
+          <!-- 4. Camion autoroute -->
+          <a href="https://www.dakaractu.com/Nguekhokh-Camion-renverse-sur-l-autoroute-a-peage-Mbour-Dakar_a271272.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" alt="Camion route Sénégal" />
+              <div class="bw"><span class="badge b-faits">Société</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Nguekhokh : camion renversé sur l'autoroute à péage Mbour-Dakar, trafic totalement paralysé</div>
+              <div class="ac-meta"><span class="src-tag src-da"><span class="dot dot-da"></span>Dakaractu</span></div>
+            </div>
+          </a>
+
+          <!-- 5. Louga terrain -->
+          <a href="https://www.dakaractu.com/Louga-Une-vente-de-terrain-vire-au-chaos_a271241.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Terrain immobilier" />
+              <div class="bw"><span class="badge b-faits">Faits divers</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Louga : une vente de terrain vire au chaos — Serigne Akhma Mbacké placé en garde à vue</div>
+              <div class="ac-meta"><span class="src-tag src-da"><span class="dot dot-da"></span>Dakaractu</span></div>
+            </div>
+          </a>
+
+          <!-- 6. Macky Sall ONU — homme africain en costume, discours -->
+          <a href="https://www.dakaractu.com/Audition-Candidats-a-ONU-Macky-Sall-presente-sa-vision_a271236.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+                   alt="Homme africain professionnel costume" />
+              <div class="bw"><span class="badge b-politique">Diplomatie</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Candidats à l'ONU : Macky Sall présente sa vision axée sur le dialogue et la consultation</div>
+              <div class="ac-meta"><span class="src-tag src-da"><span class="dot dot-da"></span>Dakaractu</span></div>
+            </div>
+          </a>
+
+          <!-- 7. Cancer fondation — femme africaine / santé -->
+          <a href="https://www.dakaractu.com/Pourquoi-la-Fondation-des-deux-Premieres-dames-pour-la-lutte-contre-le-cancer_a271095.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80"
+                   alt="Femme africaine médecin santé" />
+              <div class="bw"><span class="badge b-sante">Santé</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Fondation des deux Premières dames pour la lutte contre le cancer : une excellente initiative</div>
+              <div class="ac-meta"><span class="src-tag src-da"><span class="dot dot-da"></span>Dakaractu</span></div>
+            </div>
+          </a>
+
+          <!-- 8. Défaut paiement — marchés financiers -->
+          <a href="https://www.dakaractu.com/Risque-de-defaut-de-paiement-en-Afrique_a271071.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80" alt="Finance marchés" />
+              <div class="bw"><span class="badge b-economie">Économie</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Risque de défaut de paiement en Afrique : le Sénégal, le Mozambique et le Malawi sous surveillance</div>
+              <div class="ac-meta"><span class="src-tag src-da"><span class="dot dot-da"></span>Dakaractu</span></div>
+            </div>
+          </a>
+
+        </div>
+      </div><!-- /dakaractu -->
+
+      <!-- ════════ LERAL.NET ═════════════════════════════ -->
+      <div class="sec">
+        <div class="src-sh">
+          <span class="src-pill p-l">LN</span>
+          <span class="src-nm">Leral.net</span>
+          <a href="https://www.leral.net" target="_blank" class="src-lk">Voir le site →</a>
+        </div>
+        <div class="g3">
+
+          <!-- 1. JOJ 2026 — stade sportif -->
+          <a href="https://www.leral.net/JOJ-2026-le-Prefet-de-Dakar-ordonne-la-liberation-des-emprises-du-canal-de-la-Gueule-Tapee_a398734.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1541919329513-35f7af297129?w=600&q=80" alt="Stade sportif Dakar" />
+              <div class="bw"><span class="badge b-joj">JOJ 2026</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">JOJ 2026 : le Préfet de Dakar ordonne la libération des emprises du canal de la Gueule Tapée</div>
+              <div class="ac-meta"><span class="src-tag src-lr"><span class="dot dot-lr"></span>Leral.net</span></div>
+            </div>
+          </a>
+
+          <!-- 2. Idrissa Gana Guèye — joueur africain de football -->
+          <a href="https://www.leral.net/Idrissa-Gana-Gueye-proche-d-une-prolongation-avec-Everton_a398732.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&q=80"
+                   alt="Footballeur africain dribble" />
+              <div class="bw"><span class="badge b-sport">Football</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Idrissa Gana Guèye proche d'une prolongation avec Everton</div>
+              <div class="ac-meta"><span class="src-tag src-lr"><span class="dot dot-lr"></span>Leral.net</span></div>
+            </div>
+          </a>
+
+          <!-- 3. FIFAe — jeune africain gamer -->
+          <a href="https://www.leral.net/FIFAe-Nations-League-2026-le-Senegal-domine-la-Week-1_a398731.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600&q=80"
+                   alt="Jeune africain gaming e-sport" />
+              <div class="bw"><span class="badge b-gaming">e-Sport</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">FIFAe Nations League 2026 : le Sénégal domine la Week 1 et prend la tête du classement africain</div>
+              <div class="ac-meta"><span class="src-tag src-lr"><span class="dot dot-lr"></span>Leral.net</span></div>
+            </div>
+          </a>
+
+          <!-- 4. Lat Diop Rebeuss — homme africain grave -->
+          <a href="https://www.leral.net/Rebeuss-Farba-Ngom-evoque-les-actions-sociales-de-Lat-Diop-en-detention_a398730.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80"
+                   alt="Homme africain portrait" />
+              <div class="bw"><span class="badge b-politique">Justice</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Rebeuss : Farba Ngom évoque les actions sociales de Lat Diop en détention</div>
+              <div class="ac-meta"><span class="src-tag src-lr"><span class="dot dot-lr"></span>Leral.net</span></div>
+            </div>
+          </a>
+
+          <!-- 5. Touba TV / Océan FM — journaliste africaine devant caméra -->
+          <a href="https://www.leral.net/Touba-TV-et-Ocean-FM-le-conflit-entre-Mbakiyou-Faye-et-des-employes_a398729.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&q=80"
+                   alt="Journaliste africaine plateau TV" />
+              <div class="bw"><span class="badge b-media">Médias</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Touba TV et Océan FM : le conflit entre Mbakiyou Faye et des employés prend une tournure judiciaire</div>
+              <div class="ac-meta"><span class="src-tag src-lr"><span class="dot dot-lr"></span>Leral.net</span></div>
+            </div>
+          </a>
+
+          <!-- 6. Police Nioro — policier africain -->
+          <a href="https://www.leral.net/Pedophilie-et-Viol-suivi-de-grossesse-un-individu-arrete_a398728.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1608493830924-ec843d9c98a9?w=600&q=80"
+                   alt="Policier africain forces de l'ordre" />
+              <div class="bw"><span class="badge b-faits">Fait divers</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Pédophilie et viol suivi de grossesse : un individu arrêté par la police de Nioro</div>
+              <div class="ac-meta"><span class="src-tag src-lr"><span class="dot dot-lr"></span>Leral.net</span></div>
+            </div>
+          </a>
+
+          <!-- 7. Saint-Louis nouveau-né — ville sénégalaise -->
+          <a href="https://www.leral.net/Saint-Louis-un-nouveau-ne-retrouve-abandonne-sous-un-arbre-a-Ngallele_a398727.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1595923533867-9d28d8c6abad?w=600&q=80"
+                   alt="Ville africaine Sénégal" />
+              <div class="bw"><span class="badge b-faits">Fait divers</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Saint-Louis : un nouveau-né retrouvé abandonné sous un arbre à Ngallèle</div>
+              <div class="ac-meta"><span class="src-tag src-lr"><span class="dot dot-lr"></span>Leral.net</span></div>
+            </div>
+          </a>
+
+          <!-- 8. Affaire Srour — homme africain en costume, tribunal -->
+          <a href="https://www.leral.net/Affaire-Mouhamed-Aly-Srour-Moustapha-Ndiaye-livre-sa-version-des-faits_a398725.html"
+             target="_blank" class="ac">
+            <div class="ac-img">
+              <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=80"
+                   alt="Homme africain costume formel" />
+              <div class="bw"><span class="badge b-faits">Fait divers</span></div>
+            </div>
+            <div class="ac-body">
+              <div class="ac-title">Affaire Mouhamed Aly Srour : Moustapha Ndiaye livre sa version des faits</div>
+              <div class="ac-meta"><span class="src-tag src-lr"><span class="dot dot-lr"></span>Leral.net</span></div>
+            </div>
+          </a>
+
+        </div>
+      </div><!-- /leral -->
+
+    </div><!-- /left column -->
+
+    <!-- ════════ SIDEBAR ══════════════════════════════════ -->
+    <aside>
+      <!-- Fil en direct -->
+      <div class="wgt">
+        <div class="sh" style="margin-bottom:12px">
+          <h3 class="st st-r" style="font-size:13px">⚡ Fil en direct</h3>
+          <span style="font-size:10px;color:var(--n400)">24 articles</span>
+        </div>
+        <div>
+          <div class="cmp-item"><span class="cmp-dot" style="background:var(--seneweb)"></span><div><a href="https://www.seneweb.com/fr/news/Afrique/mali-plus-de-30-morts_n_491847.html" target="_blank" class="cmp-title">Mali : 30+ morts dans des attaques du JNIM</a><div class="cmp-src">Seneweb</div></div></div>
+          <div class="cmp-item"><span class="cmp-dot" style="background:var(--leral)"></span><div><a href="https://www.leral.net/Idrissa-Gana-Gueye-proche_a398732.html" target="_blank" class="cmp-title">Idrissa Gana Guèye vers une prolongation avec Everton</a><div class="cmp-src">Leral.net</div></div></div>
+          <div class="cmp-item"><span class="cmp-dot" style="background:var(--dakaractu)"></span><div><a href="https://www.dakaractu.com/Son-deces-annonce_a271315.html" target="_blank" class="cmp-title">Mamour Diallo rassure : « Je me porte à merveille »</a><div class="cmp-src">Dakaractu</div></div></div>
+          <div class="cmp-item"><span class="cmp-dot" style="background:var(--leral)"></span><div><a href="https://www.leral.net/FIFAe-Nations-League_a398731.html" target="_blank" class="cmp-title">FIFAe : le Sénégal en tête du classement africain</a><div class="cmp-src">Leral.net</div></div></div>
+          <div class="cmp-item"><span class="cmp-dot" style="background:var(--dakaractu)"></span><div><a href="https://www.dakaractu.com/Nguekhokh-Camion_a271272.html" target="_blank" class="cmp-title">Nguekhokh : camion renversé, autoroute paralysée</a><div class="cmp-src">Dakaractu</div></div></div>
+          <div class="cmp-item"><span class="cmp-dot" style="background:var(--seneweb)"></span><div><a href="https://www.seneweb.com/fr/news/Afrique/tchad_n_491845.html" target="_blank" class="cmp-title">Tchad : deuil national après l'attaque de Boko Haram</a><div class="cmp-src">Seneweb</div></div></div>
+          <div class="cmp-item"><span class="cmp-dot" style="background:var(--dakaractu)"></span><div><a href="https://www.dakaractu.com/Risque-de-defaut_a271071.html" target="_blank" class="cmp-title">Sénégal sous surveillance — risque de défaut de paiement</a><div class="cmp-src">Dakaractu</div></div></div>
+          <div class="cmp-item"><span class="cmp-dot" style="background:var(--leral)"></span><div><a href="https://www.leral.net/JOJ-2026_a398734.html" target="_blank" class="cmp-title">JOJ 2026 : libération des emprises du canal de Dakar</a><div class="cmp-src">Leral.net</div></div></div>
+        </div>
+      </div>
+
+      <!-- Sources stats -->
+      <div class="wgt">
+        <div class="sh" style="margin-bottom:14px">
+          <h3 class="st" style="font-size:13px">📊 Couverture sources</h3>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px">
+              <span style="font-weight:700;color:var(--seneweb)">● Seneweb.com</span><span style="color:var(--n500)">8</span>
+            </div>
+            <div style="height:6px;background:var(--n100);border-radius:99px"><div style="height:100%;width:100%;background:var(--seneweb);border-radius:99px"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px">
+              <span style="font-weight:700;color:var(--dakaractu)">● Dakaractu.com</span><span style="color:var(--n500)">8</span>
+            </div>
+            <div style="height:6px;background:var(--n100);border-radius:99px"><div style="height:100%;width:100%;background:var(--dakaractu);border-radius:99px"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px">
+              <span style="font-weight:700;color:var(--leral)">● Leral.net</span><span style="color:var(--n500)">8</span>
+            </div>
+            <div style="height:6px;background:var(--n100);border-radius:99px"><div style="height:100%;width:100%;background:var(--leral);border-radius:99px"></div></div>
+          </div>
+          <div style="text-align:center;padding-top:8px;border-top:1px solid var(--n100);font-size:11px;color:var(--n400)">🕐 7 mai 2026</div>
+        </div>
+      </div>
+
+      <div class="ad ad-rect">Espace publicitaire 300×250</div>
+
+      <div class="wgt nl-wgt">
+        <h4>Newsletter quotidienne</h4>
+        <p>Les 5 infos essentielles chaque matin dans votre boîte mail.</p>
+        <input type="email" placeholder="votre@email.com" />
+        <button>S'abonner gratuitement</button>
+      </div>
+    </aside>
+
+  </div><!-- /pg -->
+</div>
+
+<!-- FOOTER NEWSLETTER -->
+<div class="fnl">
+  <div class="container">
+    <div class="fnl-in">
+      <div><h3>Restez informé — chaque jour</h3><p>Recevez les actualités essentielles directement dans votre boîte mail.</p></div>
+      <form><input type="email" placeholder="votre@email.com" /><button>S'abonner</button></form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="fg">
+      <div>
+        <div class="f-logo">A l'<span>Heure</span></div>
+        <p style="font-size:13px;color:#6b7280;line-height:1.6">L'actualité sénégalaise en temps réel. Agrégateur des meilleurs médias du Sénégal.</p>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <a href="#" style="width:32px;height:32px;background:#374151;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#9ca3af">f</a>
+          <a href="#" style="width:32px;height:32px;background:#374151;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#9ca3af">▶</a>
+          <a href="#" style="width:32px;height:32px;background:#374151;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#9ca3af">𝕏</a>
+        </div>
+      </div>
+      <div class="f-col"><h5>Rubriques</h5><a href="#">Politique</a><a href="#">Économie</a><a href="#">Sport</a><a href="#">Société</a><a href="#">Culture</a><a href="#">Religion</a></div>
+      <div class="f-col"><h5>Sources</h5><a href="https://www.seneweb.com" target="_blank">Seneweb.com</a><a href="https://www.dakaractu.com" target="_blank">Dakaractu.com</a><a href="https://www.leral.net" target="_blank">Leral.net</a></div>
+      <div class="f-col"><h5>À propos</h5><a href="#">Qui sommes-nous</a><a href="#">Contact</a><a href="#">Publicité</a><a href="#">Mentions légales</a></div>
+    </div>
+    <div class="f-bot"><span>© 2026 A l'Heure. Tous droits réservés.</span><span>Dakar, Sénégal — alheure.sn</span></div>
+  </div>
+</footer>
+
+</body>
+</html>
