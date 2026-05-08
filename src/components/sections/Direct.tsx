@@ -1,6 +1,11 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { PODCASTS } from "@/lib/articles";
+
+const PODCASTS = [
+  { letter: "D", variant: "", show: "Les Décodeurs", title: "La CEDEAO peut-elle survivre au départ du Mali, du Burkina et du Niger ?", duration: "28 min", date: "Hier" },
+  { letter: "T", variant: "b", show: "Téranga · Le portrait", title: "Aïssata Tall Sall : « la diplomatie sénégalaise se réinvente »", duration: "42 min", date: "Cette semaine" },
+  { letter: "É", variant: "g", show: "Économie d'Afrique", title: "Pétrole sénégalais : à qui profite réellement la rente ?", duration: "35 min", date: "Lundi" },
+];
 
 const RFM_STREAM = "https://stream.zeno.fm/yn65fsaurfhvv";
 const RFM_PAGE = "https://www.radio-senegal.com/radio-futurs-medias-940-fm";

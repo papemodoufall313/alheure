@@ -21,7 +21,6 @@ export default function TopBar() {
         <div className="right">
           <a href="#">Newsletter</a>
           <a href="#">Apps</a>
-          <a href="#">Mon compte</a>
           <span className="topbarDot" />
           <div className="lang" role="tablist" aria-label="Langue">
             <button className="on" role="tab">FR</button>

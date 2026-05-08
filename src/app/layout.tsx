@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${newsreader.variable} ${manrope.variable}`}>
-      <body>{children}</body>
+    <html lang="fr" className={`${newsreader.variable} ${manrope.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
