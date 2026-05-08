@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
 import ReadingProgress from "@/components/ReadingProgress";
 import { TopLus, WolofCard, NewsletterCard } from "@/components/Sidebar";
-import { getArticleBySlug, getArticlesByRubrique, ARTICLES } from "@/lib/articles";
+import { getArticleBySlug, getArticlesByRubrique, getAllArticles } from "@/lib/articles";
 import type { ContentBlock } from "@/lib/types";
 
 interface Props {
@@ -17,7 +17,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return ARTICLES.map((a) => ({ slug: a.slug }));
+  return getAllArticles().map((a) => ({ slug: a.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

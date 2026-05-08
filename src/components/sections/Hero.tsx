@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getFeaturedArticle, ARTICLES } from "@/lib/articles";
+import { getFeaturedArticle, getArticleBySlug } from "@/lib/articles";
 
 const SIDE_SLUGS = [
   "diomaye-2026-jeunes",
@@ -10,7 +10,7 @@ const SIDE_SLUGS = [
 
 export default function Hero() {
   const lead = getFeaturedArticle();
-  const side = SIDE_SLUGS.map((s) => ARTICLES.find((a) => a.slug === s)!).filter(Boolean);
+  const side = SIDE_SLUGS.map((s) => getArticleBySlug(s)!).filter(Boolean);
 
   return (
     <section className="hero">
