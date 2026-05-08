@@ -3,5 +3,5 @@ export function artImgSrc(seed: string, url: string | undefined, w: number, h: n
 }
 
 export function isLocalPath(src: string) {
-  return src.startsWith("/");
+  return src.startsWith("/") || !src.includes("picsum.photos");
 }
