@@ -8,6 +8,10 @@ interface Props {
   sizes?: string;
 }
 
+function picsumOrUrl(seed: string, url: string | undefined, w: number, h: number) {
+  return url || `https://picsum.photos/seed/${seed}/${w}/${h}`;
+}
+
 export default function ArticleCard({ article: a, variant = "default", sizes = "25vw" }: Props) {
   const cls = variant === "row" ? "art artRow" : variant === "lead" ? "art artLead" : "art";
 
@@ -16,7 +20,7 @@ export default function ArticleCard({ article: a, variant = "default", sizes = "
       <article className={cls}>
         <div className="artImg" style={{ flex: "0 0 130px", aspectRatio: "1" }}>
           <Image
-            src={`https://picsum.photos/seed/${a.imgSeed}/300/300`}
+            src={picsumOrUrl(a.imgSeed, a.imgUrl, 300, 300)}
             alt={a.imgAlt}
             fill
             sizes="130px"
@@ -44,7 +48,7 @@ export default function ArticleCard({ article: a, variant = "default", sizes = "
     <article className={cls}>
       <div className="artImg">
         <Image
-          src={`https://picsum.photos/seed/${a.imgSeed}/600/400`}
+          src={picsumOrUrl(a.imgSeed, a.imgUrl, 600, 400)}
           alt={a.imgAlt}
           fill
           sizes={sizes}

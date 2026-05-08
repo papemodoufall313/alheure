@@ -1,34 +1,10 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import type { Article } from "@/lib/types";
+import type { Article, ContentBlock } from "@/lib/types";
 import { RUBRIQUES_NAV } from "@/lib/types";
-
-function bodyToText(body: Article["body"]): string {
-  if (!body) return "";
-  return body.map((b) => {
-    if (b.type === "h2") return `## ${b.text}`;
-    if (b.type === "blockquote") return `> ${b.text}${b.cite ? ` — ${b.cite}` : ""}`;
-    if (b.type === "pullquote") return `pull: ${b.text}`;
-    return b.text;
-  }).join("\n\n");
-}
-
-function textToBody(text: string): Article["body"] {
-  if (!text.trim()) return undefined;
-  return text.split(/\n\n+/).map((line) => {
-    line = line.trim();
-    if (line.startsWith("## ")) return { type: "h2" as const, text: line.slice(3) };
-    if (line.startsWith("> ")) {
-      const content = line.slice(2);
-      const dashIdx = content.lastIndexOf(" — ");
-      if (dashIdx > 0) return { type: "blockquote" as const, text: content.slice(0, dashIdx), cite: content.slice(dashIdx + 3) };
-      return { type: "blockquote" as const, text: content };
-    }
-    if (line.startsWith("pull: ")) return { type: "pullquote" as const, text: line.slice(6) };
-    return { type: "p" as const, text: line };
-  }).filter((b) => b.text.trim().length > 0);
-}
+import BlockEditor from "./BlockEditor";
+import ImageUpload from "./ImageUpload";
 
 function slugify(str: string) {
   return str.toLowerCase()
@@ -38,8 +14,10 @@ function slugify(str: string) {
 }
 
 const inp: React.CSSProperties = { width: "100%", border: "1px solid #c8d0dc", padding: "8px 10px", font: "400 14px var(--sans)", color: "var(--ink)", background: "#fff", boxSizing: "border-box", borderRadius: 2 };
-const label: React.CSSProperties = { font: "700 12px var(--sans)", color: "var(--ink-2)", letterSpacing: ".06em", textTransform: "uppercase", display: "block", marginBottom: 4 };
-const group: React.CSSProperties = { display: "flex", flexDirection: "column", gap: 4 };
+const lbl: React.CSSProperties = { font: "700 11px var(--sans)", color: "var(--ink-2)", letterSpacing: ".06em", textTransform: "uppercase", display: "block", marginBottom: 4 };
+const grp: React.CSSProperties = { display: "flex", flexDirection: "column", gap: 4 };
+const row: React.CSSProperties = { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 };
+const sectionHead: React.CSSProperties = { font: "700 13px var(--sans)", color: "var(--blue)", borderBottom: "2px solid var(--blue)", paddingBottom: 6, marginBottom: 16, marginTop: 8, textTransform: "uppercase", letterSpacing: ".08em" };
 
 export default function ArticleForm({ initial, isEdit }: { initial?: Partial<Article>; isEdit?: boolean }) {
   const router = useRouter();
@@ -56,12 +34,13 @@ export default function ArticleForm({ initial, isEdit }: { initial?: Partial<Art
   const [dateIso, setDateIso] = useState(initial?.dateIso ?? "");
   const [readTime, setReadTime] = useState(initial?.readTime ?? "");
   const [imgSeed, setImgSeed] = useState(initial?.imgSeed ?? "");
+  const [imgUrl, setImgUrl] = useState(initial?.imgUrl ?? "");
   const [imgAlt, setImgAlt] = useState(initial?.imgAlt ?? "");
   const [badge, setBadge] = useState<Article["badge"]>(initial?.badge);
   const [featured, setFeatured] = useState(initial?.featured ?? false);
   const [tags, setTags] = useState((initial?.tags ?? []).join(", "));
   const [authorBio, setAuthorBio] = useState(initial?.authorBio ?? "");
-  const [bodyText, setBodyText] = useState(bodyToText(initial?.body));
+  const [blocks, setBlocks] = useState<ContentBlock[]>(initial?.body ?? []);
 
   function handleTitleChange(v: string) {
     setTitle(v);
@@ -84,12 +63,13 @@ export default function ArticleForm({ initial, isEdit }: { initial?: Partial<Art
       dateIso,
       readTime,
       imgSeed,
+      ...(imgUrl ? { imgUrl } : {}),
       imgAlt,
       ...(badge ? { badge } : {}),
       ...(featured ? { featured } : {}),
       ...(tags.trim() ? { tags: tags.split(",").map((t) => t.trim()).filter(Boolean) } : {}),
       ...(authorBio.trim() ? { authorBio } : {}),
-      ...(bodyText.trim() ? { body: textToBody(bodyText) } : {}),
+      ...(blocks.length > 0 ? { body: blocks } : {}),
     };
 
     const url = isEdit ? `/api/articles/${initial?.slug}` : "/api/articles";
@@ -107,25 +87,30 @@ export default function ArticleForm({ initial, isEdit }: { initial?: Partial<Art
     router.refresh();
   }
 
-  const fieldStyle = { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 };
-
   return (
     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-      {error && <div style={{ background: "#fde8e8", border: "1px solid #f8a0a0", padding: "10px 14px", color: "#a00", font: "400 14px var(--sans)", borderRadius: 2 }}>{error}</div>}
+      {error && (
+        <div style={{ background: "#fde8e8", border: "1px solid #f8a0a0", padding: "10px 14px", color: "#a00", font: "400 14px var(--sans)", borderRadius: 2 }}>
+          {error}
+        </div>
+      )}
 
-      <div style={group}>
-        <span style={label}>Titre *</span>
+      {/* ── Identité ── */}
+      <p style={sectionHead}>Identité de l&apos;article</p>
+
+      <div style={grp}>
+        <span style={lbl}>Titre *</span>
         <input style={inp} value={title} onChange={(e) => handleTitleChange(e.target.value)} required />
       </div>
 
-      <div style={fieldStyle}>
-        <div style={group}>
-          <span style={label}>Slug (URL) *</span>
+      <div style={row}>
+        <div style={grp}>
+          <span style={lbl}>Slug (URL) *</span>
           <input style={inp} value={slug} onChange={(e) => setSlug(e.target.value)} required />
         </div>
-        <div style={group}>
-          <span style={label}>Rubrique *</span>
-          <select style={{ ...inp }} value={rubrique} onChange={(e) => setRubrique(e.target.value as Article["rubrique"])}>
+        <div style={grp}>
+          <span style={lbl}>Rubrique *</span>
+          <select style={inp} value={rubrique} onChange={(e) => setRubrique(e.target.value as Article["rubrique"])}>
             {RUBRIQUES_NAV.filter((r) => r.slug).map((r) => (
               <option key={r.slug} value={r.slug}>{r.label}</option>
             ))}
@@ -133,41 +118,41 @@ export default function ArticleForm({ initial, isEdit }: { initial?: Partial<Art
         </div>
       </div>
 
-      <div style={group}>
-        <span style={label}>Sous-titre (dek) *</span>
+      <div style={grp}>
+        <span style={lbl}>Sous-titre (dek) *</span>
         <textarea style={{ ...inp, height: 72, resize: "vertical" }} value={dek} onChange={(e) => setDek(e.target.value)} required />
       </div>
 
-      <div style={fieldStyle}>
-        <div style={group}>
-          <span style={label}>Label rubrique</span>
+      <div style={row}>
+        <div style={grp}>
+          <span style={lbl}>Label rubrique</span>
           <input style={inp} value={rubriqueLabel} onChange={(e) => setRubriqueLabel(e.target.value)} placeholder="ex: Sénégal · Saint-Louis" />
         </div>
-        <div style={group}>
-          <span style={label}>Auteur *</span>
+        <div style={grp}>
+          <span style={lbl}>Auteur *</span>
           <input style={inp} value={author} onChange={(e) => setAuthor(e.target.value)} required />
         </div>
       </div>
 
-      <div style={fieldStyle}>
-        <div style={group}>
-          <span style={label}>Date affichée *</span>
+      <div style={row}>
+        <div style={grp}>
+          <span style={lbl}>Date affichée *</span>
           <input style={inp} value={date} onChange={(e) => setDate(e.target.value)} placeholder="ex: Aujourd'hui · 14h00" required />
         </div>
-        <div style={group}>
-          <span style={label}>Date ISO</span>
+        <div style={grp}>
+          <span style={lbl}>Date ISO</span>
           <input style={inp} type="datetime-local" value={dateIso} onChange={(e) => setDateIso(e.target.value)} />
         </div>
       </div>
 
-      <div style={fieldStyle}>
-        <div style={group}>
-          <span style={label}>Temps de lecture</span>
+      <div style={row}>
+        <div style={grp}>
+          <span style={lbl}>Temps de lecture</span>
           <input style={inp} value={readTime} onChange={(e) => setReadTime(e.target.value)} placeholder="ex: 5 min" />
         </div>
-        <div style={group}>
-          <span style={label}>Badge</span>
-          <select style={{ ...inp }} value={badge ?? ""} onChange={(e) => setBadge((e.target.value as Article["badge"]) || undefined)}>
+        <div style={grp}>
+          <span style={lbl}>Badge</span>
+          <select style={inp} value={badge ?? ""} onChange={(e) => setBadge((e.target.value as Article["badge"]) || undefined)}>
             <option value="">Aucun</option>
             <option value="rep">Grand reportage</option>
             <option value="longformat">Long format</option>
@@ -177,45 +162,52 @@ export default function ArticleForm({ initial, isEdit }: { initial?: Partial<Art
         </div>
       </div>
 
-      <div style={fieldStyle}>
-        <div style={group}>
-          <span style={label}>Mot-clé image (imgSeed) *</span>
-          <input style={inp} value={imgSeed} onChange={(e) => setImgSeed(e.target.value)} placeholder="ex: dakar-plage" required />
-        </div>
-        <div style={group}>
-          <span style={label}>Description image (alt)</span>
-          <input style={inp} value={imgAlt} onChange={(e) => setImgAlt(e.target.value)} />
-        </div>
+      {/* ── Image ── */}
+      <p style={sectionHead}>Image de couverture</p>
+
+      <ImageUpload imgSeed={imgSeed} imgUrl={imgUrl} onSeedChange={setImgSeed} onUrlChange={setImgUrl} />
+
+      <div style={grp}>
+        <span style={lbl}>Description de l&apos;image (alt)</span>
+        <input style={inp} value={imgAlt} onChange={(e) => setImgAlt(e.target.value)} placeholder="ex: Vue aérienne de Dakar" />
       </div>
 
-      <div style={group}>
-        <span style={label}>Tags (séparés par des virgules)</span>
+      {/* ── Contenu ── */}
+      <p style={sectionHead}>Contenu de l&apos;article</p>
+      <BlockEditor value={blocks} onChange={setBlocks} />
+
+      {/* ── Métadonnées ── */}
+      <p style={sectionHead}>Métadonnées</p>
+
+      <div style={grp}>
+        <span style={lbl}>Tags (séparés par des virgules)</span>
         <input style={inp} value={tags} onChange={(e) => setTags(e.target.value)} placeholder="ex: Dakar, Politique, Élections" />
       </div>
 
-      <div style={group}>
-        <span style={label}>Bio auteur</span>
+      <div style={grp}>
+        <span style={lbl}>Bio auteur</span>
         <textarea style={{ ...inp, height: 60, resize: "vertical" }} value={authorBio} onChange={(e) => setAuthorBio(e.target.value)} />
-      </div>
-
-      <div style={group}>
-        <span style={label}>Contenu de l'article</span>
-        <p style={{ font: "400 12px var(--sans)", color: "var(--ink-2)", margin: "0 0 6px" }}>
-          Un paragraphe par bloc (ligne vide entre chaque). Préfixes : <code>## </code> pour titre, <code>&gt; </code> pour citation, <code>pull: </code> pour mise en exergue.
-        </p>
-        <textarea style={{ ...inp, height: 280, resize: "vertical", fontFamily: "monospace", fontSize: 13, lineHeight: 1.6 }} value={bodyText} onChange={(e) => setBodyText(e.target.value)} placeholder={"Votre premier paragraphe ici...\n\n## Un sous-titre\n\nDeuxième paragraphe.\n\n> Une citation — Auteur de la citation\n\npull: Une phrase mise en exergue."} />
       </div>
 
       <label style={{ display: "flex", alignItems: "center", gap: 8, font: "400 14px var(--sans)", cursor: "pointer" }}>
         <input type="checkbox" checked={featured} onChange={(e) => setFeatured(e.target.checked)} />
-        Article mis en avant (hero)
+        Article mis en avant (apparaît en hero sur l&apos;accueil)
       </label>
 
-      <div style={{ display: "flex", gap: 12, paddingTop: 8 }}>
-        <button type="submit" disabled={saving} style={{ background: "var(--blue)", color: "#fff", border: "none", padding: "12px 28px", font: "700 13px var(--sans)", letterSpacing: ".06em", textTransform: "uppercase", cursor: saving ? "wait" : "pointer", opacity: saving ? .6 : 1 }}>
+      {/* ── Actions ── */}
+      <div style={{ display: "flex", gap: 12, paddingTop: 8, borderTop: "1px solid #dde2ea" }}>
+        <button
+          type="submit"
+          disabled={saving}
+          style={{ background: "var(--blue)", color: "#fff", border: "none", padding: "12px 28px", font: "700 13px var(--sans)", letterSpacing: ".06em", textTransform: "uppercase", cursor: saving ? "wait" : "pointer", opacity: saving ? .6 : 1, borderRadius: 2 }}
+        >
           {saving ? "Sauvegarde…" : isEdit ? "Enregistrer les modifications" : "Publier l'article"}
         </button>
-        <button type="button" onClick={() => router.push("/admin")} style={{ background: "transparent", color: "var(--ink-2)", border: "1px solid var(--ink-3)", padding: "12px 20px", font: "400 13px var(--sans)", cursor: "pointer" }}>
+        <button
+          type="button"
+          onClick={() => router.push("/admin")}
+          style={{ background: "transparent", color: "var(--ink-2)", border: "1px solid #c8d0dc", padding: "12px 20px", font: "400 13px var(--sans)", cursor: "pointer", borderRadius: 2 }}
+        >
           Annuler
         </button>
       </div>

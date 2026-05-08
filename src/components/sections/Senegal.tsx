@@ -26,7 +26,7 @@ export default function Senegal() {
           <article className="art artMedium">
             <div className="artImg" style={{ aspectRatio: "3/2" }}>
               <Image
-                src={`https://picsum.photos/seed/${lead.imgSeed}/900/600`}
+                src={lead.imgUrl || `https://picsum.photos/seed/${lead.imgSeed}/900/600`}
                 alt={lead.imgAlt}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

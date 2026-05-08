@@ -116,7 +116,7 @@ export default async function ArticlePage({ params }: Props) {
               <figure className="artHero">
                 <div className="artHeroImg">
                   <Image
-                    src={`https://picsum.photos/seed/${article.imgSeed}/1280/720`}
+                    src={article.imgUrl || `https://picsum.photos/seed/${article.imgSeed}/1280/720`}
                     alt={article.imgAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, 65vw"

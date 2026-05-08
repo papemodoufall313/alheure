@@ -26,6 +26,7 @@ export interface Article {
   dateIso: string;
   readTime: string;
   imgSeed: string;
+  imgUrl?: string;
   imgAlt: string;
   badge?: "live" | "video" | "rep" | "longformat";
   featured?: boolean;

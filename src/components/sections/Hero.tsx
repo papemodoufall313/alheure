@@ -20,7 +20,7 @@ export default function Hero() {
           <article className="art artLead">
             <div className="artImg" style={{ aspectRatio: "16/9" }}>
               <Image
-                src={`https://picsum.photos/seed/${lead.imgSeed}/1280/720`}
+                src={lead.imgUrl || `https://picsum.photos/seed/${lead.imgSeed}/1280/720`}
                 alt={lead.imgAlt}
                 fill
                 sizes="(max-width: 768px) 100vw, 65vw"
@@ -52,7 +52,7 @@ export default function Hero() {
                 {art.imgSeed && (
                   <div className="artImg" style={{ aspectRatio: "16/9" }}>
                     <Image
-                      src={`https://picsum.photos/seed/${art.imgSeed}/640/360`}
+                      src={art.imgUrl || `https://picsum.photos/seed/${art.imgSeed}/640/360`}
                       alt={art.imgAlt}
                       fill
                       sizes="30vw"

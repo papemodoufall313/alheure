@@ -74,7 +74,7 @@ export default async function RubriquePage({ params }: Props) {
                 <article className="art" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 32, alignItems: "start" }}>
                   <div className="artImg" style={{ aspectRatio: "3/2" }}>
                     <Image
-                      src={`https://picsum.photos/seed/${lead.imgSeed}/900/600`}
+                      src={lead.imgUrl || `https://picsum.photos/seed/${lead.imgSeed}/900/600`}
                       alt={lead.imgAlt}
                       fill
                       sizes="(max-width: 768px) 100vw, 45vw"
