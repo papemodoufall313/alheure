@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getArticlesByRubrique } from "@/lib/articles";
+import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
 import ArticleCard from "@/components/ArticleCard";
 
 export default function Senegal() {
@@ -26,7 +27,8 @@ export default function Senegal() {
           <article className="art artMedium">
             <div className="artImg" style={{ aspectRatio: "3/2" }}>
               <Image
-                src={lead.imgUrl || `https://picsum.photos/seed/${lead.imgSeed}/900/600`}
+                src={artImgSrc(lead.imgSeed, lead.imgUrl, 900, 600)}
+                unoptimized={isLocalPath(artImgSrc(lead.imgSeed, lead.imgUrl, 900, 600))}
                 alt={lead.imgAlt}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

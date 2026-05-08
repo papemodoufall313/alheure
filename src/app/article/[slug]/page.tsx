@@ -10,6 +10,7 @@ import ArticleCard from "@/components/ArticleCard";
 import ReadingProgress from "@/components/ReadingProgress";
 import { TopLus, WolofCard, NewsletterCard } from "@/components/Sidebar";
 import { getArticleBySlug, getArticlesByRubrique, getAllArticles } from "@/lib/articles";
+import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
 import type { ContentBlock } from "@/lib/types";
 
 interface Props {
@@ -116,7 +117,8 @@ export default async function ArticlePage({ params }: Props) {
               <figure className="artHero">
                 <div className="artHeroImg">
                   <Image
-                    src={article.imgUrl || `https://picsum.photos/seed/${article.imgSeed}/1280/720`}
+                    src={artImgSrc(article.imgSeed, article.imgUrl, 1280, 720)}
+                    unoptimized={isLocalPath(artImgSrc(article.imgSeed, article.imgUrl, 1280, 720))}
                     alt={article.imgAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, 65vw"

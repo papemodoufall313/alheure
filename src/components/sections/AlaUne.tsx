@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getAlaUne } from "@/lib/articles";
+import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
 
 export default function AlaUne() {
   const cards = getAlaUne();
@@ -18,10 +19,11 @@ export default function AlaUne() {
             <article key={art.slug} className="art">
               <div className="artImg">
                 <Image
-                  src={`https://picsum.photos/seed/${art.imgSeed}/600/400`}
+                  src={artImgSrc(art.imgSeed, art.imgUrl, 600, 400)}
                   alt={art.imgAlt}
                   fill
                   sizes="25vw"
+                  unoptimized={isLocalPath(artImgSrc(art.imgSeed, art.imgUrl, 600, 400))}
                   style={{ objectFit: "cover" }}
                 />
               </div>

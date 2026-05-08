@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Article } from "@/lib/types";
+import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
 
 interface Props {
   article: Article;
@@ -8,22 +9,20 @@ interface Props {
   sizes?: string;
 }
 
-function picsumOrUrl(seed: string, url: string | undefined, w: number, h: number) {
-  return url || `https://picsum.photos/seed/${seed}/${w}/${h}`;
-}
-
 export default function ArticleCard({ article: a, variant = "default", sizes = "25vw" }: Props) {
   const cls = variant === "row" ? "art artRow" : variant === "lead" ? "art artLead" : "art";
 
   if (variant === "row") {
+    const src = artImgSrc(a.imgSeed, a.imgUrl, 300, 300);
     return (
       <article className={cls}>
         <div className="artImg" style={{ flex: "0 0 130px", aspectRatio: "1" }}>
           <Image
-            src={picsumOrUrl(a.imgSeed, a.imgUrl, 300, 300)}
+            src={src}
             alt={a.imgAlt}
             fill
             sizes="130px"
+            unoptimized={isLocalPath(src)}
             style={{ objectFit: "cover" }}
           />
         </div>
@@ -44,14 +43,16 @@ export default function ArticleCard({ article: a, variant = "default", sizes = "
     );
   }
 
+  const src = artImgSrc(a.imgSeed, a.imgUrl, 600, 400);
   return (
     <article className={cls}>
       <div className="artImg">
         <Image
-          src={picsumOrUrl(a.imgSeed, a.imgUrl, 600, 400)}
+          src={src}
           alt={a.imgAlt}
           fill
           sizes={sizes}
+          unoptimized={isLocalPath(src)}
           style={{ objectFit: "cover" }}
         />
       </div>

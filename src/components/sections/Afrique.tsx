@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getArticlesByRubrique } from "@/lib/articles";
+import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
 import Sidebar from "@/components/Sidebar";
 import ArticleCard from "@/components/ArticleCard";
 
@@ -29,7 +30,8 @@ export default function Afrique() {
               <article className="art">
                 <div className="artImg" style={{ aspectRatio: "16/10" }}>
                   <Image
-                    src={lead.imgUrl || `https://picsum.photos/seed/${lead.imgSeed}/900/560`}
+                    src={artImgSrc(lead.imgSeed, lead.imgUrl, 900, 560)}
+                    unoptimized={isLocalPath(artImgSrc(lead.imgSeed, lead.imgUrl, 900, 560))}
                     alt={lead.imgAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, 40vw"

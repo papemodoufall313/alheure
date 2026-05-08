@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
 import { TopLus, WolofCard, NewsletterCard } from "@/components/Sidebar";
 import { getArticlesByRubrique } from "@/lib/articles";
+import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
 import { RUBRIQUES_NAV } from "@/lib/types";
 
 interface Props {
@@ -74,7 +75,8 @@ export default async function RubriquePage({ params }: Props) {
                 <article className="art" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 32, alignItems: "start" }}>
                   <div className="artImg" style={{ aspectRatio: "3/2" }}>
                     <Image
-                      src={lead.imgUrl || `https://picsum.photos/seed/${lead.imgSeed}/900/600`}
+                      src={artImgSrc(lead.imgSeed, lead.imgUrl, 900, 600)}
+                      unoptimized={isLocalPath(artImgSrc(lead.imgSeed, lead.imgUrl, 900, 600))}
                       alt={lead.imgAlt}
                       fill
                       sizes="(max-width: 768px) 100vw, 45vw"

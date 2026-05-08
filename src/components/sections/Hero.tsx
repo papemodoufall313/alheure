@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getFeaturedArticle, getArticleBySlug } from "@/lib/articles";
+import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
 
 const SIDE_SLUGS = [
   "diomaye-2026-jeunes",
@@ -20,10 +21,11 @@ export default function Hero() {
           <article className="art artLead">
             <div className="artImg" style={{ aspectRatio: "16/9" }}>
               <Image
-                src={lead.imgUrl || `https://picsum.photos/seed/${lead.imgSeed}/1280/720`}
+                src={artImgSrc(lead.imgSeed, lead.imgUrl, 1280, 720)}
                 alt={lead.imgAlt}
                 fill
                 sizes="(max-width: 768px) 100vw, 65vw"
+                unoptimized={isLocalPath(artImgSrc(lead.imgSeed, lead.imgUrl, 1280, 720))}
                 style={{ objectFit: "cover" }}
                 priority
               />
@@ -52,10 +54,11 @@ export default function Hero() {
                 {art.imgSeed && (
                   <div className="artImg" style={{ aspectRatio: "16/9" }}>
                     <Image
-                      src={art.imgUrl || `https://picsum.photos/seed/${art.imgSeed}/640/360`}
+                      src={artImgSrc(art.imgSeed, art.imgUrl, 640, 360)}
                       alt={art.imgAlt}
                       fill
                       sizes="30vw"
+                      unoptimized={isLocalPath(artImgSrc(art.imgSeed, art.imgUrl, 640, 360))}
                       style={{ objectFit: "cover" }}
                     />
                   </div>

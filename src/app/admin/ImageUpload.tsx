@@ -28,7 +28,6 @@ export default function ImageUpload({ imgSeed, imgUrl, onSeedChange, onUrlChange
     const data = await res.json();
     if (data.url) {
       onUrlChange(data.url);
-      onSeedChange("");
     }
     setUploading(false);
     if (fileRef.current) fileRef.current.value = "";

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Article } from "@/lib/types";
+import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
 
 function highlight(text: string, query: string) {
   if (!query) return text;
@@ -82,7 +83,7 @@ export default function SearchClient({ articles }: { articles: Article[] }) {
           {results.map((a) => (
             <article key={a.slug} className="art artRow" style={{ borderBottom: "1px solid var(--rule)", paddingBottom: 20, marginBottom: 20 }}>
               <div className="artImg" style={{ flex: "0 0 140px", aspectRatio: "16/9" }}>
-                <Image src={`https://picsum.photos/seed/${a.imgSeed}/400/225`} alt={a.imgAlt} fill sizes="140px" style={{ objectFit: "cover" }} />
+                <Image src={artImgSrc(a.imgSeed, a.imgUrl, 400, 225)} alt={a.imgAlt} fill sizes="140px" unoptimized={isLocalPath(artImgSrc(a.imgSeed, a.imgUrl, 400, 225))} style={{ objectFit: "cover" }} />
               </div>
               <div className="artBody">
                 <span className="rub">{a.rubriqueLabel}</span>
