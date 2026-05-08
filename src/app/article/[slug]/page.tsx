@@ -146,20 +146,15 @@ export default async function ArticlePage({ params }: Props) {
               </div>
 
               {/* Body prose */}
-              {article.body ? (
-                <div className="prose">
-                  {article.body.map((block, i) => (
+              <div className="prose">
+                {article.body ? (
+                  article.body.map((block, i) => (
                     <ProseBlock key={i} block={block} />
-                  ))}
-                </div>
-              ) : (
-                <div className="prose">
+                  ))
+                ) : (
                   <p className="dropCap">{article.dek}</p>
-                  <p style={{ color: "var(--ink-3)", fontStyle: "italic" }}>
-                    Le contenu complet de cet article est disponible pour les abonnés.
-                  </p>
-                </div>
-              )}
+                )}
+              </div>
 
               {/* Tags */}
               {article.tags && (

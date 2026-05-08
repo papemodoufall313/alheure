@@ -28,11 +28,7 @@ export default function Footer() {
             <Link href="/" className="lg" aria-label="À l'Heure — accueil">
               <span className="a">À</span> l&apos;Heure
             </Link>
-            <p>
-              Quotidien d&apos;information indépendant. Sénégal — Afrique — Monde.
-              <br />
-              Édité depuis Dakar, en français, anglais et wolof.
-            </p>
+            <p>Quotidien d&apos;information générale</p>
             <div className="ftSocials">
               <a href="#" aria-label="Facebook">f</a>
               <a href="#" aria-label="X / Twitter">𝕏</a>
@@ -55,7 +51,7 @@ export default function Footer() {
         </div>
 
         <div className="ftBot">
-          <span>© 2026 À l&apos;Heure SA · Dakar, Sénégal · RC SN-DKR-2018-B-1042</span>
+          <span>© 2026 À l&apos;Heure by DDBITC · Dakar, Sénégal</span>
           <div className="links">
             <a href="#">Mentions légales</a>
             <a href="#">CGU</a>

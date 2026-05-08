@@ -358,7 +358,7 @@ ul, ol { margin: 0; padding: 0 }
 .magSection { padding: 48px 0; background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule) }
 .magGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px }
 .magCard { background: #fff; border: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 1.2fr; overflow: hidden }
-.magCard .artImg { height: 100% }
+.magCard .artImg { height: 100%; aspect-ratio: unset; border-radius: 0 }
 .magCard .magBody { padding: 22px 24px; display: flex; flex-direction: column; gap: 10px; justify-content: center }
 .magCard .lab { font: 800 10.5px var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--red) }
 .magCard h3 { font-family: var(--serif); font-size: 24px; font-weight: 700; margin: 0; line-height: 1.18 }
