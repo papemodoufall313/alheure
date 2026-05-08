@@ -98,6 +98,7 @@ export default function RichTextEditor({ value, onChange }: {
   onChange: (blocks: ContentBlock[]) => void;
 }) {
   const editor = useEditor({
+    immediatelyRender: false,
     extensions: [
       StarterKit.configure({ heading: { levels: [2, 3] } }),
       Underline,
