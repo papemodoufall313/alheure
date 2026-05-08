@@ -10,6 +10,7 @@
     "dateIso": "2026-05-07T11:30",
     "readTime": "8 min",
     "imgSeed": "saintlouis-pirogues",
+    "imgUrl": "https://images.pexels.com/photos/33985276/pexels-photo-33985276.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Pirogues à Saint-Louis, Guet Ndar",
     "badge": "rep",
     "featured": true,
@@ -43,6 +44,7 @@
     "dateIso": "2026-05-07T09:00",
     "readTime": "12 min",
     "imgSeed": "touba-magal",
+    "imgUrl": "https://images.pexels.com/photos/3192662/pexels-photo-3192662.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Touba, préparatifs du grand Magal",
     "tags": ["Touba", "Magal", "Religion", "Mouridisme", "Sénégal"],
     "authorBio": "Correspondant permanent à Touba, Modou Fall couvre les événements religieux et la vie de la ville sainte depuis 2017.",
@@ -67,6 +69,7 @@
     "dateIso": "2026-05-06T21:12",
     "readTime": "6 min",
     "imgSeed": "ziguinchor-paix",
+    "imgUrl": "https://images.pexels.com/photos/30449603/pexels-photo-30449603.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Ziguinchor, Casamance"
   },
   {
@@ -80,6 +83,7 @@
     "dateIso": "2026-05-07T08:44",
     "readTime": "5 min",
     "imgSeed": "brt-dakar",
+    "imgUrl": "https://images.pexels.com/photos/8770485/pexels-photo-8770485.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "BRT Dakar"
   },
   {
@@ -93,6 +97,7 @@
     "dateIso": "2026-05-07T07:20",
     "readTime": "3 min",
     "imgSeed": "justice-tribunal",
+    "imgUrl": "https://images.pexels.com/photos/33084010/pexels-photo-33084010.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Tribunal de Dakar"
   },
   {
@@ -106,6 +111,7 @@
     "dateIso": "2026-05-06",
     "readTime": "Long format",
     "imgSeed": "mboro-phosphates",
+    "imgUrl": "https://images.pexels.com/photos/167605/pexels-photo-167605.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Mboro, mines de phosphates",
     "badge": "longformat"
   },
@@ -120,6 +126,7 @@
     "dateIso": "2026-05-07T12:00",
     "readTime": "4 min",
     "imgSeed": "diomaye-jeunes",
+    "imgUrl": "https://images.pexels.com/photos/13432768/pexels-photo-13432768.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Plan Diomaye 2026"
   },
   {
@@ -133,6 +140,7 @@
     "dateIso": "2026-05-07T11:08",
     "readTime": "3 min",
     "imgSeed": "conseil-constitutionnel",
+    "imgUrl": "https://images.pexels.com/photos/8536723/pexels-photo-8536723.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Conseil constitutionnel du Sénégal"
   },
   {
@@ -146,6 +154,7 @@
     "dateIso": "2026-05-06",
     "readTime": "4 min",
     "imgSeed": "diomaye-paris",
+    "imgUrl": "https://images.pexels.com/photos/19054772/pexels-photo-19054772.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Diomaye Faye à Paris"
   },
   {
@@ -159,6 +168,7 @@
     "dateIso": "2026-05-07T11:00",
     "readTime": "5 min",
     "imgSeed": "gaz-gta",
+    "imgUrl": "https://images.pexels.com/photos/6950205/pexels-photo-6950205.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Plateforme gazière GTA",
     "tags": ["Gaz naturel", "GTA", "BP", "Énergie", "Économie"],
     "authorBio": "Cheikh Sarr est journaliste économique spécialisé dans les industries extractives. Il suit le dossier pétrole-gaz au Sénégal depuis 2021.",
@@ -181,6 +191,7 @@
     "dateIso": "2026-05-07T10:42",
     "readTime": "5 min",
     "imgSeed": "bceao-fcfa",
+    "imgUrl": "https://images.pexels.com/photos/2892618/pexels-photo-2892618.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "BCEAO, franc CFA"
   },
   {
@@ -194,6 +205,7 @@
     "dateIso": "2026-05-04",
     "readTime": "22 min",
     "imgSeed": "dossier-petrole",
+    "imgUrl": "https://images.pexels.com/photos/7654189/pexels-photo-7654189.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Plateforme pétrolière Sangomar",
     "badge": "longformat",
     "featured": true
@@ -209,6 +221,7 @@
     "dateIso": "2026-05-07T10:00",
     "readTime": "6 min",
     "imgSeed": "ivoire-presidentielle",
+    "imgUrl": "https://images.pexels.com/photos/8846406/pexels-photo-8846406.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Présidentielle en Côte d'Ivoire",
     "featured": true
   },
@@ -223,6 +236,7 @@
     "dateIso": "2026-05-07T06:14",
     "readTime": "4 min",
     "imgSeed": "sahel-bamako",
+    "imgUrl": "https://images.pexels.com/photos/15304493/pexels-photo-15304493.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Bamako, Mali"
   },
   {
@@ -236,6 +250,7 @@
     "dateIso": "2026-05-07T12:31",
     "readTime": "3 min",
     "imgSeed": "cedeao-abuja",
+    "imgUrl": "https://images.pexels.com/photos/17059695/pexels-photo-17059695.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "CEDEAO, réunion à Abuja"
   },
   {
@@ -249,6 +264,7 @@
     "dateIso": "2026-05-06",
     "readTime": "4 min",
     "imgSeed": "rdc-paix",
+    "imgUrl": "https://images.pexels.com/photos/28227728/pexels-photo-28227728.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Goma, RDC"
   },
   {
@@ -262,6 +278,7 @@
     "dateIso": "2026-05-07T09:30",
     "readTime": "3 min",
     "imgSeed": "keurmassar-pluies",
+    "imgUrl": "https://images.pexels.com/photos/11648153/pexels-photo-11648153.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Inondations à Keur Massar",
     "badge": "live"
   },
@@ -276,6 +293,7 @@
     "dateIso": "2026-05-06",
     "readTime": "12 min",
     "imgSeed": "mbour-migrants",
+    "imgUrl": "https://images.pexels.com/photos/14434186/pexels-photo-14434186.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Mbour, familles de migrants"
   },
   {
@@ -289,6 +307,7 @@
     "dateIso": "2026-05-07",
     "readTime": "5 min",
     "imgSeed": "lions-teranga",
+    "imgUrl": "https://images.pexels.com/photos/12478756/pexels-photo-12478756.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Lions de la Téranga"
   },
   {
@@ -302,6 +321,7 @@
     "dateIso": "2026-05-06",
     "readTime": "6 min",
     "imgSeed": "lutte-modou-lo",
+    "imgUrl": "https://images.pexels.com/photos/3943882/pexels-photo-3943882.jpeg?auto=compress&cs=tinysrgb&w=1280",
     "imgAlt": "Lutte sénégalaise, Modou Lô"
   },
   {
