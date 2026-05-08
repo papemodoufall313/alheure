@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Article, ContentBlock } from "@/lib/types";
 import { RUBRIQUES_NAV } from "@/lib/types";
-import BlockEditor from "./BlockEditor";
+import RichTextEditor from "./RichTextEditor";
 import ImageUpload from "./ImageUpload";
 
 function slugify(str: string) {
@@ -174,7 +174,7 @@ export default function ArticleForm({ initial, isEdit }: { initial?: Partial<Art
 
       {/* ── Contenu ── */}
       <p style={sectionHead}>Contenu de l&apos;article</p>
-      <BlockEditor value={blocks} onChange={setBlocks} />
+      <RichTextEditor value={blocks} onChange={setBlocks} />
 
       {/* ── Métadonnées ── */}
       <p style={sectionHead}>Métadonnées</p>
