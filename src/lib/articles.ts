@@ -1,3 +1,4 @@
+import "server-only";
 import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 import type { Article, Podcast } from "./types";
