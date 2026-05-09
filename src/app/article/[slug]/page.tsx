@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import TopBar from "@/components/TopBar";
 import Masthead from "@/components/Masthead";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
+import ArticleImage from "@/components/ArticleImage";
 import ReadingProgress from "@/components/ReadingProgress";
 import { TopLus, WolofCard, NewsletterCard } from "@/components/Sidebar";
 import { getArticleBySlug, getArticlesByRubrique, getAllArticles } from "@/lib/articles";
-import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
+import { artImgSrc } from "@/lib/imgSrc";
 import type { ContentBlock } from "@/lib/types";
 
 interface Props {
@@ -116,10 +116,11 @@ export default async function ArticlePage({ params }: Props) {
               {/* Hero image */}
               <figure className="artHero">
                 <div className="artHeroImg">
-                  <Image
+                  <ArticleImage
                     src={artImgSrc(article.imgSeed, article.imgUrl, 1280, 720)}
-                    unoptimized={isLocalPath(artImgSrc(article.imgSeed, article.imgUrl, 1280, 720))}
                     alt={article.imgAlt}
+                    seed={article.imgSeed}
+                    w={1280} h={720}
                     fill
                     sizes="(max-width: 768px) 100vw, 65vw"
                     style={{ objectFit: "cover" }}

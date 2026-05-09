@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { getAlaUne } from "@/lib/articles";
-import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
+import { artImgSrc } from "@/lib/imgSrc";
+import ArticleImage from "@/components/ArticleImage";
 
 export default function AlaUne() {
   const cards = getAlaUne();
@@ -18,12 +18,13 @@ export default function AlaUne() {
           {cards.map((art) => (
             <article key={art.slug} className="art">
               <div className="artImg">
-                <Image
+                <ArticleImage
                   src={artImgSrc(art.imgSeed, art.imgUrl, 600, 400)}
                   alt={art.imgAlt}
+                  seed={art.imgSeed}
+                  w={600} h={400}
                   fill
                   sizes="25vw"
-                  unoptimized={isLocalPath(artImgSrc(art.imgSeed, art.imgUrl, 600, 400))}
                   style={{ objectFit: "cover" }}
                 />
               </div>

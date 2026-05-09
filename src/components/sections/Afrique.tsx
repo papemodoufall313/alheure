@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { getArticlesByRubrique } from "@/lib/articles";
-import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
+import { artImgSrc } from "@/lib/imgSrc";
+import ArticleImage from "@/components/ArticleImage";
 import Sidebar from "@/components/Sidebar";
 import ArticleCard from "@/components/ArticleCard";
 
@@ -26,13 +26,13 @@ export default function Afrique() {
               <Link href="/rubrique/afrique" className="more">Tout l&apos;agenda africain</Link>
             </div>
             <div className="three">
-              {/* Lead */}
               <article className="art">
                 <div className="artImg" style={{ aspectRatio: "16/10" }}>
-                  <Image
+                  <ArticleImage
                     src={artImgSrc(lead.imgSeed, lead.imgUrl, 900, 560)}
-                    unoptimized={isLocalPath(artImgSrc(lead.imgSeed, lead.imgUrl, 900, 560))}
                     alt={lead.imgAlt}
+                    seed={lead.imgSeed}
+                    w={900} h={560}
                     fill
                     sizes="(max-width: 768px) 100vw, 40vw"
                     style={{ objectFit: "cover" }}
