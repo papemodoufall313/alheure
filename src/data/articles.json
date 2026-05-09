@@ -10,27 +10,74 @@
     "dateIso": "2026-05-07T11:30",
     "readTime": "8 min",
     "imgSeed": "saintlouis-pirogues",
-    "imgUrl": "https://images.pexels.com/photos/1582653/pexels-photo-1582653.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/saint-louis-peche-artisanale.svg",
     "imgAlt": "Pirogues à Saint-Louis, Guet Ndar",
     "badge": "rep",
     "featured": true,
     "commentCount": 6,
-    "tags": ["Sénégal", "Saint-Louis", "Pêche artisanale", "Économie maritime", "Accords de pêche", "Guet Ndar"],
+    "tags": [
+      "Sénégal",
+      "Saint-Louis",
+      "Pêche artisanale",
+      "Économie maritime",
+      "Accords de pêche",
+      "Guet Ndar"
+    ],
     "authorBio": "Grand reporter spécialisée dans les questions environnementales et d'économie bleue. Basée à Dakar, elle couvre l'Afrique de l'Ouest pour À l'Heure depuis 2019.",
     "body": [
-      { "type": "p", "text": "Il est à peine cinq heures du matin quand les premières pirogues se mettent en travers du chenal. En quelques dizaines de minutes, elles sont plus de quatre cents à former un verrou silencieux sur les eaux sombres du fleuve Sénégal, à l'entrée du port de Guet Ndar. Les hommes sont debout, debout depuis la veille pour certains. Ils ne crient pas. Ils attendent." },
-      { "type": "p", "text": "« On n'a plus le choix », dit Lamine Ndiaye, 54 ans, les mains posées sur l'étrave de sa pirogue peinte en bleu et blanc. Pêcheur depuis l'enfance, il a connu les temps où les eaux débordaient de thons et de capitaines. Depuis dix ans, il dit que « la mer s'est appauvrie ». Et il en tient responsables les chalutiers étrangers — européens, asiatiques — qui raclent les fonds à des profondeurs interdites." },
-      { "type": "h2", "text": "La goutte qui a fait déborder le fleuve" },
-      { "type": "p", "text": "Ce qui a mis le feu aux poudres, c'est la publication, il y a trois jours, d'un document gouvernemental annonçant la signature de deux nouveaux protocoles d'accord avec des armements basés en Espagne et en Chine. Ces accords permettraient à des navires de plus de 1 500 tonnes d'opérer dans la zone économique exclusive sénégalaise jusqu'à soixante-dix milles des côtes — soit, selon les syndicats de pêcheurs, dans des zones historiquement réservées à la pêche artisanale côtière." },
-      { "type": "p", "text": "Le Collectif des Mareyeurs et Pêcheurs du Fleuve, réuni en urgence le lendemain, a voté à l'unanimité le blocage du port. Une décision « douloureuse mais nécessaire », selon son secrétaire général, Ibrahima Sarr. « Nous perdons nos revenus, nos familles souffrent. Mais si nous ne bloquons pas aujourd'hui, il ne restera plus rien demain. »" },
-      { "type": "blockquote", "text": "« Si nous ne bloquons pas aujourd'hui, il ne restera plus rien demain. »", "cite": "Ibrahima Sarr, secrétaire général du Collectif des Mareyeurs et Pêcheurs du Fleuve" },
-      { "type": "h2", "text": "L'État entre pression économique et engagements internationaux" },
-      { "type": "p", "text": "Du côté gouvernemental, le silence a duré plusieurs heures avant qu'un communiqué du ministère de la Pêche ne reconnaisse « la légitimité des préoccupations soulevées » tout en défendant les accords comme « essentiels à l'équilibre des finances publiques ». Selon des sources proches des négociations qu'À l'Heure a pu consulter, les deux protocoles représentent une contrepartie de l'ordre de 14 milliards de francs CFA par an pour le Trésor sénégalais." },
-      { "type": "p", "text": "Un chiffre qui ne convainc pas les pêcheurs. « Quatorze milliards pour détruire une filière qui fait vivre directement 600 000 personnes au Sénégal ? C'est du bradage pur », tranche Astou Diallo, présidente de l'Association des Femmes Transformatrices de Poisson de Saint-Louis. Les femmes transformatrices — qui sèchent, fument et commercialisent les prises — sont en première ligne de la crise : sans poisson, pas de transformation, pas de revenus." },
-      { "type": "pullquote", "text": "Quatre cents pirogues, trois cents familles au bord de la rupture. Saint-Louis attend que l'État choisisse entre une rente et un patrimoine." },
-      { "type": "h2", "text": "Ce que réclament les pêcheurs" },
-      { "type": "p", "text": "Le Collectif a formalisé ses demandes en trois points : la suspension immédiate de la signature des deux protocoles dans l'attente d'un audit indépendant, la création d'une commission mixte chargée de redéfinir les zones de pêche autorisées, et une compensation financière pour les pertes subies depuis six mois." },
-      { "type": "p", "text": "La pêche artisanale représente 75 % des captures totales du Sénégal et constitue la principale source de protéines animales pour les ménages. La filière emploie directement 600 000 personnes et fait vivre, indirectement, plusieurs millions de Sénégalais le long du littoral. Le gouverneur de la région a indiqué qu'une réunion de médiation était « en cours de programmation » sans préciser d'heure ni de lieu. À l'heure où nous bouclons cet article, les pirogues sont toujours en travers du chenal." }
+      {
+        "type": "p",
+        "text": "Il est à peine cinq heures du matin quand les premières pirogues se mettent en travers du chenal. En quelques dizaines de minutes, elles sont plus de quatre cents à former un verrou silencieux sur les eaux sombres du fleuve Sénégal, à l'entrée du port de Guet Ndar. Les hommes sont debout, debout depuis la veille pour certains. Ils ne crient pas. Ils attendent."
+      },
+      {
+        "type": "p",
+        "text": "« On n'a plus le choix », dit Lamine Ndiaye, 54 ans, les mains posées sur l'étrave de sa pirogue peinte en bleu et blanc. Pêcheur depuis l'enfance, il a connu les temps où les eaux débordaient de thons et de capitaines. Depuis dix ans, il dit que « la mer s'est appauvrie ». Et il en tient responsables les chalutiers étrangers — européens, asiatiques — qui raclent les fonds à des profondeurs interdites."
+      },
+      {
+        "type": "h2",
+        "text": "La goutte qui a fait déborder le fleuve"
+      },
+      {
+        "type": "p",
+        "text": "Ce qui a mis le feu aux poudres, c'est la publication, il y a trois jours, d'un document gouvernemental annonçant la signature de deux nouveaux protocoles d'accord avec des armements basés en Espagne et en Chine. Ces accords permettraient à des navires de plus de 1 500 tonnes d'opérer dans la zone économique exclusive sénégalaise jusqu'à soixante-dix milles des côtes — soit, selon les syndicats de pêcheurs, dans des zones historiquement réservées à la pêche artisanale côtière."
+      },
+      {
+        "type": "p",
+        "text": "Le Collectif des Mareyeurs et Pêcheurs du Fleuve, réuni en urgence le lendemain, a voté à l'unanimité le blocage du port. Une décision « douloureuse mais nécessaire », selon son secrétaire général, Ibrahima Sarr. « Nous perdons nos revenus, nos familles souffrent. Mais si nous ne bloquons pas aujourd'hui, il ne restera plus rien demain. »"
+      },
+      {
+        "type": "blockquote",
+        "text": "« Si nous ne bloquons pas aujourd'hui, il ne restera plus rien demain. »",
+        "cite": "Ibrahima Sarr, secrétaire général du Collectif des Mareyeurs et Pêcheurs du Fleuve"
+      },
+      {
+        "type": "h2",
+        "text": "L'État entre pression économique et engagements internationaux"
+      },
+      {
+        "type": "p",
+        "text": "Du côté gouvernemental, le silence a duré plusieurs heures avant qu'un communiqué du ministère de la Pêche ne reconnaisse « la légitimité des préoccupations soulevées » tout en défendant les accords comme « essentiels à l'équilibre des finances publiques ». Selon des sources proches des négociations qu'À l'Heure a pu consulter, les deux protocoles représentent une contrepartie de l'ordre de 14 milliards de francs CFA par an pour le Trésor sénégalais."
+      },
+      {
+        "type": "p",
+        "text": "Un chiffre qui ne convainc pas les pêcheurs. « Quatorze milliards pour détruire une filière qui fait vivre directement 600 000 personnes au Sénégal ? C'est du bradage pur », tranche Astou Diallo, présidente de l'Association des Femmes Transformatrices de Poisson de Saint-Louis. Les femmes transformatrices — qui sèchent, fument et commercialisent les prises — sont en première ligne de la crise : sans poisson, pas de transformation, pas de revenus."
+      },
+      {
+        "type": "pullquote",
+        "text": "Quatre cents pirogues, trois cents familles au bord de la rupture. Saint-Louis attend que l'État choisisse entre une rente et un patrimoine."
+      },
+      {
+        "type": "h2",
+        "text": "Ce que réclament les pêcheurs"
+      },
+      {
+        "type": "p",
+        "text": "Le Collectif a formalisé ses demandes en trois points : la suspension immédiate de la signature des deux protocoles dans l'attente d'un audit indépendant, la création d'une commission mixte chargée de redéfinir les zones de pêche autorisées, et une compensation financière pour les pertes subies depuis six mois."
+      },
+      {
+        "type": "p",
+        "text": "La pêche artisanale représente 75 % des captures totales du Sénégal et constitue la principale source de protéines animales pour les ménages. La filière emploie directement 600 000 personnes et fait vivre, indirectement, plusieurs millions de Sénégalais le long du littoral. Le gouverneur de la région a indiqué qu'une réunion de médiation était « en cours de programmation » sans préciser d'heure ni de lieu. À l'heure où nous bouclons cet article, les pirogues sont toujours en travers du chenal."
+      }
     ]
   },
   {
@@ -44,18 +91,46 @@
     "dateIso": "2026-05-07T09:00",
     "readTime": "12 min",
     "imgSeed": "touba-magal",
-    "imgUrl": "https://images.pexels.com/photos/2326715/pexels-photo-2326715.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/touba-magal-5-millions.svg",
     "imgAlt": "Touba, préparatifs du grand Magal",
-    "tags": ["Touba", "Magal", "Religion", "Mouridisme", "Sénégal"],
+    "tags": [
+      "Touba",
+      "Magal",
+      "Religion",
+      "Mouridisme",
+      "Sénégal"
+    ],
     "authorBio": "Correspondant permanent à Touba, Modou Fall couvre les événements religieux et la vie de la ville sainte depuis 2017.",
     "body": [
-      { "type": "p", "text": "À soixante-douze heures du grand Magal de Touba, la ville sainte ressemble à un chantier permanent. Des milliers de bénévoles s'activent pour préparer l'accueil des 5,2 millions de fidèles attendus cette année — un record absolu selon le comité d'organisation." },
-      { "type": "p", "text": "Le dispositif mis en place cette année est le plus ambitieux de l'histoire du Magal. Deux mille points de distribution d'eau potable, sept cents postes de premiers secours, et un système de navettes gratuites depuis les gares routières de Dakar et Thiès ont été organisés." },
-      { "type": "h2", "text": "Une ville qui se métamorphose" },
-      { "type": "p", "text": "Les ruelles de Touba sont méconnaissables. Les grandes artères ont été repavées, les façades badigeonnées de blanc et de vert. Des écrans géants ont été installés aux principaux carrefours pour retransmettre les prières et les sermons en direct." },
-      { "type": "blockquote", "text": "« Touba n'appartient pas à une ville. Elle appartient au monde. »", "cite": "Serigne Mountakha Mbacké, Khalife général des Mourides" },
-      { "type": "h2", "text": "Le défi de la sécurité" },
-      { "type": "p", "text": "Quatre mille éléments des forces de sécurité ont été déployés, dont un dispositif spécial de la gendarmerie nationale. La préfecture de Mbacké a mis en place un centre de commandement opérationnel ouvert vingt-quatre heures sur vingt-quatre pendant toute la durée du pèlerinage." }
+      {
+        "type": "p",
+        "text": "À soixante-douze heures du grand Magal de Touba, la ville sainte ressemble à un chantier permanent. Des milliers de bénévoles s'activent pour préparer l'accueil des 5,2 millions de fidèles attendus cette année — un record absolu selon le comité d'organisation."
+      },
+      {
+        "type": "p",
+        "text": "Le dispositif mis en place cette année est le plus ambitieux de l'histoire du Magal. Deux mille points de distribution d'eau potable, sept cents postes de premiers secours, et un système de navettes gratuites depuis les gares routières de Dakar et Thiès ont été organisés."
+      },
+      {
+        "type": "h2",
+        "text": "Une ville qui se métamorphose"
+      },
+      {
+        "type": "p",
+        "text": "Les ruelles de Touba sont méconnaissables. Les grandes artères ont été repavées, les façades badigeonnées de blanc et de vert. Des écrans géants ont été installés aux principaux carrefours pour retransmettre les prières et les sermons en direct."
+      },
+      {
+        "type": "blockquote",
+        "text": "« Touba n'appartient pas à une ville. Elle appartient au monde. »",
+        "cite": "Serigne Mountakha Mbacké, Khalife général des Mourides"
+      },
+      {
+        "type": "h2",
+        "text": "Le défi de la sécurité"
+      },
+      {
+        "type": "p",
+        "text": "Quatre mille éléments des forces de sécurité ont été déployés, dont un dispositif spécial de la gendarmerie nationale. La préfecture de Mbacké a mis en place un centre de commandement opérationnel ouvert vingt-quatre heures sur vingt-quatre pendant toute la durée du pèlerinage."
+      }
     ]
   },
   {
@@ -69,17 +144,45 @@
     "dateIso": "2026-05-06T21:12",
     "readTime": "6 min",
     "imgSeed": "ziguinchor-paix",
-    "imgUrl": "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/ziguinchor-accord-paix.svg",
     "imgAlt": "Signature de l'accord de paix en Casamance",
-    "tags": ["Casamance", "Paix", "MFDC", "Ziguinchor", "Sénégal"],
+    "tags": [
+      "Casamance",
+      "Paix",
+      "MFDC",
+      "Ziguinchor",
+      "Sénégal"
+    ],
     "body": [
-      { "type": "p", "text": "C'est un moment que beaucoup croyaient impossible. Hier soir à Ziguinchor, dans la salle des conférences du gouvernorat, les représentants du Mouvement des Forces Démocratiques de Casamance (MFDC) et le ministre de l'Intérieur ont apposé leur signature au bas d'un document de sept pages. Quarante ans de conflit armé prennent fin." },
-      { "type": "p", "text": "L'accord prévoit un cessez-le-feu immédiat, le désarmement progressif des combattants du MFDC sur dix-huit mois, et un programme de réintégration économique pour les anciens maquisards. En contrepartie, l'État s'engage à investir 200 milliards de francs CFA dans le développement de la région de Ziguinchor sur cinq ans." },
-      { "type": "h2", "text": "Des décennies de souffrance" },
-      { "type": "p", "text": "Le conflit casamançais, qui a débuté en 1982, a fait des milliers de morts et déplacé plusieurs centaines de milliers de personnes. La Casamance, région enclavée entre la Gambie et la Guinée-Bissau, souffrait d'un sous-développement chronique entretenu par l'insécurité." },
-      { "type": "blockquote", "text": "« Nous rentrons chez nous. Après quarante ans, nous rentrons enfin chez nous. »", "cite": "Salif Sadio, secrétaire général du MFDC" },
-      { "type": "h2", "text": "Les conditions d'une paix durable" },
-      { "type": "p", "text": "Les médiateurs gambiens et mauritaniens, présents à la cérémonie, ont salué « une victoire de la diplomatie africaine ». Mais des observateurs avertissent que la paix ne sera durable que si les engagements économiques sont tenus. « La Casamance a entendu beaucoup de promesses », rappelle le sociologue Mamadou Badji, originaire de Ziguinchor. « Le vrai test sera dans six mois. »" }
+      {
+        "type": "p",
+        "text": "C'est un moment que beaucoup croyaient impossible. Hier soir à Ziguinchor, dans la salle des conférences du gouvernorat, les représentants du Mouvement des Forces Démocratiques de Casamance (MFDC) et le ministre de l'Intérieur ont apposé leur signature au bas d'un document de sept pages. Quarante ans de conflit armé prennent fin."
+      },
+      {
+        "type": "p",
+        "text": "L'accord prévoit un cessez-le-feu immédiat, le désarmement progressif des combattants du MFDC sur dix-huit mois, et un programme de réintégration économique pour les anciens maquisards. En contrepartie, l'État s'engage à investir 200 milliards de francs CFA dans le développement de la région de Ziguinchor sur cinq ans."
+      },
+      {
+        "type": "h2",
+        "text": "Des décennies de souffrance"
+      },
+      {
+        "type": "p",
+        "text": "Le conflit casamançais, qui a débuté en 1982, a fait des milliers de morts et déplacé plusieurs centaines de milliers de personnes. La Casamance, région enclavée entre la Gambie et la Guinée-Bissau, souffrait d'un sous-développement chronique entretenu par l'insécurité."
+      },
+      {
+        "type": "blockquote",
+        "text": "« Nous rentrons chez nous. Après quarante ans, nous rentrons enfin chez nous. »",
+        "cite": "Salif Sadio, secrétaire général du MFDC"
+      },
+      {
+        "type": "h2",
+        "text": "Les conditions d'une paix durable"
+      },
+      {
+        "type": "p",
+        "text": "Les médiateurs gambiens et mauritaniens, présents à la cérémonie, ont salué « une victoire de la diplomatie africaine ». Mais des observateurs avertissent que la paix ne sera durable que si les engagements économiques sont tenus. « La Casamance a entendu beaucoup de promesses », rappelle le sociologue Mamadou Badji, originaire de Ziguinchor. « Le vrai test sera dans six mois. »"
+      }
     ]
   },
   {
@@ -93,15 +196,36 @@
     "dateIso": "2026-05-07T08:44",
     "readTime": "5 min",
     "imgSeed": "brt-dakar",
-    "imgUrl": "https://images.pexels.com/photos/1178448/pexels-photo-1178448.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/brt-dakar-bilan.svg",
     "imgAlt": "Bus BRT sur l'axe Guédiawaye-Petersen",
-    "tags": ["BRT", "Dakar", "Transport", "Mobilité urbaine", "Guédiawaye"],
+    "tags": [
+      "BRT",
+      "Dakar",
+      "Transport",
+      "Mobilité urbaine",
+      "Guédiawaye"
+    ],
     "body": [
-      { "type": "p", "text": "Six mois après le lancement officiel du Bus Rapid Transit (BRT) dakarois, le bilan est contrasté mais globalement positif. Sur l'axe Guédiawaye–Petersen, le temps de trajet a été réduit de 40 % en heure de pointe, selon les données de DAKAR BRT, l'entreprise publique opératrice." },
-      { "type": "p", "text": "Les 23 kilomètres de couloir dédié, protégé des autres véhicules par des séparateurs en béton, ont tenu leurs promesses pour les usagers qui habitent à proximité des 14 stations. La fréquence — un bus toutes les cinq minutes aux heures de pointe — satisfait la majorité des voyageurs interrogés." },
-      { "type": "h2", "text": "Des quartiers encore à l'écart" },
-      { "type": "p", "text": "Mais les habitants de Yeumbeul, Keur Massar ou Malika se sentent oubliés. Ces quartiers denses, éloignés de la ligne principale, ne bénéficient pas encore des lignes alimentaires promises lors du lancement. « Pour nous, rien n'a changé », confie Mariama Faye, qui met toujours deux heures pour rejoindre son travail à Plateau." },
-      { "type": "pullquote", "text": "Le BRT a transformé la vie de ceux qui vivent sur son corridor. Il reste à connecter ceux qui en sont encore exclus." }
+      {
+        "type": "p",
+        "text": "Six mois après le lancement officiel du Bus Rapid Transit (BRT) dakarois, le bilan est contrasté mais globalement positif. Sur l'axe Guédiawaye–Petersen, le temps de trajet a été réduit de 40 % en heure de pointe, selon les données de DAKAR BRT, l'entreprise publique opératrice."
+      },
+      {
+        "type": "p",
+        "text": "Les 23 kilomètres de couloir dédié, protégé des autres véhicules par des séparateurs en béton, ont tenu leurs promesses pour les usagers qui habitent à proximité des 14 stations. La fréquence — un bus toutes les cinq minutes aux heures de pointe — satisfait la majorité des voyageurs interrogés."
+      },
+      {
+        "type": "h2",
+        "text": "Des quartiers encore à l'écart"
+      },
+      {
+        "type": "p",
+        "text": "Mais les habitants de Yeumbeul, Keur Massar ou Malika se sentent oubliés. Ces quartiers denses, éloignés de la ligne principale, ne bénéficient pas encore des lignes alimentaires promises lors du lancement. « Pour nous, rien n'a changé », confie Mariama Faye, qui met toujours deux heures pour rejoindre son travail à Plateau."
+      },
+      {
+        "type": "pullquote",
+        "text": "Le BRT a transformé la vie de ceux qui vivent sur son corridor. Il reste à connecter ceux qui en sont encore exclus."
+      }
     ]
   },
   {
@@ -115,11 +239,17 @@
     "dateIso": "2026-05-07T07:20",
     "readTime": "3 min",
     "imgSeed": "justice-tribunal",
-    "imgUrl": "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/sweet-beauty-appel.svg",
     "imgAlt": "Palais de Justice de Dakar",
     "body": [
-      { "type": "p", "text": "La chambre criminelle de la Cour d'appel de Dakar rendra vendredi sa décision dans l'affaire Sweet Beauty, qui oppose depuis deux ans la plaignante Adji Sarr à l'opposant Ousmane Sonko. Après le dépôt des conclusions finales des deux parties mercredi, les magistrats ont mis l'affaire en délibéré." },
-      { "type": "p", "text": "La défense a plaidé la nullité de la procédure pour vices de forme, tandis que le parquet a requis la confirmation du jugement de première instance. La décision de vendredi sera susceptible d'un pourvoi en cassation devant la Cour suprême." }
+      {
+        "type": "p",
+        "text": "La chambre criminelle de la Cour d'appel de Dakar rendra vendredi sa décision dans l'affaire Sweet Beauty, qui oppose depuis deux ans la plaignante Adji Sarr à l'opposant Ousmane Sonko. Après le dépôt des conclusions finales des deux parties mercredi, les magistrats ont mis l'affaire en délibéré."
+      },
+      {
+        "type": "p",
+        "text": "La défense a plaidé la nullité de la procédure pour vices de forme, tandis que le parquet a requis la confirmation du jugement de première instance. La décision de vendredi sera susceptible d'un pourvoi en cassation devant la Cour suprême."
+      }
     ]
   },
   {
@@ -133,18 +263,47 @@
     "dateIso": "2026-05-06",
     "readTime": "Long format",
     "imgSeed": "mboro-phosphates",
-    "imgUrl": "https://images.pexels.com/photos/167605/pexels-photo-167605.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/mboro-phosphates-nappes.svg",
     "imgAlt": "Mine de phosphates à Mboro, région de Thiès",
     "badge": "longformat",
-    "tags": ["Mboro", "Phosphates", "Thiès", "Emploi", "Environnement", "Nappes phréatiques"],
+    "tags": [
+      "Mboro",
+      "Phosphates",
+      "Thiès",
+      "Emploi",
+      "Environnement",
+      "Nappes phréatiques"
+    ],
     "body": [
-      { "type": "p", "text": "À Mboro, la poussière blanche qui tache les façades des maisons et colore les feuilles des manguiers n'est pas de la poussière ordinaire. C'est du calcaire de phosphate, le même minerai qui a fait la richesse de la région de Thiès pendant un demi-siècle, et qui, après une décennie de ralentissement, revient en force." },
-      { "type": "p", "text": "Depuis la relance des exploitations par le groupe Industries Chimiques du Sénégal (ICS) en 2024, 4 200 emplois directs ont été créés, et 12 000 emplois indirects dans la sous-traitance locale. Pour une région qui souffrait d'un chômage endémique, c'est une bouffée d'oxygène. Mais à quel prix ?" },
-      { "type": "h2", "text": "L'inquiétude des riverains" },
-      { "type": "p", "text": "Le Collectif de Défense des Droits des Populations de Mboro a commandé, en novembre 2025, une analyse indépendante de l'eau de dix puits villageois. Les résultats, rendus publics la semaine dernière, montrent des taux de cadmium et de phosphore au-delà des seuils de l'OMS dans sept d'entre eux." },
-      { "type": "blockquote", "text": "« On nous dit de travailler d'un côté, mais on nous empoisonne de l'autre. Ce n'est pas un développement, c'est un marché de dupes. »", "cite": "Ndèye Cissé, présidente du Collectif de Défense des Droits des Populations de Mboro" },
-      { "type": "h2", "text": "ICS et gouvernement répondent" },
-      { "type": "p", "text": "ICS conteste les conclusions de l'analyse et a publié ses propres relevés, montrant des taux conformes aux normes. La Direction de l'Environnement a annoncé le lancement d'un audit indépendant. En attendant, les populations font face à une alternative cruelle : l'emploi ou l'eau." }
+      {
+        "type": "p",
+        "text": "À Mboro, la poussière blanche qui tache les façades des maisons et colore les feuilles des manguiers n'est pas de la poussière ordinaire. C'est du calcaire de phosphate, le même minerai qui a fait la richesse de la région de Thiès pendant un demi-siècle, et qui, après une décennie de ralentissement, revient en force."
+      },
+      {
+        "type": "p",
+        "text": "Depuis la relance des exploitations par le groupe Industries Chimiques du Sénégal (ICS) en 2024, 4 200 emplois directs ont été créés, et 12 000 emplois indirects dans la sous-traitance locale. Pour une région qui souffrait d'un chômage endémique, c'est une bouffée d'oxygène. Mais à quel prix ?"
+      },
+      {
+        "type": "h2",
+        "text": "L'inquiétude des riverains"
+      },
+      {
+        "type": "p",
+        "text": "Le Collectif de Défense des Droits des Populations de Mboro a commandé, en novembre 2025, une analyse indépendante de l'eau de dix puits villageois. Les résultats, rendus publics la semaine dernière, montrent des taux de cadmium et de phosphore au-delà des seuils de l'OMS dans sept d'entre eux."
+      },
+      {
+        "type": "blockquote",
+        "text": "« On nous dit de travailler d'un côté, mais on nous empoisonne de l'autre. Ce n'est pas un développement, c'est un marché de dupes. »",
+        "cite": "Ndèye Cissé, présidente du Collectif de Défense des Droits des Populations de Mboro"
+      },
+      {
+        "type": "h2",
+        "text": "ICS et gouvernement répondent"
+      },
+      {
+        "type": "p",
+        "text": "ICS conteste les conclusions de l'analyse et a publié ses propres relevés, montrant des taux conformes aux normes. La Direction de l'Environnement a annoncé le lancement d'un audit indépendant. En attendant, les populations font face à une alternative cruelle : l'emploi ou l'eau."
+      }
     ]
   },
   {
@@ -158,14 +317,32 @@
     "dateIso": "2026-05-07T12:00",
     "readTime": "4 min",
     "imgSeed": "diomaye-jeunes",
-    "imgUrl": "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/diomaye-2026-jeunes.svg",
     "imgAlt": "Jeunes diplômés sénégalais",
-    "tags": ["Plan Diomaye", "Jeunesse", "Emploi", "Politique", "Sénégal"],
+    "tags": [
+      "Plan Diomaye",
+      "Jeunesse",
+      "Emploi",
+      "Politique",
+      "Sénégal"
+    ],
     "body": [
-      { "type": "p", "text": "Le Premier ministre a présenté mercredi en Conseil des ministres le volet jeunesse du Plan Diomaye 2026. Sur les 160 milliards de francs CFA mobilisés, 75 000 contrats d'insertion professionnelle doivent être signés d'ici fin décembre. Une ambition saluée par les syndicats étudiants, mais accueillie avec prudence par les économistes." },
-      { "type": "p", "text": "Les détails du mécanisme restent flous : qui décide des critères de sélection ? Comment garantir l'égalité d'accès entre les régions ? Le ministère de la Jeunesse promet une plateforme numérique de candidature d'ici juin." },
-      { "type": "h2", "text": "Les syndicats entre espoir et vigilance" },
-      { "type": "p", "text": "L'UDES (Union Démocratique des Étudiants du Sénégal) a salué « le signal politique fort » mais conditionne son soutien à la publication d'un texte réglementaire précis. « Des promesses, nous en avons entendues depuis 2012. Ce qui compte, c'est le décret d'application », a déclaré son président Alioune Mbaye." }
+      {
+        "type": "p",
+        "text": "Le Premier ministre a présenté mercredi en Conseil des ministres le volet jeunesse du Plan Diomaye 2026. Sur les 160 milliards de francs CFA mobilisés, 75 000 contrats d'insertion professionnelle doivent être signés d'ici fin décembre. Une ambition saluée par les syndicats étudiants, mais accueillie avec prudence par les économistes."
+      },
+      {
+        "type": "p",
+        "text": "Les détails du mécanisme restent flous : qui décide des critères de sélection ? Comment garantir l'égalité d'accès entre les régions ? Le ministère de la Jeunesse promet une plateforme numérique de candidature d'ici juin."
+      },
+      {
+        "type": "h2",
+        "text": "Les syndicats entre espoir et vigilance"
+      },
+      {
+        "type": "p",
+        "text": "L'UDES (Union Démocratique des Étudiants du Sénégal) a salué « le signal politique fort » mais conditionne son soutien à la publication d'un texte réglementaire précis. « Des promesses, nous en avons entendues depuis 2012. Ce qui compte, c'est le décret d'application », a déclaré son président Alioune Mbaye."
+      }
     ]
   },
   {
@@ -179,12 +356,24 @@
     "dateIso": "2026-05-07T11:08",
     "readTime": "3 min",
     "imgSeed": "conseil-constitutionnel",
-    "imgUrl": "https://images.pexels.com/photos/3844517/pexels-photo-3844517.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/opposition-conseil-constitutionnel.svg",
     "imgAlt": "Assemblée nationale du Sénégal",
-    "tags": ["Conseil constitutionnel", "Opposition", "Réforme", "Politique", "Démocratie"],
+    "tags": [
+      "Conseil constitutionnel",
+      "Opposition",
+      "Réforme",
+      "Politique",
+      "Démocratie"
+    ],
     "body": [
-      { "type": "p", "text": "Treize partis d'opposition, du PDS à Taxawu Sénégal en passant par plusieurs mouvements de la société civile, ont remis jeudi une pétition commune au président de l'Assemblée nationale. Ils réclament une révision constitutionnelle portant sur le mode de nomination des sept membres du Conseil constitutionnel, actuellement désignés par le président de la République." },
-      { "type": "p", "text": "La coalition propose que trois membres sur sept soient désignés par l'opposition parlementaire, et que les mandats ne soient pas renouvelables. « Un Conseil dont tous les membres sont nommés par le chef de l'exécutif ne peut pas être perçu comme impartial », argue Barthélémy Dias, porte-parole de la pétition." }
+      {
+        "type": "p",
+        "text": "Treize partis d'opposition, du PDS à Taxawu Sénégal en passant par plusieurs mouvements de la société civile, ont remis jeudi une pétition commune au président de l'Assemblée nationale. Ils réclament une révision constitutionnelle portant sur le mode de nomination des sept membres du Conseil constitutionnel, actuellement désignés par le président de la République."
+      },
+      {
+        "type": "p",
+        "text": "La coalition propose que trois membres sur sept soient désignés par l'opposition parlementaire, et que les mandats ne soient pas renouvelables. « Un Conseil dont tous les membres sont nommés par le chef de l'exécutif ne peut pas être perçu comme impartial », argue Barthélémy Dias, porte-parole de la pétition."
+      }
     ]
   },
   {
@@ -198,14 +387,32 @@
     "dateIso": "2026-05-06",
     "readTime": "4 min",
     "imgSeed": "diomaye-paris",
-    "imgUrl": "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/diomaye-paris-agenda.svg",
     "imgAlt": "Paris, Tour Eiffel — visite officielle de Diomaye Faye",
-    "tags": ["Diomaye Faye", "Paris", "Diplomatie", "France", "Diaspora"],
+    "tags": [
+      "Diomaye Faye",
+      "Paris",
+      "Diplomatie",
+      "France",
+      "Diaspora"
+    ],
     "body": [
-      { "type": "p", "text": "Le président Bassirou Diomaye Faye débutera dimanche une visite d'État de trois jours à Paris, la première depuis son élection en mars 2024. L'agenda est dense et volontairement diversifié : entretiens à l'Élysée, rencontre avec le Premier ministre français, participation à la conférence Investir en Afrique, et discours à Sciences Po Paris sur le thème « Souveraineté et co-développement »." },
-      { "type": "p", "text": "Le président rencontrera également samedi soir, à la Cité universitaire internationale, les représentants de la diaspora sénégalaise en France, estimée à 120 000 personnes. Un moment symboliquement fort pour un président qui a fait de la diaspora un pilier de son projet économique." },
-      { "type": "h2", "text": "Les dossiers sur la table" },
-      { "type": "p", "text": "Au-delà de la forme, la substance sera scrutée de près. Les relations franco-sénégalaises traversent une période de recomposition depuis 2024, marquée par la renégociation de plusieurs accords de défense et la révision des contrats pétroliers. La question de la dette et des accords de partenariat économique avec l'Union européenne figurera également à l'ordre du jour." }
+      {
+        "type": "p",
+        "text": "Le président Bassirou Diomaye Faye débutera dimanche une visite d'État de trois jours à Paris, la première depuis son élection en mars 2024. L'agenda est dense et volontairement diversifié : entretiens à l'Élysée, rencontre avec le Premier ministre français, participation à la conférence Investir en Afrique, et discours à Sciences Po Paris sur le thème « Souveraineté et co-développement »."
+      },
+      {
+        "type": "p",
+        "text": "Le président rencontrera également samedi soir, à la Cité universitaire internationale, les représentants de la diaspora sénégalaise en France, estimée à 120 000 personnes. Un moment symboliquement fort pour un président qui a fait de la diaspora un pilier de son projet économique."
+      },
+      {
+        "type": "h2",
+        "text": "Les dossiers sur la table"
+      },
+      {
+        "type": "p",
+        "text": "Au-delà de la forme, la substance sera scrutée de près. Les relations franco-sénégalaises traversent une période de recomposition depuis 2024, marquée par la renégociation de plusieurs accords de défense et la révision des contrats pétroliers. La question de la dette et des accords de partenariat économique avec l'Union européenne figurera également à l'ordre du jour."
+      }
     ]
   },
   {
@@ -219,16 +426,37 @@
     "dateIso": "2026-05-07T11:00",
     "readTime": "5 min",
     "imgSeed": "gaz-gta",
-    "imgUrl": "https://images.pexels.com/photos/162568/pexels-photo-162568.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/gaz-gta-phase-2.svg",
     "imgAlt": "Plateforme gazière GTA en mer",
-    "tags": ["Gaz naturel", "GTA", "BP", "Énergie", "Économie"],
+    "tags": [
+      "Gaz naturel",
+      "GTA",
+      "BP",
+      "Énergie",
+      "Économie"
+    ],
     "authorBio": "Cheikh Sarr est journaliste économique spécialisé dans les industries extractives. Il suit le dossier pétrole-gaz au Sénégal depuis 2021.",
     "body": [
-      { "type": "p", "text": "BP et Kosmos Energy ont confirmé mercredi que la phase 2 du projet gazier Grand Tortue Ahmeyim (GTA) est désormais inscrite dans leur planning officiel, avec une mise en production progressive attendue au premier trimestre 2027. L'annonce, faite en marge d'une conférence à Dakar, constitue une bonne nouvelle pour les finances publiques sénégalaises." },
-      { "type": "p", "text": "Les recettes attendues pour l'État sénégalais ont été révisées à la hausse : selon le ministère du Pétrole, les exportations de la phase 2 pourraient générer entre 280 et 340 milliards de francs CFA par an, soit près du double des projections initiales, grâce à la hausse des prix du GNL sur les marchés asiatiques." },
-      { "type": "h2", "text": "Un projet complexe, enfin sur les rails" },
-      { "type": "p", "text": "GTA, développé à cheval sur les eaux territoriales sénégalaises et mauritaniennes, est l'un des projets gaziers les plus complexes d'Afrique de l'Ouest. La phase 1, entrée en production fin 2024, produit environ 2,4 millions de tonnes de GNL par an. La phase 2 devrait doubler cette capacité." },
-      { "type": "pullquote", "text": "Le Sénégal entre dans l'ère des grandes exportations énergétiques. Le défi est désormais de transformer cette rente en développement durable." }
+      {
+        "type": "p",
+        "text": "BP et Kosmos Energy ont confirmé mercredi que la phase 2 du projet gazier Grand Tortue Ahmeyim (GTA) est désormais inscrite dans leur planning officiel, avec une mise en production progressive attendue au premier trimestre 2027. L'annonce, faite en marge d'une conférence à Dakar, constitue une bonne nouvelle pour les finances publiques sénégalaises."
+      },
+      {
+        "type": "p",
+        "text": "Les recettes attendues pour l'État sénégalais ont été révisées à la hausse : selon le ministère du Pétrole, les exportations de la phase 2 pourraient générer entre 280 et 340 milliards de francs CFA par an, soit près du double des projections initiales, grâce à la hausse des prix du GNL sur les marchés asiatiques."
+      },
+      {
+        "type": "h2",
+        "text": "Un projet complexe, enfin sur les rails"
+      },
+      {
+        "type": "p",
+        "text": "GTA, développé à cheval sur les eaux territoriales sénégalaises et mauritaniennes, est l'un des projets gaziers les plus complexes d'Afrique de l'Ouest. La phase 1, entrée en production fin 2024, produit environ 2,4 millions de tonnes de GNL par an. La phase 2 devrait doubler cette capacité."
+      },
+      {
+        "type": "pullquote",
+        "text": "Le Sénégal entre dans l'ère des grandes exportations énergétiques. Le défi est désormais de transformer cette rente en développement durable."
+      }
     ]
   },
   {
@@ -242,14 +470,32 @@
     "dateIso": "2026-05-07T10:42",
     "readTime": "5 min",
     "imgSeed": "bceao-fcfa",
-    "imgUrl": "https://images.pexels.com/photos/2892618/pexels-photo-2892618.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/bceao-franc-cfa.svg",
     "imgAlt": "Sièges de la BCEAO, monnaie CFA",
-    "tags": ["BCEAO", "Franc CFA", "Économie", "Monnaie", "UEMOA"],
+    "tags": [
+      "BCEAO",
+      "Franc CFA",
+      "Économie",
+      "Monnaie",
+      "UEMOA"
+    ],
     "body": [
-      { "type": "p", "text": "La réunion trimestrielle du Conseil des gouverneurs de la BCEAO, tenue à Abidjan, a pris une tournure inattendue. Pour la première fois depuis 2019, plusieurs gouverneurs ont mis à l'ordre du jour une discussion sur le régime de change du franc CFA et son arrimage à l'euro." },
-      { "type": "p", "text": "Sans remettre en cause l'existence de la monnaie commune, les participants ont évoqué la possibilité d'un mécanisme de flexibilité accrue permettant aux banques centrales nationales de mieux adapter leur politique monétaire aux cycles économiques locaux. Une idée défendue depuis des années par les économistes critiques de la zone franc." },
-      { "type": "h2", "text": "Un débat longtemps tabou" },
-      { "type": "p", "text": "La question de la réforme du CFA est politiquement sensible. Elle mobilise des opinions très tranchées, entre partisans d'une monnaie commune stable et souverainistes qui y voient un vestige colonial. « Ce n'est pas une question de souveraineté, c'est une question d'efficacité monétaire », a tenté de cadrer le gouverneur de la BCEAO dans son allocution d'ouverture." }
+      {
+        "type": "p",
+        "text": "La réunion trimestrielle du Conseil des gouverneurs de la BCEAO, tenue à Abidjan, a pris une tournure inattendue. Pour la première fois depuis 2019, plusieurs gouverneurs ont mis à l'ordre du jour une discussion sur le régime de change du franc CFA et son arrimage à l'euro."
+      },
+      {
+        "type": "p",
+        "text": "Sans remettre en cause l'existence de la monnaie commune, les participants ont évoqué la possibilité d'un mécanisme de flexibilité accrue permettant aux banques centrales nationales de mieux adapter leur politique monétaire aux cycles économiques locaux. Une idée défendue depuis des années par les économistes critiques de la zone franc."
+      },
+      {
+        "type": "h2",
+        "text": "Un débat longtemps tabou"
+      },
+      {
+        "type": "p",
+        "text": "La question de la réforme du CFA est politiquement sensible. Elle mobilise des opinions très tranchées, entre partisans d'une monnaie commune stable et souverainistes qui y voient un vestige colonial. « Ce n'est pas une question de souveraineté, c'est une question d'efficacité monétaire », a tenté de cadrer le gouverneur de la BCEAO dans son allocution d'ouverture."
+      }
     ]
   },
   {
@@ -263,17 +509,38 @@
     "dateIso": "2026-05-04",
     "readTime": "22 min",
     "imgSeed": "dossier-petrole",
-    "imgUrl": "https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/petrole-senegal-rente.svg",
     "imgAlt": "Plateforme pétrolière Sangomar au large du Sénégal",
     "badge": "longformat",
     "featured": true,
-    "tags": ["Pétrole", "Sangomar", "Rente pétrolière", "Économie", "Woodside"],
+    "tags": [
+      "Pétrole",
+      "Sangomar",
+      "Rente pétrolière",
+      "Économie",
+      "Woodside"
+    ],
     "body": [
-      { "type": "p", "text": "Le premier baril de pétrole sénégalais a quitté la plateforme Sangomar en novembre 2024. Six mois plus tard, les recettes commencent à arriver dans les caisses de l'État. Mais entre les engagements de la campagne électorale et la réalité des contrats signés sous les précédentes administrations, la marge de manœuvre du gouvernement Faye est plus étroite qu'annoncé." },
-      { "type": "p", "text": "Selon les documents que notre rédaction a pu consulter, la part de l'État sénégalais dans les revenus bruts de Sangomar oscille entre 18 et 23 % selon le cours du baril, contre les 35 % évoqués lors de la campagne présidentielle de 2024. La différence s'explique par la structure des contrats de partage de production signés entre 2016 et 2020." },
-      { "type": "h2", "text": "La mécanique des contrats de partage" },
-      { "type": "p", "text": "Dans un contrat de partage de production (CPP), l'État ne perçoit sa part qu'après que les compagnies ont récupéré leurs coûts d'investissement — ce que l'industrie appelle le « cost oil ». Or, le coût total de développement de Sangomar est estimé à 4,2 milliards de dollars. Jusqu'à ce seuil, Woodside Energy, l'opérateur australien, récupère une part dominante de la production." },
-      { "type": "pullquote", "text": "Le pétrole sénégalais existe. Les revenus, eux, arriveront progressivement — à condition que les prix mondiaux restent favorables et les coûts maîtrisés." }
+      {
+        "type": "p",
+        "text": "Le premier baril de pétrole sénégalais a quitté la plateforme Sangomar en novembre 2024. Six mois plus tard, les recettes commencent à arriver dans les caisses de l'État. Mais entre les engagements de la campagne électorale et la réalité des contrats signés sous les précédentes administrations, la marge de manœuvre du gouvernement Faye est plus étroite qu'annoncé."
+      },
+      {
+        "type": "p",
+        "text": "Selon les documents que notre rédaction a pu consulter, la part de l'État sénégalais dans les revenus bruts de Sangomar oscille entre 18 et 23 % selon le cours du baril, contre les 35 % évoqués lors de la campagne présidentielle de 2024. La différence s'explique par la structure des contrats de partage de production signés entre 2016 et 2020."
+      },
+      {
+        "type": "h2",
+        "text": "La mécanique des contrats de partage"
+      },
+      {
+        "type": "p",
+        "text": "Dans un contrat de partage de production (CPP), l'État ne perçoit sa part qu'après que les compagnies ont récupéré leurs coûts d'investissement — ce que l'industrie appelle le « cost oil ». Or, le coût total de développement de Sangomar est estimé à 4,2 milliards de dollars. Jusqu'à ce seuil, Woodside Energy, l'opérateur australien, récupère une part dominante de la production."
+      },
+      {
+        "type": "pullquote",
+        "text": "Le pétrole sénégalais existe. Les revenus, eux, arriveront progressivement — à condition que les prix mondiaux restent favorables et les coûts maîtrisés."
+      }
     ]
   },
   {
@@ -287,15 +554,32 @@
     "dateIso": "2026-05-07T10:00",
     "readTime": "6 min",
     "imgSeed": "ivoire-presidentielle",
-    "imgUrl": "https://images.pexels.com/photos/1550337/pexels-photo-1550337.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/presidentielle-ivoirienne-manouvres.svg",
     "imgAlt": "Bureau de vote en Côte d'Ivoire",
     "featured": true,
-    "tags": ["Côte d'Ivoire", "Présidentielle", "Élections", "Afrique"],
+    "tags": [
+      "Côte d'Ivoire",
+      "Présidentielle",
+      "Élections",
+      "Afrique"
+    ],
     "body": [
-      { "type": "p", "text": "À moins de six mois du scrutin présidentiel ivoirien, la scène politique d'Abidjan vit au rythme des recompositions d'alliances et des entrées en lice. Le président Alassane Ouattara, dont le troisième mandat s'achève en décembre, n'a toujours pas officiellement désigné son successeur au sein du RHDP, alimentant les spéculations et les tensions." },
-      { "type": "p", "text": "L'opposition, de son côté, s'organise. Le PDCI de Tidjane Thiam a conclu un accord de coalition avec cinq partis de moindre importance. Le FPI, l'ancien parti de Laurent Gbagbo, a désigné son candidat en assemblée générale extraordinaire la semaine dernière." },
-      { "type": "h2", "text": "La question des listes électorales" },
-      { "type": "p", "text": "La Commission Électorale Indépendante (CEI) a annoncé que 7,4 millions d'électeurs sont inscrits, soit une hausse de 12 % par rapport à 2020. Mais l'opposition conteste ces chiffres et réclame un audit international des fichiers. « Sans liste fiable, il n'y a pas d'élection crédible », a prévenu Laurent Tchagba, coordinateur de la plateforme Ensemble pour la Démocratie." }
+      {
+        "type": "p",
+        "text": "À moins de six mois du scrutin présidentiel ivoirien, la scène politique d'Abidjan vit au rythme des recompositions d'alliances et des entrées en lice. Le président Alassane Ouattara, dont le troisième mandat s'achève en décembre, n'a toujours pas officiellement désigné son successeur au sein du RHDP, alimentant les spéculations et les tensions."
+      },
+      {
+        "type": "p",
+        "text": "L'opposition, de son côté, s'organise. Le PDCI de Tidjane Thiam a conclu un accord de coalition avec cinq partis de moindre importance. Le FPI, l'ancien parti de Laurent Gbagbo, a désigné son candidat en assemblée générale extraordinaire la semaine dernière."
+      },
+      {
+        "type": "h2",
+        "text": "La question des listes électorales"
+      },
+      {
+        "type": "p",
+        "text": "La Commission Électorale Indépendante (CEI) a annoncé que 7,4 millions d'électeurs sont inscrits, soit une hausse de 12 % par rapport à 2020. Mais l'opposition conteste ces chiffres et réclame un audit international des fichiers. « Sans liste fiable, il n'y a pas d'élection crédible », a prévenu Laurent Tchagba, coordinateur de la plateforme Ensemble pour la Démocratie."
+      }
     ]
   },
   {
@@ -309,12 +593,24 @@
     "dateIso": "2026-05-07T06:14",
     "readTime": "4 min",
     "imgSeed": "sahel-bamako",
-    "imgUrl": "https://images.pexels.com/photos/3023119/pexels-photo-3023119.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/attentat-bamako.svg",
     "imgAlt": "Forces de sécurité à Bamako, Mali",
-    "tags": ["Mali", "Bamako", "Terrorisme", "Sahel", "Sécurité"],
+    "tags": [
+      "Mali",
+      "Bamako",
+      "Terrorisme",
+      "Sahel",
+      "Sécurité"
+    ],
     "body": [
-      { "type": "p", "text": "Une voiture piégée a explosé jeudi à l'aube aux abords de la caserne du 33e régiment d'infanterie, dans la banlieue nord de Bamako. Selon un bilan provisoire des autorités maliennes, 14 soldats ont été tués et 27 autres blessés, dont huit grièvement. C'est l'attentat le plus meurtrier à Bamako depuis 2021." },
-      { "type": "p", "text": "Aucun groupe n'a encore revendiqué l'attaque. Mais les méthodes — véhicule kamikaze, ciblage d'une caserne — correspondent au modus operandi du GSIM (Groupe de Soutien à l'Islam et aux Musulmans), affilié à Al-Qaïda, ou du JNIM, selon les analystes sécuritaires." }
+      {
+        "type": "p",
+        "text": "Une voiture piégée a explosé jeudi à l'aube aux abords de la caserne du 33e régiment d'infanterie, dans la banlieue nord de Bamako. Selon un bilan provisoire des autorités maliennes, 14 soldats ont été tués et 27 autres blessés, dont huit grièvement. C'est l'attentat le plus meurtrier à Bamako depuis 2021."
+      },
+      {
+        "type": "p",
+        "text": "Aucun groupe n'a encore revendiqué l'attaque. Mais les méthodes — véhicule kamikaze, ciblage d'une caserne — correspondent au modus operandi du GSIM (Groupe de Soutien à l'Islam et aux Musulmans), affilié à Al-Qaïda, ou du JNIM, selon les analystes sécuritaires."
+      }
     ]
   },
   {
@@ -328,12 +624,24 @@
     "dateIso": "2026-05-07T12:31",
     "readTime": "3 min",
     "imgSeed": "cedeao-abuja",
-    "imgUrl": "https://images.pexels.com/photos/1181696/pexels-photo-1181696.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/cedeao-urgence-defense.svg",
     "imgAlt": "Réunion des ministres de la CEDEAO à Abuja",
-    "tags": ["CEDEAO", "Défense", "Sahel", "Abuja", "Terrorisme"],
+    "tags": [
+      "CEDEAO",
+      "Défense",
+      "Sahel",
+      "Abuja",
+      "Terrorisme"
+    ],
     "body": [
-      { "type": "p", "text": "La Commission de la CEDEAO a convoqué une réunion extraordinaire des ministres de la Défense des quinze États membres, prévue vendredi à Abuja. L'ordre du jour : répondre à la recrudescence des attaques jihadistes dans la bande sahélienne, y compris dans des pays côtiers comme le Bénin, la Côte d'Ivoire et le Togo." },
-      { "type": "p", "text": "La réunion intervient dans un contexte de fragilisation de l'architecture sécuritaire régionale, après le retrait du Mali, du Burkina Faso et du Niger de l'organisation. La force G5 Sahel, déjà affaiblie, n'est plus opérationnelle dans ces trois pays. La CEDEAO cherche à construire un mécanisme alternatif." }
+      {
+        "type": "p",
+        "text": "La Commission de la CEDEAO a convoqué une réunion extraordinaire des ministres de la Défense des quinze États membres, prévue vendredi à Abuja. L'ordre du jour : répondre à la recrudescence des attaques jihadistes dans la bande sahélienne, y compris dans des pays côtiers comme le Bénin, la Côte d'Ivoire et le Togo."
+      },
+      {
+        "type": "p",
+        "text": "La réunion intervient dans un contexte de fragilisation de l'architecture sécuritaire régionale, après le retrait du Mali, du Burkina Faso et du Niger de l'organisation. La force G5 Sahel, déjà affaiblie, n'est plus opérationnelle dans ces trois pays. La CEDEAO cherche à construire un mécanisme alternatif."
+      }
     ]
   },
   {
@@ -347,12 +655,25 @@
     "dateIso": "2026-05-06",
     "readTime": "4 min",
     "imgSeed": "rdc-paix",
-    "imgUrl": "https://images.pexels.com/photos/1451341/pexels-photo-1451341.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/rdc-treve-goma.svg",
     "imgAlt": "Région de Goma, RDC — camp de réfugiés",
-    "tags": ["RDC", "Goma", "M23", "Trêve", "ONU", "Luanda"],
+    "tags": [
+      "RDC",
+      "Goma",
+      "M23",
+      "Trêve",
+      "ONU",
+      "Luanda"
+    ],
     "body": [
-      { "type": "p", "text": "Pour la troisième semaine consécutive, la mission de l'ONU en RDC (MONUSCO) enregistre une baisse significative des incidents armés dans le Nord-Kivu. Le nombre de violations du cessez-le-feu est passé de 47 par semaine en avril à 8 cette semaine, selon le rapport hebdomadaire des observateurs." },
-      { "type": "p", "text": "L'accord de Luanda, signé fin avril entre Kinshasa et Kigali sous l'égide de l'Union africaine, semble tenir — du moins dans ses aspects militaires. Mais la situation humanitaire reste catastrophique : plus de 6 millions de déplacés internes, des camps surpeuplés, une épidémie de choléra qui n'est pas endiguée." }
+      {
+        "type": "p",
+        "text": "Pour la troisième semaine consécutive, la mission de l'ONU en RDC (MONUSCO) enregistre une baisse significative des incidents armés dans le Nord-Kivu. Le nombre de violations du cessez-le-feu est passé de 47 par semaine en avril à 8 cette semaine, selon le rapport hebdomadaire des observateurs."
+      },
+      {
+        "type": "p",
+        "text": "L'accord de Luanda, signé fin avril entre Kinshasa et Kigali sous l'égide de l'Union africaine, semble tenir — du moins dans ses aspects militaires. Mais la situation humanitaire reste catastrophique : plus de 6 millions de déplacés internes, des camps surpeuplés, une épidémie de choléra qui n'est pas endiguée."
+      }
     ]
   },
   {
@@ -366,13 +687,25 @@
     "dateIso": "2026-05-07T09:30",
     "readTime": "3 min",
     "imgSeed": "keurmassar-pluies",
-    "imgUrl": "https://images.pexels.com/photos/1459495/pexels-photo-1459495.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/keur-massar-inondations.svg",
     "imgAlt": "Inondations à Keur Massar, banlieue de Dakar",
     "badge": "live",
-    "tags": ["Keur Massar", "Inondations", "ORSEC", "Dakar", "Société"],
+    "tags": [
+      "Keur Massar",
+      "Inondations",
+      "ORSEC",
+      "Dakar",
+      "Société"
+    ],
     "body": [
-      { "type": "p", "text": "Le Plan ORSEC a été activé à 23h00 hier soir pour Keur Massar Nord et Jaxaay, après que des pluies exceptionnelles de 80 mm en trois heures ont submergé les rues. Deux bataillons de génie militaire sont déployés depuis l'aube pour assister les populations et pomper les eaux stagnantes." },
-      { "type": "p", "text": "Les écoles de Keur Massar Nord ont été réquisitionnées comme centres d'hébergement d'urgence. Selon la Préfecture de Pikine, plus de 1 200 familles ont été évacuées. Les routes de l'autoroute à péage au-delà de Pikine restent coupées à la circulation." }
+      {
+        "type": "p",
+        "text": "Le Plan ORSEC a été activé à 23h00 hier soir pour Keur Massar Nord et Jaxaay, après que des pluies exceptionnelles de 80 mm en trois heures ont submergé les rues. Deux bataillons de génie militaire sont déployés depuis l'aube pour assister les populations et pomper les eaux stagnantes."
+      },
+      {
+        "type": "p",
+        "text": "Les écoles de Keur Massar Nord ont été réquisitionnées comme centres d'hébergement d'urgence. Selon la Préfecture de Pikine, plus de 1 200 familles ont été évacuées. Les routes de l'autoroute à péage au-delà de Pikine restent coupées à la circulation."
+      }
     ]
   },
   {
@@ -386,15 +719,37 @@
     "dateIso": "2026-05-06",
     "readTime": "12 min",
     "imgSeed": "mbour-migrants",
-    "imgUrl": "https://images.pexels.com/photos/1374610/pexels-photo-1374610.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/mbour-familles-migrants.svg",
     "imgAlt": "Pirogue de migrants en mer, côte sénégalaise",
-    "tags": ["Migration", "Mbour", "Atlantique", "Familles", "Société"],
+    "tags": [
+      "Migration",
+      "Mbour",
+      "Atlantique",
+      "Familles",
+      "Société"
+    ],
     "body": [
-      { "type": "p", "text": "Fatoumata n'a pas de tombeau où aller. Son fils Boubacar, 23 ans, a quitté Mbour en pirogue en janvier 2023 avec 87 autres personnes. Ni lui ni aucun de ses compagnons n'est jamais arrivé aux Canaries. « On n'a jamais retrouvé le bateau. On n'a jamais retrouvé les corps. On n'a rien », dit-elle, les mains croisées sur les genoux." },
-      { "type": "p", "text": "Trois ans après, l'Association des Familles de Migrants Disparus de Mbour, qui regroupe 214 familles, maintient la pression. Elle réclame la création d'une commission d'enquête indépendante sur les conditions des traversées, l'accès aux données des garde-côtes espagnols et marocains, et une aide psychologique pour les proches." },
-      { "type": "blockquote", "text": "« Nous voulons juste savoir. Est-ce qu'ils ont souffert ? Est-ce qu'ils sont quelque part ? Donnez-nous la vérité. »", "cite": "Fatoumata Diallo, mère de Boubacar, 23 ans, disparu en janvier 2023" },
-      { "type": "h2", "text": "Un phénomène qui ne faiblit pas" },
-      { "type": "p", "text": "Malgré les campagnes de sensibilisation et le renforcement des contrôles, le nombre de départs de Mbour n'a pas baissé en 2025. L'Organisation Internationale pour les Migrations (OIM) a recensé 4 700 morts et disparus sur la route atlantique vers les Canaries l'an dernier — un record depuis 2014." }
+      {
+        "type": "p",
+        "text": "Fatoumata n'a pas de tombeau où aller. Son fils Boubacar, 23 ans, a quitté Mbour en pirogue en janvier 2023 avec 87 autres personnes. Ni lui ni aucun de ses compagnons n'est jamais arrivé aux Canaries. « On n'a jamais retrouvé le bateau. On n'a jamais retrouvé les corps. On n'a rien », dit-elle, les mains croisées sur les genoux."
+      },
+      {
+        "type": "p",
+        "text": "Trois ans après, l'Association des Familles de Migrants Disparus de Mbour, qui regroupe 214 familles, maintient la pression. Elle réclame la création d'une commission d'enquête indépendante sur les conditions des traversées, l'accès aux données des garde-côtes espagnols et marocains, et une aide psychologique pour les proches."
+      },
+      {
+        "type": "blockquote",
+        "text": "« Nous voulons juste savoir. Est-ce qu'ils ont souffert ? Est-ce qu'ils sont quelque part ? Donnez-nous la vérité. »",
+        "cite": "Fatoumata Diallo, mère de Boubacar, 23 ans, disparu en janvier 2023"
+      },
+      {
+        "type": "h2",
+        "text": "Un phénomène qui ne faiblit pas"
+      },
+      {
+        "type": "p",
+        "text": "Malgré les campagnes de sensibilisation et le renforcement des contrôles, le nombre de départs de Mbour n'a pas baissé en 2025. L'Organisation Internationale pour les Migrations (OIM) a recensé 4 700 morts et disparus sur la route atlantique vers les Canaries l'an dernier — un record depuis 2014."
+      }
     ]
   },
   {
@@ -408,14 +763,32 @@
     "dateIso": "2026-05-07",
     "readTime": "5 min",
     "imgSeed": "lions-teranga",
-    "imgUrl": "https://images.pexels.com/photos/46798/pexels-photo-46798.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/lions-selection-mane.svg",
     "imgAlt": "Les Lions de la Téranga, équipe nationale du Sénégal",
-    "tags": ["Lions de la Téranga", "Sadio Mané", "CAN 2027", "Football", "Aliou Cissé"],
+    "tags": [
+      "Lions de la Téranga",
+      "Sadio Mané",
+      "CAN 2027",
+      "Football",
+      "Aliou Cissé"
+    ],
     "body": [
-      { "type": "p", "text": "La liste a fuité avant même la conférence de presse. Et quand Aliou Cissé a confirmé le retour de Sadio Mané, la toile sénégalaise a explosé. À 34 ans, l'attaquant d'Al-Nassr sera bien de la partie pour les deux matchs de qualification à la CAN 2027 — face au Mozambique à Dakar et face à l'Algérie à Alger." },
-      { "type": "p", "text": "La sélection de 26 joueurs compte 8 nouveaux visages, dont le milieu de terrain Amadou Diallo (Brest) et le gardien Saliou Ciss (Reims). Les absences notables : Cheikhou Kouyaté, blessé à la cuisse, et Nampalys Mendy, écarté pour raisons disciplinaires selon une source interne à la fédération." },
-      { "type": "h2", "text": "L'enjeu de la qualification" },
-      { "type": "p", "text": "Le Sénégal, champion d'Afrique en titre depuis 2022, occupe la tête de son groupe de qualification avec 6 points. Une victoire contre le Mozambique suffirait à valider mathématiquement la qualification pour la CAN 2027, prévue en Maroc. « On ne joue pas pour se qualifier, on joue pour gagner », a prévenu Aliou Cissé." }
+      {
+        "type": "p",
+        "text": "La liste a fuité avant même la conférence de presse. Et quand Aliou Cissé a confirmé le retour de Sadio Mané, la toile sénégalaise a explosé. À 34 ans, l'attaquant d'Al-Nassr sera bien de la partie pour les deux matchs de qualification à la CAN 2027 — face au Mozambique à Dakar et face à l'Algérie à Alger."
+      },
+      {
+        "type": "p",
+        "text": "La sélection de 26 joueurs compte 8 nouveaux visages, dont le milieu de terrain Amadou Diallo (Brest) et le gardien Saliou Ciss (Reims). Les absences notables : Cheikhou Kouyaté, blessé à la cuisse, et Nampalys Mendy, écarté pour raisons disciplinaires selon une source interne à la fédération."
+      },
+      {
+        "type": "h2",
+        "text": "L'enjeu de la qualification"
+      },
+      {
+        "type": "p",
+        "text": "Le Sénégal, champion d'Afrique en titre depuis 2022, occupe la tête de son groupe de qualification avec 6 points. Une victoire contre le Mozambique suffirait à valider mathématiquement la qualification pour la CAN 2027, prévue en Maroc. « On ne joue pas pour se qualifier, on joue pour gagner », a prévenu Aliou Cissé."
+      }
     ]
   },
   {
@@ -429,13 +802,29 @@
     "dateIso": "2026-05-06",
     "readTime": "6 min",
     "imgSeed": "lutte-modou-lo",
-    "imgUrl": "https://images.pexels.com/photos/3943882/pexels-photo-3943882.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/lutte-modou-lo-siteu.svg",
     "imgAlt": "Arène nationale, lutte sénégalaise",
-    "tags": ["Lutte sénégalaise", "Modou Lô", "Siteu", "Arène nationale", "Sport"],
+    "tags": [
+      "Lutte sénégalaise",
+      "Modou Lô",
+      "Siteu",
+      "Arène nationale",
+      "Sport"
+    ],
     "body": [
-      { "type": "p", "text": "Le CNG (Comité National de Gestion de la lutte avec frappe) a officialisé jeudi la tenue du combat Modou Lô vs Siteu le 14 juin prochain à l'Arène nationale de Pikine. Deux ans après leur premier affrontement — remporté par Modou Lô par forfait médical de Siteu — la revanche est enfin programmée." },
-      { "type": "p", "text": "Le cachet du combat est évalué à 250 millions de francs CFA pour le vainqueur, 80 millions pour le perdant. Les billetteries ouvrent lundi. Les promoteurs s'attendent à une vente complète en moins de 48 heures — 20 000 places sont disponibles." },
-      { "type": "blockquote", "text": "« Cette fois, il n'y aura pas de report. Je suis prêt. J'attends ce combat depuis deux ans. »", "cite": "Siteu, lors d'une conférence de presse à Dakar" }
+      {
+        "type": "p",
+        "text": "Le CNG (Comité National de Gestion de la lutte avec frappe) a officialisé jeudi la tenue du combat Modou Lô vs Siteu le 14 juin prochain à l'Arène nationale de Pikine. Deux ans après leur premier affrontement — remporté par Modou Lô par forfait médical de Siteu — la revanche est enfin programmée."
+      },
+      {
+        "type": "p",
+        "text": "Le cachet du combat est évalué à 250 millions de francs CFA pour le vainqueur, 80 millions pour le perdant. Les billetteries ouvrent lundi. Les promoteurs s'attendent à une vente complète en moins de 48 heures — 20 000 places sont disponibles."
+      },
+      {
+        "type": "blockquote",
+        "text": "« Cette fois, il n'y aura pas de report. Je suis prêt. J'attends ce combat depuis deux ans. »",
+        "cite": "Siteu, lors d'une conférence de presse à Dakar"
+      }
     ]
   },
   {
@@ -449,13 +838,25 @@
     "dateIso": "2026-05-07T09:15",
     "readTime": "3 min",
     "imgSeed": "youssou-ndour",
-    "imgUrl": "https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/youssou-ndour-tournee.svg",
     "imgAlt": "Concert de Youssou Ndour",
     "badge": "video",
-    "tags": ["Youssou Ndour", "Musique", "Xippi", "Tournée africaine", "Culture"],
+    "tags": [
+      "Youssou Ndour",
+      "Musique",
+      "Xippi",
+      "Tournée africaine",
+      "Culture"
+    ],
     "body": [
-      { "type": "p", "text": "Youssou Ndour a annoncé jeudi sa tournée africaine « Xippi » (« Ouvre les yeux » en wolof), qui le conduira dans cinq capitales du continent entre juillet et septembre. Dakar, Abidjan, Accra, Lagos et Nairobi : cinq étapes, cinq nuits de mbalax, de soul africaine et des extraits de son nouvel album attendu en juin." },
-      { "type": "p", "text": "« Xippi est mon album le plus personnel. Il parle de l'Afrique qui se réveille, qui se regarde elle-même sans complexe », a déclaré l'artiste en conférence de presse au Musée des civilisations noires de Dakar. L'album compte 14 titres, dont deux collaborations avec Burna Boy et l'artiste nigériane Tiwa Savage." }
+      {
+        "type": "p",
+        "text": "Youssou Ndour a annoncé jeudi sa tournée africaine « Xippi » (« Ouvre les yeux » en wolof), qui le conduira dans cinq capitales du continent entre juillet et septembre. Dakar, Abidjan, Accra, Lagos et Nairobi : cinq étapes, cinq nuits de mbalax, de soul africaine et des extraits de son nouvel album attendu en juin."
+      },
+      {
+        "type": "p",
+        "text": "« Xippi est mon album le plus personnel. Il parle de l'Afrique qui se réveille, qui se regarde elle-même sans complexe », a déclaré l'artiste en conférence de presse au Musée des civilisations noires de Dakar. L'album compte 14 titres, dont deux collaborations avec Burna Boy et l'artiste nigériane Tiwa Savage."
+      }
     ]
   },
   {
@@ -469,12 +870,24 @@
     "dateIso": "2026-05-05",
     "readTime": "4 min",
     "imgSeed": "dakar-biennale",
-    "imgUrl": "https://images.pexels.com/photos/3224924/pexels-photo-3224924.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/dakart-biennale-2026.svg",
     "imgAlt": "Biennale de Dakar Dak'Art 2026 — exposition d'art contemporain africain",
-    "tags": ["Dak'Art", "Biennale", "Dakar", "Art contemporain", "Ndary Lo"],
+    "tags": [
+      "Dak'Art",
+      "Biennale",
+      "Dakar",
+      "Art contemporain",
+      "Ndary Lo"
+    ],
     "body": [
-      { "type": "p", "text": "Le ministère de la Culture a officialisé mardi la nomination de Ndary Lo comme directeur artistique de la 16e Biennale de Dakar, prévue en mai 2026. Sculpteur de renommée internationale, Ndary Lo est connu pour ses installations monumentales qui mêlent matériaux de récupération et références aux traditions africaines." },
-      { "type": "p", "text": "Le thème retenu — « Mémoires plurielles, futurs communs » — vise à explorer les relations entre héritage culturel africain et contemporanéité mondiale. « Nous voulons une Biennale qui questionne, qui dérange, qui invite à imaginer », a déclaré Ndary Lo." }
+      {
+        "type": "p",
+        "text": "Le ministère de la Culture a officialisé mardi la nomination de Ndary Lo comme directeur artistique de la 16e Biennale de Dakar, prévue en mai 2026. Sculpteur de renommée internationale, Ndary Lo est connu pour ses installations monumentales qui mêlent matériaux de récupération et références aux traditions africaines."
+      },
+      {
+        "type": "p",
+        "text": "Le thème retenu — « Mémoires plurielles, futurs communs » — vise à explorer les relations entre héritage culturel africain et contemporanéité mondiale. « Nous voulons une Biennale qui questionne, qui dérange, qui invite à imaginer », a déclaré Ndary Lo."
+      }
     ]
   },
   {
@@ -488,13 +901,25 @@
     "dateIso": "2026-05-04",
     "readTime": "7 min",
     "imgSeed": "cinema-mati-diop",
-    "imgUrl": "https://images.pexels.com/photos/33129/pexels-photo-33129.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/mati-diop-cannes.svg",
     "imgAlt": "Festival de Cannes — cinéma africain",
     "badge": "video",
-    "tags": ["Mati Diop", "Cannes", "Cinéma africain", "Culture", "Sénégal"],
+    "tags": [
+      "Mati Diop",
+      "Cannes",
+      "Cinéma africain",
+      "Culture",
+      "Sénégal"
+    ],
     "body": [
-      { "type": "p", "text": "Après « Atlantique » (Grand Prix à Cannes en 2019) et « Dahomey » (Ours d'or à Berlin en 2024), Mati Diop revient à Cannes avec « Barzakh », son troisième long-métrage en sélection officielle en compétition. Le film, dont la bande-annonce a été dévoilée lundi, explore les liens entre vivants et ancêtres dans le contexte d'une Afrique contemporaine en mutation." },
-      { "type": "p", "text": "La cinéaste franco-sénégalaise, petite-fille du cinéaste Djibril Diop Mambéty, incarne à elle seule une certaine idée du cinéma africain — exigeant, poétique, ancré dans le réel sans jamais y réduire. « Je ne fais pas du cinéma africain. Je fais du cinéma. Le reste, c'est une étiquette que les autres collent », dit-elle." }
+      {
+        "type": "p",
+        "text": "Après « Atlantique » (Grand Prix à Cannes en 2019) et « Dahomey » (Ours d'or à Berlin en 2024), Mati Diop revient à Cannes avec « Barzakh », son troisième long-métrage en sélection officielle en compétition. Le film, dont la bande-annonce a été dévoilée lundi, explore les liens entre vivants et ancêtres dans le contexte d'une Afrique contemporaine en mutation."
+      },
+      {
+        "type": "p",
+        "text": "La cinéaste franco-sénégalaise, petite-fille du cinéaste Djibril Diop Mambéty, incarne à elle seule une certaine idée du cinéma africain — exigeant, poétique, ancré dans le réel sans jamais y réduire. « Je ne fais pas du cinéma africain. Je fais du cinéma. Le reste, c'est une étiquette que les autres collent », dit-elle."
+      }
     ]
   },
   {
@@ -508,12 +933,24 @@
     "dateIso": "2026-05-06",
     "readTime": "5 min",
     "imgSeed": "festival-saint-louis",
-    "imgUrl": "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/bouba-ndour-festival-saint-louis.svg",
     "imgAlt": "Festival de Jazz de Saint-Louis",
-    "tags": ["Festival de Jazz", "Saint-Louis", "Bouba Ndour", "Culture", "Musique"],
+    "tags": [
+      "Festival de Jazz",
+      "Saint-Louis",
+      "Bouba Ndour",
+      "Culture",
+      "Musique"
+    ],
     "body": [
-      { "type": "p", "text": "Bouba Ndour, directeur artistique du Festival International de Jazz de Saint-Louis, a publié mercredi un communiqué de six pages répondant point par point aux accusations de mauvaise gestion financière portées par le collectif d'artisans locaux « Saint-Louis Debout »." },
-      { "type": "p", "text": "Le collectif reprochait au festival de faire appel en priorité à des artistes et techniciens extérieurs à la région, privant ainsi les acteurs culturels locaux de retombées économiques significatives. Bouba Ndour conteste ces chiffres et annonce un audit indépendant pour « rétablir la vérité »." }
+      {
+        "type": "p",
+        "text": "Bouba Ndour, directeur artistique du Festival International de Jazz de Saint-Louis, a publié mercredi un communiqué de six pages répondant point par point aux accusations de mauvaise gestion financière portées par le collectif d'artisans locaux « Saint-Louis Debout »."
+      },
+      {
+        "type": "p",
+        "text": "Le collectif reprochait au festival de faire appel en priorité à des artistes et techniciens extérieurs à la région, privant ainsi les acteurs culturels locaux de retombées économiques significatives. Bouba Ndour conteste ces chiffres et annonce un audit indépendant pour « rétablir la vérité »."
+      }
     ]
   },
   {
@@ -527,15 +964,33 @@
     "dateIso": "2026-05-07T08:00",
     "readTime": "8 min",
     "imgSeed": "marseille-diaspora",
-    "imgUrl": "https://images.pexels.com/photos/209841/pexels-photo-209841.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/marseille-senegalais-legislatives.svg",
     "imgAlt": "Vieux-Port de Marseille, communauté sénégalaise",
     "badge": "video",
-    "tags": ["Diaspora", "Marseille", "Législatives", "Sénégalais de France", "Vote"],
+    "tags": [
+      "Diaspora",
+      "Marseille",
+      "Législatives",
+      "Sénégalais de France",
+      "Vote"
+    ],
     "body": [
-      { "type": "p", "text": "Au marché des Capucins, dans le quartier de Noailles, les tomates séchées et les bissaps côtoient les déclarations politiques. Ici, dans ce Marseille multicolore et légèrement décrépit que les Sénégalais appellent « la deuxième ville du Sénégal », les élections législatives suscitent des réactions contrastées." },
-      { "type": "p", "text": "Moussa Diallo, 52 ans, gérant d'une épicerie de la Belle-de-Mai, hausse les épaules. « Chaque fois, on nous demande de voter. Et après ? Les routes de chez nous sont toujours défoncées. L'hôpital de mon village n'a toujours pas de médecin. » À côté, Ndeye Seck, 31 ans, étudiante en droit, est plus engagée. « Cette fois, c'est différent. Le gouvernement Faye, on y croit encore. »" },
-      { "type": "h2", "text": "Un vote qui compte" },
-      { "type": "p", "text": "La circumscription des Sénégalais de l'extérieur compte désormais 15 sièges à l'Assemblée nationale. Sur les 120 000 Sénégalais inscrits en France, environ 40 % sont enregistrés dans la région Provence-Alpes-Côte d'Azur. La mobilisation reste le principal enjeu : aux dernières législatives, le taux de participation dans la diaspora ne dépassait pas 18 %." }
+      {
+        "type": "p",
+        "text": "Au marché des Capucins, dans le quartier de Noailles, les tomates séchées et les bissaps côtoient les déclarations politiques. Ici, dans ce Marseille multicolore et légèrement décrépit que les Sénégalais appellent « la deuxième ville du Sénégal », les élections législatives suscitent des réactions contrastées."
+      },
+      {
+        "type": "p",
+        "text": "Moussa Diallo, 52 ans, gérant d'une épicerie de la Belle-de-Mai, hausse les épaules. « Chaque fois, on nous demande de voter. Et après ? Les routes de chez nous sont toujours défoncées. L'hôpital de mon village n'a toujours pas de médecin. » À côté, Ndeye Seck, 31 ans, étudiante en droit, est plus engagée. « Cette fois, c'est différent. Le gouvernement Faye, on y croit encore. »"
+      },
+      {
+        "type": "h2",
+        "text": "Un vote qui compte"
+      },
+      {
+        "type": "p",
+        "text": "La circumscription des Sénégalais de l'extérieur compte désormais 15 sièges à l'Assemblée nationale. Sur les 120 000 Sénégalais inscrits en France, environ 40 % sont enregistrés dans la région Provence-Alpes-Côte d'Azur. La mobilisation reste le principal enjeu : aux dernières législatives, le taux de participation dans la diaspora ne dépassait pas 18 %."
+      }
     ]
   },
   {
@@ -549,15 +1004,36 @@
     "dateIso": "2026-05-04",
     "readTime": "6 min",
     "imgSeed": "diaspora-vote",
-    "imgUrl": "https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/diaspora-vote-pourquoi.svg",
     "imgAlt": "Vote de la diaspora sénégalaise",
-    "tags": ["Diaspora", "Vote", "Tribune", "Rama Yade", "Démocratie"],
+    "tags": [
+      "Diaspora",
+      "Vote",
+      "Tribune",
+      "Rama Yade",
+      "Démocratie"
+    ],
     "body": [
-      { "type": "p", "text": "Nous sommes 3 millions. Trois millions de Sénégalais vivant à l'extérieur du pays. Nous envoyons chaque année plus de 2 600 milliards de francs CFA au Sénégal — soit 11 % du PIB. Nous sommes le premier bailleur de fonds du développement sénégalais, devant la Banque mondiale et le FMI réunis." },
-      { "type": "p", "text": "Et pourtant, nous votons peu. Aux dernières législatives, moins d'un Sénégalais de l'extérieur sur cinq a exercé son droit de vote. Cette abstention massive nous prive d'une influence politique proportionnelle à notre poids économique. Elle envoie un signal aux élus : la diaspora peut être ignorée sans conséquence." },
-      { "type": "h2", "text": "Voter n'est pas suffisant" },
-      { "type": "p", "text": "Voter, c'est nécessaire. Mais ce n'est pas suffisant. La diaspora doit aussi s'organiser en groupes de pression structurés, capables d'exiger des comptes sur l'utilisation des fonds publics, sur les conditions de retour des expatriés, sur la reconnaissance des diplômes étrangers. Nous avons les ressources. Il nous manque la coordination." },
-      { "type": "blockquote", "text": "« Le vote de la diaspora n'est pas un luxe démocratique. C'est une nécessité pour l'équilibre politique de notre pays. »" }
+      {
+        "type": "p",
+        "text": "Nous sommes 3 millions. Trois millions de Sénégalais vivant à l'extérieur du pays. Nous envoyons chaque année plus de 2 600 milliards de francs CFA au Sénégal — soit 11 % du PIB. Nous sommes le premier bailleur de fonds du développement sénégalais, devant la Banque mondiale et le FMI réunis."
+      },
+      {
+        "type": "p",
+        "text": "Et pourtant, nous votons peu. Aux dernières législatives, moins d'un Sénégalais de l'extérieur sur cinq a exercé son droit de vote. Cette abstention massive nous prive d'une influence politique proportionnelle à notre poids économique. Elle envoie un signal aux élus : la diaspora peut être ignorée sans conséquence."
+      },
+      {
+        "type": "h2",
+        "text": "Voter n'est pas suffisant"
+      },
+      {
+        "type": "p",
+        "text": "Voter, c'est nécessaire. Mais ce n'est pas suffisant. La diaspora doit aussi s'organiser en groupes de pression structurés, capables d'exiger des comptes sur l'utilisation des fonds publics, sur les conditions de retour des expatriés, sur la reconnaissance des diplômes étrangers. Nous avons les ressources. Il nous manque la coordination."
+      },
+      {
+        "type": "blockquote",
+        "text": "« Le vote de la diaspora n'est pas un luxe démocratique. C'est une nécessité pour l'équilibre politique de notre pays. »"
+      }
     ]
   },
   {
@@ -571,18 +1047,47 @@
     "dateIso": "2026-05-07T09:00",
     "readTime": "7 min",
     "imgSeed": "sahel-climat",
-    "imgUrl": "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/onu-changement-climatique-sahel.svg",
     "imgAlt": "Désertification au Sahel, Afrique de l'Ouest",
-    "tags": ["Climat", "Sahel", "GIEC", "ONU", "Afrique de l'Ouest", "Monde"],
+    "tags": [
+      "Climat",
+      "Sahel",
+      "GIEC",
+      "ONU",
+      "Afrique de l'Ouest",
+      "Monde"
+    ],
     "featured": true,
     "body": [
-      { "type": "p", "text": "Le rapport du Groupe d'experts intergouvernemental sur l'évolution du climat (GIEC) publié jeudi à Genève est sans équivoque : sans réduction drastique des émissions mondiales de CO₂, le Sahel connaîtra une hausse des températures moyennes de 2,5 degrés Celsius d'ici 2100 par rapport aux niveaux préindustriels, contre 1,8 degré pour la moyenne mondiale." },
-      { "type": "p", "text": "Cette asymétrie climatique — l'Afrique se réchauffe plus vite que le reste du monde tout en étant la moins responsable des émissions — est au cœur de l'indignation des délégations africaines à la conférence de l'ONU. « Nous payons la facture d'une dette que nous n'avons pas contractée », a déclaré la ministre sénégalaise de l'Environnement, Aminata Cissé." },
-      { "type": "h2", "text": "Des conséquences concrètes déjà visibles" },
-      { "type": "p", "text": "Le rapport identifie plusieurs régions à très haut risque, dont le nord du Mali, le sud de la Mauritanie et le nord du Sénégal. Dans ces zones, les rendements agricoles du mil et du sorgho pourraient chuter de 40 à 60 % d'ici 2050 si les pratiques agricoles ne s'adaptent pas. La pression sur les ressources en eau s'intensifiera également, menaçant la coexistence pacifique entre agriculteurs et éleveurs." },
-      { "type": "blockquote", "text": "« D'ici 2050, certaines parties du Sahel seront physiquement invivables en journée pendant plusieurs mois de l'année. Ce n'est pas de la science-fiction, c'est de la physique atmosphérique. »", "cite": "Dr. Fatimata Cissé, climatologue malienne, co-auteure du rapport GIEC" },
-      { "type": "h2", "text": "Des solutions à portée de main ?" },
-      { "type": "p", "text": "Le rapport n'est pas uniquement alarmiste. Il identifie des solutions d'adaptation locales qui fonctionnent : la régénération naturelle assistée des terres (RNA) au Niger, les zones humides artificielles au Mali, la diversification des cultures vers des variétés résistantes à la chaleur. Mais ces solutions nécessitent des financements massifs et durables — l'Afrique reçoit actuellement moins de 5 % du financement climatique mondial." }
+      {
+        "type": "p",
+        "text": "Le rapport du Groupe d'experts intergouvernemental sur l'évolution du climat (GIEC) publié jeudi à Genève est sans équivoque : sans réduction drastique des émissions mondiales de CO₂, le Sahel connaîtra une hausse des températures moyennes de 2,5 degrés Celsius d'ici 2100 par rapport aux niveaux préindustriels, contre 1,8 degré pour la moyenne mondiale."
+      },
+      {
+        "type": "p",
+        "text": "Cette asymétrie climatique — l'Afrique se réchauffe plus vite que le reste du monde tout en étant la moins responsable des émissions — est au cœur de l'indignation des délégations africaines à la conférence de l'ONU. « Nous payons la facture d'une dette que nous n'avons pas contractée », a déclaré la ministre sénégalaise de l'Environnement, Aminata Cissé."
+      },
+      {
+        "type": "h2",
+        "text": "Des conséquences concrètes déjà visibles"
+      },
+      {
+        "type": "p",
+        "text": "Le rapport identifie plusieurs régions à très haut risque, dont le nord du Mali, le sud de la Mauritanie et le nord du Sénégal. Dans ces zones, les rendements agricoles du mil et du sorgho pourraient chuter de 40 à 60 % d'ici 2050 si les pratiques agricoles ne s'adaptent pas. La pression sur les ressources en eau s'intensifiera également, menaçant la coexistence pacifique entre agriculteurs et éleveurs."
+      },
+      {
+        "type": "blockquote",
+        "text": "« D'ici 2050, certaines parties du Sahel seront physiquement invivables en journée pendant plusieurs mois de l'année. Ce n'est pas de la science-fiction, c'est de la physique atmosphérique. »",
+        "cite": "Dr. Fatimata Cissé, climatologue malienne, co-auteure du rapport GIEC"
+      },
+      {
+        "type": "h2",
+        "text": "Des solutions à portée de main ?"
+      },
+      {
+        "type": "p",
+        "text": "Le rapport n'est pas uniquement alarmiste. Il identifie des solutions d'adaptation locales qui fonctionnent : la régénération naturelle assistée des terres (RNA) au Niger, les zones humides artificielles au Mali, la diversification des cultures vers des variétés résistantes à la chaleur. Mais ces solutions nécessitent des financements massifs et durables — l'Afrique reçoit actuellement moins de 5 % du financement climatique mondial."
+      }
     ]
   },
   {
@@ -596,14 +1101,33 @@
     "dateIso": "2026-05-06T18:22",
     "readTime": "6 min",
     "imgSeed": "trump-afrique",
-    "imgUrl": "https://images.pexels.com/photos/1550337/pexels-photo-1550337.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/trump-tarifs-afrique.svg",
     "imgAlt": "Commerce international et droits de douane",
-    "tags": ["Trump", "Commerce", "AGOA", "Afrique", "Tarifs douaniers", "Monde"],
+    "tags": [
+      "Trump",
+      "Commerce",
+      "AGOA",
+      "Afrique",
+      "Tarifs douaniers",
+      "Monde"
+    ],
     "body": [
-      { "type": "p", "text": "L'annonce de nouveaux droits de douane américains frappant les exportations africaines a provoqué une réaction immédiate des chancelleries du continent. La taxe de 20 % sur les textiles et de 15 % sur les produits agricoles transformés touche en priorité l'Éthiopie, le Kenya, le Lesotho et la Mauritius — les quatre pays africains les plus dépendants de l'AGOA (African Growth and Opportunity Act)." },
-      { "type": "p", "text": "Pour le Sénégal, l'impact direct est limité : les exportations sénégalaises vers les États-Unis représentent moins de 2 % du total. Mais l'effet indirect est redouté. Une perturbation des chaînes d'approvisionnement régionales pourrait affecter la filière de la pêche, dont une partie du poisson transformé transite par le Kenya avant d'être exportée." },
-      { "type": "h2", "text": "L'Union africaine réclame des négociations" },
-      { "type": "p", "text": "Le président de la Commission de l'Union africaine a exigé jeudi l'ouverture de négociations bilatérales urgentes avec Washington. « L'Afrique n'est pas un marché captif. Nous avons des alternatives », a-t-il déclaré, en faisant allusion au renforcement des échanges intra-africains dans le cadre de la ZLECAf (Zone de Libre-Échange Continentale Africaine)." }
+      {
+        "type": "p",
+        "text": "L'annonce de nouveaux droits de douane américains frappant les exportations africaines a provoqué une réaction immédiate des chancelleries du continent. La taxe de 20 % sur les textiles et de 15 % sur les produits agricoles transformés touche en priorité l'Éthiopie, le Kenya, le Lesotho et la Mauritius — les quatre pays africains les plus dépendants de l'AGOA (African Growth and Opportunity Act)."
+      },
+      {
+        "type": "p",
+        "text": "Pour le Sénégal, l'impact direct est limité : les exportations sénégalaises vers les États-Unis représentent moins de 2 % du total. Mais l'effet indirect est redouté. Une perturbation des chaînes d'approvisionnement régionales pourrait affecter la filière de la pêche, dont une partie du poisson transformé transite par le Kenya avant d'être exportée."
+      },
+      {
+        "type": "h2",
+        "text": "L'Union africaine réclame des négociations"
+      },
+      {
+        "type": "p",
+        "text": "Le président de la Commission de l'Union africaine a exigé jeudi l'ouverture de négociations bilatérales urgentes avec Washington. « L'Afrique n'est pas un marché captif. Nous avons des alternatives », a-t-il déclaré, en faisant allusion au renforcement des échanges intra-africains dans le cadre de la ZLECAf (Zone de Libre-Échange Continentale Africaine)."
+      }
     ]
   },
   {
@@ -617,16 +1141,38 @@
     "dateIso": "2026-05-02",
     "readTime": "8 min",
     "imgSeed": "ia-afrique",
-    "imgUrl": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgUrl": "/images/ia-regulation-mondiale.svg",
     "imgAlt": "Intelligence artificielle et régulation mondiale",
     "badge": "longformat",
-    "tags": ["Intelligence artificielle", "Régulation", "Afrique numérique", "Monde", "Technologies"],
+    "tags": [
+      "Intelligence artificielle",
+      "Régulation",
+      "Afrique numérique",
+      "Monde",
+      "Technologies"
+    ],
     "body": [
-      { "type": "p", "text": "Pendant que l'Union européenne finalisait son AI Act et que le Congrès américain débattait du Executive Order sur l'intelligence artificielle, qu'est-ce que l'Afrique faisait ? En grande partie, elle regardait. Et cette absence du débat réglementaire mondial sur l'IA pourrait lui coûter très cher." },
-      { "type": "p", "text": "Les modèles de langage développés par OpenAI, Google ou Anthropic sont principalement entraînés sur des données occidentales, en langue anglaise et française standardisée. Ils reproduisent des biais culturels qui peuvent se révéler problématiques dans des contextes africains : traduction approximative du wolof, du haoussa ou du swahili, représentations biaisées de personnages africains, systèmes de reconnaissance faciale moins performants sur les peaux noires." },
-      { "type": "h2", "text": "Les initiatives africaines existent" },
-      { "type": "p", "text": "Des initiatives émergent pourtant. Masakhane, un collectif pan-africain de chercheurs, travaille à la création de jeux de données en langues africaines pour l'entraînement de modèles d'IA. Au Sénégal, la startup LocalEyes développe un modèle optimisé pour le wolof et le pulaar. Mais ces initiatives manquent de financement et de reconnaissance internationale." },
-      { "type": "blockquote", "text": "« Si nous ne participons pas à l'écriture des règles, nous devrons subir des règles écrites pour d'autres. C'est vrai pour l'IA comme pour les accords commerciaux. »", "cite": "Awa Ndiaye, directrice du Centre Africain pour le Numérique Éthique" }
+      {
+        "type": "p",
+        "text": "Pendant que l'Union européenne finalisait son AI Act et que le Congrès américain débattait du Executive Order sur l'intelligence artificielle, qu'est-ce que l'Afrique faisait ? En grande partie, elle regardait. Et cette absence du débat réglementaire mondial sur l'IA pourrait lui coûter très cher."
+      },
+      {
+        "type": "p",
+        "text": "Les modèles de langage développés par OpenAI, Google ou Anthropic sont principalement entraînés sur des données occidentales, en langue anglaise et française standardisée. Ils reproduisent des biais culturels qui peuvent se révéler problématiques dans des contextes africains : traduction approximative du wolof, du haoussa ou du swahili, représentations biaisées de personnages africains, systèmes de reconnaissance faciale moins performants sur les peaux noires."
+      },
+      {
+        "type": "h2",
+        "text": "Les initiatives africaines existent"
+      },
+      {
+        "type": "p",
+        "text": "Des initiatives émergent pourtant. Masakhane, un collectif pan-africain de chercheurs, travaille à la création de jeux de données en langues africaines pour l'entraînement de modèles d'IA. Au Sénégal, la startup LocalEyes développe un modèle optimisé pour le wolof et le pulaar. Mais ces initiatives manquent de financement et de reconnaissance internationale."
+      },
+      {
+        "type": "blockquote",
+        "text": "« Si nous ne participons pas à l'écriture des règles, nous devrons subir des règles écrites pour d'autres. C'est vrai pour l'IA comme pour les accords commerciaux. »",
+        "cite": "Awa Ndiaye, directrice du Centre Africain pour le Numérique Éthique"
+      }
     ]
   }
 ]
