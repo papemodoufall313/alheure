@@ -10,7 +10,7 @@
     "dateIso": "2026-05-07T11:30",
     "readTime": "8 min",
     "imgSeed": "saintlouis-pirogues",
-    "imgUrl": "/images/saint-louis-peche-artisanale.svg",
+    "imgUrl": "https://images.pexels.com/photos/1657130/pexels-photo-1657130.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Pirogues à Saint-Louis, Guet Ndar",
     "badge": "rep",
     "featured": true,
@@ -91,7 +91,7 @@
     "dateIso": "2026-05-07T09:00",
     "readTime": "12 min",
     "imgSeed": "touba-magal",
-    "imgUrl": "/images/touba-magal-5-millions.svg",
+    "imgUrl": "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Touba, préparatifs du grand Magal",
     "tags": [
       "Touba",
@@ -144,7 +144,7 @@
     "dateIso": "2026-05-06T21:12",
     "readTime": "6 min",
     "imgSeed": "ziguinchor-paix",
-    "imgUrl": "/images/ziguinchor-accord-paix.svg",
+    "imgUrl": "https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Signature de l'accord de paix en Casamance",
     "tags": [
       "Casamance",
@@ -196,7 +196,7 @@
     "dateIso": "2026-05-07T08:44",
     "readTime": "5 min",
     "imgSeed": "brt-dakar",
-    "imgUrl": "/images/brt-dakar-bilan.svg",
+    "imgUrl": "https://images.pexels.com/photos/1178752/pexels-photo-1178752.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Bus BRT sur l'axe Guédiawaye-Petersen",
     "tags": [
       "BRT",
@@ -239,7 +239,7 @@
     "dateIso": "2026-05-07T07:20",
     "readTime": "3 min",
     "imgSeed": "justice-tribunal",
-    "imgUrl": "/images/sweet-beauty-appel.svg",
+    "imgUrl": "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Palais de Justice de Dakar",
     "body": [
       {
@@ -263,7 +263,7 @@
     "dateIso": "2026-05-06",
     "readTime": "Long format",
     "imgSeed": "mboro-phosphates",
-    "imgUrl": "/images/mboro-phosphates-nappes.svg",
+    "imgUrl": "https://images.pexels.com/photos/2287310/pexels-photo-2287310.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Mine de phosphates à Mboro, région de Thiès",
     "badge": "longformat",
     "tags": [
@@ -317,7 +317,7 @@
     "dateIso": "2026-05-07T12:00",
     "readTime": "4 min",
     "imgSeed": "diomaye-jeunes",
-    "imgUrl": "/images/diomaye-2026-jeunes.svg",
+    "imgUrl": "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Jeunes diplômés sénégalais",
     "tags": [
       "Plan Diomaye",
@@ -356,7 +356,7 @@
     "dateIso": "2026-05-07T11:08",
     "readTime": "3 min",
     "imgSeed": "conseil-constitutionnel",
-    "imgUrl": "/images/opposition-conseil-constitutionnel.svg",
+    "imgUrl": "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Assemblée nationale du Sénégal",
     "tags": [
       "Conseil constitutionnel",
@@ -387,7 +387,7 @@
     "dateIso": "2026-05-06",
     "readTime": "4 min",
     "imgSeed": "diomaye-paris",
-    "imgUrl": "/images/diomaye-paris-agenda.svg",
+    "imgUrl": "https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Paris, Tour Eiffel — visite officielle de Diomaye Faye",
     "tags": [
       "Diomaye Faye",
@@ -426,7 +426,7 @@
     "dateIso": "2026-05-07T11:00",
     "readTime": "5 min",
     "imgSeed": "gaz-gta",
-    "imgUrl": "/images/gaz-gta-phase-2.svg",
+    "imgUrl": "https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Plateforme gazière GTA en mer",
     "tags": [
       "Gaz naturel",
@@ -470,7 +470,7 @@
     "dateIso": "2026-05-07T10:42",
     "readTime": "5 min",
     "imgSeed": "bceao-fcfa",
-    "imgUrl": "/images/bceao-franc-cfa.svg",
+    "imgUrl": "https://images.pexels.com/photos/210742/pexels-photo-210742.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Sièges de la BCEAO, monnaie CFA",
     "tags": [
       "BCEAO",
@@ -509,7 +509,7 @@
     "dateIso": "2026-05-04",
     "readTime": "22 min",
     "imgSeed": "dossier-petrole",
-    "imgUrl": "/images/petrole-senegal-rente.svg",
+    "imgUrl": "https://images.pexels.com/photos/247763/pexels-photo-247763.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Plateforme pétrolière Sangomar au large du Sénégal",
     "badge": "longformat",
     "featured": true,
@@ -554,7 +554,7 @@
     "dateIso": "2026-05-07T10:00",
     "readTime": "6 min",
     "imgSeed": "ivoire-presidentielle",
-    "imgUrl": "/images/presidentielle-ivoirienne-manouvres.svg",
+    "imgUrl": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Bureau de vote en Côte d'Ivoire",
     "featured": true,
     "tags": [
@@ -593,7 +593,7 @@
     "dateIso": "2026-05-07T06:14",
     "readTime": "4 min",
     "imgSeed": "sahel-bamako",
-    "imgUrl": "/images/attentat-bamako.svg",
+    "imgUrl": "https://images.pexels.com/photos/1550337/pexels-photo-1550337.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Forces de sécurité à Bamako, Mali",
     "tags": [
       "Mali",
@@ -624,7 +624,7 @@
     "dateIso": "2026-05-07T12:31",
     "readTime": "3 min",
     "imgSeed": "cedeao-abuja",
-    "imgUrl": "/images/cedeao-urgence-defense.svg",
+    "imgUrl": "https://images.pexels.com/photos/1532771/pexels-photo-1532771.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Réunion des ministres de la CEDEAO à Abuja",
     "tags": [
       "CEDEAO",
@@ -655,7 +655,7 @@
     "dateIso": "2026-05-06",
     "readTime": "4 min",
     "imgSeed": "rdc-paix",
-    "imgUrl": "/images/rdc-treve-goma.svg",
+    "imgUrl": "https://images.pexels.com/photos/1586996/pexels-photo-1586996.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Région de Goma, RDC — camp de réfugiés",
     "tags": [
       "RDC",
@@ -687,7 +687,7 @@
     "dateIso": "2026-05-07T09:30",
     "readTime": "3 min",
     "imgSeed": "keurmassar-pluies",
-    "imgUrl": "/images/keur-massar-inondations.svg",
+    "imgUrl": "https://images.pexels.com/photos/1447419/pexels-photo-1447419.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Inondations à Keur Massar, banlieue de Dakar",
     "badge": "live",
     "tags": [
@@ -719,7 +719,7 @@
     "dateIso": "2026-05-06",
     "readTime": "12 min",
     "imgSeed": "mbour-migrants",
-    "imgUrl": "/images/mbour-familles-migrants.svg",
+    "imgUrl": "https://images.pexels.com/photos/1374610/pexels-photo-1374610.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Pirogue de migrants en mer, côte sénégalaise",
     "tags": [
       "Migration",
@@ -763,7 +763,7 @@
     "dateIso": "2026-05-07",
     "readTime": "5 min",
     "imgSeed": "lions-teranga",
-    "imgUrl": "/images/lions-selection-mane.svg",
+    "imgUrl": "https://images.pexels.com/photos/46798/pexels-photo-46798.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Les Lions de la Téranga, équipe nationale du Sénégal",
     "tags": [
       "Lions de la Téranga",
@@ -802,7 +802,7 @@
     "dateIso": "2026-05-06",
     "readTime": "6 min",
     "imgSeed": "lutte-modou-lo",
-    "imgUrl": "/images/lutte-modou-lo-siteu.svg",
+    "imgUrl": "https://images.pexels.com/photos/2204150/pexels-photo-2204150.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Arène nationale, lutte sénégalaise",
     "tags": [
       "Lutte sénégalaise",
@@ -838,7 +838,7 @@
     "dateIso": "2026-05-07T09:15",
     "readTime": "3 min",
     "imgSeed": "youssou-ndour",
-    "imgUrl": "/images/youssou-ndour-tournee.svg",
+    "imgUrl": "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Concert de Youssou Ndour",
     "badge": "video",
     "tags": [
@@ -870,7 +870,7 @@
     "dateIso": "2026-05-05",
     "readTime": "4 min",
     "imgSeed": "dakar-biennale",
-    "imgUrl": "/images/dakart-biennale-2026.svg",
+    "imgUrl": "https://images.pexels.com/photos/1194420/pexels-photo-1194420.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Biennale de Dakar Dak'Art 2026 — exposition d'art contemporain africain",
     "tags": [
       "Dak'Art",
@@ -901,7 +901,7 @@
     "dateIso": "2026-05-04",
     "readTime": "7 min",
     "imgSeed": "cinema-mati-diop",
-    "imgUrl": "/images/mati-diop-cannes.svg",
+    "imgUrl": "https://images.pexels.com/photos/3402450/pexels-photo-3402450.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Festival de Cannes — cinéma africain",
     "badge": "video",
     "tags": [
@@ -933,7 +933,7 @@
     "dateIso": "2026-05-06",
     "readTime": "5 min",
     "imgSeed": "festival-saint-louis",
-    "imgUrl": "/images/bouba-ndour-festival-saint-louis.svg",
+    "imgUrl": "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Festival de Jazz de Saint-Louis",
     "tags": [
       "Festival de Jazz",
@@ -964,7 +964,7 @@
     "dateIso": "2026-05-07T08:00",
     "readTime": "8 min",
     "imgSeed": "marseille-diaspora",
-    "imgUrl": "/images/marseille-senegalais-legislatives.svg",
+    "imgUrl": "https://images.pexels.com/photos/1555591/pexels-photo-1555591.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Vieux-Port de Marseille, communauté sénégalaise",
     "badge": "video",
     "tags": [
@@ -1004,7 +1004,7 @@
     "dateIso": "2026-05-04",
     "readTime": "6 min",
     "imgSeed": "diaspora-vote",
-    "imgUrl": "/images/diaspora-vote-pourquoi.svg",
+    "imgUrl": "https://images.pexels.com/photos/3698534/pexels-photo-3698534.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Vote de la diaspora sénégalaise",
     "tags": [
       "Diaspora",
@@ -1047,7 +1047,7 @@
     "dateIso": "2026-05-07T09:00",
     "readTime": "7 min",
     "imgSeed": "sahel-climat",
-    "imgUrl": "/images/onu-changement-climatique-sahel.svg",
+    "imgUrl": "https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Désertification au Sahel, Afrique de l'Ouest",
     "tags": [
       "Climat",
@@ -1101,7 +1101,7 @@
     "dateIso": "2026-05-06T18:22",
     "readTime": "6 min",
     "imgSeed": "trump-afrique",
-    "imgUrl": "/images/trump-tarifs-afrique.svg",
+    "imgUrl": "https://images.pexels.com/photos/3183146/pexels-photo-3183146.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Commerce international et droits de douane",
     "tags": [
       "Trump",
@@ -1141,7 +1141,7 @@
     "dateIso": "2026-05-02",
     "readTime": "8 min",
     "imgSeed": "ia-afrique",
-    "imgUrl": "/images/ia-regulation-mondiale.svg",
+    "imgUrl": "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imgAlt": "Intelligence artificielle et régulation mondiale",
     "badge": "longformat",
     "tags": [
