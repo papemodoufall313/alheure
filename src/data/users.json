@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "login": "admin",
+    "passwordHash": "$2b$10$I0eAmA9.kmO58K8eTO.pKOnrJyGNSgLMjKVI3chvBRGHC5VJzOPEa",
+    "name": "Administrateur",
+    "role": "admin"
+  },
+  {
+    "id": "2",
+    "login": "editeur",
+    "passwordHash": "$2b$10$6ierfc/9w987j7bF5QZdYO2IJPPXC2.g9PN6JyuMOmcwozBII9GkW",
+    "name": "Éditeur",
+    "role": "editeur"
+  }
+]
