@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ep12",
+    "num": "12",
+    "title": "Pétrole sénégalais : à qui profite la manne ?",
+    "desc": "Sangomar est en production depuis six mois. Nos reporters ont enquêté sur la redistribution des revenus pétroliers entre l'État, Petrosen et les multinationales.",
+    "duration": "38 min",
+    "date": "7 mai 2026",
+    "guest": "Avec Ibrahima Diallo, économiste",
+    "spotifyUrl": "",
+    "appleUrl": "",
+    "published": true
+  },
+  {
+    "id": "ep11",
+    "num": "11",
+    "title": "Migrations : comprendre les nouvelles routes",
+    "desc": "Les départs depuis Mbour et Kafountine ont repris. Pourquoi ces jeunes choisissent-ils encore la pirogue malgré les risques ?",
+    "duration": "44 min",
+    "date": "30 avr. 2026",
+    "guest": "Avec Fatou Sow, sociologue",
+    "spotifyUrl": "",
+    "appleUrl": "",
+    "published": true
+  },
+  {
+    "id": "ep10",
+    "num": "10",
+    "title": "CEDEAO : l'heure de la réforme",
+    "desc": "Après les départs du Mali, du Niger et du Burkina Faso, la CEDEAO peut-elle encore parler d'une seule voix ?",
+    "duration": "51 min",
+    "date": "23 avr. 2026",
+    "guest": "Avec Amadou Balde, géopolitologue",
+    "spotifyUrl": "",
+    "appleUrl": "",
+    "published": true
+  }
+]

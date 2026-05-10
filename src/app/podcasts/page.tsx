@@ -2,57 +2,9 @@ import TopBar from "@/components/TopBar";
 import Masthead from "@/components/Masthead";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import podcastsData from "@/data/podcasts.json";
 
-const EPISODES = [
-  {
-    num: "12",
-    title: "Pétrole sénégalais : à qui profite la manne ?",
-    desc: "Sangomar est en production depuis six mois. Nos reporters ont enquêté sur la redistribution des revenus pétroliers entre l'État, Petrosen et les multinationales.",
-    duration: "38 min",
-    date: "7 mai 2026",
-    guest: "Avec Ibrahima Diallo, économiste",
-  },
-  {
-    num: "11",
-    title: "Migrations : comprendre les nouvelles routes",
-    desc: "Les départs depuis Mbour et Kafountine ont repris. Pourquoi ces jeunes choisissent-ils encore la pirogue malgré les risques ?",
-    duration: "44 min",
-    date: "30 avr. 2026",
-    guest: "Avec Fatou Sow, sociologue",
-  },
-  {
-    num: "10",
-    title: "CEDEAO : l'heure de la réforme",
-    desc: "Après les départs du Mali, du Niger et du Burkina Faso, la CEDEAO peut-elle encore parler d'une seule voix ? Décryptage avec notre correspondant à Abuja.",
-    duration: "51 min",
-    date: "23 avr. 2026",
-    guest: "Avec Amadou Balde, géopolitologue",
-  },
-  {
-    num: "9",
-    title: "La lutte sénégalaise à l'heure du business",
-    desc: "Modou Lô, Siteu, Gris Bordeaux… La lutte est devenue une industrie. Entre tradition et spectacle, quel avenir pour l'arène nationale ?",
-    duration: "29 min",
-    date: "16 avr. 2026",
-    guest: "Avec Pape Samba Mboup, journaliste sportif",
-  },
-  {
-    num: "8",
-    title: "Le franc CFA en question",
-    desc: "Faut-il réformer ou abandonner le franc CFA ? Économistes, politiques et citoyens répondent.",
-    duration: "57 min",
-    date: "9 avr. 2026",
-    guest: "Avec Ndongo Samba Sylla, économiste",
-  },
-  {
-    num: "7",
-    title: "Dakar, ville en chantier",
-    desc: "BRT, TER, autoroutes à péage… Les grands travaux transforment-ils vraiment le quotidien des Dakarois ?",
-    duration: "33 min",
-    date: "2 avr. 2026",
-    guest: "Avec Rokhaya Diallo, urbaniste",
-  },
-];
+const EPISODES = podcastsData;
 
 export default function PodcastsPage() {
   return (
