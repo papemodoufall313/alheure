@@ -4,9 +4,9 @@ import { getFeaturedArticle, getArticleBySlug } from "@/lib/articles";
 import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
 
 const SIDE_SLUGS = [
-  "diomaye-2026-jeunes",
-  "gaz-gta-phase-2",
-  "marseille-senegalais-legislatives",
+  "code-electoral-diomaye-deux-versions-bloque",
+  "mondial-2026-shakira-dai-dai-burna-boy",
+  "senegal-balance-commerciale-excedent-mars-2026",
 ];
 
 export default function Hero() {

@@ -1,9 +1,14 @@
 const ITEMS = [
-  { time: "13:42", text: "L'Assemblée nationale adopte la loi de finances rectificative à 142 voix contre 38" },
-  { time: "13:18", text: "Touba — 5,2 millions de fidèles attendus pour le Magal" },
-  { time: "12:55", text: "BRT Dakar : la ligne 2 entrera en service le 1er juin" },
-  { time: "12:31", text: "CEDEAO — réunion d'urgence des ministres de la défense vendredi à Abuja" },
-  { time: "11:48", text: "Lions de la Téranga : Sadio Mané rappelé en sélection" },
+  { time: "17:30", text: "Code électoral — Diomaye Faye bloque la promulgation après réception de deux versions contradictoires de la loi" },
+  { time: "16:00", text: "Mondial 2026 — Koulibaly incertain, Lamine Sané rassure : « Les Lions sont prêts »" },
+  { time: "15:45", text: "Meeting Sargal à Mbour : des dizaines de milliers de militants pour soutenir Diomaye Faye" },
+  { time: "14:00", text: "Shakira x Burna Boy — « Dai Dai » dévoilé, l'hymne officiel de la Coupe du Monde 2026" },
+  { time: "13:20", text: "Mali — Deux camions piégés visaient la résidence d'Assimi Goïta, révèle le ministre Abdoulaye Diop" },
+  { time: "12:45", text: "APR · Thérèse Faye invite Macky Sall à clarifier ses intentions avant 2029" },
+  { time: "11:30", text: "Mamour Diallo dément sa mort sur les réseaux : « Je me porte à merveille »" },
+  { time: "10:30", text: "Économie · Sénégal : excédent commercial de 188 milliards FCFA en mars 2026, porté par le pétrole" },
+  { time: "09:00", text: "Nioro du Rip — Une attaque à main armée déjouée par la gendarmerie après échange de tirs" },
+  { time: "08:00", text: "Sahel · Un hélicoptère de l'armée malienne aurait été abattu près de Gao" },
 ];
 
 export default function Ticker() {

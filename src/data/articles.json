@@ -9,28 +9,74 @@
     "date": "Aujourd'hui · 11h30",
     "dateIso": "2026-05-07T11:30",
     "readTime": "8 min",
-    "imgSeed": "saintlouis-pirogues",
-    "imgUrl": "https://images.pexels.com/photos/33985276/pexels-photo-33985276.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778260110731.jpg",
     "imgAlt": "Pirogues à Saint-Louis, Guet Ndar",
     "badge": "rep",
     "featured": true,
-    "commentCount": 6,
-    "tags": ["Sénégal", "Saint-Louis", "Pêche artisanale", "Économie maritime", "Accords de pêche", "Guet Ndar"],
+    "tags": [
+      "Sénégal",
+      "Saint-Louis",
+      "Pêche artisanale",
+      "Économie maritime",
+      "Accords de pêche",
+      "Guet Ndar"
+    ],
     "authorBio": "Grand reporter spécialisée dans les questions environnementales et d'économie bleue. Basée à Dakar, elle couvre l'Afrique de l'Ouest pour À l'Heure depuis 2019.",
     "body": [
-      { "type": "p", "text": "Il est à peine cinq heures du matin quand les premières pirogues se mettent en travers du chenal. En quelques dizaines de minutes, elles sont plus de quatre cents à former un verrou silencieux sur les eaux sombres du fleuve Sénégal, à l'entrée du port de Guet Ndar. Les hommes sont debout, debout depuis la veille pour certains. Ils ne crient pas. Ils attendent." },
-      { "type": "p", "text": "« On n'a plus le choix », dit Lamine Ndiaye, 54 ans, les mains posées sur l'étrave de sa pirogue peinte en bleu et blanc. Pêcheur depuis l'enfance, il a connu les temps où les eaux débordaient de thons et de capitaines. Depuis dix ans, il dit que « la mer s'est appauvrie ». Et il en tient responsables les chalutiers étrangers — européens, asiatiques — qui raclent les fonds à des profondeurs interdites." },
-      { "type": "h2", "text": "La goutte qui a fait déborder le fleuve" },
-      { "type": "p", "text": "Ce qui a mis le feu aux poudres, c'est la publication, il y a trois jours, d'un document gouvernemental annonçant la signature de deux nouveaux protocoles d'accord avec des armements basés en Espagne et en Chine. Ces accords permettraient à des navires de plus de 1 500 tonnes d'opérer dans la zone économique exclusive sénégalaise jusqu'à soixante-dix milles des côtes — soit, selon les syndicats de pêcheurs, dans des zones historiquement réservées à la pêche artisanale côtière." },
-      { "type": "p", "text": "Le Collectif des Mareyeurs et Pêcheurs du Fleuve, réuni en urgence le lendemain, a voté à l'unanimité le blocage du port. Une décision « douloureuse mais nécessaire », selon son secrétaire général, Ibrahima Sarr. « Nous perdons nos revenus, nos familles souffrent. Mais si nous ne bloquons pas aujourd'hui, il ne restera plus rien demain. »" },
-      { "type": "blockquote", "text": "« Si nous ne bloquons pas aujourd'hui, il ne restera plus rien demain. »", "cite": "Ibrahima Sarr, secrétaire général du Collectif des Mareyeurs et Pêcheurs du Fleuve" },
-      { "type": "h2", "text": "L'État entre pression économique et engagements internationaux" },
-      { "type": "p", "text": "Du côté gouvernemental, le silence a duré plusieurs heures avant qu'un communiqué du ministère de la Pêche ne reconnaisse « la légitimité des préoccupations soulevées » tout en défendant les accords comme « essentiels à l'équilibre des finances publiques ». Selon des sources proches des négociations qu'À l'Heure a pu consulter, les deux protocoles représentent une contrepartie de l'ordre de 14 milliards de francs CFA par an pour le Trésor sénégalais." },
-      { "type": "p", "text": "Un chiffre qui ne convainc pas les pêcheurs. « Quatorze milliards pour détruire une filière qui fait vivre directement 600 000 personnes au Sénégal ? C'est du bradage pur », tranche Astou Diallo, présidente de l'Association des Femmes Transformatrices de Poisson de Saint-Louis. Les femmes transformatrices — qui sèchent, fument et commercialisent les prises — sont en première ligne de la crise : sans poisson, pas de transformation, pas de revenus." },
-      { "type": "pullquote", "text": "Quatre cents pirogues, trois cents familles au bord de la rupture. Saint-Louis attend que l'État choisisse entre une rente et un patrimoine." },
-      { "type": "h2", "text": "Ce que réclament les pêcheurs" },
-      { "type": "p", "text": "Le Collectif a formalisé ses demandes en trois points : la suspension immédiate de la signature des deux protocoles dans l'attente d'un audit indépendant, la création d'une commission mixte chargée de redéfinir les zones de pêche autorisées, et une compensation financière pour les pertes subies depuis six mois." },
-      { "type": "p", "text": "La pêche artisanale représente 75 % des captures totales du Sénégal et constitue la principale source de protéines animales pour les ménages. La filière emploie directement 600 000 personnes et fait vivre, indirectement, plusieurs millions de Sénégalais le long du littoral. Le gouverneur de la région a indiqué qu'une réunion de médiation était « en cours de programmation » sans préciser d'heure ni de lieu. À l'heure où nous bouclons cet article, les pirogues sont toujours en travers du chenal." }
+      {
+        "type": "p",
+        "text": "Il est à peine cinq heures du matin quand les premières pirogues se mettent en travers du chenal. En quelques dizaines de minutes, elles sont plus de quatre cents à former un verrou silencieux sur les eaux sombres du fleuve Sénégal, à l'entrée du port de Guet Ndar. Les hommes sont debout, debout depuis la veille pour certains. Ils ne crient pas. Ils attendent."
+      },
+      {
+        "type": "p",
+        "text": "« On n'a plus le choix », dit Lamine Ndiaye, 54 ans, les mains posées sur l'étrave de sa pirogue peinte en bleu et blanc. Pêcheur depuis l'enfance, il a connu les temps où les eaux débordaient de thons et de capitaines. Depuis dix ans, il dit que « la mer s'est appauvrie ». Et il en tient responsables les chalutiers étrangers — européens, asiatiques — qui raclent les fonds à des profondeurs interdites."
+      },
+      {
+        "type": "h2",
+        "text": "La goutte qui a fait déborder le fleuve"
+      },
+      {
+        "type": "p",
+        "text": "Ce qui a mis le feu aux poudres, c'est la publication, il y a trois jours, d'un document gouvernemental annonçant la signature de deux nouveaux protocoles d'accord avec des armements basés en Espagne et en Chine. Ces accords permettraient à des navires de plus de 1 500 tonnes d'opérer dans la zone économique exclusive sénégalaise jusqu'à soixante-dix milles des côtes — soit, selon les syndicats de pêcheurs, dans des zones historiquement réservées à la pêche artisanale côtière."
+      },
+      {
+        "type": "p",
+        "text": "Le Collectif des Mareyeurs et Pêcheurs du Fleuve, réuni en urgence le lendemain, a voté à l'unanimité le blocage du port. Une décision « douloureuse mais nécessaire », selon son secrétaire général, Ibrahima Sarr. « Nous perdons nos revenus, nos familles souffrent. Mais si nous ne bloquons pas aujourd'hui, il ne restera plus rien demain. »"
+      },
+      {
+        "type": "blockquote",
+        "text": "« Si nous ne bloquons pas aujourd'hui, il ne restera plus rien demain. »",
+        "cite": "Ibrahima Sarr, secrétaire général du Collectif des Mareyeurs et Pêcheurs du Fleuve"
+      },
+      {
+        "type": "h2",
+        "text": "L'État entre pression économique et engagements internationaux"
+      },
+      {
+        "type": "p",
+        "text": "Du côté gouvernemental, le silence a duré plusieurs heures avant qu'un communiqué du ministère de la Pêche ne reconnaisse « la légitimité des préoccupations soulevées » tout en défendant les accords comme « essentiels à l'équilibre des finances publiques ». Selon des sources proches des négociations qu'À l'Heure a pu consulter, les deux protocoles représentent une contrepartie de l'ordre de 14 milliards de francs CFA par an pour le Trésor sénégalais."
+      },
+      {
+        "type": "p",
+        "text": "Un chiffre qui ne convainc pas les pêcheurs. « Quatorze milliards pour détruire une filière qui fait vivre directement 600 000 personnes au Sénégal ? C'est du bradage pur », tranche Astou Diallo, présidente de l'Association des Femmes Transformatrices de Poisson de Saint-Louis. Les femmes transformatrices — qui sèchent, fument et commercialisent les prises — sont en première ligne de la crise : sans poisson, pas de transformation, pas de revenus."
+      },
+      {
+        "type": "pullquote",
+        "text": "Quatre cents pirogues, trois cents familles au bord de la rupture. Saint-Louis attend que l'État choisisse entre une rente et un patrimoine."
+      },
+      {
+        "type": "h2",
+        "text": "Ce que réclament les pêcheurs"
+      },
+      {
+        "type": "p",
+        "text": "Le Collectif a formalisé ses demandes en trois points : la suspension immédiate de la signature des deux protocoles dans l'attente d'un audit indépendant, la création d'une commission mixte chargée de redéfinir les zones de pêche autorisées, et une compensation financière pour les pertes subies depuis six mois."
+      },
+      {
+        "type": "p",
+        "text": "La pêche artisanale représente 75 % des captures totales du Sénégal et constitue la principale source de protéines animales pour les ménages. La filière emploie directement 600 000 personnes et fait vivre, indirectement, plusieurs millions de Sénégalais le long du littoral. Le gouverneur de la région a indiqué qu'une réunion de médiation était « en cours de programmation » sans préciser d'heure ni de lieu. À l'heure où nous bouclons cet article, les pirogues sont toujours en travers du chenal."
+      }
     ]
   },
   {
@@ -43,19 +89,47 @@
     "date": "Aujourd'hui · 09h00",
     "dateIso": "2026-05-07T09:00",
     "readTime": "12 min",
-    "imgSeed": "touba-magal",
-    "imgUrl": "https://images.pexels.com/photos/3192662/pexels-photo-3192662.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778421905414.webp",
     "imgAlt": "Touba, préparatifs du grand Magal",
-    "tags": ["Touba", "Magal", "Religion", "Mouridisme", "Sénégal"],
+    "tags": [
+      "Touba",
+      "Magal",
+      "Religion",
+      "Mouridisme",
+      "Sénégal"
+    ],
     "authorBio": "Correspondant permanent à Touba, Modou Fall couvre les événements religieux et la vie de la ville sainte depuis 2017.",
     "body": [
-      { "type": "p", "text": "À soixante-douze heures du grand Magal de Touba, la ville sainte ressemble à un chantier permanent. Des milliers de bénévoles s'activent pour préparer l'accueil des 5,2 millions de fidèles attendus cette année — un record absolu selon le comité d'organisation." },
-      { "type": "p", "text": "Le dispositif mis en place cette année est le plus ambitieux de l'histoire du Magal. Deux mille points de distribution d'eau potable, sept cents postes de premiers secours, et un système de navettes gratuites depuis les gares routières de Dakar et Thiès ont été organisés." },
-      { "type": "h2", "text": "Une ville qui se métamorphose" },
-      { "type": "p", "text": "Les ruelles de Touba sont méconnaissables. Les grandes artères ont été repavées, les façades badigeonnées de blanc et de vert. Des écrans géants ont été installés aux principaux carrefours pour retransmettre les prières et les sermons en direct." },
-      { "type": "blockquote", "text": "« Touba n'appartient pas à une ville. Elle appartient au monde. »", "cite": "Serigne Mountakha Mbacké, Khalife général des Mourides" },
-      { "type": "h2", "text": "Le défi de la sécurité" },
-      { "type": "p", "text": "Quatre mille éléments des forces de sécurité ont été déployés, dont un dispositif spécial de la gendarmerie nationale. La préfecture de Mbacké a mis en place un centre de commandement opérationnel ouvert vingt-quatre heures sur vingt-quatre pendant toute la durée du pèlerinage." }
+      {
+        "type": "p",
+        "text": "À soixante-douze heures du grand Magal de Touba, la ville sainte ressemble à un chantier permanent. Des milliers de bénévoles s'activent pour préparer l'accueil des 5,2 millions de fidèles attendus cette année — un record absolu selon le comité d'organisation."
+      },
+      {
+        "type": "p",
+        "text": "Le dispositif mis en place cette année est le plus ambitieux de l'histoire du Magal. Deux mille points de distribution d'eau potable, sept cents postes de premiers secours, et un système de navettes gratuites depuis les gares routières de Dakar et Thiès ont été organisés."
+      },
+      {
+        "type": "h2",
+        "text": "Une ville qui se métamorphose"
+      },
+      {
+        "type": "p",
+        "text": "Les ruelles de Touba sont méconnaissables. Les grandes artères ont été repavées, les façades badigeonnées de blanc et de vert. Des écrans géants ont été installés aux principaux carrefours pour retransmettre les prières et les sermons en direct."
+      },
+      {
+        "type": "blockquote",
+        "text": "« Touba n'appartient pas à une ville. Elle appartient au monde. »",
+        "cite": "Serigne Mountakha Mbacké, Khalife général des Mourides"
+      },
+      {
+        "type": "h2",
+        "text": "Le défi de la sécurité"
+      },
+      {
+        "type": "p",
+        "text": "Quatre mille éléments des forces de sécurité ont été déployés, dont un dispositif spécial de la gendarmerie nationale. La préfecture de Mbacké a mis en place un centre de commandement opérationnel ouvert vingt-quatre heures sur vingt-quatre pendant toute la durée du pèlerinage."
+      }
     ]
   },
   {
@@ -68,13 +142,13 @@
     "date": "Hier · 21h12",
     "dateIso": "2026-05-06T21:12",
     "readTime": "6 min",
-    "imgSeed": "ziguinchor-paix",
-    "imgUrl": "https://images.pexels.com/photos/30449603/pexels-photo-30449603.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778421971777.png",
     "imgAlt": "Ziguinchor, Casamance"
   },
   {
     "slug": "brt-dakar-bilan",
-    "title": "Le BRT change le quotidien à Dakar — premier bilan, six mois après",
+    "title": "Le BRT change le quotidien à Dakar : premier bilan, six mois après",
     "dek": "Moins d'embouteillages sur l'axe Guédiawaye–Petersen, des usagers conquis mais des lacunes dans la desserte des quartiers périphériques.",
     "rubrique": "senegal",
     "rubriqueLabel": "Mobilité · Dakar",
@@ -82,23 +156,9 @@
     "date": "Aujourd'hui · 08h44",
     "dateIso": "2026-05-07T08:44",
     "readTime": "5 min",
-    "imgSeed": "brt-dakar",
-    "imgUrl": "https://images.pexels.com/photos/8770485/pexels-photo-8770485.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778422239408.jpg",
     "imgAlt": "BRT Dakar"
-  },
-  {
-    "slug": "sweet-beauty-appel",
-    "title": "Affaire Sweet Beauty : la cour d'appel rendra sa décision vendredi",
-    "dek": "Les avocats des deux parties ont déposé leurs conclusions. Le verdict est attendu après deux ans de procédure.",
-    "rubrique": "senegal",
-    "rubriqueLabel": "Justice",
-    "author": "Service Juridique",
-    "date": "Aujourd'hui · 07h20",
-    "dateIso": "2026-05-07T07:20",
-    "readTime": "3 min",
-    "imgSeed": "justice-tribunal",
-    "imgUrl": "https://images.pexels.com/photos/33084010/pexels-photo-33084010.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "imgAlt": "Tribunal de Dakar"
   },
   {
     "slug": "mboro-phosphates-nappes",
@@ -110,24 +170,90 @@
     "date": "Hier",
     "dateIso": "2026-05-06",
     "readTime": "Long format",
-    "imgSeed": "mboro-phosphates",
-    "imgUrl": "https://images.pexels.com/photos/167605/pexels-photo-167605.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778422303445.jpg",
     "imgAlt": "Mboro, mines de phosphates",
     "badge": "longformat"
   },
   {
     "slug": "diomaye-2026-jeunes",
     "title": "Plan Diomaye 2026 : ce que le gouvernement promet aux jeunes diplômés",
-    "dek": "160 milliards FCFA, 75 000 contrats, mais beaucoup d'inconnues sur le calendrier et les critères de sélection.",
+    "dek": "En 2026, le gouvernement sénégalais, sous la direction de Bassirou Diomaye Faye, place la jeunesse au cœur de son action via le Plan Sénégal 2050, érigeant l'année 2026 comme « Année de l'Emploi et de l'Économie sociale et solidaire ». Les promesses phares incluent l'insertion de 35 000 jeunes diplômés par an, le soutien à l'entrepreneuriat, et des infrastructures sportives. ",
     "rubrique": "politique",
     "rubriqueLabel": "Politique",
     "author": "Service Politique",
     "date": "Il y a 1h",
     "dateIso": "2026-05-07T12:00",
     "readTime": "4 min",
-    "imgSeed": "diomaye-jeunes",
-    "imgUrl": "https://images.pexels.com/photos/13432768/pexels-photo-13432768.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "imgAlt": "Plan Diomaye 2026"
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778259470789.jpg",
+    "imgAlt": "Plan Diomaye 2026",
+    "body": [
+      {
+        "type": "p",
+        "text": "En 2026, le gouvernement sénégalais, sous la direction de Bassirou Diomaye Faye, place la jeunesse au cœur de son action via le Plan Sénégal 2050, érigeant l'année 2026 comme « Année de l'Emploi et de l'Économie sociale et solidaire ». Les promesses phares incluent l'insertion de 35 000 jeunes diplômés par an, le soutien à l'entrepreneuriat, et des infrastructures sportives."
+      },
+      {
+        "type": "p",
+        "text": "Voici les axes principaux du Plan Diomaye pour 2026 :"
+      },
+      {
+        "type": "p",
+        "text": "• Insertion et Emploi :35 000 jeunes diplômés insérés annuellement via des partenariats avec le secteur privé. Fédéralisation des agences d'emploi pour une meilleure efficacité (Programme national de promotion de l'emploi des jeunes).Soutien financier et administratif pour la création d'entreprises."
+      },
+      {
+        "type": "p",
+        "text": "• 35 000 jeunes diplômés insérés annuellement via des partenariats avec le secteur privé."
+      },
+      {
+        "type": "p",
+        "text": "• Fédéralisation des agences d'emploi pour une meilleure efficacité (Programme national de promotion de l'emploi des jeunes)."
+      },
+      {
+        "type": "p",
+        "text": "• Soutien financier et administratif pour la création d'entreprises."
+      },
+      {
+        "type": "p",
+        "text": "• Formation et Éducation :31 milliards FCFA investis dans la construction et la réhabilitation d'infrastructures universitaires et de formation professionnelle. Déploiement de 23 centres de formation départementaux supplémentaires pour rapprocher la formation des jeunes."
+      },
+      {
+        "type": "p",
+        "text": "• 31 milliards FCFA investis dans la construction et la réhabilitation d'infrastructures universitaires et de formation professionnelle."
+      },
+      {
+        "type": "p",
+        "text": "• Déploiement de 23 centres de formation départementaux supplémentaires pour rapprocher la formation des jeunes."
+      },
+      {
+        "type": "p",
+        "text": "• Sport et Insertion :Les Jeux Olympiques de la Jeunesse (JOJ) Dakar 2026 sont utilisés comme levier de création d'emplois et d'investissement. Construction d'infrastructures sportives et d'espaces de jeunesse dans tous les départements."
+      },
+      {
+        "type": "p",
+        "text": "• Les Jeux Olympiques de la Jeunesse (JOJ) Dakar 2026 sont utilisés comme levier de création d'emplois et d'investissement."
+      },
+      {
+        "type": "p",
+        "text": "• Construction d'infrastructures sportives et d'espaces de jeunesse dans tous les départements."
+      },
+      {
+        "type": "p",
+        "text": "• Numérique et Citoyenneté :Mise en place d'un Conseil consultatif des jeunes pour les impliquer dans les décisions publiques. Déploiement d'antennes satellitaires offrant un accès gratuit à Internet à près d'un million de personnes."
+      },
+      {
+        "type": "p",
+        "text": "• Mise en place d'un Conseil consultatif des jeunes pour les impliquer dans les décisions publiques."
+      },
+      {
+        "type": "p",
+        "text": "• Déploiement d'antennes satellitaires offrant un accès gratuit à Internet à près d'un million de personnes."
+      },
+      {
+        "type": "p",
+        "text": "Ces mesures visent à répondre au chômage, à la précarité et à renforcer la souveraineté économique nationale en s'appuyant sur le potentiel de la jeunesse."
+      }
+    ]
   },
   {
     "slug": "opposition-conseil-constitutionnel",
@@ -139,8 +265,8 @@
     "date": "11h08",
     "dateIso": "2026-05-07T11:08",
     "readTime": "3 min",
-    "imgSeed": "conseil-constitutionnel",
-    "imgUrl": "https://images.pexels.com/photos/8536723/pexels-photo-8536723.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778422375288.jpg",
     "imgAlt": "Conseil constitutionnel du Sénégal"
   },
   {
@@ -153,8 +279,8 @@
     "date": "Hier",
     "dateIso": "2026-05-06",
     "readTime": "4 min",
-    "imgSeed": "diomaye-paris",
-    "imgUrl": "https://images.pexels.com/photos/19054772/pexels-photo-19054772.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778422440384.jpg",
     "imgAlt": "Diomaye Faye à Paris"
   },
   {
@@ -167,17 +293,38 @@
     "date": "Il y a 2h",
     "dateIso": "2026-05-07T11:00",
     "readTime": "5 min",
-    "imgSeed": "gaz-gta",
-    "imgUrl": "https://images.pexels.com/photos/6950205/pexels-photo-6950205.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778422526969.jpg",
     "imgAlt": "Plateforme gazière GTA",
-    "tags": ["Gaz naturel", "GTA", "BP", "Énergie", "Économie"],
+    "tags": [
+      "Gaz naturel",
+      "GTA",
+      "BP",
+      "Énergie",
+      "Économie"
+    ],
     "authorBio": "Cheikh Sarr est journaliste économique spécialisé dans les industries extractives. Il suit le dossier pétrole-gaz au Sénégal depuis 2021.",
     "body": [
-      { "type": "p", "text": "BP et Kosmos Energy ont confirmé mercredi que la phase 2 du projet gazier Grand Tortue Ahmeyim (GTA) est désormais inscrite dans leur planning officiel, avec une mise en production progressive attendue au premier trimestre 2027. L'annonce, faite en marge d'une conférence à Dakar, constitue une bonne nouvelle pour les finances publiques sénégalaises." },
-      { "type": "p", "text": "Les recettes attendues pour l'État sénégalais ont été révisées à la hausse : selon le ministère du Pétrole, les exportations de la phase 2 pourraient générer entre 280 et 340 milliards de francs CFA par an, soit près du double des projections initiales, grâce à la hausse des prix du GNL sur les marchés asiatiques." },
-      { "type": "h2", "text": "Un projet complexe, enfin sur les rails" },
-      { "type": "p", "text": "GTA, développé à cheval sur les eaux territoriales sénégalaises et mauritaniennes, est l'un des projets gaziers les plus complexes d'Afrique de l'Ouest. La phase 1, entrée en production fin 2024, produit environ 2,4 millions de tonnes de GNL par an. La phase 2 devrait doubler cette capacité." },
-      { "type": "pullquote", "text": "Le Sénégal entre dans l'ère des grandes exportations énergétiques. Le défi est désormais de transformer cette rente en développement durable." }
+      {
+        "type": "p",
+        "text": "BP et Kosmos Energy ont confirmé mercredi que la phase 2 du projet gazier Grand Tortue Ahmeyim (GTA) est désormais inscrite dans leur planning officiel, avec une mise en production progressive attendue au premier trimestre 2027. L'annonce, faite en marge d'une conférence à Dakar, constitue une bonne nouvelle pour les finances publiques sénégalaises."
+      },
+      {
+        "type": "p",
+        "text": "Les recettes attendues pour l'État sénégalais ont été révisées à la hausse : selon le ministère du Pétrole, les exportations de la phase 2 pourraient générer entre 280 et 340 milliards de francs CFA par an, soit près du double des projections initiales, grâce à la hausse des prix du GNL sur les marchés asiatiques."
+      },
+      {
+        "type": "h2",
+        "text": "Un projet complexe, enfin sur les rails"
+      },
+      {
+        "type": "p",
+        "text": "GTA, développé à cheval sur les eaux territoriales sénégalaises et mauritaniennes, est l'un des projets gaziers les plus complexes d'Afrique de l'Ouest. La phase 1, entrée en production fin 2024, produit environ 2,4 millions de tonnes de GNL par an. La phase 2 devrait doubler cette capacité."
+      },
+      {
+        "type": "pullquote",
+        "text": "Le Sénégal entre dans l'ère des grandes exportations énergétiques. Le défi est désormais de transformer cette rente en développement durable."
+      }
     ]
   },
   {
@@ -190,8 +337,8 @@
     "date": "10h42",
     "dateIso": "2026-05-07T10:42",
     "readTime": "5 min",
-    "imgSeed": "bceao-fcfa",
-    "imgUrl": "https://images.pexels.com/photos/2892618/pexels-photo-2892618.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778422586286.png",
     "imgAlt": "BCEAO, franc CFA"
   },
   {
@@ -204,25 +351,10 @@
     "date": "Lundi",
     "dateIso": "2026-05-04",
     "readTime": "22 min",
-    "imgSeed": "dossier-petrole",
-    "imgUrl": "https://images.pexels.com/photos/7654189/pexels-photo-7654189.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778422655342.jpg",
     "imgAlt": "Plateforme pétrolière Sangomar",
     "badge": "longformat",
-    "featured": true
-  },
-  {
-    "slug": "presidentielle-ivoirienne-manouvres",
-    "title": "Présidentielle ivoirienne : les dernières manœuvres avant le scrutin d'octobre",
-    "dek": "Alliances de dernière minute, retours sur la scène politique : Abidjan vit sous tension électorale permanente.",
-    "rubrique": "afrique",
-    "rubriqueLabel": "Côte d'Ivoire",
-    "author": "Bureau d'Abidjan",
-    "date": "Il y a 3h",
-    "dateIso": "2026-05-07T10:00",
-    "readTime": "6 min",
-    "imgSeed": "ivoire-presidentielle",
-    "imgUrl": "https://images.pexels.com/photos/8846406/pexels-photo-8846406.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "imgAlt": "Présidentielle en Côte d'Ivoire",
     "featured": true
   },
   {
@@ -235,8 +367,8 @@
     "date": "06h14",
     "dateIso": "2026-05-07T06:14",
     "readTime": "4 min",
-    "imgSeed": "sahel-bamako",
-    "imgUrl": "https://images.pexels.com/photos/15304493/pexels-photo-15304493.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778422762799.jpg",
     "imgAlt": "Bamako, Mali"
   },
   {
@@ -249,8 +381,8 @@
     "date": "12h31",
     "dateIso": "2026-05-07T12:31",
     "readTime": "3 min",
-    "imgSeed": "cedeao-abuja",
-    "imgUrl": "https://images.pexels.com/photos/17059695/pexels-photo-17059695.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778422824975.jpg",
     "imgAlt": "CEDEAO, réunion à Abuja"
   },
   {
@@ -263,8 +395,8 @@
     "date": "Hier",
     "dateIso": "2026-05-06",
     "readTime": "4 min",
-    "imgSeed": "rdc-paix",
-    "imgUrl": "https://images.pexels.com/photos/28227728/pexels-photo-28227728.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778422908274.jpg",
     "imgAlt": "Goma, RDC"
   },
   {
@@ -277,8 +409,8 @@
     "date": "09h30",
     "dateIso": "2026-05-07T09:30",
     "readTime": "3 min",
-    "imgSeed": "keurmassar-pluies",
-    "imgUrl": "https://images.pexels.com/photos/11648153/pexels-photo-11648153.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778423095135.jpg",
     "imgAlt": "Inondations à Keur Massar",
     "badge": "live"
   },
@@ -292,8 +424,8 @@
     "date": "Hier",
     "dateIso": "2026-05-06",
     "readTime": "12 min",
-    "imgSeed": "mbour-migrants",
-    "imgUrl": "https://images.pexels.com/photos/14434186/pexels-photo-14434186.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778423158677.jpg",
     "imgAlt": "Mbour, familles de migrants"
   },
   {
@@ -306,8 +438,8 @@
     "date": "Aujourd'hui",
     "dateIso": "2026-05-07",
     "readTime": "5 min",
-    "imgSeed": "lions-teranga",
-    "imgUrl": "https://images.pexels.com/photos/12478756/pexels-photo-12478756.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778423237032.jpg",
     "imgAlt": "Lions de la Téranga"
   },
   {
@@ -320,8 +452,8 @@
     "date": "Hier",
     "dateIso": "2026-05-06",
     "readTime": "6 min",
-    "imgSeed": "lutte-modou-lo",
-    "imgUrl": "https://images.pexels.com/photos/3943882/pexels-photo-3943882.jpeg?auto=compress&cs=tinysrgb&w=1280",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778423304755.jpg",
     "imgAlt": "Lutte sénégalaise, Modou Lô"
   },
   {
@@ -334,7 +466,8 @@
     "date": "09h15",
     "dateIso": "2026-05-07T09:15",
     "readTime": "3 min",
-    "imgSeed": "youssou-ndour",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778423375056.jpg",
     "imgAlt": "Youssou Ndour",
     "badge": "video"
   },
@@ -348,7 +481,8 @@
     "date": "Mardi",
     "dateIso": "2026-05-05",
     "readTime": "4 min",
-    "imgSeed": "dakar-biennale",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778423422236.jpg",
     "imgAlt": "Biennale de Dakar, Dak'Art 2026"
   },
   {
@@ -361,7 +495,8 @@
     "date": "Lundi",
     "dateIso": "2026-05-04",
     "readTime": "7 min",
-    "imgSeed": "cinema-mati-diop",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778423509769.jpg",
     "imgAlt": "Mati Diop, cinéaste sénégalaise",
     "badge": "video"
   },
@@ -375,22 +510,9 @@
     "date": "Hier",
     "dateIso": "2026-05-06",
     "readTime": "5 min",
-    "imgSeed": "festival-saint-louis",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778423579979.jpg",
     "imgAlt": "Festival de Jazz de Saint-Louis"
-  },
-  {
-    "slug": "marseille-senegalais-legislatives",
-    "title": "À Marseille, les Sénégalais préparent les législatives — entre fierté et fatigue",
-    "dek": "Reportage dans la communauté sénégalaise de Marseille à quelques semaines des élections législatives.",
-    "rubrique": "diaspora",
-    "rubriqueLabel": "Diaspora · Marseille",
-    "author": "Bineta Sy, envoyée spéciale",
-    "date": "Ce matin",
-    "dateIso": "2026-05-07T08:00",
-    "readTime": "8 min",
-    "imgSeed": "marseille-diaspora",
-    "imgAlt": "Communauté sénégalaise à Marseille",
-    "badge": "video"
   },
   {
     "slug": "diaspora-vote-pourquoi",
@@ -402,7 +524,633 @@
     "date": "Lundi",
     "dateIso": "2026-05-04",
     "readTime": "6 min",
-    "imgSeed": "diaspora-vote",
-    "imgAlt": "Vote diaspora sénégalaise"
+    "imgSeed": "",
+    "imgAlt": "Vote diaspora sénégalaise",
+    "imgUrl": "https://images.unsplash.com/photo-NRv8BsouFBQ?w=900&q=80"
+  },
+  {
+    "slug": "code-electoral-diomaye-deux-versions-bloque",
+    "title": "Code électoral : Diomaye reçoit deux versions de la loi et bloque tout",
+    "dek": "Le président Bassirou Diomaye Faye a refusé de promulguer la loi modifiant les articles L29 et L30 du Code électoral après avoir reçu deux textes contradictoires de l'Assemblée nationale, plongeant la majorité dans une crise inédite.",
+    "rubrique": "politique",
+    "rubriqueLabel": "Politique · Assemblée nationale",
+    "author": "Cheikh Tidiane Diallo",
+    "date": "Aujourd'hui · 07h15",
+    "dateIso": "2026-05-08T07:15",
+    "readTime": "5 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778261873751.jpg",
+    "imgAlt": "Président Diomaye Faye",
+    "badge": "live",
+    "featured": true,
+    "tags": [
+      "Code électoral",
+      "Diomaye Faye",
+      "Assemblée nationale",
+      "El Malick Ndiaye"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Une situation sans précédent s'est produite à la présidence de la République. Selon nos informations, le chef de l'État Bassirou Diomaye Faye a reçu deux versions différentes de la loi portant modification des articles L29 et L30 du Code électoral — deux textes censés être identiques mais présentant des divergences substantielles sur plusieurs points relatifs aux conditions d'éligibilité."
+      },
+      {
+        "type": "p",
+        "text": "Face à cette anomalie, la présidence a décidé de suspendre la procédure de promulgation et de renvoyer le dossier à l'Assemblée nationale pour clarification. El Malick Ndiaye, ministre chargé du suivi de l'action gouvernementale, a aussitôt convoqué une réunion d'urgence avec les services juridiques du Parlement."
+      },
+      {
+        "type": "h2",
+        "text": "Une crise au sommet de la majorité"
+      },
+      {
+        "type": "p",
+        "text": "L'incident révèle des tensions internes au sein de la majorité Pastef. Plusieurs sources proches du Palais confirment que le président Faye aurait demandé une seconde lecture du texte avant toute promulgation, ouvrant un bras de fer constitutionnel avec les partisans d'un passage en force. L'opposition a immédiatement saisi l'occasion pour réclamer la saisine du Conseil constitutionnel."
+      }
+    ]
+  },
+  {
+    "slug": "nioro-du-rip-attaque-armee-gendarmerie",
+    "title": "Nioro du Rip : une attaque à main armée déjouée après un échange de tirs",
+    "dek": "Des malfaiteurs lourdement armés ont tenté de dévaliser une entreprise de la région de Kaolack. La gendarmerie nationale les a mis en fuite après un échange de coups de feu, sans faire de victime côté forces de l'ordre.",
+    "rubrique": "senegal",
+    "rubriqueLabel": "Sénégal · Sécurité",
+    "author": "Ibrahima Sow",
+    "date": "Aujourd'hui · 06h30",
+    "dateIso": "2026-05-08T06:30",
+    "readTime": "3 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778423774333.jpg",
+    "imgAlt": "Gendarmerie nationale sénégalaise",
+    "tags": [
+      "Nioro du Rip",
+      "Gendarmerie",
+      "Sécurité",
+      "Kaolack"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Dans la nuit de mercredi à jeudi, une équipe de gendarmes en patrouille dans la commune de Nioro du Rip a intercepté un groupe d'hommes armés qui s'apprêtaient à attaquer une entreprise locale. Selon les premières informations, les assaillants étaient au nombre de cinq et portaient des armes à feu de fabrication artisanale."
+      },
+      {
+        "type": "p",
+        "text": "Un échange de tirs a eu lieu pendant plusieurs minutes avant que les malfaiteurs ne prennent la fuite en abandonnant deux armes sur place. Un suspect a été interpellé à quelques kilomètres du lieu de l'accrochage. La brigade de Nioro a ouvert une enquête pour retrouver les complices toujours en fuite."
+      }
+    ]
+  },
+  {
+    "slug": "bamako-dialogue-groupes-armes-abdoulaye-diop",
+    "title": "Bamako va-t-il dialoguer avec les groupes armés terroristes ? La réponse cash d'Abdoulaye Diop",
+    "dek": "Le ministre malien des Affaires étrangères Abdoulaye Diop a exclu tout dialogue direct avec le JNIM et le GSIM, tout en laissant ouverte la porte à des médiations indirectes dans certaines zones rurales du pays.",
+    "rubrique": "afrique",
+    "rubriqueLabel": "Afrique · Sahel",
+    "author": "Rédaction Seneweb",
+    "date": "Aujourd'hui · 09h00",
+    "dateIso": "2026-05-08T09:00",
+    "readTime": "4 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778423878921.jpg",
+    "imgAlt": "Abdoulaye Diop, ministre malien des Affaires étrangères",
+    "tags": [
+      "Mali",
+      "JNIM",
+      "Terrorisme",
+      "Abdoulaye Diop",
+      "Sahel",
+      "Dialogue"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Interrogé lors d'une conférence de presse à Bamako, le ministre malien des Affaires étrangères Abdoulaye Diop a répondu avec fermeté : « La République ne négocie pas avec ceux qui tuent ses enfants et s'attaquent à ses institutions. » Une déclaration qui ferme officiellement la porte à toute discussion directe avec le Groupe de soutien à l'islam et aux musulmans (GSIM) et le Jama'a Nusrat ul-Islam wa al-Muslimin (JNIM)."
+      },
+      {
+        "type": "p",
+        "text": "Toutefois, le chef de la diplomatie malienne a reconnu l'existence de « canaux informels » dans certaines communautés rurales où des chefs coutumiers servent d'intermédiaires pour faciliter la libération de civils otages. Ces initiatives locales, a-t-il précisé, ne constituent pas une reconnaissance politique des groupes armés."
+      }
+    ]
+  },
+  {
+    "slug": "meeting-sargal-diomaye-mbour-effervescence",
+    "title": "Meeting Sargal de Diomaye Faye : « effervescence monstre » à Mbour",
+    "dek": "Des dizaines de milliers de militants de Pastef ont envahi la ville de Mbour pour le grand rassemblement de soutien au président Bassirou Diomaye Faye, à quelques semaines des législatives anticipées.",
+    "rubrique": "politique",
+    "rubriqueLabel": "Politique · Pastef",
+    "author": "Ousmane Diatta",
+    "date": "Aujourd'hui · 15h45",
+    "dateIso": "2026-05-08T15:45",
+    "readTime": "4 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778424172746.jpg",
+    "imgAlt": "Meeting politique à Mbour",
+    "badge": "live",
+    "featured": true,
+    "tags": [
+      "Pastef",
+      "Diomaye Faye",
+      "Mbour",
+      "Meeting",
+      "Législatives"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Depuis tôt le matin, des convois de bus et de cars rapides convergent vers Mbour en provenance de tout le pays. La ville balnéaire, choisie pour accueillir le grand « Sargal » (rassemblement de soutien) au président Bassirou Diomaye Faye, n'a pas connu pareille mobilisation depuis l'élection présidentielle de 2024."
+      },
+      {
+        "type": "p",
+        "text": "Sur la grande place du marché transformée en esplanade, les animateurs chauffent la foule en attendant l'arrivée du cortège présidentiel. Des pancartes à l'effigie de Diomaye et d'Ousmane Sonko s'étalent à perte de vue. Les organisateurs évoquent « entre 80 000 et 100 000 personnes » présentes, un chiffre que la préfecture de Mbour n'a pas encore confirmé."
+      }
+    ]
+  },
+  {
+    "slug": "promulgation-loi-reglement-interieur-assemblee",
+    "title": "Promulgation de la loi sur le règlement intérieur : le bras de fer que l'Assemblée peut opposer à l'exécutif",
+    "dek": "Après les péripéties autour du Code électoral, constitutionnalistes et parlementaires analysent les leviers dont dispose l'Assemblée nationale pour résister à un éventuel veto de l'exécutif.",
+    "rubrique": "politique",
+    "rubriqueLabel": "Politique · Législatif",
+    "author": "Awa Mbaye",
+    "date": "Aujourd'hui · 12h10",
+    "dateIso": "2026-05-08T12:10",
+    "readTime": "6 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778424270783.jpg",
+    "imgAlt": "Assemblée nationale du Sénégal",
+    "tags": [
+      "Assemblée nationale",
+      "Constitution",
+      "Code électoral",
+      "Règlement intérieur"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "La crise du Code électoral a mis en lumière une tension constitutionnelle latente entre les deux têtes de l'exécutif et le Parlement. Plusieurs professeurs de droit constitutionnel contactés par nos soins soulignent que le président de la République dispose de quinze jours pour promulguer une loi, et qu'il peut en demander une nouvelle délibération — mais une seule fois."
+      },
+      {
+        "type": "p",
+        "text": "Une fois que l'Assemblée a voté un texte dans les mêmes termes, le président est constitutionnellement tenu de le promulguer, sauf à saisir le Conseil constitutionnel. C'est précisément cette arme juridique que l'opposition appelle à activer, estimant que les modifications des articles L29 et L30 posent des problèmes de constitutionnalité."
+      }
+    ]
+  },
+  {
+    "slug": "ramaphosa-destitution-justice-sud-africaine",
+    "title": "La justice sud-africaine rouvre la porte à une destitution du président Ramaphosa",
+    "dek": "La Cour suprême d'appel de Bloemfontein a jugé recevable une demande de révision de la procédure ayant exonéré le président Cyril Ramaphosa dans l'affaire Phala Phala, relançant une potentielle procédure d'impeachment.",
+    "rubrique": "monde",
+    "rubriqueLabel": "Monde · Afrique australe",
+    "author": "Rédaction Seneweb",
+    "date": "Aujourd'hui · 10h55",
+    "dateIso": "2026-05-08T10:55",
+    "readTime": "5 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778424399183.jpg",
+    "imgAlt": "Présidence de l'Afrique du Sud, Pretoria",
+    "tags": [
+      "Afrique du Sud",
+      "Ramaphosa",
+      "Impeachment",
+      "Phala Phala",
+      "Justice"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "La Cour suprême d'appel de Bloemfontein a rendu un arrêt surprise en déclarant recevable le recours déposé par le Mouvement de libération économique (EFF) et l'Alliance démocratique (DA) contre la décision du comité parlementaire ayant blanchi Cyril Ramaphosa dans le scandale Phala Phala — une affaire impliquant la dissimulation présumée de millions de dollars en devises étrangères dans sa ferme privée."
+      },
+      {
+        "type": "p",
+        "text": "La décision ne constitue pas encore une condamnation, mais elle ouvre la voie à un réexamen de l'ensemble de la procédure parlementaire. Si la Cour devait infirmer l'exonération du président, l'Assemblée nationale pourrait être contrainte d'engager une nouvelle procédure d'impeachment — une perspective que l'ANC, parti au pouvoir, qualifie de « manœuvre politique » de l'opposition."
+      }
+    ]
+  },
+  {
+    "slug": "coupe-monde-2026-trump-prix-billets",
+    "title": "Coupe du Monde 2026 : Donald Trump dénonce le prix élevé des billets",
+    "dek": "Le président américain a exprimé publiquement son mécontentement face aux tarifs pratiqués pour la Coupe du monde organisée aux États-Unis, au Canada et au Mexique, certains billets atteignant plusieurs milliers de dollars.",
+    "rubrique": "sport",
+    "rubriqueLabel": "Sport · Mondial 2026",
+    "author": "Rédaction Seneweb",
+    "date": "Hier · 20h30",
+    "dateIso": "2026-05-07T20:30",
+    "readTime": "3 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778424518933.jpg",
+    "imgAlt": "Coupe du Monde 2026",
+    "tags": [
+      "Coupe du Monde 2026",
+      "Trump",
+      "FIFA",
+      "Billets",
+      "États-Unis"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Sur son réseau social Truth Social, Donald Trump a tiré à boulets rouges sur la FIFA et les organisateurs de la Coupe du Monde 2026 : « Les billets pour voir jouer nos équipes coûtent une fortune. Les vraies familles américaines ne peuvent pas se permettre ça. La FIFA doit revoir ses prix — maintenant ! » Le texte, accompagné d'une photo du trophée doré, a été partagé des milliers de fois en quelques heures."
+      },
+      {
+        "type": "p",
+        "text": "En effet, les billets pour les matchs à élimination directe dans des stades comme le MetLife Stadium de New York ou le SoFi Stadium de Los Angeles sont commercialisés entre 800 et 4 000 dollars sur les plateformes officielles. La FIFA a répondu sobrement qu'un « programme de billets accessibles » avait été mis en place pour les supporters à revenus modestes."
+      }
+    ]
+  },
+  {
+    "slug": "mali-camions-pieges-assimi-goita-avril",
+    "title": "Deux camions piégés visaient la résidence d'Assimi Goïta  : les révélations du ministre Diop",
+    "dek": "Le ministre malien des Affaires étrangères Abdoulaye Diop a révélé que les attentats du 25 avril à Bamako avaient pour cibles directes la résidence du chef de la junte et plusieurs infrastructures stratégiques de la capitale.",
+    "rubrique": "afrique",
+    "rubriqueLabel": "Afrique · Mali",
+    "author": "Rédaction Seneweb",
+    "date": "Hier · 18h20",
+    "dateIso": "2026-05-07T18:20",
+    "readTime": "4 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778424694072.jpg",
+    "imgAlt": "Bamako, Mali",
+    "tags": [
+      "Mali",
+      "Assimi Goïta",
+      "Attentat",
+      "JNIM",
+      "Bamako"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Lors d'une conférence de presse tenue ce jeudi à Bamako, le chef de la diplomatie malienne Abdoulaye Diop a levé le voile sur l'ampleur des attaques du 25 avril. Selon lui, les services de renseignement ont établi que deux camions bourrés d'explosifs avaient pour cible la résidence personnelle du président de la transition, Assimi Goïta, dans le quartier de Badalabougou."
+      },
+      {
+        "type": "p",
+        "text": "« Les Forces armées maliennes et les services de sécurité ont neutralisé la menace avant qu'elle n'atteigne son objectif », a déclaré le ministre, sans préciser par quels moyens les véhicules avaient été interceptés. Il a attribué l'attentat au JNIM, dénonçant « un acte de guerre contre l'État malien » et promettant une riposte « ferme et proportionnée »."
+      }
+    ]
+  },
+  {
+    "slug": "mali-helicoptere-gao-fla-jnim",
+    "title": "Mali : chute probable d'un hélicoptère de l'armée près de Gao après une offensive du FLA et du JNIM",
+    "dek": "Des sources sécuritaires font état de la disparition d'un aéronef militaire malien dans la région de Gao lors d'une opération contre une coalition des Forces de libération de l'Azawad et du JNIM.",
+    "rubrique": "afrique",
+    "rubriqueLabel": "Afrique · Sahel",
+    "author": "Rédaction Dakaractu",
+    "date": "Aujourd'hui · 08h00",
+    "dateIso": "2026-05-08T08:00",
+    "readTime": "4 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778425045031.jpg",
+    "imgAlt": "Zone de conflit, région de Gao, Mali",
+    "tags": [
+      "Mali",
+      "Gao",
+      "JNIM",
+      "FLA",
+      "Forces armées",
+      "Sahel"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Un hélicoptère des Forces armées maliennes (FAMa) aurait été abattu ou aurait effectué un atterrissage forcé dans la région de Gao, selon plusieurs sources sécuritaires concordantes contactées par Dakaractu. L'incident se serait produit lors d'une opération de reconnaissance dans une zone contrôlée conjointement par le FLA (Front de libération de l'Azawad) et le JNIM."
+      },
+      {
+        "type": "p",
+        "text": "Les autorités maliennes n'ont pas encore confirmé officiellement l'incident. Le porte-parole des FAMa a indiqué qu'une « opération de sécurisation est en cours » dans le secteur sans donner plus de détails. Des vidéos circulant sur les réseaux sociaux, dont l'authenticité n'a pu être vérifiée indépendamment, montreraient l'épave d'un aéronef militaire."
+      }
+    ]
+  },
+  {
+    "slug": "mamour-diallo-deces-annonce-reseaux-sociaux",
+    "title": "Son décès annoncé sur les réseaux sociaux, Mamour Diallo rassure : « Je me porte à merveille »",
+    "dek": "L'ex-directeur des Domaines, Mamour Diallo, a dû intervenir personnellement sur les réseaux sociaux pour démentir les rumeurs de son décès qui ont envahi la toile sénégalaise, suscitant une vive émotion dans son entourage.",
+    "rubrique": "senegal",
+    "rubriqueLabel": "Sénégal · Société",
+    "author": "Rédaction Dakaractu",
+    "date": "Aujourd'hui · 11h30",
+    "dateIso": "2026-05-08T11:30",
+    "readTime": "2 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778425111593.webp",
+    "imgAlt": "Mamour Diallo",
+    "tags": [
+      "Mamour Diallo",
+      "Réseaux sociaux",
+      "Fake news",
+      "Sénégal"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "« Je suis bien vivant et je me porte à merveille. » C'est par ce message publié sur son compte Facebook que Mamour Diallo, ancien directeur des Domaines du Sénégal et figure du parti Rewmi, a mis fin aux rumeurs qui le donnaient pour mort depuis ce mercredi matin. Les fausses nouvelles annonçant son décès s'étaient répandues comme une traînée de poudre sur WhatsApp et Facebook, provoquant une vague de condoléances de la part de ses proches."
+      },
+      {
+        "type": "p",
+        "text": "L'entourage de Mamour Diallo a vigoureusement dénoncé « une campagne malveillante orchestrée par des individus sans scrupules ». Une plainte pour diffusion de fausses informations est en cours de préparation, selon son avocat. Cet épisode rappelle plusieurs cas similaires qui ont touché des personnalités sénégalaises ces dernières années."
+      }
+    ]
+  },
+  {
+    "slug": "nguekhokh-camion-renverse-autoroute-mbour-dakar",
+    "title": "Nguekhokh : un camion renversé paralyse l'autoroute à péage Mbour-Dakar",
+    "dek": "Un accident spectaculaire impliquant un poids lourd a bloqué pendant plusieurs heures la circulation sur l'axe autoroutier reliant Mbour à Dakar, créant des embouteillages sur plusieurs kilomètres.",
+    "rubrique": "senegal",
+    "rubriqueLabel": "Sénégal · Transports",
+    "author": "Rédaction Dakaractu",
+    "date": "Hier · 14h15",
+    "dateIso": "2026-05-07T14:15",
+    "readTime": "2 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778425288307.jpg",
+    "imgAlt": "Autoroute à péage Mbour-Dakar",
+    "tags": [
+      "Nguekhokh",
+      "Autoroute",
+      "Accident",
+      "Transports",
+      "Mbour"
+    ]
+  },
+  {
+    "slug": "louga-terrain-vente-chaos-serigne-akhma",
+    "title": "Louga : une vente de terrain vire au chaos, Serigne Akhma Mbacké placé en garde à vue",
+    "dek": "Un litige foncier dans la région de Louga a dégénéré en affrontement, faisant plusieurs blessés. Serigne Akhma Mbacké Inzaghi, figure locale, a été interpellé par les forces de l'ordre.",
+    "rubrique": "senegal",
+    "rubriqueLabel": "Sénégal · Justice",
+    "author": "Rédaction Dakaractu",
+    "date": "Hier · 16h40",
+    "dateIso": "2026-05-07T16:40",
+    "readTime": "3 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778425399163.jpg",
+    "imgAlt": "Tribunal régional de Louga",
+    "tags": [
+      "Louga",
+      "Foncier",
+      "Serigne Akhma Mbacké",
+      "Justice",
+      "Litige terrain"
+    ]
+  },
+  {
+    "slug": "cheikh-diba-bceao-conference-crypto-actifs",
+    "title": "Cheikh Diba ouvre la conférence internationale de la BCEAO sur les crypto-actifs",
+    "dek": "Le ministre sénégalais des Finances a présidé l'ouverture d'un forum régional consacré à la régulation des monnaies numériques en Afrique de l'Ouest, alors que la BCEAO prépare son cadre réglementaire sur les actifs virtuels.",
+    "rubrique": "economie",
+    "rubriqueLabel": "Économie · Finance numérique",
+    "author": "Rédaction Dakaractu",
+    "date": "Aujourd'hui · 10h00",
+    "dateIso": "2026-05-08T10:00",
+    "readTime": "4 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778425511344.jpg",
+    "imgAlt": "Conférence BCEAO, Dakar",
+    "tags": [
+      "BCEAO",
+      "Crypto-actifs",
+      "Cheikh Diba",
+      "Finance numérique",
+      "UEMOA"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "La Banque Centrale des États de l'Afrique de l'Ouest (BCEAO) accueille jusqu'à vendredi à Dakar une conférence internationale réunissant régulateurs, économistes et acteurs de la fintech autour de la question des crypto-actifs. Le ministre des Finances Cheikh Diba, qui a présidé la séance d'ouverture, a souligné l' « urgence » pour la zone UEMOA de se doter d'un cadre réglementaire clair face à l'essor des monnaies virtuelles."
+      },
+      {
+        "type": "p",
+        "text": "« Des millions de nos concitoyens n'ont pas accès aux services bancaires traditionnels. Les technologies numériques, si elles sont bien encadrées, peuvent combler ce fossé », a déclaré Cheikh Diba. La BCEAO devrait publier d'ici fin 2026 un projet de règlement harmonisé sur les crypto-actifs applicable aux huit pays membres de l'UEMOA."
+      }
+    ]
+  },
+  {
+    "slug": "mondial-2026-shakira-dai-dai-burna-boy",
+    "title": "Mondial 2026 : Shakira revient avec « Dai Dai », nouvel hymne officiel avec Burna Boy",
+    "dek": "Seize ans après « Waka Waka (This Time for Africa) », la chanteuse colombienne s'associe à l'Afrobeats star nigérian Burna Boy pour signer l'hymne officiel de la Coupe du Monde 2026 organisée en Amérique du Nord.",
+    "rubrique": "culture",
+    "rubriqueLabel": "Culture · Musique · Mondial",
+    "author": "Rédaction Leral.net",
+    "date": "Aujourd'hui · 14h00",
+    "dateIso": "2026-05-08T14:00",
+    "readTime": "3 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778425599388.jpg",
+    "imgAlt": "Shakira et Burna Boy, hymne Mondial 2026",
+    "badge": "video",
+    "tags": [
+      "Mondial 2026",
+      "Shakira",
+      "Burna Boy",
+      "Musique",
+      "FIFA",
+      "Afrobeats"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "La FIFA a officialisé ce jeudi la collaboration entre Shakira et le géant de l'Afrobeats Burna Boy pour l'hymne de la Coupe du Monde 2026. Intitulé « Dai Dai », le titre mêle pop latine et rythmes africains dans une fusion qui se veut à l'image d'un tournoi organisé pour la première fois à trois pays — États-Unis, Canada, Mexique. Le clip, tourné entre Lagos, Bogotá et Los Angeles, cumule déjà plus de 50 millions de vues en 24 heures sur YouTube."
+      },
+      {
+        "type": "p",
+        "text": "Pour Burna Boy, ce partenariat marque une reconnaissance mondiale supplémentaire pour l'Afrobeats, qu'il défend depuis des années sur la scène internationale. « L'Afrique est au cœur du monde. Cette chanson le dit », a déclaré l'artiste nigérian lors d'une conférence de presse à Zurich. Shakira, de son côté, a évoqué des souvenirs émus de « Waka Waka » et l'envie de « recréer cette magie mondiale »."
+      }
+    ]
+  },
+  {
+    "slug": "guy-marius-sagna-ambassade-france-fsf-pape-thiaw",
+    "title": "Déjeuner à l'ambassade de France : Guy Marius Sagna s'en prend à la FSF et à Pape Thiaw",
+    "dek": "Le député Pastef Guy Marius Sagna a vivement critiqué la présence de dirigeants de la Fédération sénégalaise de football et du sélectionneur Pape Thiaw à un déjeuner organisé à la résidence de l'ambassadeur de France à Dakar.",
+    "rubrique": "sport",
+    "rubriqueLabel": "Sport · Lions du Sénégal",
+    "author": "Rédaction Leral.net",
+    "date": "Aujourd'hui · 11h00",
+    "dateIso": "2026-05-08T11:00",
+    "readTime": "3 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778425732127.jpg",
+    "imgAlt": "Football sénégalais",
+    "tags": [
+      "Guy Marius Sagna",
+      "FSF",
+      "Pape Thiaw",
+      "France",
+      "Lions du Sénégal"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Sur ses réseaux sociaux, le député Guy Marius Sagna a partagé une photo du déjeuner organisé à la résidence de l'ambassadeur de France à Dakar, auquel assistaient notamment le président de la Fédération sénégalaise de football (FSF) Augustin Senghor et le sélectionneur national Pape Thiaw. Dans un texte incendiaire, il dénonce une « dépendance symbolique » et s'interroge : « Qu'est-ce que nos dirigeants du football vont chercher à la table de la France ? »"
+      },
+      {
+        "type": "p",
+        "text": "La FSF a répliqué qu'il s'agissait d'un déjeuner diplomatique de courtoisie sans aucun enjeu sportif. Pape Thiaw n'a pas encore réagi personnellement. Cette polémique intervient dans un contexte de préparation intensive des Lions en vue de la Coupe du Monde 2026 aux États-Unis."
+      }
+    ]
+  },
+  {
+    "slug": "jaaw-ketchup-african-influencers-summit-2026",
+    "title": "Jaaw Ketchup et Dudu Fait des Vidéos représentent le Sénégal à l'African Social Media Influencers Summit",
+    "dek": "Les deux créateurs de contenu sénégalais les plus suivis sur TikTok et YouTube participent au sommet continental des influenceurs africains organisé à Addis-Abeba, aux côtés de personnalités du numérique de 30 pays.",
+    "rubrique": "culture",
+    "rubriqueLabel": "Culture · Réseaux sociaux",
+    "author": "Rédaction Leral.net",
+    "date": "Aujourd'hui · 09h30",
+    "dateIso": "2026-05-08T09:30",
+    "readTime": "3 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778425939657.jpg",
+    "imgAlt": "Influenceurs africains, réseaux sociaux",
+    "tags": [
+      "Jaaw Ketchup",
+      "Dudu Fait des Vidéos",
+      "TikTok",
+      "Influenceurs",
+      "Addis-Abeba",
+      "Sénégal"
+    ]
+  },
+  {
+    "slug": "mondial-2026-lamine-sane-koulibaly-incertitude",
+    "title": "Mondial 2026 : Lamine Sané rassure malgré l'incertitude autour de Kalidou Koulibaly",
+    "dek": "L'ancien international sénégalais Lamine Sané a exprimé sa confiance dans les Lions du Sénégal pour la Coupe du Monde 2026, même si la disponibilité de Kalidou Koulibaly, touché à la cheville, reste incertaine.",
+    "rubrique": "sport",
+    "rubriqueLabel": "Sport · Mondial 2026 · Lions",
+    "author": "Rédaction Leral.net",
+    "date": "Aujourd'hui · 16h00",
+    "dateIso": "2026-05-08T16:00",
+    "readTime": "3 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778425995259.jpg",
+    "imgAlt": "Lamine Sané, ancien Lion du Sénégal",
+    "tags": [
+      "Lamine Sané",
+      "Kalidou Koulibaly",
+      "Mondial 2026",
+      "Lions du Sénégal"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Interrogé par Leral.net en marge d'une cérémonie à Dakar, l'ancien défenseur international Lamine Sané a voulu calmer les inquiétudes liées à l'état de santé de Kalidou Koulibaly. « Koulibaly est un guerrier. Même à 70 %, il vaut mieux que beaucoup. Et si jamais il ne peut pas être là, nous avons des garçons capables de le remplacer dignement. Les Lions sont prêts », a-t-il déclaré avec conviction."
+      },
+      {
+        "type": "p",
+        "text": "Le capitaine des Lions Kalidou Koulibaly, touché à la cheville droite lors du match retour avec Al-Hilal en Ligue des champions asiatique, observe une période de repos forcé. Son club a indiqué que la durée d'indisponibilité serait réévaluée dans dix jours, laissant planer le doute sur sa présence à la liste définitive que Pape Thiaw devra communiquer à la FIFA fin mai."
+      }
+    ]
+  },
+  {
+    "slug": "bouna-sarr-retour-selection-pape-thiaw",
+    "title": "Mondial 2026 : Bouna Sarr lance un appel fort à Pape Thiaw pour un retour en sélection",
+    "dek": "Le latéral droit sénégalais Bouna Sarr, qui n'a plus été convoqué depuis 2023, espère une dernière chance en équipe nationale avant la fin de sa carrière internationale, à quelques semaines de la liste pour le Mondial.",
+    "rubrique": "sport",
+    "rubriqueLabel": "Sport · Lions du Sénégal",
+    "author": "Rédaction Leral.net",
+    "date": "Aujourd'hui · 17h30",
+    "dateIso": "2026-05-08T17:30",
+    "readTime": "2 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778426129534.jpg",
+    "imgAlt": "Bouna Sarr, international sénégalais",
+    "tags": [
+      "Bouna Sarr",
+      "Pape Thiaw",
+      "Mondial 2026",
+      "Lions du Sénégal",
+      "Sélection"
+    ]
+  },
+  {
+    "slug": "hantavirus-navire-croisiere-oms-pas-vaccin",
+    "title": "Hantavirus sur un navire de croisière : l'OMS confirme l'absence de vaccin et de traitement spécifique",
+    "dek": "L'Organisation mondiale de la santé a confirmé la détection du virus Hanta à bord d'un navire de croisière en Méditerranée et rappelle qu'il n'existe à ce jour aucun vaccin ni traitement antiviral approuvé contre cette maladie.",
+    "rubrique": "monde",
+    "rubriqueLabel": "Monde · Santé internationale",
+    "author": "Rédaction Leral.net",
+    "date": "Aujourd'hui · 08h45",
+    "dateIso": "2026-05-08T08:45",
+    "readTime": "4 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778426215965.jpg",
+    "imgAlt": "OMS, santé mondiale",
+    "tags": [
+      "Hantavirus",
+      "OMS",
+      "Santé",
+      "Croisière",
+      "Épidémie"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "L'OMS a publié ce jeudi une alerte épidémiologique après la confirmation de plusieurs cas de Hantavirus à bord d'un navire de croisière battant pavillon panaméen, actuellement en quarantaine dans un port méditerranéen. Selon le bulletin de l'organisation, cinq passagers présentent des symptômes sévères, dont deux sont hospitalisés en unité de soins intensifs."
+      },
+      {
+        "type": "p",
+        "text": "Le Hantavirus, transmis principalement par les rongeurs et leurs déjections, peut provoquer une fièvre hémorragique avec syndrome rénal (FHSR) ou un syndrome pulmonaire à Hantavirus (SPH) dont la mortalité peut dépasser 40 %. L'OMS rappelle que si des traitements de soutien existent, aucun antiviral spécifique n'a été approuvé à ce jour. Les autorités sanitaires des pays côtiers concernés ont été notifiées et renforcent la surveillance."
+      }
+    ]
+  },
+  {
+    "slug": "senegal-balance-commerciale-excedent-mars-2026",
+    "title": "Sénégal : la balance commerciale affiche un excédent de 188 milliards FCFA en mars 2026",
+    "dek": "Pour le troisième mois consécutif, le Sénégal enregistre une balance commerciale excédentaire, portée par les exportations d'hydrocarbures et d'or, selon les données provisoires publiées par l'Agence nationale de la Statistique.",
+    "rubrique": "economie",
+    "rubriqueLabel": "Économie · Commerce extérieur",
+    "author": "Rédaction Leral.net",
+    "date": "Aujourd'hui · 10h30",
+    "dateIso": "2026-05-08T10:30",
+    "readTime": "4 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778426270712.jpg",
+    "imgAlt": "Port de Dakar, commerce extérieur",
+    "tags": [
+      "Balance commerciale",
+      "Sénégal",
+      "Pétrole",
+      "Exportations",
+      "Économie",
+      "ANSD"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "L'Agence nationale de la Statistique et de la Démographie (ANSD) a publié ses données provisoires pour mars 2026 : le Sénégal affiche un excédent commercial de 188 milliards de francs CFA, contre un déficit de 42 milliards à la même période en 2025. Ce renversement spectaculaire est principalement attribué à la montée en puissance des exportations d'hydrocarbures depuis l'entrée en production commerciale des champs pétroliers de Sangomar."
+      },
+      {
+        "type": "p",
+        "text": "Les exportations totales ont atteint 612 milliards FCFA en mars, tirées par le pétrole brut (38 %), l'or (22 %) et les produits halieutiques (11 %). Les importations, à 424 milliards, sont en légère hausse du fait du renforcement des achats de biens d'équipement liés aux grands chantiers d'infrastructure. Le gouvernement voit dans ces chiffres la confirmation de sa stratégie de valorisation des ressources naturelles."
+      }
+    ]
+  },
+  {
+    "slug": "macky-sall-onu-presidentielle-2029-clarification-apr",
+    "title": "ONU ou Présidentielle 2029 : Thérèse Faye invite Macky Sall à clarifier l'avenir de l'APR",
+    "dek": "La présidente du groupe parlementaire de l'APR à l'Assemblée nationale, Thérèse Faye Diouf, a demandé publiquement à l'ancien président Macky Sall de préciser ses intentions — candidature à la tête de l'ONU ou retour en politique intérieure — pour permettre au parti de se préparer.",
+    "rubrique": "politique",
+    "rubriqueLabel": "Politique · Opposition · APR",
+    "author": "Rédaction Leral.net",
+    "date": "Aujourd'hui · 12h45",
+    "dateIso": "2026-05-08T12:45",
+    "readTime": "4 min",
+    "imgSeed": "",
+    "imgUrl": "/uploads/1778426341523.jpg",
+    "imgAlt": "Siège de l'APR, Dakar",
+    "tags": [
+      "Macky Sall",
+      "APR",
+      "ONU",
+      "Présidentielle 2029",
+      "Thérèse Faye",
+      "Opposition"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Dans un entretien accordé à Leral.net, Thérèse Faye Diouf, présidente du groupe parlementaire de l'Alliance pour la République (APR) et ancienne ministre, a rompu le silence que s'imposait la direction du parti depuis des semaines : « Nous avons besoin de savoir. Est-ce que le président Macky Sall va poursuivre l'aventure onusienne, ou est-ce qu'il reviendra prendre la tête du combat pour 2029 ? Le parti ne peut pas naviguer sans boussole. »"
+      },
+      {
+        "type": "p",
+        "text": "Macky Sall, candidat déclaré à la présidence de la Commission de l'Union africaine puis pressenti pour des postes dans le système onusien, n'a donné aucun signe officiel de son intention de briguer la présidence en 2029. Plusieurs responsables de l'APR, rencontrés en marge d'une réunion de bureau politique, confirment que l'incertitude commence à peser sur les finances et l'organisation du parti."
+      }
+    ]
   }
 ]
