@@ -51,9 +51,10 @@ ul, ol { margin: 0; padding: 0 }
 /* ── MASTHEAD ── */
 .masthead { background: var(--paper) }
 .masthead .wrap {
-  display: grid; grid-template-columns: 1fr auto 1fr;
-  align-items: center; gap: 24px; padding: 22px 28px 18px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; padding: 16px 28px;
 }
+.logoFallback { display: none }
 .mastLeft { display: flex; align-items: center; gap: 14px; font-size: 13px; color: var(--ink-2) }
 .mastRight { display: flex; align-items: center; justify-content: flex-end; gap: 10px }
 .logo { display: flex; align-items: baseline; gap: 10px; justify-content: center }
@@ -488,6 +489,42 @@ footer ul a:hover { color: #fff }
 .mobileNavList li.active a { color: var(--red); font-weight: 700 }
 .mobileNavFooter { padding: 16px 20px; border-top: 1px solid var(--rule); display: flex; gap: 20px }
 
+/* ── ANIMATIONS & TRANSITIONS ── */
+.art { transition: transform .22s ease, box-shadow .22s ease }
+.art:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(14,43,98,.10) }
+.art .artImg { overflow: hidden }
+.art .artImg > span, .art .artImg img { transition: transform .38s cubic-bezier(.25,.46,.45,.94) }
+.art:hover .artImg > span, .art:hover .artImg img { transform: scale(1.05) }
+.art h3 a { transition: color .16s }
+.artTags a { transition: background .18s, color .18s, border-color .18s }
+.liveBtn { transition: transform .15s, box-shadow .22s }
+.liveBtn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(200,48,42,.28) }
+.subBtn { transition: background .18s, transform .15s }
+.subBtn:hover { background: var(--blue-deep); transform: translateY(-1px) }
+.iconBtn { transition: background .16s }
+.loadMoreBtn { transition: background .2s, color .2s, border-color .2s }
+.bylineShare button { transition: background .16s, color .16s }
+.magCard { transition: box-shadow .22s, transform .22s }
+.magCard:hover { box-shadow: 0 10px 36px rgba(14,43,98,.12); transform: translateY(-2px) }
+.podPlay { transition: background .18s }
+.podPlay:hover { background: rgba(255,255,255,.12) }
+.playBtn { transition: transform .18s, box-shadow .22s }
+.playBtn:hover { transform: scale(1.08); box-shadow: 0 10px 30px rgba(0,0,0,.35) }
+.nlForm button { transition: background .18s }
+.nav li > a { transition: color .14s }
+.tribuneOthers a { transition: background .16s }
+.tribuneOthers a:hover { background: var(--blue-soft) }
+.ftSocials a { transition: background .18s }
+section.section, .hero, .snSection, .directSection, .tribuneSection, .magSection { animation: fadeUpSection .55s cubic-bezier(.25,.46,.45,.94) both }
+@keyframes fadeUpSection { from { opacity: 0; transform: translateY(18px) } to { opacity: 1; transform: translateY(0) } }
+section.section:nth-child(2) { animation-delay: .05s }
+section.section:nth-child(3) { animation-delay: .10s }
+section.section:nth-child(4) { animation-delay: .15s }
+
+/* Skeleton loading placeholder */
+.imgSkeleton { background: linear-gradient(90deg, #dcd5c2 25%, #e8e1cf 50%, #dcd5c2 75%); background-size: 400% 100%; animation: shimmer 1.6s infinite }
+@keyframes shimmer { 0% { background-position: 100% 0 } 100% { background-position: -100% 0 } }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .artLayout { grid-template-columns: 1fr; gap: 32px }
@@ -556,3 +593,43 @@ footer ul a:hover { color: #fff }
   .artRow .artImg { flex: 0 0 90px }
   .artRow h3 { font-size: 14.5px }
 }
+
+@media (max-width: 480px) {
+  .topbar { display: none }
+  .section { padding: 18px 0 }
+  .secHead h2 { font-size: 24px }
+  .directSection { padding: 24px 0 }
+  .pods { gap: 10px }
+  .pod { grid-template-columns: 52px 1fr auto; padding: 10px; gap: 10px }
+  .podCover { width: 52px; height: 52px; font-size: 18px }
+  .player { padding: 16px }
+  .player h3 { font-size: 20px }
+  .artH1 { font-size: 20px; letter-spacing: -.01em }
+  .artDek { font-size: 15px }
+  .prose { font-size: 15.5px; line-height: 1.6 }
+  .prose > p:first-child::first-letter { font-size: 46px }
+  .pullQuote { font-size: 18px; padding: 18px 14px; margin: 20px 0 }
+  .byline { gap: 10px }
+  .bylineAv { width: 36px; height: 36px; font-size: 12px }
+  .bylineShare button { width: 30px; height: 30px }
+  .artHeroImg { aspect-ratio: 4/3 }
+  .wolofCard .word { font-size: 30px }
+  .tribuneSection blockquote { font-size: 22px; padding-left: 14px }
+  .rubriqueTitle { font-size: 28px }
+  .ticker { height: 36px; font-size: 12px }
+  .tickerLabel { padding: 0 10px; font-size: 10px }
+  .artLayout { gap: 24px }
+  .logoMark { font-size: 36px }
+  .related { margin-top: 32px }
+  .art:hover { transform: none; box-shadow: none }
+  .magCard:hover { transform: none; box-shadow: none }
+}
+
+/* Monde section card override */
+.mondeGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px }
+@media (max-width: 1024px) { .mondeGrid { grid-template-columns: repeat(2, 1fr) } }
+@media (max-width: 680px) { .mondeGrid { grid-template-columns: 1fr } }
+
+/* Focus styles for accessibility */
+a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; border-radius: 2px }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--blue); outline-offset: 0 }

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a4a6e"/>
+      <stop offset="100%" stop-color="#1a7fa8"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.75)"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="900" height="600" fill="url(#bg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.07" stroke="white" stroke-width="0.5">
+    <line x1="0" y1="0" x2="0" y2="600"/><line x1="60" y1="0" x2="60" y2="600"/><line x1="120" y1="0" x2="120" y2="600"/><line x1="180" y1="0" x2="180" y2="600"/><line x1="240" y1="0" x2="240" y2="600"/><line x1="300" y1="0" x2="300" y2="600"/><line x1="360" y1="0" x2="360" y2="600"/><line x1="420" y1="0" x2="420" y2="600"/><line x1="480" y1="0" x2="480" y2="600"/><line x1="540" y1="0" x2="540" y2="600"/><line x1="600" y1="0" x2="600" y2="600"/><line x1="660" y1="0" x2="660" y2="600"/><line x1="720" y1="0" x2="720" y2="600"/><line x1="780" y1="0" x2="780" y2="600"/><line x1="840" y1="0" x2="840" y2="600"/><line x1="900" y1="0" x2="900" y2="600"/>
+    <line x1="0" y1="0" x2="900" y2="0"/><line x1="0" y1="60" x2="900" y2="60"/><line x1="0" y1="120" x2="900" y2="120"/><line x1="0" y1="180" x2="900" y2="180"/><line x1="0" y1="240" x2="900" y2="240"/><line x1="0" y1="300" x2="900" y2="300"/><line x1="0" y1="360" x2="900" y2="360"/><line x1="0" y1="420" x2="900" y2="420"/><line x1="0" y1="480" x2="900" y2="480"/><line x1="0" y1="540" x2="900" y2="540"/><line x1="0" y1="600" x2="900" y2="600"/>
+  </g>
+  <!-- Decorative circles -->
+  <circle cx="750" cy="100" r="180" fill="#4dd0ff" opacity="0.06"/>
+  <circle cx="150" cy="480" r="140" fill="#4dd0ff" opacity="0.05"/>
+  <!-- Icon (centered, large) -->
+  <g transform="translate(390,160) scale(2.2)" stroke="#4dd0ff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <path d="M10,40 Q30,20 50,40 Q70,20 90,40 Q110,20 130,40"/>
+  </g>
+  <!-- Bottom fade -->
+  <rect width="900" height="600" fill="url(#fade)"/>
+  <!-- Accent bar left -->
+  <rect x="0" y="0" width="6" height="600" fill="#4dd0ff" opacity="0.8"/>
+  <!-- Label -->
+  <rect x="30" y="480" width="176" height="26" rx="3" fill="#4dd0ff" opacity="0.85"/>
+  <text x="42" y="498" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#0a4a6e" letter-spacing="0.05em">PÊCHE · SAINT-LOUIS</text>
+  <!-- Title lines -->
+  <g transform="translate(390,0)">
+    <text x="60" y="266" font-family="Georgia,serif" font-size="17" font-weight="bold" fill="white" text-anchor="middle" opacity="0.95">À Saint-Louis, le bras de</text>
+<text x="60" y="292" font-family="Georgia,serif" font-size="17" font-weight="bold" fill="white" text-anchor="middle" opacity="0.95">fer monte d'un cran autour</text>
+<text x="60" y="318" font-family="Georgia,serif" font-size="17" font-weight="bold" fill="white" text-anchor="middle" opacity="0.95">de la pêche artisanale</text>
+
+  </g>
+</svg>

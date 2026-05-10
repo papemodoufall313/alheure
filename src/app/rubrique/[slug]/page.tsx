@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import TopBar from "@/components/TopBar";
 import Masthead from "@/components/Masthead";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
+import ArticleImage from "@/components/ArticleImage";
 import { TopLus, WolofCard, NewsletterCard } from "@/components/Sidebar";
 import { getArticlesByRubrique } from "@/lib/articles";
-import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
+import { artImgSrc } from "@/lib/imgSrc";
 import { RUBRIQUES_NAV } from "@/lib/types";
 
 interface Props {
@@ -74,10 +74,11 @@ export default async function RubriquePage({ params }: Props) {
               <div className="rubrique-lead">
                 <article className="art" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 32, alignItems: "start" }}>
                   <div className="artImg" style={{ aspectRatio: "3/2" }}>
-                    <Image
+                    <ArticleImage
                       src={artImgSrc(lead.imgSeed, lead.imgUrl, 900, 600)}
-                      unoptimized={isLocalPath(artImgSrc(lead.imgSeed, lead.imgUrl, 900, 600))}
                       alt={lead.imgAlt}
+                      seed={lead.imgSeed}
+                      w={900} h={600}
                       fill
                       sizes="(max-width: 768px) 100vw, 45vw"
                       style={{ objectFit: "cover" }}

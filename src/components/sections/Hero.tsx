@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { getFeaturedArticle, getArticleBySlug } from "@/lib/articles";
-import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
+import { artImgSrc } from "@/lib/imgSrc";
+import ArticleImage from "@/components/ArticleImage";
 
 const SIDE_SLUGS = [
   "code-electoral-diomaye-deux-versions-bloque",
@@ -20,12 +20,13 @@ export default function Hero() {
 
           <article className="art artLead">
             <div className="artImg" style={{ aspectRatio: "16/9" }}>
-              <Image
+              <ArticleImage
                 src={artImgSrc(lead.imgSeed, lead.imgUrl, 1280, 720)}
                 alt={lead.imgAlt}
+                seed={lead.imgSeed}
+                w={1280} h={720}
                 fill
                 sizes="(max-width: 768px) 100vw, 65vw"
-                unoptimized={isLocalPath(artImgSrc(lead.imgSeed, lead.imgUrl, 1280, 720))}
                 style={{ objectFit: "cover" }}
                 priority
               />
@@ -53,12 +54,13 @@ export default function Hero() {
               <article key={art.slug} className="art">
                 {art.imgSeed && (
                   <div className="artImg" style={{ aspectRatio: "16/9" }}>
-                    <Image
+                    <ArticleImage
                       src={artImgSrc(art.imgSeed, art.imgUrl, 640, 360)}
                       alt={art.imgAlt}
+                      seed={art.imgSeed}
+                      w={640} h={360}
                       fill
                       sizes="30vw"
-                      unoptimized={isLocalPath(artImgSrc(art.imgSeed, art.imgUrl, 640, 360))}
                       style={{ objectFit: "cover" }}
                     />
                   </div>

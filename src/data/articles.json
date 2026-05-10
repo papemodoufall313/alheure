@@ -355,7 +355,36 @@
     "imgUrl": "/uploads/1778422655342.jpg",
     "imgAlt": "Plateforme pétrolière Sangomar",
     "badge": "longformat",
-    "featured": true
+    "featured": true,
+    "tags": [
+      "Pétrole",
+      "Sangomar",
+      "Rente pétrolière",
+      "Économie",
+      "Woodside"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Le premier baril de pétrole sénégalais a quitté la plateforme Sangomar en novembre 2024. Six mois plus tard, les recettes commencent à arriver dans les caisses de l'État. Mais entre les engagements de la campagne électorale et la réalité des contrats signés sous les précédentes administrations, la marge de manœuvre du gouvernement Faye est plus étroite qu'annoncé."
+      },
+      {
+        "type": "p",
+        "text": "Selon les documents que notre rédaction a pu consulter, la part de l'État sénégalais dans les revenus bruts de Sangomar oscille entre 18 et 23 % selon le cours du baril, contre les 35 % évoqués lors de la campagne présidentielle de 2024. La différence s'explique par la structure des contrats de partage de production signés entre 2016 et 2020."
+      },
+      {
+        "type": "h2",
+        "text": "La mécanique des contrats de partage"
+      },
+      {
+        "type": "p",
+        "text": "Dans un contrat de partage de production (CPP), l'État ne perçoit sa part qu'après que les compagnies ont récupéré leurs coûts d'investissement — ce que l'industrie appelle le « cost oil ». Or, le coût total de développement de Sangomar est estimé à 4,2 milliards de dollars. Jusqu'à ce seuil, Woodside Energy, l'opérateur australien, récupère une part dominante de la production."
+      },
+      {
+        "type": "pullquote",
+        "text": "Le pétrole sénégalais existe. Les revenus, eux, arriveront progressivement — à condition que les prix mondiaux restent favorables et les coûts maîtrisés."
+      }
+    ]
   },
   {
     "slug": "attentat-bamako",

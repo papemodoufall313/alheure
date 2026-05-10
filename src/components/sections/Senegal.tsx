@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { getArticlesByRubrique } from "@/lib/articles";
-import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
+import { artImgSrc } from "@/lib/imgSrc";
+import ArticleImage from "@/components/ArticleImage";
 import ArticleCard from "@/components/ArticleCard";
 
 export default function Senegal() {
@@ -23,13 +23,13 @@ export default function Senegal() {
         </div>
 
         <div className="snGrid">
-          {/* Lead */}
           <article className="art artMedium">
             <div className="artImg" style={{ aspectRatio: "3/2" }}>
-              <Image
+              <ArticleImage
                 src={artImgSrc(lead.imgSeed, lead.imgUrl, 900, 600)}
-                unoptimized={isLocalPath(artImgSrc(lead.imgSeed, lead.imgUrl, 900, 600))}
                 alt={lead.imgAlt}
+                seed={lead.imgSeed}
+                w={900} h={600}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
@@ -59,7 +59,6 @@ export default function Senegal() {
             </div>
           </article>
 
-          {/* List */}
           <div className="snList">
             {list.map((a) => (
               <ArticleCard key={a.slug} article={a} variant="row" sizes="130px" />

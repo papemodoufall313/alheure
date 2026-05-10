@@ -7,6 +7,7 @@ import AlaUne from "@/components/sections/AlaUne";
 import Senegal from "@/components/sections/Senegal";
 import Direct from "@/components/sections/Direct";
 import Afrique from "@/components/sections/Afrique";
+import Monde from "@/components/sections/Monde";
 import Tribune from "@/components/sections/Tribune";
 import SportCulture from "@/components/sections/SportCulture";
 import Dossiers from "@/components/sections/Dossiers";
@@ -25,6 +26,7 @@ export default function HomePage() {
         <Senegal />
         <Direct />
         <Afrique />
+        <Monde />
         <Tribune />
         <SportCulture />
         <Dossiers />

@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Article } from "@/lib/types";
-import { artImgSrc, isLocalPath } from "@/lib/imgSrc";
+import { artImgSrc } from "@/lib/imgSrc";
+import ArticleImage from "@/components/ArticleImage";
 
 interface Props {
   article: Article;
@@ -17,14 +17,7 @@ export default function ArticleCard({ article: a, variant = "default", sizes = "
     return (
       <article className={cls}>
         <div className="artImg" style={{ flex: "0 0 130px", aspectRatio: "1" }}>
-          <Image
-            src={src}
-            alt={a.imgAlt}
-            fill
-            sizes="130px"
-            unoptimized={isLocalPath(src)}
-            style={{ objectFit: "cover" }}
-          />
+          <ArticleImage src={src} alt={a.imgAlt} seed={a.imgSeed} w={300} h={300} fill sizes="130px" style={{ objectFit: "cover" }} />
         </div>
         <div className="artBody">
           <span className="rub">{a.rubriqueLabel}</span>
@@ -47,14 +40,7 @@ export default function ArticleCard({ article: a, variant = "default", sizes = "
   return (
     <article className={cls}>
       <div className="artImg">
-        <Image
-          src={src}
-          alt={a.imgAlt}
-          fill
-          sizes={sizes}
-          unoptimized={isLocalPath(src)}
-          style={{ objectFit: "cover" }}
-        />
+        <ArticleImage src={src} alt={a.imgAlt} seed={a.imgSeed} w={600} h={400} fill sizes={sizes} style={{ objectFit: "cover" }} />
       </div>
       {a.badge === "rep" && <span className="badge badgeRep">Grand reportage</span>}
       <span className="rub">{a.rubriqueLabel}</span>
