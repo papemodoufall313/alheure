@@ -2,81 +2,9 @@ import TopBar from "@/components/TopBar";
 import Masthead from "@/components/Masthead";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import wolofData from "@/data/wolof.json";
 
-const MOTS = [
-  {
-    word: "Téranga",
-    pron: "/te.ʁaŋ.ɡa/",
-    type: "n.f.",
-    def: "Hospitalité, art de bien recevoir. Valeur cardinale de la société sénégalaise — partager le repas, l'ombre, le silence.",
-    exemple: "« La téranga, c'est offrir ce qu'on a, même quand on n'a pas grand-chose. »",
-    date: "Aujourd'hui",
-    featured: true,
-  },
-  {
-    word: "Xam-xam",
-    pron: "/xam.xam/",
-    type: "n.m.",
-    def: "La connaissance, le savoir. Désigne à la fois le fait de savoir et le savoir lui-même.",
-    exemple: "« Dafa am xam-xam » — Il a de la connaissance, il est instruit.",
-    date: "6 mai 2026",
-    featured: false,
-  },
-  {
-    word: "Jëf-jël",
-    pron: "/dʒɛf.dʒɛl/",
-    type: "n.m.",
-    def: "La réciprocité, l'échange équitable. Donner et recevoir en juste proportion.",
-    exemple: "« Jëf-jël moo tax mbokk yi soxor. » — La réciprocité cimente les liens familiaux.",
-    date: "5 mai 2026",
-    featured: false,
-  },
-  {
-    word: "Barça wala Barzakh",
-    pron: "/baʁ.sa wa.la baʁ.zax/",
-    type: "expr.",
-    def: "Littéralement : « Barcelone ou l'au-delà ». Expression des candidats à l'émigration irrégulière, prêts à risquer leur vie pour rejoindre l'Europe.",
-    exemple: "Cette expression résume le désespoir et la détermination de milliers de jeunes Sénégalais.",
-    date: "4 mai 2026",
-    featured: false,
-  },
-  {
-    word: "Ndëkk",
-    pron: "/ndɛk/",
-    type: "n.m.",
-    def: "Le matin, l'aurore. Symbolise le renouveau, le nouveau départ, la chance qui se présente.",
-    exemple: "« Ndëkk bu bees moo newoon. » — Un nouveau matin est arrivé.",
-    date: "3 mai 2026",
-    featured: false,
-  },
-  {
-    word: "Mbokk",
-    pron: "/m.bɔk/",
-    type: "n.m./adj.",
-    def: "La parenté, le proche, le frère de sang ou de cœur. Désigne aussi l'appartenance à une même communauté.",
-    exemple: "« Niit ñépp mbokk la. » — Tous les hommes sont parents.",
-    date: "2 mai 2026",
-    featured: false,
-  },
-  {
-    word: "Sutura",
-    pron: "/su.tu.ʁa/",
-    type: "n.f.",
-    def: "La pudeur, la discrétion, la dignité tranquille. Valeur morale centrale qui consiste à ne pas s'exposer, ne pas étaler ses peines ni ses richesses.",
-    exemple: "« Sutura dafa gëna am solo ci këlifa yi. » — La discrétion vaut plus que la puissance.",
-    date: "30 avr. 2026",
-    featured: false,
-  },
-  {
-    word: "Kersa",
-    pron: "/kɛʁ.sa/",
-    type: "n.f.",
-    def: "La honte positive, la retenue, la conscience de ce qui est convenable. Ne pas agir de manière déshonorante pour soi ou sa famille.",
-    exemple: "« Kersa moo teg nit ci bakkan bu baax. » — La honte positive place l'homme dans la voie du bien.",
-    date: "29 avr. 2026",
-    featured: false,
-  },
-];
+const MOTS = wolofData;
 
 export default function WolofPage() {
   const [featured, ...archive] = MOTS;

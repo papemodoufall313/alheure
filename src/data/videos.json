@@ -1,0 +1,35 @@
+[
+  {
+    "id": "sangomar-reportage",
+    "title": "Sangomar : dans les coulisses de la première plateforme pétrolière sénégalaise",
+    "desc": "Notre équipe a embarqué à bord du navire de soutien. Images exclusives.",
+    "duration": "14:32",
+    "date": "7 mai 2026",
+    "category": "Grand reportage",
+    "imgUrl": "/uploads/gaz-gta-phase-2.jpg",
+    "videoUrl": "",
+    "published": true
+  },
+  {
+    "id": "lutte-arene-nationale",
+    "title": "Arène nationale : coulisses d'un combat entre Modou Lô et Siteu",
+    "desc": "Accès inédit aux vestiaires, aux marabouts et à la foule en délire.",
+    "duration": "22:05",
+    "date": "2 mai 2026",
+    "category": "Sport",
+    "imgUrl": "/uploads/lutte-modou-lo-siteu.jpg",
+    "videoUrl": "",
+    "published": true
+  },
+  {
+    "id": "lions-entrainement",
+    "title": "Les Lions se préparent : entraînement ouvert à la presse",
+    "desc": "Aliou Cissé présente son groupe avant les qualifications.",
+    "duration": "6:12",
+    "date": "20 avr. 2026",
+    "category": "Football",
+    "imgUrl": "/uploads/lions-selection-mane.jpg",
+    "videoUrl": "",
+    "published": true
+  }
+]

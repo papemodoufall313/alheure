@@ -1,0 +1,32 @@
+[
+  {
+    "id": "teranga",
+    "word": "Téranga",
+    "pron": "/te.ʁaŋ.ɡa/",
+    "type": "n.f.",
+    "def": "Hospitalité, art de bien recevoir. Valeur cardinale de la société sénégalaise — partager le repas, l'ombre, le silence.",
+    "exemple": "« La téranga, c'est offrir ce qu'on a, même quand on n'a pas grand-chose. »",
+    "date": "2026-05-10",
+    "featured": true
+  },
+  {
+    "id": "xam-xam",
+    "word": "Xam-xam",
+    "pron": "/xam.xam/",
+    "type": "n.m.",
+    "def": "La connaissance, le savoir. Désigne à la fois le fait de savoir et le savoir lui-même.",
+    "exemple": "« Dafa am xam-xam » — Il a de la connaissance, il est instruit.",
+    "date": "2026-05-09",
+    "featured": false
+  },
+  {
+    "id": "sutura",
+    "word": "Sutura",
+    "pron": "/su.tu.ʁa/",
+    "type": "n.f.",
+    "def": "La pudeur, la discrétion, la dignité tranquille.",
+    "exemple": "« Sutura dafa gëna am solo ci këlifa yi. » — La discrétion vaut plus que la puissance.",
+    "date": "2026-05-08",
+    "featured": false
+  }
+]
