@@ -51,9 +51,10 @@ ul, ol { margin: 0; padding: 0 }
 /* ── MASTHEAD ── */
 .masthead { background: var(--paper) }
 .masthead .wrap {
-  display: grid; grid-template-columns: 1fr auto 1fr;
-  align-items: center; gap: 24px; padding: 22px 28px 18px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; padding: 16px 28px;
 }
+.logoFallback { display: none }
 .mastLeft { display: flex; align-items: center; gap: 14px; font-size: 13px; color: var(--ink-2) }
 .mastRight { display: flex; align-items: center; justify-content: flex-end; gap: 10px }
 .logo { display: flex; align-items: baseline; gap: 10px; justify-content: center }

@@ -49,6 +49,7 @@ export default function Nav({ activeRubrique = "À la une" }: { activeRubrique?:
           <div className="navEnd">
             <a href="/videos" style={{ color: "var(--red)" }}>▶ VIDÉOS</a>
             <a href="/podcasts" style={{ color: "var(--blue)" }}>♪ PODCASTS</a>
+            <a href="/wolof" style={{ color: "#0a5a3a" }}>🇸🇳 WOLOF</a>
           </div>
         </div>
       </nav>
@@ -90,6 +91,8 @@ export default function Nav({ activeRubrique = "À la une" }: { activeRubrique?:
             <div className="mobileNavFooter">
               <a href="/videos" style={{ color: "var(--red)", font: "700 13px var(--sans)" }}>▶ VIDÉOS</a>
               <a href="/podcasts" style={{ color: "var(--blue)", font: "700 13px var(--sans)" }}>♪ PODCASTS</a>
+              <a href="/newsletter" style={{ color: "var(--ink-2)", font: "700 13px var(--sans)" }}>✉ NEWSLETTER</a>
+              <a href="/wolof" style={{ color: "#0a5a3a", font: "700 13px var(--sans)" }}>🇸🇳 WOLOF</a>
             </div>
           </div>
         </>
