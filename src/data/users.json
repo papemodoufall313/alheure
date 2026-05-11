@@ -12,5 +12,12 @@
     "passwordHash": "$2b$10$6ierfc/9w987j7bF5QZdYO2IJPPXC2.g9PN6JyuMOmcwozBII9GkW",
     "name": "Éditeur",
     "role": "editeur"
+  },
+  {
+    "id": "u-1778525674090",
+    "login": "modou",
+    "name": "Modou FALL",
+    "role": "editeur",
+    "passwordHash": "$2b$10$u98T9vZqW89j.mQbXF9Po.M5BCljVufH53wYIv2HNC4m1DjfJt41e"
   }
 ]
