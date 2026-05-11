@@ -48,6 +48,7 @@ export default function AdminPage() {
             <Link href="/admin/podcasts" style={{ font: "400 12px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Podcasts</Link>
             <Link href="/admin/videos" style={{ font: "400 12px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Vidéos</Link>
             <Link href="/admin/wolof" style={{ font: "400 12px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Wolof</Link>
+            <Link href="/admin/guide" style={{ font: "400 12px var(--sans)", color: "#fcd34d", textDecoration: "none" }}>📖 Guide</Link>
             <Link href="/" target="_blank" style={{ font: "400 12px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>← Voir le site</Link>
             <LogoutButton />
           </div>
