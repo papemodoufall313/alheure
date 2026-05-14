@@ -71,35 +71,44 @@ def fr_date(d: datetime) -> str:
 def esc(t: str) -> str:
     return t.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
 
-def body_text(body: list, max_chars=800) -> str:
+def body_text(body: list, max_chars=9999) -> str:
+    """Extrait tout le texte des blocs body. max_chars = limite optionnelle."""
     parts, total = [], 0
     for blk in body:
         if blk.get("type") in ("p","blockquote","pullquote"):
             t = blk.get("text","")
-            if total + len(t) > max_chars:
+            if max_chars and total + len(t) > max_chars:
                 parts.append(t[:max_chars-total] + "…"); break
             parts.append(t); total += len(t)
-            if total >= max_chars: break
     return " ".join(parts)
 
-def load_img(art: dict, max_w: float, max_h: float):
-    """Charge l'image de l'article, retourne un RLImage ou None."""
+def load_img(art: dict, max_w: float, fixed_h: float):
+    """
+    Charge l'image de l'article redimensionnée à fixed_h de hauteur exacte,
+    centrée dans max_w (pas d'étirement, crop visuel obtenu par contrainte).
+    Retourne un RLImage ou None.
+    """
     url = art.get("imgUrl","")
     if not url:
         return None
     path = BASE / "public" / url.lstrip("/")
-    # Préférer le JPG au SVG
     if not path.exists():
         jpg = path.with_suffix(".jpg")
         if jpg.exists(): path = jpg
         else: return None
     if path.suffix.lower() == ".svg":
-        return None  # ReportLab ne lit pas les SVG natifs
+        return None
     try:
-        ir = ImageReader(str(path))
+        ir  = ImageReader(str(path))
         iw, ih = ir.getSize()
-        ratio = min(max_w / iw, max_h / ih)
-        return RLImage(str(path), width=iw*ratio, height=ih*ratio)
+        # Hauteur fixe, largeur proportionnelle mais plafonnée à max_w
+        ratio = fixed_h / ih
+        w_scaled = iw * ratio
+        if w_scaled > max_w:
+            # Recadrer horizontalement en réduisant davantage
+            ratio = max_w / iw
+            return RLImage(str(path), width=max_w, height=ih*ratio)
+        return RLImage(str(path), width=w_scaled, height=fixed_h)
     except Exception:
         return None
 
@@ -238,12 +247,11 @@ def draw_une(c, articles: list, edition_date: datetime, numero: int):
         cx = ML + i*(col_w+GAP)
         if i > 0:
             col_rule(c, cx-GAP/2, content_bot, sec_h)
-        # Image pour l'article secondaire
-        img = load_img(art, col_w, 60)
+        img = load_img(art, col_w, IMG_H)
         story = []
         if img:
             story.append(img); story.append(Spacer(1,3))
-        story += article_story(art, "h4", "dek", "bodyS", max_body=320)
+        story += article_story(art, "h4", "dek", "bodyS", max_body=9999)
         fr = Frame(cx, content_bot, col_w, sec_h,
                    showBoundary=0, leftPadding=0, rightPadding=0, topPadding=4, bottomPadding=0)
         fr.addFromList(story, c)
@@ -251,6 +259,15 @@ def draw_une(c, articles: list, edition_date: datetime, numero: int):
     c.showPage()
 
 # ─── PAGES STANDARD ───────────────────────────────────────────────────────────
+
+IMG_H = 58  # hauteur fixe de toutes les images dans les colonnes intérieures
+
+def distribute(articles: list, cols: int) -> list[list]:
+    """Répartit les articles en round-robin sur cols colonnes."""
+    buckets: list[list] = [[] for _ in range(cols)]
+    for i, a in enumerate(articles):
+        buckets[i % cols].append(a)
+    return buckets
 
 def draw_standard_page(c, articles: list, rubrique_label: str,
                         page_num: int, edition_date: datetime, numero: int):
@@ -264,51 +281,42 @@ def draw_standard_page(c, articles: list, rubrique_label: str,
     n = len(articles)
     if n == 0:
         c.setFont("Helvetica", 9); c.setFillColor(INK3)
-        c.drawCentredString(W/2, H/2, f"Aucun article · {rubrique_label}")
+        c.drawCentredString(W/2, H/2, f"Aucun article — {rubrique_label}")
         c.showPage(); return
 
-    cols  = 2 if n <= 2 else 3
+    # Nombre de colonnes selon le nombre d'articles
+    cols  = 1 if n == 1 else (2 if n == 2 else 3)
     col_w = (CW - (cols-1)*GAP) / cols
 
-    # Répartition : colonne 0 = 1er article (lead), reste équitablement
-    if n == 1:
-        art_lists = [articles, [], []]
-    elif n == 2:
-        art_lists = [[articles[0]], [articles[1]], []]
-    else:
-        # Colonne 0 prend le premier article (lead), les autres se partagent le reste
-        mid = (n - 1) // 2
-        art_lists = [articles[:1+mid//2], articles[1+mid//2:1+mid], articles[1+mid:]]
-        # S'assurer qu'on a bien 3 listes
-        while len(art_lists) < 3:
-            art_lists.append([])
+    # Distribution round-robin : article 0 → col0, article 1 → col1, etc.
+    art_lists = distribute(articles, cols)
 
     for i in range(cols):
         cx = ML + i*(col_w+GAP)
         if i > 0:
             col_rule(c, cx-GAP/2, content_bot, content_h)
 
-        col_arts = art_lists[i] if i < len(art_lists) else []
         story = []
-        for j, art in enumerate(col_arts):
+        for j, art in enumerate(art_lists[i]):
             is_lead = (j == 0 and i == 0)
             hs = "h2" if is_lead else ("h3" if j == 0 else "h4")
-            mb = 900 if is_lead else (550 if j == 0 else 380)
-            img_h_max = 110 if is_lead else 75
 
-            # Image pour l'article lead de chaque colonne
-            show_img = (j == 0)
-            if show_img:
-                img = load_img(art, col_w, img_h_max)
+            # Image en haut de chaque premier article de colonne, hauteur fixe IMG_H
+            if j == 0:
+                img = load_img(art, col_w, IMG_H)
                 if img:
-                    story.append(img); story.append(Spacer(1,4))
+                    story.append(img)
+                    story.append(Spacer(1, 4))
 
-            story += article_story(art, hs, "dek", "body", max_body=mb)
-            story.append(Spacer(1,6))
-            story.append(HRFlowable(width="100%", thickness=0.5, color=RULE, spaceAfter=5, spaceBefore=0))
+            # Texte complet — pas de troncature, la Frame gère le débordement
+            story += article_story(art, hs, "dek", "body", max_body=9999)
+            story.append(Spacer(1, 5))
+            story.append(HRFlowable(width="100%", thickness=0.5,
+                                     color=RULE, spaceAfter=5, spaceBefore=0))
 
         fr = Frame(cx, content_bot, col_w, content_h,
-                   showBoundary=0, leftPadding=0, rightPadding=0, topPadding=6, bottomPadding=0)
+                   showBoundary=0, leftPadding=0, rightPadding=0,
+                   topPadding=6, bottomPadding=0)
         fr.addFromList(story, c)
 
     c.showPage()
@@ -335,8 +343,7 @@ def draw_page8(c, articles: list, page_num: int, edition_date: datetime, numero:
     col_rule(c, ML+col_w+GAP/2, content_bot, content_h)
 
     art = articles[0]
-    # Image grande en haut à droite
-    img_full = load_img(art, col_w, content_h*0.45)
+    img_full = load_img(art, col_w, IMG_H * 2)
 
     for i in range(2):
         cx = ML + i*(col_w+GAP)
