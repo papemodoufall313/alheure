@@ -63,7 +63,7 @@ function parseRSS(xml: string, source: { name: string; category: string }): Feed
     }) : "";
 
     items.push({
-      id:       Buffer.from(link).toString("base64").slice(0, 16),
+      id:       Buffer.from(link).toString("base64").replace(/[^a-zA-Z0-9]/g, "").slice(0, 32),
       title,
       excerpt,
       url:      link,
