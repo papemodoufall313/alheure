@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0e2b62"/>
+      <stop offset="100%" style="stop-color:#112f70"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Red accent top -->
+  <rect x="0" y="0" width="1600" height="10" fill="#c8302a"/>
+  <!-- Red accent bottom -->
+  <rect x="0" y="890" width="1600" height="10" fill="#c8302a"/>
+
+  <!-- Left column red -->
+  <rect x="80" y="60" width="5" height="780" fill="#c8302a" opacity="0.6"/>
+
+  <!-- Logo -->
+  <text x="110" y="160" font-family="Georgia, serif" font-size="96" font-weight="bold" font-style="italic" fill="white">À l'Heure</text>
+  <rect x="110" y="178" width="560" height="4" fill="#c8302a"/>
+  <text x="110" y="220" font-family="Arial, sans-serif" font-size="22" fill="#8090b0" letter-spacing="4">LE QUOTIDIEN D'INFORMATION</text>
+
+  <!-- Category badge -->
+  <rect x="110" y="260" width="200" height="52" fill="#c8302a"/>
+  <text x="210" y="293" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="3">RUBRIQUE</text>
+
+  <!-- Headline -->
+  <text x="110" y="400" font-family="Georgia, serif" font-size="64" font-weight="bold" fill="white">TITRE DE L'ARTICLE</text>
+  <text x="110" y="475" font-family="Georgia, serif" font-size="64" font-weight="bold" fill="white">EN DEUX LIGNES MAX</text>
+
+  <!-- Red separator -->
+  <rect x="110" y="510" width="860" height="5" fill="#c8302a"/>
+
+  <!-- Accroche -->
+  <text x="110" y="570" font-family="Arial, sans-serif" font-size="30" fill="#c8d0e0">Accroche ou citation de l'article</text>
+
+  <!-- Date -->
+  <text x="110" y="650" font-family="Arial, sans-serif" font-size="24" fill="#6070a0">Dakar · DATE 2026</text>
+
+  <!-- URL -->
+  <text x="110" y="820" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#a8b4cf" letter-spacing="3">alheure.info</text>
+
+  <!-- Right image placeholder -->
+  <rect x="1060" y="60" width="480" height="780" fill="#0a1e45" rx="6"/>
+  <rect x="1060" y="60" width="480" height="780" fill="none" stroke="#c8302a" stroke-width="3" rx="6"/>
+  <text x="1300" y="420" font-family="Arial, sans-serif" font-size="22" fill="#3a5080" text-anchor="middle">PHOTO</text>
+  <text x="1300" y="455" font-family="Arial, sans-serif" font-size="22" fill="#3a5080" text-anchor="middle">ARTICLE</text>
+
+  <!-- Tagline -->
+  <text x="800" y="876" font-family="Arial, sans-serif" font-size="16" fill="#50608a" text-anchor="middle" letter-spacing="2">RIGUEUR · INDÉPENDANCE · PROXIMITÉ · INNOVATION</text>
+</svg>

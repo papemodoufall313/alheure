@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0e2b62"/>
+      <stop offset="100%" style="stop-color:#0a2050"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+
+  <!-- Top border -->
+  <rect x="0" y="0" width="1080" height="10" fill="#c8302a"/>
+  <!-- Bottom border -->
+  <rect x="0" y="1070" width="1080" height="10" fill="#c8302a"/>
+  <!-- Left border -->
+  <rect x="0" y="0" width="10" height="1080" fill="#c8302a"/>
+  <!-- Right border -->
+  <rect x="1070" y="0" width="10" height="1080" fill="#c8302a"/>
+
+  <!-- Image area placeholder -->
+  <rect x="40" y="40" width="1000" height="500" fill="#0a1e45" rx="4"/>
+  <text x="540" y="265" font-family="Arial, sans-serif" font-size="24" fill="#3a5080" text-anchor="middle">PHOTO / IMAGE DE L'ARTICLE</text>
+  <text x="540" y="300" font-family="Arial, sans-serif" font-size="18" fill="#2a3a5a" text-anchor="middle">1000 × 500 px recommandé</text>
+
+  <!-- Gradient overlay on image -->
+  <rect x="40" y="380" width="1000" height="160" fill="url(#bg)" opacity="0.8" rx="0"/>
+
+  <!-- Logo on image -->
+  <text x="80" y="500" font-family="Georgia, serif" font-size="48" font-weight="bold" font-style="italic" fill="white">À l'Heure</text>
+
+  <!-- Category badge -->
+  <rect x="40" y="560" width="180" height="48" fill="#c8302a"/>
+  <text x="130" y="591" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="3">RUBRIQUE</text>
+
+  <!-- Headline -->
+  <text x="80" y="670" font-family="Georgia, serif" font-size="50" font-weight="bold" fill="white">TITRE PRINCIPAL</text>
+  <text x="80" y="730" font-family="Georgia, serif" font-size="50" font-weight="bold" fill="white">DE L'ARTICLE ICI</text>
+
+  <!-- Red separator -->
+  <rect x="80" y="760" width="900" height="4" fill="#c8302a"/>
+
+  <!-- Subtitle / accroche -->
+  <text x="80" y="820" font-family="Arial, sans-serif" font-size="28" fill="#c8d0e0">Accroche ou sous-titre court</text>
+
+  <!-- Date -->
+  <text x="80" y="900" font-family="Arial, sans-serif" font-size="22" fill="#6070a0">Dakar, DATE 2026</text>
+
+  <!-- Bottom: website + tagline -->
+  <text x="540" y="980" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="3">alheure.info</text>
+  <text x="540" y="1030" font-family="Arial, sans-serif" font-size="16" fill="#6070a0" text-anchor="middle" letter-spacing="2">RIGUEUR · INDÉPENDANCE · PROXIMITÉ · INNOVATION</text>
+</svg>
