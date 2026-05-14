@@ -5,7 +5,7 @@ import { join } from "path";
 const FILE = join(process.cwd(), "src/data/articles.json");
 
 export async function POST(req: Request) {
-  const { title, dek, body, rubrique, author, status = "draft" } = await req.json();
+  const { title, dek, body, rubrique, author, imgUrl, status = "draft" } = await req.json();
   if (!title || !rubrique) {
     return NextResponse.json({ error: "Titre et rubrique obligatoires." }, { status: 400 });
   }
@@ -52,7 +52,7 @@ export async function POST(req: Request) {
     dateIso:      now.toISOString(),
     readTime:     `${Math.max(2, Math.ceil(paragraphs.length * 1.5))} min`,
     imgSeed:      slug,
-    imgUrl:       `/images/${slug}.jpg`,
+    imgUrl:       imgUrl || "",
     imgAlt:       title,
     badge:        null,
     featured:     false,

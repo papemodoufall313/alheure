@@ -25,7 +25,7 @@ const CAT_COLORS: Record<string, string> = {
   monde:"#374151", sport:"#dc2626", culture:"#7c3aed",
 };
 
-const EMPTY_DRAFT = { title: "", dek: "", body: "", rubrique: "senegal", author: "" };
+const EMPTY_DRAFT = { title: "", dek: "", body: "", rubrique: "senegal", author: "", imgUrl: "" };
 
 export default function AdminVeille() {
   const [items,   setItems]   = useState<FeedItem[]>([]);
@@ -39,6 +39,7 @@ export default function AdminVeille() {
   const [msg,     setMsg]     = useState({ text: "", error: false });
   const [lastFetch, setLastFetch] = useState(0);
   const [tab,     setTab]     = useState<"veille"|"draft">("veille");
+  const [uploading, setUploading] = useState(false);
 
   function flash(text: string, error = false) {
     setMsg({ text, error });
@@ -77,8 +78,21 @@ export default function AdminVeille() {
     flash("Article réécrit par l'IA ✓");
   }
 
+  async function uploadImage(file: File) {
+    setUploading(true);
+    const form = new FormData();
+    form.append("file", file);
+    const res  = await fetch("/api/upload", { method: "POST", body: form });
+    const data = await res.json();
+    setUploading(false);
+    if (data.error) { flash(data.error, true); return; }
+    setDraft(d => ({ ...d, imgUrl: data.url }));
+    flash("Image téléversée ✓");
+  }
+
   async function saveDraft(status: "draft" | "published") {
     if (!draft.title || !draft.rubrique) { flash("Titre et rubrique obligatoires.", true); return; }
+    if (status === "published" && !draft.imgUrl) { flash("Ajoutez une image avant de publier.", true); return; }
     setSaving(true);
     const res  = await fetch("/api/admin/veille/save", {
       method: "POST",
@@ -294,6 +308,31 @@ export default function AdminVeille() {
                 <input value={draft.author} onChange={e => setDraft(d => ({ ...d, author: e.target.value }))}
                   placeholder="Rédaction À l'Heure"
                   style={{ width: "100%", padding: "8px 10px", border: "1.5px solid var(--rule)", borderRadius: 4, font: "400 13px var(--sans)", boxSizing: "border-box" }} />
+              </div>
+
+              {/* Image */}
+              <div>
+                <label style={{ font: "600 10px var(--sans)", textTransform: "uppercase", letterSpacing: ".06em", color: "var(--ink-3)", display: "block", marginBottom: 5 }}>
+                  Image d&apos;illustration
+                  {!draft.imgUrl && <span style={{ color: "#dc2626", marginLeft: 6 }}>⚠ obligatoire avant publication</span>}
+                </label>
+                {draft.imgUrl ? (
+                  <div style={{ position: "relative", display: "inline-block", width: "100%" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={draft.imgUrl} alt="aperçu" style={{ width: "100%", height: 140, objectFit: "cover", borderRadius: 4, display: "block" }} />
+                    <button onClick={() => setDraft(d => ({ ...d, imgUrl: "" }))}
+                      style={{ position: "absolute", top: 6, right: 6, background: "rgba(0,0,0,.55)", color: "#fff", border: "none", borderRadius: 3, padding: "2px 7px", font: "700 11px var(--sans)", cursor: "pointer" }}>
+                      ✕ Changer
+                    </button>
+                  </div>
+                ) : (
+                  <label style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 6, height: 90, border: "2px dashed #d1d5db", borderRadius: 4, cursor: "pointer", background: "#fafafa" }}>
+                    <span style={{ font: "600 12px var(--sans)", color: "var(--ink-2)" }}>{uploading ? "Envoi en cours…" : "📷 Cliquer pour téléverser"}</span>
+                    <span style={{ font: "400 10px var(--sans)", color: "var(--ink-3)" }}>JPG, PNG, WebP</span>
+                    <input type="file" accept="image/*" style={{ display: "none" }} disabled={uploading}
+                      onChange={e => { const f = e.target.files?.[0]; if (f) uploadImage(f); }} />
+                  </label>
+                )}
               </div>
 
               {/* Actions */}
