@@ -168,7 +168,7 @@ export default function AdminVeille() {
               </div>
             ) : (
               filtered.map((item) => (
-                <div key={item.id}
+                <div key={item.url}
                   onClick={() => selectItem(item)}
                   style={{ padding: "14px 20px", borderBottom: "1px solid #f0f2f6", cursor: "pointer", display: "grid", gridTemplateColumns: "1fr auto", gap: 12, alignItems: "start",
                     background: selected?.id === item.id ? "#eff6ff" : "#fff",
