@@ -44,13 +44,14 @@ export default function AdminPage() {
             </span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <Link href="/admin/auteurs" style={{ font: "400 12px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Auteurs</Link>
-            <Link href="/admin/users" style={{ font: "400 12px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Comptes</Link>
-            <Link href="/admin/podcasts" style={{ font: "400 12px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Podcasts</Link>
-            <Link href="/admin/videos" style={{ font: "400 12px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Vidéos</Link>
-            <Link href="/admin/wolof" style={{ font: "400 12px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Wolof</Link>
-            <Link href="/admin/guide" style={{ font: "400 12px var(--sans)", color: "#fcd34d", textDecoration: "none" }}>📖 Guide</Link>
-            <Link href="/" target="_blank" style={{ font: "400 12px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>← Voir le site</Link>
+            <Link href="/admin/auteurs" style={{ font: "400 11px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Auteurs</Link>
+            <Link href="/admin/users" style={{ font: "400 11px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Comptes</Link>
+            <Link href="/admin/podcasts" style={{ font: "400 11px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Podcasts</Link>
+            <Link href="/admin/videos" style={{ font: "400 11px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Vidéos</Link>
+            <Link href="/admin/wolof" style={{ font: "400 11px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>Wolof</Link>
+            <Link href="/admin/journal" style={{ font: "700 11px var(--sans)", color: "#fcd34d", textDecoration: "none" }}>📰 Journal</Link>
+            <Link href="/admin/guide" style={{ font: "400 11px var(--sans)", color: "#fcd34d", textDecoration: "none" }}>📖 Guide</Link>
+            <Link href="/" target="_blank" style={{ font: "400 11px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>← Site</Link>
             <LogoutButton />
           </div>
         </div>
