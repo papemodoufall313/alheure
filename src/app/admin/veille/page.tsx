@@ -7,6 +7,7 @@ interface FeedItem {
   url: string; source: string; category: string;
   date: string; imgUrl?: string;
 }
+interface SourceStat { name: string; count: number; ok: boolean }
 
 const RUBRIQUES = [
   { value: "senegal",   label: "Sénégal"   },
@@ -38,8 +39,10 @@ export default function AdminVeille() {
   const [saving,  setSaving]  = useState(false);
   const [msg,     setMsg]     = useState({ text: "", error: false });
   const [lastFetch, setLastFetch] = useState(0);
-  const [tab,     setTab]     = useState<"veille"|"draft">("veille");
+  const [tab,       setTab]       = useState<"veille"|"draft">("veille");
   const [uploading, setUploading] = useState(false);
+  const [stats,     setStats]     = useState<SourceStat[]>([]);
+  const [showStats, setShowStats] = useState(false);
 
   function flash(text: string, error = false) {
     setMsg({ text, error });
@@ -51,6 +54,7 @@ export default function AdminVeille() {
     const res  = await fetch(`/api/admin/veille${force ? "?refresh=1" : ""}`);
     const data = await res.json();
     setItems(data.items ?? []);
+    setStats(data.stats ?? []);
     setLastFetch(data.ts ?? Date.now());
     setLoading(false);
   }, []);
@@ -125,9 +129,10 @@ export default function AdminVeille() {
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <Link href="/admin" style={{ font: "400 11px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>← Admin</Link>
             <span style={{ font: "700 15px var(--serif)", fontStyle: "italic", color: "#fff" }}>Veille & Rédaction</span>
-            <span style={{ font: "400 11px var(--sans)", color: "#6070a0" }}>
-              {items.length} articles · {sources.length} sources
-            </span>
+            <button onClick={() => setShowStats(s => !s)}
+              style={{ background: "none", border: "none", cursor: "pointer", font: "400 11px var(--sans)", color: "#6070a0", padding: 0 }}>
+              {items.length} articles · {stats.filter(s => s.ok).length}/{stats.length} sources actives {showStats ? "▲" : "▼"}
+            </button>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             {msg.text && <span style={{ font: "600 12px var(--sans)", color: msg.error ? "#fca5a5" : "#86efac" }}>{msg.text}</span>}
@@ -141,6 +146,21 @@ export default function AdminVeille() {
           </div>
         </div>
       </div>
+
+      {/* Panneau statut sources */}
+      {showStats && stats.length > 0 && (
+        <div style={{ background: "#1a2540", padding: "12px 28px", borderBottom: "1px solid #0a1530" }}>
+          <div style={{ maxWidth: 1400, margin: "0 auto", display: "flex", flexWrap: "wrap", gap: 8 }}>
+            {stats.map(s => (
+              <div key={s.name} style={{ display: "flex", alignItems: "center", gap: 5, padding: "3px 10px", borderRadius: 20, background: s.ok ? "#0d2b1a" : "#2b0d0d", border: `1px solid ${s.ok ? "#14532d" : "#7f1d1d"}` }}>
+                <span style={{ width: 6, height: 6, borderRadius: "50%", background: s.ok ? "#4ade80" : "#f87171", flexShrink: 0 }} />
+                <span style={{ font: "600 10px var(--sans)", color: s.ok ? "#86efac" : "#fca5a5" }}>{s.name}</span>
+                {s.ok && <span style={{ font: "400 10px var(--sans)", color: "#4ade80" }}>{s.count}</span>}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 420px", gap: 0, minHeight: "calc(100vh - 54px)" }}>
 

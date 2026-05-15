@@ -2,17 +2,30 @@ import { NextResponse } from "next/server";
 
 // Sources RSS Sénégal / Afrique
 const SOURCES = [
+  // ── Sénégal ─────────────────────────────────────────────────────────
+  { name: "Seneweb",          url: "https://www.seneweb.com/news/rss.php",                  category: "senegal"   },
+  { name: "Dakar Actu",       url: "https://www.dakaractu.com/rss.php",                     category: "senegal"   },
+  { name: "Leral",            url: "https://www.leral.net/feed/",                           category: "senegal"   },
+  { name: "SeneNews",         url: "https://www.senenews.com/feed",                         category: "senegal"   },
+  { name: "iGFM",             url: "https://www.igfm.sn/feed/",                             category: "senegal"   },
+  { name: "Senego",           url: "https://senego.com/feed",                               category: "senegal"   },
+  { name: "Rewmi",            url: "https://www.rewmi.com/feed/",                           category: "senegal"   },
+  { name: "Pressafrik",       url: "https://www.pressafrik.com/feed/",                      category: "senegal"   },
+  { name: "Le Soleil",        url: "https://www.lesoleil.sn/feed/",                         category: "senegal"   },
+  { name: "L'Observateur",    url: "https://www.lobservateur.sn/feed/",                     category: "senegal"   },
+  { name: "Vox Populi",       url: "https://www.voxpopuli.sn/feed/",                        category: "senegal"   },
+  { name: "Walf Quotidien",   url: "https://www.walf-groupe.com/feed/",                     category: "senegal"   },
+  { name: "Sud Quotidien",    url: "https://www.sudonline.sn/feed/",                        category: "senegal"   },
+  { name: "Xibaaru",          url: "https://xibaaru.com/feed/",                             category: "senegal"   },
+  // ── Afrique ─────────────────────────────────────────────────────────
   { name: "RFI Afrique",      url: "https://www.rfi.fr/fr/rss/afrique",                    category: "afrique"   },
   { name: "RFI Sénégal",      url: "https://www.rfi.fr/fr/rss/senegal",                    category: "senegal"   },
   { name: "Le Monde Afrique", url: "https://www.lemonde.fr/afrique/rss_full.xml",           category: "afrique"   },
   { name: "Jeune Afrique",    url: "https://www.jeuneafrique.com/feed/",                    category: "afrique"   },
   { name: "APA News",         url: "https://apanews.net/feed/",                             category: "afrique"   },
-  { name: "Agence Ecofin",    url: "https://www.agenceecofin.com/flux-rss",                 category: "economie"  },
-  { name: "Seneweb",          url: "https://www.seneweb.com/news/rss.php",                  category: "senegal"   },
-  { name: "Dakar Actu",       url: "https://www.dakaractu.com/rss.php",                     category: "senegal"   },
-  { name: "Rewmi",            url: "https://www.rewmi.com/feed/",                           category: "senegal"   },
-  { name: "Pressafrik",       url: "https://www.pressafrik.com/feed/",                      category: "senegal"   },
   { name: "Africa24",         url: "https://www.africa24.com/feed/",                        category: "afrique"   },
+  // ── Économie ────────────────────────────────────────────────────────
+  { name: "Agence Ecofin",    url: "https://www.agenceecofin.com/flux-rss",                 category: "economie"  },
 ];
 
 export interface FeedItem {
@@ -76,17 +89,20 @@ function parseRSS(xml: string, source: { name: string; category: string }): Feed
   return items;
 }
 
-async function fetchSource(src: typeof SOURCES[0]): Promise<FeedItem[]> {
+interface SourceStat { name: string; count: number; ok: boolean }
+
+async function fetchSource(src: typeof SOURCES[0]): Promise<{ items: FeedItem[]; stat: SourceStat }> {
   try {
     const res = await fetch(src.url, {
-      signal: AbortSignal.timeout(6000),
-      headers: { "User-Agent": "AlHeureBot/1.0" },
+      signal: AbortSignal.timeout(10000),
+      headers: { "User-Agent": "Mozilla/5.0 AlHeureBot/1.0" },
     });
-    if (!res.ok) return [];
-    const xml = await res.text();
-    return parseRSS(xml, src);
+    if (!res.ok) return { items: [], stat: { name: src.name, count: 0, ok: false } };
+    const xml   = await res.text();
+    const items = parseRSS(xml, src);
+    return { items, stat: { name: src.name, count: items.length, ok: items.length > 0 } };
   } catch {
-    return [];
+    return { items: [], stat: { name: src.name, count: 0, ok: false } };
   }
 }
 
@@ -99,16 +115,20 @@ export async function GET(req: Request) {
   }
 
   const results = await Promise.allSettled(SOURCES.map(fetchSource));
-  const items: FeedItem[] = [];
+  const items: FeedItem[]     = [];
+  const stats: SourceStat[]   = [];
+
   results.forEach((r) => {
-    if (r.status === "fulfilled") items.push(...r.value);
+    if (r.status === "fulfilled") {
+      items.push(...r.value.items);
+      stats.push(r.value.stat);
+    }
   });
 
-  // Tri par date décroissante (best effort)
   items.sort((a, b) => (b.date > a.date ? 1 : -1));
 
   cache.ts    = Date.now();
   cache.items = items;
 
-  return NextResponse.json({ items, cached: false, ts: cache.ts });
+  return NextResponse.json({ items, stats, cached: false, ts: cache.ts });
 }
