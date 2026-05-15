@@ -49,7 +49,7 @@ export default function Nav({ activeRubrique = "À la une" }: { activeRubrique?:
           <div className="navEnd">
             <a href="/videos" style={{ color: "var(--red)" }}>▶ VIDÉOS</a>
             <a href="/podcasts" style={{ color: "var(--blue)" }}>♪ PODCASTS</a>
-            <a href="/wolof" style={{ color: "#0a5a3a" }}>🇸🇳 WOLOF</a>
+            <a href="/wolof" style={{ color: "#0a5a3a" }}>🇸🇳 Wolof</a>
           </div>
         </div>
       </nav>
