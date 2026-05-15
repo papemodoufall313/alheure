@@ -6,6 +6,7 @@ interface FeedItem {
   id: string; title: string; excerpt: string;
   url: string; source: string; category: string;
   date: string; imgUrl?: string;
+  coverage: number; allSources: string[];
 }
 interface SourceStat { name: string; count: number; ok: boolean }
 
@@ -209,10 +210,16 @@ export default function AdminVeille() {
                     borderLeft: selected?.id === item.id ? "3px solid var(--blue)" : "3px solid transparent" }}
                 >
                   <div>
-                    <div style={{ display: "flex", gap: 6, marginBottom: 5, alignItems: "center" }}>
+                    <div style={{ display: "flex", gap: 6, marginBottom: 5, alignItems: "center", flexWrap: "wrap" }}>
                       <span style={{ background: CAT_COLORS[item.category] ?? "#374151", color: "#fff", font: "700 9px var(--sans)", padding: "2px 6px", borderRadius: 2, letterSpacing: ".06em", textTransform: "uppercase" }}>
                         {item.category}
                       </span>
+                      {item.coverage > 1 && (
+                        <span title={item.allSources.join(", ")}
+                          style={{ background: "#fef3c7", color: "#92400e", font: "700 9px var(--sans)", padding: "2px 6px", borderRadius: 2, letterSpacing: ".04em" }}>
+                          🔥 {item.coverage} sources
+                        </span>
+                      )}
                       <span style={{ font: "600 10px var(--sans)", color: "var(--ink-3)" }}>{item.source}</span>
                       <span style={{ font: "400 10px var(--sans)", color: "var(--ink-3)" }}>· {item.date}</span>
                     </div>

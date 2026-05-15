@@ -29,14 +29,17 @@ const SOURCES = [
 ];
 
 export interface FeedItem {
-  id:       string;
-  title:    string;
-  excerpt:  string;
-  url:      string;
-  source:   string;
-  category: string;
-  date:     string;
-  imgUrl?:  string;
+  id:          string;
+  title:       string;
+  excerpt:     string;
+  url:         string;
+  source:      string;
+  category:    string;
+  date:        string;
+  dateTs:      number;
+  imgUrl?:     string;
+  coverage:    number;   // nb de sources ayant couvert le même sujet
+  allSources:  string[]; // liste de ces sources
 }
 
 // Cache en mémoire : 20 minutes
@@ -71,22 +74,77 @@ function parseRSS(xml: string, source: { name: string; category: string }): Feed
     if (!title || !link) continue;
 
     const excerpt = desc.length > 300 ? desc.slice(0, 300) + "…" : desc;
-    const date    = pubDate ? new Date(pubDate).toLocaleDateString("fr-FR", {
+    const pubTs   = pubDate ? new Date(pubDate).getTime() : 0;
+    const date    = pubTs ? new Date(pubTs).toLocaleDateString("fr-FR", {
       day: "numeric", month: "short", hour: "2-digit", minute: "2-digit"
     }) : "";
 
     items.push({
-      id:       Buffer.from(link).toString("base64").replace(/[^a-zA-Z0-9]/g, "").slice(0, 32),
+      id:         Buffer.from(link).toString("base64").replace(/[^a-zA-Z0-9]/g, "").slice(0, 32),
       title,
       excerpt,
-      url:      link,
-      source:   source.name,
-      category: source.category,
+      url:        link,
+      source:     source.name,
+      category:   source.category,
       date,
-      imgUrl:   imgUrl || undefined,
+      dateTs:     pubTs,
+      imgUrl:     imgUrl || undefined,
+      coverage:   1,
+      allSources: [source.name],
     });
   }
   return items;
+}
+
+// Mots vides à ignorer pour la similarité
+const STOPWORDS = new Set(["dans","pour","avec","cette","sont","plus","tout","les","des","une","sur","par","pas","que","qui","est","lui","ils","elles","nous","vous","leur","leurs","mais","donc","car","comme","après","avant","vers","depuis","aussi","très","bien","dont","quoi","quel","quelle","entre","encore","même","sous","lors","lors","aux","ces","ses"]);
+
+function titleWords(s: string): Set<string> {
+  return new Set(
+    s.toLowerCase()
+      .normalize("NFD").replace(/[̀-ͯ]/g, "")
+      .replace(/[^a-z0-9 ]/g, " ")
+      .split(/\s+/)
+      .filter(w => w.length >= 4 && !STOPWORDS.has(w))
+  );
+}
+
+function jaccardSim(a: Set<string>, b: Set<string>): number {
+  if (a.size === 0 || b.size === 0) return 0;
+  let inter = 0;
+  a.forEach(w => { if (b.has(w)) inter++; });
+  return inter / (a.size + b.size - inter);
+}
+
+function deduplicateAndScore(items: FeedItem[]): FeedItem[] {
+  const wordSets = items.map(it => titleWords(it.title));
+  const merged   = new Uint8Array(items.length); // 0=kept, 1=absorbed
+
+  for (let i = 0; i < items.length; i++) {
+    if (merged[i]) continue;
+    for (let j = i + 1; j < items.length; j++) {
+      if (merged[j]) continue;
+      if (jaccardSim(wordSets[i], wordSets[j]) >= 0.42) {
+        // Absorber j dans i
+        items[i].coverage++;
+        if (!items[i].allSources.includes(items[j].source))
+          items[i].allSources.push(items[j].source);
+        // Garder l'image ou l'extrait le plus riche
+        if (!items[i].imgUrl && items[j].imgUrl) items[i].imgUrl = items[j].imgUrl;
+        if (items[j].excerpt.length > items[i].excerpt.length) items[i].excerpt = items[j].excerpt;
+        merged[j] = 1;
+      }
+    }
+  }
+
+  return items.filter((_, i) => !merged[i]);
+}
+
+// Score de pertinence : buzz (coverage) + fraîcheur
+function relevanceScore(item: FeedItem, now: number): number {
+  const ageH  = (now - item.dateTs) / 3_600_000; // heures
+  const fresh = Math.max(0, 1 - ageH / 72);      // décroît sur 72 h
+  return item.coverage * 2 + fresh * 3;
 }
 
 interface SourceStat { name: string; count: number; ok: boolean }
@@ -125,10 +183,12 @@ export async function GET(req: Request) {
     }
   });
 
-  items.sort((a, b) => (b.date > a.date ? 1 : -1));
+  const now        = Date.now();
+  const deduped    = deduplicateAndScore(items);
+  deduped.sort((a, b) => relevanceScore(b, now) - relevanceScore(a, now));
 
-  cache.ts    = Date.now();
-  cache.items = items;
+  cache.ts    = now;
+  cache.items = deduped;
 
-  return NextResponse.json({ items, stats, cached: false, ts: cache.ts });
+  return NextResponse.json({ items: deduped, stats, cached: false, ts: cache.ts });
 }
