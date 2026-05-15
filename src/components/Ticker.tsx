@@ -1,14 +1,21 @@
-const ITEMS = [
-  { time: "13:42", text: "L'Assemblée nationale adopte la loi de finances rectificative à 142 voix contre 38" },
-  { time: "13:18", text: "Touba — 5,2 millions de fidèles attendus pour le Magal" },
-  { time: "12:55", text: "BRT Dakar : la ligne 2 entrera en service le 1er juin" },
-  { time: "12:31", text: "CEDEAO — réunion d'urgence des ministres de la défense vendredi à Abuja" },
-  { time: "11:48", text: "Lions de la Téranga : Sadio Mané rappelé en sélection" },
-];
+import { readFileSync } from "fs";
+import { join } from "path";
+
+type TickerItem = { id: string; time: string; text: string; active: boolean };
+
+function getItems(): TickerItem[] {
+  try {
+    const raw = readFileSync(join(process.cwd(), "src/data/ticker.json"), "utf-8");
+    return (JSON.parse(raw) as TickerItem[]).filter(i => i.active);
+  } catch {
+    return [];
+  }
+}
 
 export default function Ticker() {
-  // Duplicated for seamless loop
-  const doubled = [...ITEMS, ...ITEMS];
+  const items  = getItems();
+  if (items.length === 0) return null;
+  const doubled = [...items, ...items];
 
   return (
     <div className="ticker" role="marquee" aria-label="Dernières nouvelles en continu">
@@ -17,7 +24,7 @@ export default function Ticker() {
         <div className="tickerTrack">
           {doubled.map((item, i) => (
             <span key={i}>
-              {i > 0 && i % ITEMS.length !== 0 && (
+              {i > 0 && i % items.length !== 0 && (
                 <span className="sep" aria-hidden="true"> ● </span>
               )}
               <time>{item.time}</time>
