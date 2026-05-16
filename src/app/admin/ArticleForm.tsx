@@ -38,7 +38,8 @@ export default function ArticleForm({ initial, isEdit }: { initial?: Partial<Art
   const [rubriqueLabel, setRubriqueLabel] = useState(initial?.rubriqueLabel ?? "");
   const [author, setAuthor] = useState(initial?.author ?? "");
   const [authorBio, setAuthorBio] = useState(initial?.authorBio ?? "");
-  const [date, setDate] = useState(initial?.date ?? "");
+  const todayLabel = new Date().toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  const [date, setDate] = useState(initial?.date ?? todayLabel);
   const [dateIso, setDateIso] = useState(initial?.dateIso ?? "");
   const [status, setStatus] = useState<ArticleStatus>(initial?.status ?? "draft");
   const [publishAt, setPublishAt] = useState(initial?.publishAt ?? "");
@@ -222,7 +223,17 @@ export default function ArticleForm({ initial, isEdit }: { initial?: Partial<Art
       <div style={row3}>
         <div style={grp}>
           <span style={lbl}>Date affichée</span>
-          <input style={inp} value={date} onChange={(e) => setDate(e.target.value)} placeholder="ex: Aujourd'hui · 14h00" />
+          <div style={{ display: "flex", gap: 6 }}>
+            <input style={{ ...inp, flex: 1 }} value={date} onChange={(e) => setDate(e.target.value)} placeholder="ex: Aujourd'hui · 14h00" />
+            <button
+              type="button"
+              onClick={() => { setDate(todayLabel); setDateIso(new Date().toISOString()); }}
+              title="Mettre à la date d'aujourd'hui"
+              style={{ background: "#f0f9ff", border: "1px solid var(--blue)", color: "var(--blue)", padding: "0 10px", borderRadius: 2, font: "600 11px var(--sans)", whiteSpace: "nowrap", cursor: "pointer" }}
+            >
+              Aujourd&apos;hui
+            </button>
+          </div>
         </div>
         <div style={grp}>
           <span style={lbl}>Date ISO</span>
