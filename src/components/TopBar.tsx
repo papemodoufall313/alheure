@@ -1,8 +1,15 @@
+"use client";
+import { useState, useEffect } from "react";
+
 export default function TopBar() {
-  const today = new Date().toLocaleDateString("fr-FR", {
-    weekday: "long", day: "numeric", month: "long", year: "numeric",
-  });
-  const dateLabel = today.charAt(0).toUpperCase() + today.slice(1);
+  const [dateLabel, setDateLabel] = useState("");
+
+  useEffect(() => {
+    const today = new Date().toLocaleDateString("fr-FR", {
+      weekday: "long", day: "numeric", month: "long", year: "numeric",
+    });
+    setDateLabel(today.charAt(0).toUpperCase() + today.slice(1));
+  }, []);
 
   return (
     <div className="topbar">
