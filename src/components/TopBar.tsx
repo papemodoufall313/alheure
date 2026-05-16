@@ -1,10 +1,15 @@
 export default function TopBar() {
+  const today = new Date().toLocaleDateString("fr-FR", {
+    weekday: "long", day: "numeric", month: "long", year: "numeric",
+  });
+  const dateLabel = today.charAt(0).toUpperCase() + today.slice(1);
+
   return (
     <div className="topbar">
       <div className="wrap">
         <div className="left">
           <span>
-            Jeudi 7 mai 2026 ·{" "}
+            {dateLabel} ·{" "}
             <em style={{ fontStyle: "normal", color: "#fff" }}>Dakar</em>
           </span>
           <span className="topbarDot" />
