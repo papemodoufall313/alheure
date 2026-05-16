@@ -9,10 +9,10 @@
   --ink-2: #3b4150;
   --ink-3: #6b7184;
   --ink-4: #9aa0b0;
-  --rule: #d6cebc;
-  --rule-2: #ece6d6;
-  --paper: #F7F1E3;
-  --cream: #fbf6ea;
+  --rule: #e2e2e2;
+  --rule-2: #ebebeb;
+  --paper: #ffffff;
+  --cream: #f9f9f9;
   --gold: #b88a3e;
   --serif: var(--font-newsreader), "Times New Roman", Georgia, serif;
   --sans: var(--font-manrope), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -452,7 +452,7 @@ footer ul a:hover { color: #fff }
 
 /* ── MOBILE NAV DRAWER ── */
 .hamburger {
-  display: none; /* shown via media query */
+  display: none;
   align-items: center; justify-content: center;
   width: 40px; height: 52px; background: transparent; border: 0;
   color: var(--ink); flex-shrink: 0;
