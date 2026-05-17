@@ -69,8 +69,6 @@ export default function Sidebar() {
   return (
     <aside className="sideStack">
       <TopLus />
-      <WolofCard />
-      <NewsletterCard />
     </aside>
   );
 }

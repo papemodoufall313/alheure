@@ -11,6 +11,7 @@ import Monde from "@/components/sections/Monde";
 import Tribune from "@/components/sections/Tribune";
 import SportCulture from "@/components/sections/SportCulture";
 import Dossiers from "@/components/sections/Dossiers";
+import NewsletterMot from "@/components/sections/NewsletterMot";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
@@ -30,6 +31,7 @@ export default function HomePage() {
         <Tribune />
         <SportCulture />
         <Dossiers />
+        <NewsletterMot />
       </main>
       <Footer />
     </>
