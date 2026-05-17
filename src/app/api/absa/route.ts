@@ -110,19 +110,25 @@ export async function POST(req: NextRequest) {
   const siteContext = getSiteContext();
   const system = `${SYSTEM_PROMPT_BASE}\n\n${siteContext}`;
 
-  const stream = await client.messages.stream({
+  const streamResponse = await client.messages.create({
     model: "claude-opus-4-7",
     max_tokens: 512,
     system,
     messages,
+    stream: true,
   });
 
   const encoder = new TextEncoder();
   const readable = new ReadableStream({
     async start(controller) {
       try {
-        for await (const text of stream.textStream) {
-          controller.enqueue(encoder.encode(text));
+        for await (const event of streamResponse) {
+          if (
+            event.type === "content_block_delta" &&
+            event.delta.type === "text_delta"
+          ) {
+            controller.enqueue(encoder.encode(event.delta.text));
+          }
         }
       } finally {
         controller.close();
