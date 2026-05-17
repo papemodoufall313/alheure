@@ -49,7 +49,7 @@ ul, ol { margin: 0; padding: 0 }
 .meteo { display: inline-flex; align-items: center; gap: 6px }
 
 /* ── MASTHEAD ── */
-.masthead { background: #000 }
+.masthead { background: var(--paper) }
 .masthead .wrap {
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px; padding: 16px 28px;
@@ -60,12 +60,12 @@ ul, ol { margin: 0; padding: 0 }
 .logo { display: flex; align-items: baseline; gap: 10px; justify-content: center }
 .logoMark {
   font-family: var(--serif); font-weight: 800; font-size: 64px;
-  letter-spacing: -.02em; line-height: .9; color: #fff; font-style: italic;
+  letter-spacing: -.02em; line-height: .9; color: var(--blue); font-style: italic;
 }
 .logoMark .a { color: var(--red) }
 .logoTag {
   font: 500 10px var(--sans); letter-spacing: .18em; text-transform: uppercase;
-  color: rgba(255,255,255,.5); border-left: 1px solid rgba(255,255,255,.2); padding-left: 10px;
+  color: var(--ink-3); border-left: 1px solid var(--rule); padding-left: 10px;
   align-self: center; line-height: 1.35; max-width: 170px;
 }
 .liveBtn {
@@ -88,9 +88,9 @@ ul, ol { margin: 0; padding: 0 }
 .iconBtn {
   width: 34px; height: 34px; border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
-  background: transparent; border: 1px solid rgba(255,255,255,.25); color: #fff;
+  background: transparent; border: 1px solid var(--rule); color: var(--blue);
 }
-.iconBtn:hover { background: rgba(255,255,255,.12) }
+.iconBtn:hover { background: var(--blue-soft) }
 .subBtn {
   background: var(--blue); color: #fff; border: 0; padding: 9px 16px;
   border-radius: 3px; font: 700 12px var(--sans); letter-spacing: .06em;
@@ -98,9 +98,9 @@ ul, ol { margin: 0; padding: 0 }
 .tricolor { height: 5px; display: flex }
 .tricolor span { flex: 1 }
 .tricolor span:nth-child(1) { background: var(--blue) }
-.tricolor span:nth-child(2) { background: #e8e8e8 }
+.tricolor span:nth-child(2) { background: #fff }
 .tricolor span:nth-child(3) { background: var(--red) }
-.updated { display: inline-flex; align-items: center; gap: 6px; font: 600 10.5px var(--sans); color: rgba(255,255,255,.55) }
+.updated { display: inline-flex; align-items: center; gap: 6px; font: 600 10.5px var(--sans); color: var(--ink-3) }
 .updated::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #3aa57a }
 
 /* ── NAV ── */
