@@ -11,7 +11,9 @@ import Monde from "@/components/sections/Monde";
 import Tribune from "@/components/sections/Tribune";
 import SportCulture from "@/components/sections/SportCulture";
 import Dossiers from "@/components/sections/Dossiers";
+import UneJournal from "@/components/sections/UneJournal";
 import NewsletterMot from "@/components/sections/NewsletterMot";
+import AdSlot from "@/components/AdSlot";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
@@ -24,13 +26,26 @@ export default function HomePage() {
       <main>
         <Hero />
         <AlaUne />
+
+        {/* Pub bandeau après À la une */}
+        <div className="wrap" style={{ padding: "8px 20px" }}>
+          <AdSlot format="leaderboard" />
+        </div>
+
         <Senegal />
         <Direct />
         <Afrique />
+
+        {/* Pub demi-page entre sections */}
+        <div className="wrap" style={{ padding: "4px 20px 20px" }}>
+          <AdSlot format="halfpage" label="Publicité · Demi-page" />
+        </div>
+
         <Monde />
         <Tribune />
         <SportCulture />
         <Dossiers />
+        <UneJournal />
         <NewsletterMot />
       </main>
       <Footer />
