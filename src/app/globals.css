@@ -49,7 +49,7 @@ ul, ol { margin: 0; padding: 0 }
 .meteo { display: inline-flex; align-items: center; gap: 6px }
 
 /* ── MASTHEAD ── */
-.masthead { background: var(--paper) }
+.masthead { background: #000 }
 .masthead .wrap {
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px; padding: 16px 28px;
@@ -88,9 +88,9 @@ ul, ol { margin: 0; padding: 0 }
 .iconBtn {
   width: 34px; height: 34px; border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
-  background: transparent; border: 1px solid var(--rule); color: var(--blue);
+  background: transparent; border: 1px solid rgba(255,255,255,.25); color: #fff;
 }
-.iconBtn:hover { background: #fff }
+.iconBtn:hover { background: rgba(255,255,255,.12) }
 .subBtn {
   background: var(--blue); color: #fff; border: 0; padding: 9px 16px;
   border-radius: 3px; font: 700 12px var(--sans); letter-spacing: .06em;
@@ -98,9 +98,9 @@ ul, ol { margin: 0; padding: 0 }
 .tricolor { height: 5px; display: flex }
 .tricolor span { flex: 1 }
 .tricolor span:nth-child(1) { background: var(--blue) }
-.tricolor span:nth-child(2) { background: #fff }
+.tricolor span:nth-child(2) { background: #e8e8e8 }
 .tricolor span:nth-child(3) { background: var(--red) }
-.updated { display: inline-flex; align-items: center; gap: 6px; font: 600 10.5px var(--sans); color: var(--ink-3) }
+.updated { display: inline-flex; align-items: center; gap: 6px; font: 600 10.5px var(--sans); color: rgba(255,255,255,.55) }
 .updated::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #3aa57a }
 
 /* ── NAV ── */
