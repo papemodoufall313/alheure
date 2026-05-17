@@ -14,6 +14,9 @@ export default function ArticleCard({ article: a, variant = "default", sizes = "
 
   if (variant === "row") {
     const src = artImgSrc(a.imgSeed, a.imgUrl, 300, 300);
+    const shortDate = a.dateIso
+      ? new Date(a.dateIso).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })
+      : a.date;
     return (
       <article className={cls}>
         <div className="artImg" style={{ flex: "0 0 130px", aspectRatio: "1" }}>
@@ -23,7 +26,7 @@ export default function ArticleCard({ article: a, variant = "default", sizes = "
           <span className="rub">{a.rubriqueLabel}</span>
           <h3><Link href={`/article/${a.slug}`}>{a.title}</Link></h3>
           <div className="artMeta">
-            <time dateTime={a.dateIso}>{a.date}</time>
+            <time dateTime={a.dateIso}>{shortDate}</time>
             {a.readTime && (
               <>
                 <span className="metaDot" />
