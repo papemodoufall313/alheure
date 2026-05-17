@@ -52,14 +52,14 @@ export default function Afrique() {
 
               <div className="colList">
                 {col1.map((a) => (
-                  <ArticleCard key={a.slug} article={a} variant="row" sizes="130px" />
+                  <ArticleCard key={a.slug} article={a} sizes="25vw" />
                 ))}
               </div>
 
               {col2.length > 0 && (
                 <div className="colList">
                   {col2.map((a) => (
-                    <ArticleCard key={a.slug} article={a} variant="row" sizes="130px" />
+                    <ArticleCard key={a.slug} article={a} sizes="25vw" />
                   ))}
                 </div>
               )}
