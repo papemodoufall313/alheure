@@ -49,7 +49,7 @@ ul, ol { margin: 0; padding: 0 }
 .meteo { display: inline-flex; align-items: center; gap: 6px }
 
 /* ── MASTHEAD ── */
-.masthead { background: var(--paper) }
+.masthead { background: #fff }
 .masthead .wrap {
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px; padding: 16px 28px;
