@@ -1,4 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
+import { readFileSync } from "fs";
+import { join } from "path";
+import { unstable_noStore as noStore } from "next/cache";
 import { getFeaturedArticle, getArticleBySlug } from "@/lib/articles";
 import { artImgSrc } from "@/lib/imgSrc";
 import ArticleImage from "@/components/ArticleImage";
@@ -9,9 +13,17 @@ const SIDE_SLUGS = [
   "senegal-balance-commerciale-excedent-mars-2026",
 ];
 
+function getUne() {
+  noStore();
+  try { return JSON.parse(readFileSync(join(process.cwd(), "src/data/une.json"), "utf-8")); }
+  catch { return { imgUrl: "", date: "", numero: "", headline: "", active: false }; }
+}
+
 export default function Hero() {
   const lead = getFeaturedArticle();
   const side = SIDE_SLUGS.map((s) => getArticleBySlug(s)!).filter(Boolean);
+  const une  = getUne();
+  const showUne = une.active && une.imgUrl;
 
   return (
     <section className="hero">
@@ -50,6 +62,27 @@ export default function Hero() {
           </article>
 
           <aside className="heroSide" aria-label="Autres titres">
+
+            {/* Une papier en tête du sidebar */}
+            {showUne && (
+              <div className="uneWidget">
+                <div className="uneWidgetLabel">
+                  <span className="kicker" style={{ fontSize: 10 }}>Édition papier</span>
+                  {une.date && <span style={{ font: "400 10px var(--sans)", color: "var(--ink-3)" }}>{une.numero ? `N°${une.numero} · ` : ""}{une.date}</span>}
+                </div>
+                <div className="uneWidgetBody">
+                  <a href={une.imgUrl} target="_blank" rel="noopener noreferrer" className="uneWidgetCover">
+                    <Image src={une.imgUrl} alt={`Une du journal — ${une.date}`} width={110} height={156} style={{ display: "block", width: "100%", height: "auto", borderRadius: 2 }} unoptimized />
+                  </a>
+                  <div style={{ flex: 1 }}>
+                    {une.headline && <p style={{ font: "700 13px/1.3 var(--serif)", color: "var(--ink)", margin: "0 0 8px" }}>{une.headline}</p>}
+                    <p style={{ font: "400 11px var(--sans)", color: "var(--ink-2)", lineHeight: 1.5, margin: "0 0 10px" }}>Retrouvez l&apos;édition du jour dans les kiosques de Dakar.</p>
+                    <Link href="/newsletter" style={{ font: "700 10px var(--sans)", letterSpacing: ".06em", textTransform: "uppercase", color: "var(--blue)", textDecoration: "none" }}>S&apos;abonner →</Link>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {side.map((art) => (
               <article key={art.slug} className="art">
                 {art.imgSeed && (
