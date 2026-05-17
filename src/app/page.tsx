@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import TopBar from "@/components/TopBar";
 import Masthead from "@/components/Masthead";
 import Nav from "@/components/Nav";
