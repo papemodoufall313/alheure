@@ -1,20 +1,24 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Masthead() {
   return (
     <header className="masthead">
       <div className="wrap" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <Link href="/" aria-label="À l'Heure — accueil" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-          <Image
-            src="/logo.png"
-            alt="À l'Heure"
-            width={220}
-            height={80}
-            priority
-            style={{ height: 64, width: "auto", objectFit: "contain" }}
-            unoptimized
-          />
+        <Link href="/" aria-label="À l'Heure — accueil" style={{ textDecoration: "none" }}>
+          <svg viewBox="0 0 280 90" width="224" height="72" xmlns="http://www.w3.org/2000/svg">
+            {/* Arc rouge horloge */}
+            <path d="M 105 54 A 38 38 0 0 1 181 54" fill="none" stroke="#C8302A" strokeWidth="5" strokeLinecap="round"/>
+            {/* Aiguille minute (12h) */}
+            <line x1="143" y1="54" x2="143" y2="22" stroke="#0E2B62" strokeWidth="2.5" strokeLinecap="round"/>
+            {/* Aiguille heure (2h) */}
+            <line x1="143" y1="54" x2="163" y2="40" stroke="#0E2B62" strokeWidth="2.5" strokeLinecap="round"/>
+            {/* Centre */}
+            <circle cx="143" cy="54" r="3" fill="#0E2B62"/>
+            {/* Texte "A l'heure" */}
+            <text x="6" y="78" fontFamily="Georgia,'Times New Roman',serif" fontWeight="700" fontSize="44" fill="#0E2B62" fontStyle="italic" letterSpacing="-1">A l&apos;heure</text>
+            {/* Barre rouge sous le texte */}
+            <rect x="6" y="83" width="268" height="4" fill="#C8302A" rx="1"/>
+          </svg>
         </Link>
 
         <div className="mastRight">
