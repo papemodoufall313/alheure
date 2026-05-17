@@ -70,16 +70,21 @@ export default function AdminVeille() {
   async function rewrite() {
     if (!selected) return;
     setRewriting(true);
-    const res  = await fetch("/api/admin/veille/rewrite", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ title: selected.title, excerpt: selected.excerpt, url: selected.url, rubrique: draft.rubrique }),
-    });
-    const data = await res.json();
-    setRewriting(false);
-    if (data.error) { flash(data.error, true); return; }
-    setDraft(d => ({ ...d, title: data.title || d.title, dek: data.dek || d.dek, body: data.body || "" }));
-    flash("Article réécrit par l'IA ✓");
+    try {
+      const res  = await fetch("/api/admin/veille/rewrite", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title: selected.title, excerpt: selected.excerpt, url: selected.url, rubrique: draft.rubrique }),
+      });
+      const data = await res.json();
+      if (data.error) { flash(data.error, true); return; }
+      setDraft(d => ({ ...d, title: data.title || d.title, dek: data.dek || d.dek, body: data.body || "" }));
+      flash("Article réécrit par l'IA ✓");
+    } catch {
+      flash("Erreur réseau, veuillez réessayer.", true);
+    } finally {
+      setRewriting(false);
+    }
   }
 
   async function uploadImage(file: File) {

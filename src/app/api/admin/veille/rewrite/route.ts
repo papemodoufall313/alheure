@@ -23,7 +23,7 @@ export async function POST(req: Request) {
   }
 
   const { title, excerpt, url, rubrique } = await req.json();
-  if (!title) return NextResponse.json({ error: "Titre manquant." }, { status: 400 });
+  if (!title?.trim()) return NextResponse.json({ error: "Titre manquant." }, { status: 400 });
 
   const client = new Anthropic({ apiKey });
   const rubLabel = RUBRIQUE_LABELS[rubrique] ?? rubrique ?? "Actualité";
@@ -50,11 +50,15 @@ Important :
 - N'invente pas de citations ni de chiffres non mentionnés dans la source
 - Écris en français standard`;
 
+  if (!prompt.trim()) {
+    return NextResponse.json({ error: "Impossible de générer un prompt valide." }, { status: 400 });
+  }
+
   try {
     const message = await client.messages.create({
       model:      "claude-sonnet-4-6",
       max_tokens: 1200,
-      messages:   [{ role: "user", content: prompt }],
+      messages:   [{ role: "user", content: [{ type: "text", text: prompt }] }],
     });
 
     const text = message.content
