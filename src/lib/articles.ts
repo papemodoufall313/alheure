@@ -5,9 +5,20 @@ import type { Article, Podcast } from "./types";
 
 const DATA_PATH = join(process.cwd(), "src/data/articles.json");
 
+function formatDate(iso: string): string {
+  const d = new Date(iso);
+  return d.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+}
+
+function normalizeDate(a: Article): Article {
+  if (!a.dateIso) return a;
+  return { ...a, date: formatDate(a.dateIso) };
+}
+
 export function getAllArticles(): Article[] {
   try {
-    return JSON.parse(readFileSync(DATA_PATH, "utf-8")) as Article[];
+    const articles = JSON.parse(readFileSync(DATA_PATH, "utf-8")) as Article[];
+    return articles.map(normalizeDate);
   } catch {
     return [];
   }
