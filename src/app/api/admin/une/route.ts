@@ -14,14 +14,19 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-  const body = await req.json();
-  const { action } = body;
+  try {
+    const body = await req.json();
+    const { action } = body;
 
-  if (action === "save") {
-    const une = { imgUrl: body.imgUrl ?? "", date: body.date ?? "", numero: body.numero ?? "", headline: body.headline ?? "", active: body.active ?? false };
-    writeFileSync(FILE, JSON.stringify(une, null, 2));
-    return NextResponse.json({ ok: true, une });
+    if (action === "save") {
+      const une = { imgUrl: body.imgUrl ?? "", date: body.date ?? "", numero: body.numero ?? "", headline: body.headline ?? "", active: body.active ?? false };
+      writeFileSync(FILE, JSON.stringify(une, null, 2));
+      return NextResponse.json({ ok: true, une });
+    }
+
+    return NextResponse.json({ error: "Action inconnue." }, { status: 400 });
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    return NextResponse.json({ error: msg }, { status: 500 });
   }
-
-  return NextResponse.json({ error: "Action inconnue." }, { status: 400 });
 }

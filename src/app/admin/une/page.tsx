@@ -18,7 +18,10 @@ export default function AdminUne() {
   }
 
   useEffect(() => {
-    fetch("/api/admin/une").then(r => r.json()).then(setUne);
+    fetch("/api/admin/une")
+      .then(r => r.ok ? r.json() : null)
+      .then(data => { if (data && data.imgUrl !== undefined) setUne(data); })
+      .catch(() => {});
   }, []);
 
   async function handleUpload(file: File) {
