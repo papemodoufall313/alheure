@@ -3,3 +3,7 @@ node_modules/
 .env*
 *.local
 .env.local
+
+# Données runtime — ne pas écraser au déploiement
+src/data/une.json
+public/uploads/
