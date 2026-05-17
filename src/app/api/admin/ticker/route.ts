@@ -4,7 +4,7 @@ import { join } from "path";
 
 const FILE = join(process.cwd(), "src/data/ticker.json");
 
-type TickerItem = { id: string; time: string; text: string; active: boolean };
+type TickerItem = { id: string; time: string; dateIso?: string; text: string; active: boolean };
 
 function read(): TickerItem[] {
   return JSON.parse(readFileSync(FILE, "utf-8"));
@@ -22,8 +22,11 @@ export async function POST(req: Request) {
   if (body.action === "add") {
     const { text, time } = body;
     if (!text?.trim()) return NextResponse.json({ error: "Texte manquant." }, { status: 400 });
+    const now = new Date();
     const id = Date.now().toString();
-    items.unshift({ id, time: time || new Date().toTimeString().slice(0, 5), text: text.trim(), active: true });
+    const hhmm = time || now.toTimeString().slice(0, 5);
+    const dateIso = now.toISOString();
+    items.unshift({ id, time: hhmm, dateIso, text: text.trim(), active: true });
   }
 
   // Suppression

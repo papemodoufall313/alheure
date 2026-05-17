@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 
-type TickerItem = { id: string; time: string; text: string; active: boolean };
+type TickerItem = { id: string; time: string; dateIso?: string; text: string; active: boolean };
 
 function getItems(): TickerItem[] {
   try {
@@ -10,6 +10,22 @@ function getItems(): TickerItem[] {
   } catch {
     return [];
   }
+}
+
+function tickerLabel(item: TickerItem): string {
+  if (!item.dateIso) return item.time.replace(":", "h");
+
+  const itemDate = new Date(item.dateIso);
+  const now = new Date();
+
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const startOfYesterday = new Date(startOfToday.getTime() - 86400000);
+
+  const hhmm = itemDate.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" }).replace(":", "h");
+
+  if (itemDate >= startOfToday) return hhmm;
+  if (itemDate >= startOfYesterday) return `Hier · ${hhmm}`;
+  return `${itemDate.toLocaleDateString("fr-FR", { day: "numeric", month: "short" })} · ${hhmm}`;
 }
 
 export default function Ticker() {
@@ -27,7 +43,7 @@ export default function Ticker() {
               {i > 0 && i % items.length !== 0 && (
                 <span className="sep" aria-hidden="true"> ● </span>
               )}
-              <time>{item.time}</time>
+              <time>{tickerLabel(item)}</time>
               {item.text}
             </span>
           ))}
