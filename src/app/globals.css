@@ -319,14 +319,13 @@ ul, ol { margin: 0; padding: 0 }
 .nlCard .lab { font: 800 10.5px var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--blue) }
 .nlCard h4 { font-family: var(--serif); font-size: 22px; color: var(--blue-deep); margin: 0; font-weight: 700; line-height: 1.15 }
 .nlCard p { font: 500 12.5px var(--sans); color: var(--ink-2); margin: 0; line-height: 1.45 }
-.nlForm { display: flex; margin-top: 6px }
-.nlForm input {
-  flex: 1; border: 1px solid var(--rule); border-right: 0;
-  padding: 10px 12px; font: 500 13px var(--sans); background: var(--paper); outline: none;
+.waBtn {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 6px;
+  background: #25D366; color: #fff; text-decoration: none;
+  padding: 10px 18px; border-radius: 4px; font: 700 13px var(--sans);
+  letter-spacing: .04em; width: fit-content;
 }
-.nlForm input:focus { border-color: var(--blue) }
-.nlForm button { background: var(--red); color: #fff; border: 0; padding: 0 16px; font: 700 12px var(--sans); letter-spacing: .06em }
-.nlForm button:hover { background: var(--red-dark) }
+.waBtn:hover { background: #1ebe5d }
 
 /* ── THREE-COL ── */
 .three { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; align-items: start }
