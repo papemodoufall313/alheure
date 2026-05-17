@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   },
   description:
     "Quotidien d'information indépendant. Sénégal — Afrique — Monde. Édité depuis Dakar.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

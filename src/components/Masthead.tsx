@@ -1,14 +1,22 @@
 import Link from "next/link";
+import Image from "next/image";
+
 export default function Masthead() {
   return (
     <header className="masthead">
       <div className="wrap" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        {/* Logo à gauche */}
-        <Link href="/" aria-label="À l'Heure — accueil" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none" }}>
-          <span className="logoMark"><span className="a">À</span> l&apos;Heure</span>
+        <Link href="/" aria-label="À l'Heure — accueil" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+          <Image
+            src="/logo.png"
+            alt="À l'Heure"
+            width={220}
+            height={80}
+            priority
+            style={{ height: 64, width: "auto", objectFit: "contain" }}
+            unoptimized
+          />
         </Link>
 
-        {/* Droite : recherche + mis à jour */}
         <div className="mastRight">
           <span className="updated" style={{ fontSize: 12 }}>Mis à jour il y a 4&nbsp;min</span>
           <Link href="/recherche" className="iconBtn" aria-label="Rechercher">

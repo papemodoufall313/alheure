@@ -2,10 +2,12 @@ import { readFileSync } from "fs";
 import { join } from "path";
 import Image from "next/image";
 import Link from "next/link";
+import { unstable_noStore as noStore } from "next/cache";
 
 interface Une { imgUrl: string; date: string; numero: string; headline: string; active: boolean }
 
 function getUne(): Une {
+  noStore();
   try {
     return JSON.parse(readFileSync(join(process.cwd(), "src/data/une.json"), "utf-8"));
   } catch {
