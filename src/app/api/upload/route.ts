@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
     const bytes = await file.arrayBuffer();
     writeFileSync(join(uploadDir, filename), Buffer.from(bytes));
 
-    return NextResponse.json({ url: `/uploads/${filename}` });
+    return NextResponse.json({ url: `/api/files/${filename}` });
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     console.error("[upload] error:", msg);
