@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Newsreader, Manrope } from "next/font/google";
 import "./globals.css";
+import AbsaChat from "@/components/AbsaChat";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" className={`${newsreader.variable} ${manrope.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         {children}
+        <AbsaChat />
         {/* Bulle WhatsApp flottante */}
         <a
           href={WA_HREF}
