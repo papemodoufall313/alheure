@@ -34,11 +34,16 @@ export default function AdminUne() {
 
   async function save() {
     setSaving(true);
-    const res  = await fetch("/api/admin/une", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "save", ...une }) });
-    const data = await res.json();
-    setSaving(false);
-    if (data.ok) flash("Une sauvegardée ✓");
-    else flash(data.error ?? "Erreur", true);
+    try {
+      const res  = await fetch("/api/admin/une", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "save", ...une }) });
+      const data = await res.json();
+      if (data.ok) flash("Une sauvegardée ✓");
+      else flash(data.error ?? `Erreur ${res.status}`, true);
+    } catch (e) {
+      flash(e instanceof Error ? e.message : "Erreur réseau", true);
+    } finally {
+      setSaving(false);
+    }
   }
 
   const inp: React.CSSProperties = { width: "100%", border: "1.5px solid var(--rule)", padding: "9px 12px", font: "400 14px var(--sans)", borderRadius: 4, boxSizing: "border-box" };
