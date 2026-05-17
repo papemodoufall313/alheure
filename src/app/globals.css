@@ -204,6 +204,10 @@ ul, ol { margin: 0; padding: 0 }
 .heroSide .art:last-child { border-bottom: 0; padding-bottom: 0 }
 .heroSide .art h3 { font-size: 18px; line-height: 1.2; font-weight: 700 }
 .heroSide .art .dek { font-size: 13px }
+.uneWidget { padding-bottom: 18px; border-bottom: 1px solid var(--rule) }
+.uneWidgetLabel { display: flex; align-items: center; gap: 8px; margin-bottom: 10px }
+.uneWidgetBody { display: flex; gap: 12px; align-items: flex-start }
+.uneWidgetCover { flex-shrink: 0; width: 110px; box-shadow: 0 3px 12px rgba(0,0,0,.18); border-radius: 2px; display: block; overflow: hidden }
 
 /* ── À LA UNE ── */
 .aluneHead { display: flex; align-items: center; gap: 14px; margin-bottom: 18px }

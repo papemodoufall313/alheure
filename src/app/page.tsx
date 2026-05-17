@@ -13,7 +13,6 @@ import Monde from "@/components/sections/Monde";
 import Tribune from "@/components/sections/Tribune";
 import SportCulture from "@/components/sections/SportCulture";
 import Dossiers from "@/components/sections/Dossiers";
-import UneJournal from "@/components/sections/UneJournal";
 import NewsletterMot from "@/components/sections/NewsletterMot";
 import AdSlot from "@/components/AdSlot";
 import Footer from "@/components/Footer";
@@ -47,7 +46,6 @@ export default function HomePage() {
         <Tribune />
         <SportCulture />
         <Dossiers />
-        <UneJournal />
         <NewsletterMot />
       </main>
       <Footer />
