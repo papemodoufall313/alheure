@@ -53,6 +53,7 @@ export default function AdminPage() {
             <Link href="/admin/veille" style={{ font: "700 11px var(--sans)", color: "#86efac", textDecoration: "none" }}>📡 Veille</Link>
             <Link href="/admin/journal" style={{ font: "700 11px var(--sans)", color: "#fcd34d", textDecoration: "none" }}>📰 Journal</Link>
             <Link href="/admin/une" style={{ font: "700 11px var(--sans)", color: "#fdba74", textDecoration: "none" }}>🗻️ Une</Link>
+            <Link href="/admin/dossiers" style={{ font: "700 11px var(--sans)", color: "#a5f3fc", textDecoration: "none" }}>📂 Dossiers</Link>
             <Link href="/admin/guide" style={{ font: "400 11px var(--sans)", color: "#fcd34d", textDecoration: "none" }}>📖 Guide</Link>
             <Link href="/" target="_blank" style={{ font: "400 11px var(--sans)", color: "#a8b4cf", textDecoration: "none" }}>← Site</Link>
             <LogoutButton />

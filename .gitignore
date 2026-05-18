@@ -6,5 +6,6 @@ node_modules/
 
 # Données runtime — ne pas écraser au déploiement
 src/data/une.json
+src/data/dossiers.json
 public/uploads/
 tsconfig.tsbuildinfo
