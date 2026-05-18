@@ -84,32 +84,14 @@ export default function Hero() {
             )}
 
             {side.map((art) => (
-              <article key={art.slug} className="art">
-                {art.imgSeed && (
-                  <div className="artImg" style={{ aspectRatio: "16/9" }}>
-                    <ArticleImage
-                      src={artImgSrc(art.imgSeed, art.imgUrl, 640, 360)}
-                      alt={art.imgAlt}
-                      seed={art.imgSeed}
-                      w={640} h={360}
-                      fill
-                      sizes="30vw"
-                      style={{ objectFit: "cover" }}
-                    />
-                  </div>
-                )}
+              <article key={art.slug} className="art sideArt">
                 <span className="rub">{art.rubriqueLabel}</span>
                 <h3><Link href={`/article/${art.slug}`}>{art.title}</Link></h3>
-                <p className="dek">{art.dek}</p>
                 <div className="artMeta">
-                  <span className="by">{art.author}</span>
-                  <span className="metaDot" />
                   <time dateTime={art.dateIso}>{art.date}</time>
+                  {art.readTime && <><span className="metaDot" /><span>Lecture {art.readTime}</span></>}
                   {art.badge === "video" && (
-                    <>
-                      <span className="metaDot" />
-                      <span className="badge badgeVideo" style={{ fontSize: 9, padding: "2px 6px" }}>Vidéo</span>
-                    </>
+                    <><span className="metaDot" /><span className="badge badgeVideo" style={{ fontSize: 9, padding: "2px 6px" }}>Vidéo</span></>
                   )}
                 </div>
               </article>

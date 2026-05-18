@@ -204,6 +204,8 @@ ul, ol { margin: 0; padding: 0 }
 .heroSide .art:last-child { border-bottom: 0; padding-bottom: 0 }
 .heroSide .art h3 { font-size: 18px; line-height: 1.2; font-weight: 700 }
 .heroSide .art .dek { font-size: 13px }
+.heroSide .sideArt h3 { font-size: 15px; line-height: 1.25 }
+.heroSide .sideArt .artMeta { font-size: 11px }
 .uneWidget { padding-bottom: 18px; border-bottom: 1px solid var(--rule) }
 .uneWidgetLabel { display: flex; align-items: center; gap: 8px; margin-bottom: 10px }
 .uneWidgetBody { display: flex; gap: 12px; align-items: flex-start }
