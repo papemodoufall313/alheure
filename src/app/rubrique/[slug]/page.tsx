@@ -33,8 +33,6 @@ export default async function RubriquePage({ params }: Props) {
   if (!nav) notFound();
 
   const articles = getArticlesByRubrique(slug);
-  if (articles.length === 0) notFound();
-
   const [lead, ...rest] = articles;
 
   // kicker labels per rubrique
@@ -48,6 +46,8 @@ export default async function RubriquePage({ params }: Props) {
     sport: "Terrain",
     culture: "Scène & arts",
     diaspora: "Hors-frontières",
+    environnement: "Planète & climat",
+    sante: "Santé publique",
   };
 
   return (
@@ -68,55 +68,64 @@ export default async function RubriquePage({ params }: Props) {
         </div>
 
         <div className="wrap" style={{ padding: "36px 28px 60px" }}>
+          {articles.length === 0 ? (
+            <p style={{ font: "400 15px var(--sans)", color: "var(--ink-3)", padding: "40px 0" }}>
+              Aucun article dans cette rubrique pour le moment.
+            </p>
+          ) : null}
           <div className="sbGrid">
             <div>
               {/* Lead article — full width with large image */}
-              <div className="rubrique-lead">
-                <article className="art" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 32, alignItems: "start" }}>
-                  <div className="artImg" style={{ aspectRatio: "3/2" }}>
-                    <ArticleImage
-                      src={artImgSrc(lead.imgSeed, lead.imgUrl, 900, 600)}
-                      alt={lead.imgAlt}
-                      seed={lead.imgSeed}
-                      w={900} h={600}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 45vw"
-                      style={{ objectFit: "cover" }}
-                      priority
-                    />
-                    {lead.badge === "rep" && (
-                      <span className="badge badgeRep" style={{ position: "absolute", top: 12, left: 12 }}>
-                        Grand reportage
-                      </span>
-                    )}
+              {lead && (
+                <>
+                  <div className="rubrique-lead">
+                    <article className="art" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 32, alignItems: "start" }}>
+                      <div className="artImg" style={{ aspectRatio: "3/2" }}>
+                        <ArticleImage
+                          src={artImgSrc(lead.imgSeed, lead.imgUrl, 900, 600)}
+                          alt={lead.imgAlt}
+                          seed={lead.imgSeed}
+                          w={900} h={600}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 45vw"
+                          style={{ objectFit: "cover" }}
+                          priority
+                        />
+                        {lead.badge === "rep" && (
+                          <span className="badge badgeRep" style={{ position: "absolute", top: 12, left: 12 }}>
+                            Grand reportage
+                          </span>
+                        )}
+                      </div>
+                      <div style={{ display: "flex", flexDirection: "column", gap: 12, paddingTop: 4 }}>
+                        <span className="rub">{lead.rubriqueLabel}</span>
+                        <h2 style={{ fontFamily: "var(--serif)", fontWeight: 800, fontSize: 36, lineHeight: 1.06, margin: 0, color: "var(--ink)", letterSpacing: "-.02em" }}>
+                          <Link href={`/article/${lead.slug}`}>{lead.title}</Link>
+                        </h2>
+                        <p className="dek" style={{ fontSize: 16 }}>{lead.dek}</p>
+                        <div className="artMeta">
+                          <span className="by">{lead.author}</span>
+                          <span className="metaDot" />
+                          <time dateTime={lead.dateIso}>{lead.date}</time>
+                          <span className="metaDot" />
+                          <span>{lead.readTime}</span>
+                        </div>
+                      </div>
+                    </article>
                   </div>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12, paddingTop: 4 }}>
-                    <span className="rub">{lead.rubriqueLabel}</span>
-                    <h2 style={{ fontFamily: "var(--serif)", fontWeight: 800, fontSize: 36, lineHeight: 1.06, margin: 0, color: "var(--ink)", letterSpacing: "-.02em" }}>
-                      <Link href={`/article/${lead.slug}`}>{lead.title}</Link>
-                    </h2>
-                    <p className="dek" style={{ fontSize: 16 }}>{lead.dek}</p>
-                    <div className="artMeta">
-                      <span className="by">{lead.author}</span>
-                      <span className="metaDot" />
-                      <time dateTime={lead.dateIso}>{lead.date}</time>
-                      <span className="metaDot" />
-                      <span>{lead.readTime}</span>
+
+                  {/* Divider */}
+                  <div style={{ height: 2, background: "var(--blue)", margin: "32px 0 28px" }} />
+
+                  {/* Grid of remaining articles */}
+                  {rest.length > 0 && (
+                    <div className="rubriqueGrid">
+                      {rest.map((art) => (
+                        <ArticleCard key={art.slug} article={art} sizes="(max-width: 768px) 100vw, 22vw" />
+                      ))}
                     </div>
-                  </div>
-                </article>
-              </div>
-
-              {/* Divider */}
-              <div style={{ height: 2, background: "var(--blue)", margin: "32px 0 28px" }} />
-
-              {/* Grid of remaining articles */}
-              {rest.length > 0 && (
-                <div className="rubriqueGrid">
-                  {rest.map((art) => (
-                    <ArticleCard key={art.slug} article={art} sizes="(max-width: 768px) 100vw, 22vw" />
-                  ))}
-                </div>
+                  )}
+                </>
               )}
 
               {/* Load more (static placeholder) */}
