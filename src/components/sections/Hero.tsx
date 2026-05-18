@@ -3,15 +3,9 @@ import Image from "next/image";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { unstable_noStore as noStore } from "next/cache";
-import { getFeaturedArticle, getArticleBySlug } from "@/lib/articles";
+import { getFeaturedArticle, getSideArticles } from "@/lib/articles";
 import { artImgSrc } from "@/lib/imgSrc";
 import ArticleImage from "@/components/ArticleImage";
-
-const SIDE_SLUGS = [
-  "code-electoral-diomaye-deux-versions-bloque",
-  "mondial-2026-shakira-dai-dai-burna-boy",
-  "senegal-balance-commerciale-excedent-mars-2026",
-];
 
 function getUne() {
   noStore();
@@ -21,7 +15,7 @@ function getUne() {
 
 export default function Hero() {
   const lead = getFeaturedArticle();
-  const side = SIDE_SLUGS.map((s) => getArticleBySlug(s)!).filter(Boolean);
+  const side = getSideArticles(lead.slug, 3);
   const une  = getUne();
   const showUne = une.active && une.imgUrl;
 

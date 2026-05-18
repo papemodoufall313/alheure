@@ -41,6 +41,12 @@ export function getFeaturedArticle(): Article {
   return all.find((a) => a.featured && a.rubrique === "senegal") ?? all[0];
 }
 
+export function getSideArticles(excludeSlug: string, count = 3): Article[] {
+  return getAllArticles()
+    .filter((a) => a.slug !== excludeSlug)
+    .slice(0, count);
+}
+
 export function getAlaUne(): Article[] {
   const picks: Article["rubrique"][] = ["politique", "economie", "societe", "culture"];
   const all = getAllArticles();
